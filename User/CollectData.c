@@ -90,13 +90,13 @@ void Data_Collect(){
 
         switch (Sensor[i].sensor_type) {
             case 0xA1://土压力盒
-                Sensor[i].Calculate = TYLH_YL_MPa(Sensor[i].init_freq[0], Sensor[i].init_temp, Sensor[i].freq[0], Sensor[i].temp, Sensor[i].para1);
+                Sensor[i].Calculate = TYLH_YL_MPa(Sensor[i].init_freq[0], Sensor[i].init_temp, Sensor[i].freq[0], Sensor[i].temp, Sensor[i].para[0]);
                 break;
             case 0xA2://渗压计
-                Sensor[i].Calculate = SYJ_YL_MPa(Sensor[i].init_freq[0], Sensor[i].init_temp, Sensor[i].freq[0], Sensor[i].temp, Sensor[i].para1, Sensor[i].para2, Sensor[i].para3, Sensor[i].para4);
+                Sensor[i].Calculate = SYJ_YL_MPa(Sensor[i].init_freq[0], Sensor[i].init_temp, Sensor[i].freq[0], Sensor[i].temp, Sensor[i].para[0], Sensor[i].para[1], Sensor[i].para[2], Sensor[i].para[3]);
                 break;
             case 0xA3://钢筋计
-                Sensor[i].Calculate = GJJ_YL(Sensor[i].init_freq[0], Sensor[i].init_temp, Sensor[i].freq[0], Sensor[i].temp, Sensor[i].para1);
+                Sensor[i].Calculate = GJJ_YL(Sensor[i].init_freq[0], Sensor[i].init_temp, Sensor[i].freq[0], Sensor[i].temp, Sensor[i].para[0]);
                 break;
             case 0xA4://埋入式应变计
                 Sensor[i].Calculate = MRYBJ_YB(Sensor[i].init_freq[0], Sensor[i].init_temp, Sensor[i].freq[0], Sensor[i].temp);
@@ -105,14 +105,14 @@ void Data_Collect(){
                 Sensor[i].Calculate = BMYBJ_YB(Sensor[i].init_freq[0], Sensor[i].init_temp, Sensor[i].freq[0], Sensor[i].temp);
                 break;
             case 0xA6://锚索计
-                Sensor[i].freq = (u16 *)malloc(Sensor[i].size * sizeof(u16));
+                Sensor[i].freq = (u16 *)malloc(Sensor[i].cancel_size * sizeof(u16));
 
                 for(u8 k = 0, j = 0; j < 16; ++j){
                     if(Sensor[i].cancel_addr && (1 << j)){
                         Sensor[i].freq[k++] = Sensor[j].freq[0];
                     }
                 }
-                Sensor[i].Calculate = MSJ_YL_KN(Sensor[i].init_freq, Sensor[i].init_temp, Sensor[i].freq, Sensor[i].temp, Sensor[i].size, Sensor[i].para1, Sensor[i].para2);
+                Sensor[i].Calculate = MSJ_YL_KN(Sensor[i].init_freq, Sensor[i].init_temp, Sensor[i].freq, Sensor[i].temp, Sensor[i].cancel_size, Sensor[i].para[0], Sensor[i].para[1]);
                 break;
         }
     }
