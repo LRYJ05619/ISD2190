@@ -120,6 +120,7 @@ void Data_Collect(){
 int i = 0;
 
 void HAL_UART_RxCpltCallback(UART_HandleTypeDef *huart){
+    //通道9~16
     if(huart->Instance == USART3){
         if(0xAA == rxdata){
             receiving = 1;
@@ -150,6 +151,7 @@ void HAL_UART_RxCpltCallback(UART_HandleTypeDef *huart){
         }
         HAL_UART_Receive_IT(&huart3, &rxdata, 1);
     };
+    //通道1~8
     if(huart->Instance == USART2){
         if(0xAA == rxdata){
             receiving = 1;
@@ -180,9 +182,9 @@ void HAL_UART_RxCpltCallback(UART_HandleTypeDef *huart){
         }
         HAL_UART_Receive_IT(&huart2, &rxdata, 1);
     }
+    //蓝牙回调
     if(huart->Instance == UART5){
-        receiving = 1;
-        i++;
+
         HAL_UART_Receive_IT(&huart5, &rxdata, 1);
     }
 };
@@ -199,5 +201,8 @@ void HAL_TIM_PeriodElapsedCallback(TIM_HandleTypeDef *htim){
         VM_Busy = 0;
         VM_init = 0;
         Scan_Start = 0;
+    }
+    if(htim->Instance == TIM3){
+        
     }
 }

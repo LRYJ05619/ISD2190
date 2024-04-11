@@ -185,7 +185,6 @@
 			},
 			"sourceIndexes" : 
 			[
-				8,
 				9,
 				10,
 				11,
@@ -196,10 +195,8 @@
 				16,
 				17,
 				18,
-				81,
-				82,
-				83,
-				84,
+				19,
+				20,
 				85,
 				86,
 				87,
@@ -214,11 +211,16 @@
 				96,
 				97,
 				98,
+				99,
 				100,
+				101,
 				102,
-				104,
-				106,
-				108
+				103,
+				105,
+				107,
+				109,
+				111,
+				113
 			]
 		},
 		{
@@ -317,7 +319,7 @@
 			"language" : "ASM",
 			"sourceIndexes" : 
 			[
-				19
+				21
 			]
 		}
 	],
@@ -388,11 +390,10 @@
 				5,
 				6,
 				7,
-				20,
-				21,
+				8,
 				22,
-				25,
-				26,
+				23,
+				24,
 				27,
 				28,
 				29,
@@ -412,8 +413,8 @@
 				43,
 				44,
 				45,
+				46,
 				47,
-				48,
 				49,
 				50,
 				51,
@@ -444,19 +445,22 @@
 				76,
 				77,
 				78,
-				99,
-				101,
-				103,
-				105,
-				107,
-				109
+				79,
+				80,
+				81,
+				82,
+				104,
+				106,
+				108,
+				110,
+				112,
+				114
 			]
 		},
 		{
 			"name" : "Source Files",
 			"sourceIndexes" : 
 			[
-				8,
 				9,
 				10,
 				11,
@@ -467,10 +471,8 @@
 				16,
 				17,
 				18,
-				81,
-				82,
-				83,
-				84,
+				19,
+				20,
 				85,
 				86,
 				87,
@@ -485,24 +487,29 @@
 				96,
 				97,
 				98,
+				99,
 				100,
+				101,
 				102,
-				104,
-				106,
-				108
+				103,
+				105,
+				107,
+				109,
+				111,
+				113
 			]
 		},
 		{
 			"name" : "",
 			"sourceIndexes" : 
 			[
-				19,
-				23,
-				24,
-				46,
-				79,
-				80,
-				110
+				21,
+				25,
+				26,
+				48,
+				83,
+				84,
+				115
 			]
 		}
 	],
@@ -521,6 +528,11 @@
 		{
 			"backtrace" : 1,
 			"path" : "Core/Inc/gpio.h",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 1,
+			"path" : "Core/Inc/iwdg.h",
 			"sourceGroupIndex" : 0
 		},
 		{
@@ -564,6 +576,12 @@
 			"backtrace" : 1,
 			"compileGroupIndex" : 0,
 			"path" : "Core/Src/gpio.c",
+			"sourceGroupIndex" : 1
+		},
+		{
+			"backtrace" : 1,
+			"compileGroupIndex" : 0,
+			"path" : "Core/Src/iwdg.c",
 			"sourceGroupIndex" : 1
 		},
 		{
@@ -822,6 +840,11 @@
 		},
 		{
 			"backtrace" : 1,
+			"path" : "Drivers/STM32L1xx_HAL_Driver/Inc/stm32l1xx_hal_iwdg.h",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 1,
 			"path" : "Drivers/STM32L1xx_HAL_Driver/Inc/stm32l1xx_hal_pwr.h",
 			"sourceGroupIndex" : 0
 		},
@@ -883,6 +906,11 @@
 		{
 			"backtrace" : 1,
 			"path" : "Drivers/STM32L1xx_HAL_Driver/Inc/stm32l1xx_ll_gpio.h",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 1,
+			"path" : "Drivers/STM32L1xx_HAL_Driver/Inc/stm32l1xx_ll_iwdg.h",
 			"sourceGroupIndex" : 0
 		},
 		{
@@ -983,6 +1011,12 @@
 			"backtrace" : 1,
 			"compileGroupIndex" : 0,
 			"path" : "Drivers/STM32L1xx_HAL_Driver/Src/stm32l1xx_hal_gpio.c",
+			"sourceGroupIndex" : 1
+		},
+		{
+			"backtrace" : 1,
+			"compileGroupIndex" : 0,
+			"path" : "Drivers/STM32L1xx_HAL_Driver/Src/stm32l1xx_hal_iwdg.c",
 			"sourceGroupIndex" : 1
 		},
 		{

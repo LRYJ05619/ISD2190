@@ -102,28 +102,26 @@ void Error_Handler(void);
 #define ADC_CHANCEL_NUM 16
 
 typedef struct SENSOR_InfoTypeDef{
-    u8 sensor_type; //ä¼ æ„Ÿå™¨ç±»å‹
+    u8 sensor_type; //´«¸ĞÆ÷ÀàĞÍ
 
-    u16 cancel_addr; //å ç”¨é€šé“
+    u16 cancel_addr; //Õ¼ÓÃÍ¨µÀ
 
-    int8_t init_temp; //åˆå§‹æ¸©åº¦
-    u16 init_freq[9]; //åˆå§‹é¢‘ç‡ ä½¿ç”¨æ—¶éœ€è¦é™¤ä»¥10
+    int8_t init_temp; //³õÊ¼ÎÂ¶È
+    u16 init_freq[9]; //³õÊ¼ÆµÂÊ Ê¹ÓÃÊ±ĞèÒª³ıÒÔ10
 
-    int8_t temp; //æµ‹é‡æ¸©åº¦
-    u16 *freq; //æµ‹é‡é¢‘ç‡ ä½¿ç”¨æ—¶éœ€è¦é™¤ä»¥10
+    int8_t temp; //²âÁ¿ÎÂ¶È
+    u16 *freq; //²âÁ¿ÆµÂÊ Ê¹ÓÃÊ±ĞèÒª³ıÒÔ10
 
-    u8 cancel_size; //å ç”¨é€šé“æ•°é‡
+    u8 cancel_size; //Õ¼ÓÃÍ¨µÀÊıÁ¿
 
-    double Calculate; //è®¡ç®—å€¼
+    double Calculate; //¼ÆËãÖµ
 
-    u8 para_size; //å‚æ•°æ•°é‡
-    u16 para[4]; //å‚æ•°
+    u8 para_size; //²ÎÊıÊıÁ¿
+    u16 para[4]; //²ÎÊı
 
-    u8 status; //çŠ¶æ€ä½ 0x00æœªä½¿ç”¨ 0x01ä¸»é€šé“ 0x02ä»é€šé“
+    u8 status; //×´Ì¬Î» 0x00Î´Ê¹ÓÃ 0x01Ö÷Í¨µÀ 0x02´ÓÍ¨µÀ
 }Sensor_Info;
-
-
-
+/* USER CODE END Private defines */
 
 #ifdef __cplusplus
 }
