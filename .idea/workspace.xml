@@ -21,20 +21,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="c8e28670-dfba-4e2b-832d-3f7616a4423e" name="更改" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Core/Inc/main.h" beforeDir="false" afterPath="$PROJECT_DIR$/Core/Inc/main.h" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Core/Src/main.c" beforeDir="false" afterPath="$PROJECT_DIR$/Core/Src/main.c" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/User/CollectData.c" beforeDir="false" afterPath="$PROJECT_DIR$/User/CollectData.c" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/User/bt4531.c" beforeDir="false" afterPath="$PROJECT_DIR$/User/bt4531.c" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/User/bt4531.h" beforeDir="false" afterPath="$PROJECT_DIR$/User/bt4531.h" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/User/flash.c" beforeDir="false" afterPath="$PROJECT_DIR$/User/flash.c" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/User/flash.h" beforeDir="false" afterPath="$PROJECT_DIR$/User/flash.h" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/.ninja_deps" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/.ninja_deps" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/.ninja_log" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/.ninja_log" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/ISD2190.bin" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/ISD2190.bin" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/ISD2190.elf" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/ISD2190.elf" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/ISD2190.hex" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/ISD2190.hex" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/ISD2190.map" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/ISD2190.map" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -158,7 +145,7 @@
       <workItem from="1712715185986" duration="13000" />
       <workItem from="1712715201596" duration="1360000" />
       <workItem from="1712768757599" duration="1000" />
-      <workItem from="1712769516627" duration="25546000" />
+      <workItem from="1712769516627" duration="25986000" />
     </task>
     <servers />
   </component>

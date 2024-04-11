@@ -2,9 +2,11 @@
 // Created by ifasten on 2024/4/2.
 //
 
+#include <string.h>
 #include "bt4531.h"
 #include "usart.h"
 #include "flash.h"
+#include "CollectData.h"
 
 u8 tx_buffer[MAX_DATA_LENGTH];
 extern SensorInfo Sensor[16];
@@ -69,7 +71,13 @@ void BleProcess(){
             Flash_Write((uint8_t*)&Sensor, sizeof(Sensor));
             StatuCallback(0x50, 0xA0);
             break;
-//        case 0x40:
+        case 0x40:
+            Data_Collect();
+            memcpy(Sensor[BleBuf[4]].init_freq, Sensor[BleBuf[4]].freq, Sensor[BleBuf[4]].cancel_size);
+            Sensor[BleBuf[4]].init_temp = Sensor[BleBuf[4]].temp;
+            Flash_Write((uint8_t*)&Sensor, sizeof(Sensor));
+            StatuCallback(0x50, 0xA0);
+            break;
     }
 }
 
