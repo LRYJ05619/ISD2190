@@ -95,15 +95,19 @@ void Error_Handler(void);
 #define T16_AN_GPIO_Port GPIOB
 
 /* USER CODE BEGIN Private defines */
+//384K flash最后一页
+#define SensorInfo_FLASH_ADDRESS (0x0805F800)
+
 #define u8 uint8_t
 #define u16 uint16_t
 
 #define MAX_DATA_LENGTH 255
 #define ADC_CHANCEL_NUM 16
 
-typedef struct SENSOR_InfoTypeDef{
+typedef struct SensorInfoTypeDef{
     u8 sensor_type; //传感器类型
 
+    u8 cancel_size; //占用通道数量
     u16 cancel_addr; //占用通道
 
     int8_t init_temp; //初始温度
@@ -112,15 +116,13 @@ typedef struct SENSOR_InfoTypeDef{
     int8_t temp; //测量温度
     u16 *freq; //测量频率 使用时需要除以10
 
-    u8 cancel_size; //占用通道数量
-
     double Calculate; //计算值
 
     u8 para_size; //参数数量
     u16 para[4]; //参数
 
     u8 status; //状态位 0x00未使用 0x01主通道 0x02从通道
-}Sensor_Info;
+}SensorInfo;
 /* USER CODE END Private defines */
 
 #ifdef __cplusplus

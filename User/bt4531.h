@@ -7,6 +7,7 @@
 
 #include "main.h"
 
+void BleProcess();
 void ConfigSend(u8 cancel);
 void TotalConfigSend();
 void DataSend(u8 cancel);

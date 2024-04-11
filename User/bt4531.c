@@ -4,11 +4,74 @@
 
 #include "bt4531.h"
 #include "usart.h"
+#include "flash.h"
 
 u8 tx_buffer[MAX_DATA_LENGTH];
-extern Sensor_Info Sensor[16];
+extern SensorInfo Sensor[16];
+extern u8 BleBuf[MAX_DATA_LENGTH];
 
 u16 CRC_Check(uint8_t *CRC_Ptr,uint8_t LEN);
+
+//命令处理
+void BleProcess(){
+    if(0xA0 != BleBuf[0] || 0x01 != BleBuf[2])
+        return;
+    u16 dataLength = sizeof(BleBuf) / sizeof(BleBuf[0]);
+    if(dataLength != BleBuf[1]){
+        StatuCallback(BleBuf[2], 0x15);
+        return;
+    }
+    u16 receivedCRC = (BleBuf[dataLength - 2] << 8) | BleBuf[dataLength - 1];
+    u16 calculatedCRC = CRC_Check(BleBuf, dataLength - 2); // 不包括校验码本身
+    if (receivedCRC != calculatedCRC){
+        StatuCallback(BleBuf[3], 0x14);
+        return;
+    }
+
+    u16 addr;
+    u8 master;
+    u8 num;
+
+    switch (BleBuf[3]) {
+        case 0x60:
+            DataSend(BleBuf[4]);
+            break;
+        case 0x61:
+            TotalDataSend();
+            break;
+        case 0x70:
+            ConfigSend(BleBuf[4]);
+            break;
+        case 0x71:
+            TotalConfigSend();
+            break;
+        case 0x50:
+            addr = ((u16)BleBuf[5] << 8) & BleBuf[6];
+            for(u8 i =0, flag = 0; i < 16; i++){
+                if(BleBuf[4] & (1 << i)){
+                    num++;
+                    if(flag == 0){
+                        flag = 1;
+                        master = i;
+                        Sensor[i].cancel_addr = addr;
+                        Sensor[i].sensor_type = BleBuf[4];
+                        Sensor[i].para_size = BleBuf[7];
+                        for(int j = 0; j < BleBuf[7]; j++){
+                            Sensor[i].para[j] = ((u16)BleBuf[2 * j + 7] << 8) & BleBuf[2 * j + 8];
+                        }
+                        Sensor[i].status = 0x01;
+                    } else{
+                        Sensor[i].status = 0x02;
+                    }
+                }
+            }
+            Sensor[master].cancel_size = num;
+            Flash_Write((uint8_t*)&Sensor, sizeof(Sensor));
+            StatuCallback(0x50, 0xA0);
+            break;
+//        case 0x40:
+    }
+}
 
 //返回配置信息
 void ConfigSend(u8 cancel){
@@ -18,9 +81,10 @@ void ConfigSend(u8 cancel){
     tx_buffer[2] = 0x01;
     tx_buffer[3] = 0x60;
     tx_buffer[4] = Sensor[cancel].sensor_type;
-    tx_buffer[5] = Sensor[cancel].cancel_addr;
+    tx_buffer[5] = (Sensor[cancel].cancel_addr >> 8) & 0xFF;
+    tx_buffer[6] = Sensor[cancel].cancel_addr & 0xFF;
 
-    u8 num = 6;
+    u8 num = 7;
 
     for(u8 i = 0; i < Sensor[cancel].cancel_size; i++){
         tx_buffer[num++] = (Sensor[cancel].init_freq[i] >> 8) & 0xFF;
@@ -53,7 +117,9 @@ void TotalConfigSend(){
 
         device++;
         tx_buffer[num++] = Sensor[i].sensor_type;
-        tx_buffer[num++] = Sensor[i].cancel_addr;
+        tx_buffer[num++] = (Sensor[i].cancel_addr >> 8) & 0xFF;
+        tx_buffer[num++] = Sensor[i].cancel_addr & 0xFF;
+
         for(u8 j = 0; j < Sensor[i].cancel_size; j++){
             tx_buffer[num++] = (Sensor[i].init_freq[j] >> 8) & 0xFF;
             tx_buffer[num++] = (Sensor[i].init_freq[j]) & 0xFF;
@@ -82,7 +148,8 @@ void DataSend(u8 cancel){
     tx_buffer[2] = 0x01;
     tx_buffer[3] = 0x70;
     tx_buffer[4] = Sensor[cancel].sensor_type;
-    tx_buffer[5] = Sensor[cancel].cancel_addr;
+    tx_buffer[5] = (Sensor[cancel].cancel_addr >> 8) & 0xFF;
+    tx_buffer[6] = Sensor[cancel].cancel_addr & 0xFF;
 
     for(u8 i = 0; i < Sensor[cancel].cancel_size ; i++){
         tx_buffer[num++] = (Sensor[cancel].freq[i] >> 8) & 0xFF;
@@ -114,7 +181,9 @@ void TotalDataSend(){
 
         device++;
         tx_buffer[num++] = Sensor[i].sensor_type;
-        tx_buffer[num++] = Sensor[i].cancel_addr;
+        tx_buffer[num++] = (Sensor[i].cancel_addr >> 8) & 0xFF;
+        tx_buffer[num++] = Sensor[i].cancel_addr & 0xFF;
+
         for (u8 j = 0; j < Sensor[i].cancel_size; j++) {
             tx_buffer[num++] = (Sensor[i].freq[j] >> 8) & 0xFF;
             tx_buffer[num++] = (Sensor[i].freq[j]) & 0xFF;

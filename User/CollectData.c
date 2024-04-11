@@ -7,11 +7,11 @@
 #include "tim.h"
 #include "usart.h"
 #include "adc.h"
-#include <malloc.h>
 #include <string.h>
 #include "VMxx.h"
 #include "hardware.h"
 #include "temp.h"
+#include "bt4531.h"
 
 extern volatile  u8  VM_Busy;
 extern volatile  u8  ADC_Busy;
@@ -19,6 +19,7 @@ extern volatile  u8  VM_ERR;
 extern volatile  u8  Scan_Start;
 extern volatile  u8 restart;
 
+extern u8 ble_flag;
 extern u8  rxdata;
 extern u8  rx_check;
 extern u8  rx_index;
@@ -29,8 +30,8 @@ extern u8  VM_init;
 
 extern u16 ADC_Value[ADC_CHANCEL_NUM];
 extern int8_t Temp_Value[ADC_CHANCEL_NUM];
-
-extern Sensor_Info Sensor[16];
+extern u8  BleBuf[MAX_DATA_LENGTH];
+extern SensorInfo Sensor[16];
 
 void Data_Collect(){
     HAL_TIM_Base_Start_IT(&htim2);
@@ -44,7 +45,7 @@ void Data_Collect(){
     }
     if (restart) {
         VM_init = 0;
-        //Todo 报错
+        StatuCallback(0x70, 0x13);
         return;
     }
 
@@ -65,7 +66,7 @@ void Data_Collect(){
     }
     if (restart) {
         VM_init = 0;
-        //Todo 报错
+        StatuCallback(0x70, 0x13);
         return;
     }
 
@@ -105,10 +106,8 @@ void Data_Collect(){
                 Sensor[i].Calculate = BMYBJ_YB(Sensor[i].init_freq[0], Sensor[i].init_temp, Sensor[i].freq[0], Sensor[i].temp);
                 break;
             case 0xA6://锚索计
-                Sensor[i].freq = (u16 *)malloc(Sensor[i].cancel_size * sizeof(u16));
-
-                for(u8 k = 0, j = 0; j < 16; ++j){
-                    if(Sensor[i].cancel_addr && (1 << j)){
+                for(u8 k = 0, j = 0; j < 16; j++){
+                    if(Sensor[i].cancel_addr & (1 << j)){
                         Sensor[i].freq[k++] = Sensor[j].freq[0];
                     }
                 }
@@ -117,16 +116,18 @@ void Data_Collect(){
         }
     }
 }
-int i = 0;
 
+u8 lastbuf;
 void HAL_UART_RxCpltCallback(UART_HandleTypeDef *huart){
-    //通道9~16
-    if(huart->Instance == USART3){
-        if(0xAA == rxdata){
+    lastbuf = rxdata;
+    //VM模块
+    if(huart->Instance == USART3 || huart->Instance == USART2){
+        if(0xBB == rxdata && 0xAA == lastbuf){
             receiving = 1;
+            rx_buffer[rx_index++] = 0xAA;
         }
         if(receiving){
-            rx_buffer[rx_index] = rxdata;
+            rx_buffer[rx_index++] = rxdata;
             if(rx_check == rxdata){
                 if(0xAA != rxdata) {
                     if (0x05 == rx_buffer[3]) {
@@ -141,50 +142,24 @@ void HAL_UART_RxCpltCallback(UART_HandleTypeDef *huart){
                     rx_check = 0;
                     VM_Busy = 0;
                     HAL_UART_Receive_IT(&huart3, &rxdata, 1);
+                    HAL_UART_Receive_IT(&huart2, &rxdata, 1);
                     HAL_TIM_Base_Stop_IT(&htim2);
                     __HAL_TIM_SET_COUNTER(&htim2, 0);
                     return;
                 }
             }
             rx_check += rxdata;
-            rx_index++;
         }
         HAL_UART_Receive_IT(&huart3, &rxdata, 1);
-    };
-    //通道1~8
-    if(huart->Instance == USART2){
-        if(0xAA == rxdata){
-            receiving = 1;
-        }
-        if(receiving){
-            rx_buffer[rx_index] = rxdata;
-            if(rx_check == rxdata){
-                if(0xAA != rxdata) {
-                    if (0x05 == rx_buffer[3]) {
-                        VM_init = 1;
-                        memset(rx_buffer, 0, MAX_DATA_LENGTH);
-                    }
-                    if (0x73 == rx_buffer[3]) {
-                        Scan_Start = 0;
-                    }
-                    rx_index = 0;
-                    receiving = 0;
-                    rx_check = 0;
-                    VM_Busy = 0;
-                    HAL_UART_Receive_IT(&huart3, &rxdata, 1);
-                    HAL_TIM_Base_Stop_IT(&htim2);
-                    __HAL_TIM_SET_COUNTER(&htim2, 0);
-                    return;
-                }
-            }
-            rx_check += rxdata;
-            rx_index++;
-        }
         HAL_UART_Receive_IT(&huart2, &rxdata, 1);
-    }
-    //蓝牙回调
-    if(huart->Instance == UART5){
+    };
 
+    //蓝牙
+    if(huart->Instance == UART5){
+        BleBuf[rx_index++] = rxdata;
+        HAL_TIM_Base_Stop_IT(&htim3); // 计数清零 重启定时器
+        __HAL_TIM_SET_COUNTER(&htim3,0);
+        HAL_TIM_Base_Start_IT(&htim3);
         HAL_UART_Receive_IT(&huart5, &rxdata, 1);
     }
 };
@@ -201,8 +176,10 @@ void HAL_TIM_PeriodElapsedCallback(TIM_HandleTypeDef *htim){
         VM_Busy = 0;
         VM_init = 0;
         Scan_Start = 0;
+        rx_index = 0;
     }
     if(htim->Instance == TIM3){
-        
+        rx_index = 0;
+        ble_flag = 1;
     }
 }

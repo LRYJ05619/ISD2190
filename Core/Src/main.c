@@ -29,7 +29,9 @@
 /* USER CODE BEGIN Includes */
 #include <string.h>
 #include "VMxx.h"
-#include "CollectData.h" 
+#include "CollectData.h"
+#include "bt4531.h"
+#include "flash.h"
 /* USER CODE END Includes */
 
 /* Private typedef -----------------------------------------------------------*/
@@ -65,8 +67,9 @@ volatile  u8  VM_Busy;
 volatile  u8  ADC_Busy;
 volatile  u8  VM_ERR;
 volatile  u8  Scan_Start;
-volatile  u8 restart;
+volatile  u8  restart;
 
+u8 ble_flag;
 u8  rxdata;
 u8  rx_check;
 u8  rx_index;
@@ -75,7 +78,8 @@ u8  receiving;
 u8  VM_init;
 u16 ADC_Value[ADC_CHANCEL_NUM];
 int16_t Temp_Value[ADC_CHANCEL_NUM];
-Sensor_Info Sensor[16];
+u8  BleBuf[MAX_DATA_LENGTH];
+SensorInfo Sensor[16];
 //传感器通道和adc通道对照
 // 1 -> 11  ;  2 -> 10  ;  3 -> 13  ;  4 -> 12
 // 5 -> 1   ;  6 -> 0   ;  7 -> 5   ;  8 -> 4
@@ -126,20 +130,8 @@ int main(void)
   HAL_UART_Receive_IT(&huart2, &rxdata, 1);
   HAL_UART_Receive_IT(&huart5, &rxdata, 1);
 
-  Scan_Start = 1;
+  Flash_Read((uint8_t*)&Sensor, sizeof(Sensor));
 
-    u8 VM_Scan_Cmd[5] = {
-            0xAA,
-            0xAA,
-            0x01,
-            0x73,
-            0xC8,
-    };
-
-  printf("0x12\r\n");
-  printf("中文测试\r\n");
-
-  HAL_UART_Transmit(&huart5, (uint8_t *) VM_Scan_Cmd, 1, 0xFFFF);
   /* USER CODE END 2 */
 
   /* Infinite loop */
@@ -149,6 +141,11 @@ int main(void)
 
     /* USER CODE BEGIN 3 */
       restart = 0;
+
+      if(ble_flag){
+          ble_flag = 0;
+          BleProcess();
+      }
 
       if(!VM_init && !VM_Busy){
           VM_Busy = 1;
