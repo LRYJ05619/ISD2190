@@ -131,7 +131,7 @@ int main(void)
   HAL_UART_Receive_IT(&huart2, &rxdata, 1);
   HAL_UART_Receive_IT(&huart5, &rxdata, 1);
 
-  Flash_Read((uint8_t*)&Sensor, sizeof(Sensor));
+  Flash_Read((uint8_t *)&Sensor, sizeof(SensorInfo[16]));
 
   /* USER CODE END 2 */
 

@@ -2,6 +2,7 @@
 // Created by 15569 on 2024/4/11.
 //
 
+#include <string.h>
 #include "flash.h"
 
 //384K flash最后一页
@@ -9,7 +10,8 @@
 
 HAL_StatusTypeDef Flash_Write(uint8_t *data, uint16_t len) {
     HAL_StatusTypeDef status;
-    uint32_t i;
+    uint32_t typeProgram = FLASH_TYPEPROGRAM_WORD;  // 改为字编程
+    uint32_t FlashAddress = SensorInfo_FLASH_ADDRESS;
 
     // 解锁 Flash
     HAL_FLASH_Unlock();
@@ -22,12 +24,20 @@ HAL_StatusTypeDef Flash_Write(uint8_t *data, uint16_t len) {
     EraseInitStruct.NbPages = 1; // 根据需要存储的数据量调整擦除的页数
     status = HAL_FLASHEx_Erase(&EraseInitStruct, &PAGEError);
 
-    if (status == HAL_OK) {
-        for (i = 0; i < len; i += 4) {
-            // 以半字为单位写入数据
-            if (HAL_FLASH_Program(FLASH_TYPEPROGRAM_WORD, SensorInfo_FLASH_ADDRESS + i, *((uint16_t*)(data + i))) != HAL_OK) {
-                break; // 如果写入失败，跳出循环
-            }
+    if (status != HAL_OK) {
+        return status;
+    }
+
+    // 写入数据
+    for (uint16_t i = 0; i < len; i += 4) {
+        uint32_t data32 = *((uint32_t *)(data + i));
+        if (HAL_FLASH_Program(typeProgram, FlashAddress, data32) == HAL_OK) {
+            FlashAddress += 4; // 移动到下一个字
+        } else {
+            // 错误处理
+            status = HAL_FLASH_GetError();
+            HAL_FLASH_Lock();
+            return status;
         }
     }
 
@@ -38,10 +48,6 @@ HAL_StatusTypeDef Flash_Write(uint8_t *data, uint16_t len) {
 }
 
 void Flash_Read(uint8_t *data, uint16_t len) {
-    uint32_t i;
-
-    for (i = 0; i < len; i++) {
-        data[i] = *(__IO uint8_t*)(SensorInfo_FLASH_ADDRESS + i);
-    }
+    memcpy(data, (uint8_t *)SensorInfo_FLASH_ADDRESS, len);
 }
 

@@ -104,7 +104,7 @@ void Error_Handler(void);
 #define MAX_DATA_LENGTH 255
 #define ADC_CHANCEL_NUM 16
 
-typedef struct SensorInfoTypeDef{
+typedef struct __attribute__((packed)) SensorInfoTypeDef{
     u8 sensor_type; //传感器类型
 
     u8 channel_size; //占用通道数量
@@ -114,12 +114,12 @@ typedef struct SensorInfoTypeDef{
     u16 init_freq[9]; //初始频率 使用时需要除以10
 
     int8_t temp; //测量温度
-    u16 *freq; //测量频率 使用时需要除以10
+    u16 freq[9]; //测量频率 使用时需要除以10
 
     double Calculate; //计算值
 
     u8 para_size; //参数数量
-    u16 para[4]; //参数
+    int16_t para[4]; //参数
 
     u8 status; //状态位 0x00未使用 0x01主通道 0x02从通道
 }SensorInfo;

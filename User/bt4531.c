@@ -53,7 +53,7 @@ void BleProcess(){
             TotalConfigSend();
             break;
         case 0x50:
-            addr = ((u16)BleBuf[5] << 8) & BleBuf[6];
+            addr = ((u16)BleBuf[5] << 8) | BleBuf[6];
             for(u8 i =0, flag = 0; i < 16; i++){
                 if(addr & (1 << i)){
                     num++;
@@ -64,7 +64,7 @@ void BleProcess(){
                         Sensor[i].sensor_type = BleBuf[4];
                         Sensor[i].para_size = BleBuf[7];
                         for(int j = 0; j < BleBuf[7]; j++){
-                            Sensor[i].para[j] = ((u16)BleBuf[2 * j + 8] << 8) & BleBuf[2 * j + 9];
+                            Sensor[i].para[j] = (int16_t)BleBuf[2 * j + 8] << 8 | BleBuf[2 * j + 9];
                         }
                         Sensor[i].status = 0x01;
                     } else{
@@ -73,14 +73,20 @@ void BleProcess(){
                 }
             }
             Sensor[master].channel_size = num;
-            Flash_Write((uint8_t*)&Sensor, sizeof(Sensor));
+
+            uint8_t data[sizeof(SensorInfo[16])];
+            memcpy(data, &Sensor, sizeof(SensorInfo[16]));
+            Flash_Write(data, sizeof(SensorInfo[16]));
             StatuCallback(0x50, 0xA0);
             break;
         case 0x40:
             Data_Collect();
             memcpy(Sensor[BleBuf[4]].init_freq, Sensor[BleBuf[4]].freq, Sensor[BleBuf[4]].channel_size);
             Sensor[BleBuf[4]].init_temp = Sensor[BleBuf[4]].temp;
-            Flash_Write((uint8_t*)&Sensor, sizeof(Sensor));
+
+            uint8_t data1[sizeof(SensorInfo[16])];
+            memcpy(data1, &Sensor, sizeof(SensorInfo[16]));
+            Flash_Write(data1, sizeof(SensorInfo[16]));
             StatuCallback(0x50, 0xA0);
             break;
     }
@@ -123,7 +129,7 @@ void TotalConfigSend(){
 
     tx_buffer[0] = 0xA0;
     tx_buffer[2] = 0x01;
-    tx_buffer[3] = 0x71;
+    tx_buffer[3] = 0x61;
 
     for(u8 i = 0; i < 16; i++) {
         if (Sensor[i].status != 0x01)
@@ -182,7 +188,7 @@ void DataSend(u8 channel){
 }
 //返回全部数据
 void TotalDataSend(){
-    u8 num = 4;
+    u8 num = 5;
     u8 device = 0;
     u16 crc;
 
@@ -196,8 +202,7 @@ void TotalDataSend(){
 
         device++;
         tx_buffer[num++] = Sensor[i].sensor_type;
-        tx_buffer[num++] = (Sensor[i].channel_addr >> 8) & 0xFF;
-        tx_buffer[5] = Sensor[i].channel_size;
+        tx_buffer[num++] = Sensor[i].channel_size;
 
         for (u8 j = 0; j < Sensor[i].channel_size; j++) {
             tx_buffer[num++] = (Sensor[i].freq[j] >> 8) & 0xFF;
