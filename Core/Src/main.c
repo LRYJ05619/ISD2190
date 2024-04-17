@@ -70,12 +70,13 @@ volatile  u8  Scan_Start;
 volatile  u8  restart;
 
 u8 ble_flag;
-u8  rxdata;
-u8  rx_check;
-u8  rx_index;
+u8  rxdata = 0;
+u8  rx_check = 0;
+u8  rx_index = 0;
+u8  rx_len = 0;
 u8  rx_buffer[MAX_DATA_LENGTH];
-u8  receiving;
-u8  VM_init;
+u8  receiving = 0;
+u8  VM_init = 0;
 u16 ADC_Value[ADC_CHANCEL_NUM];
 int16_t Temp_Value[ADC_CHANCEL_NUM];
 u8  BleBuf[MAX_DATA_LENGTH];

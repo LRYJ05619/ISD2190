@@ -8,9 +8,9 @@
 #include "main.h"
 
 void BleProcess();
-void ConfigSend(u8 cancel);
+void ConfigSend(u8 channel);
 void TotalConfigSend();
-void DataSend(u8 cancel);
+void DataSend(u8 channel);
 void TotalDataSend();
 void StatuCallback(u8 cmd, u8 statu);
 

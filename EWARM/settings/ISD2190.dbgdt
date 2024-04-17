@@ -145,7 +145,7 @@
                 <expressions>
                     <item>Temp_Value</item>
                     <item>ADC_Value</item>
-                    <item></item>
+                    <item />
                 </expressions>
                 <col-names>
                     <item>Expression</item>

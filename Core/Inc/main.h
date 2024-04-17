@@ -107,8 +107,8 @@ void Error_Handler(void);
 typedef struct SensorInfoTypeDef{
     u8 sensor_type; //传感器类型
 
-    u8 cancel_size; //占用通道数量
-    u16 cancel_addr; //占用通道
+    u8 channel_size; //占用通道数量
+    u16 channel_addr; //占用通道
 
     int8_t init_temp; //初始温度
     u16 init_freq[9]; //初始频率 使用时需要除以10

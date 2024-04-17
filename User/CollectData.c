@@ -23,6 +23,7 @@ extern u8 ble_flag;
 extern u8  rxdata;
 extern u8  rx_check;
 extern u8  rx_index;
+extern u8  rx_len;
 extern u8  rx_buffer[MAX_DATA_LENGTH];
 
 extern u8  receiving;
@@ -107,11 +108,11 @@ void Data_Collect(){
                 break;
             case 0xA6://锚索计
                 for(u8 k = 0, j = 0; j < 16; j++){
-                    if(Sensor[i].cancel_addr & (1 << j)){
+                    if(Sensor[i].channel_addr & (1 << j)){
                         Sensor[i].freq[k++] = Sensor[j].freq[0];
                     }
                 }
-                Sensor[i].Calculate = MSJ_YL_KN(Sensor[i].init_freq, Sensor[i].init_temp, Sensor[i].freq, Sensor[i].temp, Sensor[i].cancel_size, Sensor[i].para[0], Sensor[i].para[1]);
+                Sensor[i].Calculate = MSJ_YL_KN(Sensor[i].init_freq, Sensor[i].init_temp, Sensor[i].freq, Sensor[i].temp, Sensor[i].channel_size, Sensor[i].para[0], Sensor[i].para[1]);
                 break;
         }
     }
@@ -172,6 +173,8 @@ void HAL_ADC_ConvCpltCallback(ADC_HandleTypeDef *hadc){
 
 void HAL_TIM_PeriodElapsedCallback(TIM_HandleTypeDef *htim){
     if(htim->Instance == TIM2){
+        __HAL_TIM_SET_COUNTER(&htim2,0);
+        HAL_TIM_Base_Start_IT(&htim2);
         VM_ERR = 1;
         VM_Busy = 0;
         VM_init = 0;
@@ -179,6 +182,9 @@ void HAL_TIM_PeriodElapsedCallback(TIM_HandleTypeDef *htim){
         rx_index = 0;
     }
     if(htim->Instance == TIM3){
+        HAL_TIM_Base_Stop_IT(&htim3); // 计数清零 重启定时器
+        __HAL_TIM_SET_COUNTER(&htim3,0);
+        rx_len = rx_index;
         rx_index = 0;
         ble_flag = 1;
     }

@@ -11,6 +11,7 @@
 u8 tx_buffer[MAX_DATA_LENGTH];
 extern SensorInfo Sensor[16];
 extern u8 BleBuf[MAX_DATA_LENGTH];
+extern u8  rx_len;
 
 u16 CRC_Check(uint8_t *CRC_Ptr,uint8_t LEN);
 
@@ -18,48 +19,52 @@ u16 CRC_Check(uint8_t *CRC_Ptr,uint8_t LEN);
 void BleProcess(){
     if(0xA0 != BleBuf[0] || 0x01 != BleBuf[2])
         return;
-    u16 dataLength = sizeof(BleBuf) / sizeof(BleBuf[0]);
-    if(dataLength != BleBuf[1]){
+    if(rx_len != BleBuf[1]){
         StatuCallback(BleBuf[2], 0x15);
+        rx_len = 0;
         return;
     }
-    u16 receivedCRC = (BleBuf[dataLength - 2] << 8) | BleBuf[dataLength - 1];
-    u16 calculatedCRC = CRC_Check(BleBuf, dataLength - 2); // 不包括校验码本身
+
+
+    u16 receivedCRC = (BleBuf[rx_len - 2] << 8) | BleBuf[rx_len - 1];
+    u16 calculatedCRC = CRC_Check(BleBuf, rx_len - 2); // 不包括校验码本身
     if (receivedCRC != calculatedCRC){
         StatuCallback(BleBuf[3], 0x14);
         return;
     }
+
+    rx_len = 0;
 
     u16 addr;
     u8 master;
     u8 num;
 
     switch (BleBuf[3]) {
-        case 0x60:
+        case 0x70:
             DataSend(BleBuf[4]);
             break;
-        case 0x61:
+        case 0x71:
             TotalDataSend();
             break;
-        case 0x70:
+        case 0x60:
             ConfigSend(BleBuf[4]);
             break;
-        case 0x71:
+        case 0x61:
             TotalConfigSend();
             break;
         case 0x50:
             addr = ((u16)BleBuf[5] << 8) & BleBuf[6];
             for(u8 i =0, flag = 0; i < 16; i++){
-                if(BleBuf[4] & (1 << i)){
+                if(addr & (1 << i)){
                     num++;
                     if(flag == 0){
                         flag = 1;
                         master = i;
-                        Sensor[i].cancel_addr = addr;
+                        Sensor[i].channel_addr = addr;
                         Sensor[i].sensor_type = BleBuf[4];
                         Sensor[i].para_size = BleBuf[7];
                         for(int j = 0; j < BleBuf[7]; j++){
-                            Sensor[i].para[j] = ((u16)BleBuf[2 * j + 7] << 8) & BleBuf[2 * j + 8];
+                            Sensor[i].para[j] = ((u16)BleBuf[2 * j + 8] << 8) & BleBuf[2 * j + 9];
                         }
                         Sensor[i].status = 0x01;
                     } else{
@@ -67,13 +72,13 @@ void BleProcess(){
                     }
                 }
             }
-            Sensor[master].cancel_size = num;
+            Sensor[master].channel_size = num;
             Flash_Write((uint8_t*)&Sensor, sizeof(Sensor));
             StatuCallback(0x50, 0xA0);
             break;
         case 0x40:
             Data_Collect();
-            memcpy(Sensor[BleBuf[4]].init_freq, Sensor[BleBuf[4]].freq, Sensor[BleBuf[4]].cancel_size);
+            memcpy(Sensor[BleBuf[4]].init_freq, Sensor[BleBuf[4]].freq, Sensor[BleBuf[4]].channel_size);
             Sensor[BleBuf[4]].init_temp = Sensor[BleBuf[4]].temp;
             Flash_Write((uint8_t*)&Sensor, sizeof(Sensor));
             StatuCallback(0x50, 0xA0);
@@ -82,26 +87,27 @@ void BleProcess(){
 }
 
 //返回配置信息
-void ConfigSend(u8 cancel){
+void ConfigSend(u8 channel){
     u16 crc;
 
     tx_buffer[0] = 0xA0;
     tx_buffer[2] = 0x01;
     tx_buffer[3] = 0x60;
-    tx_buffer[4] = Sensor[cancel].sensor_type;
-    tx_buffer[5] = (Sensor[cancel].cancel_addr >> 8) & 0xFF;
-    tx_buffer[6] = Sensor[cancel].cancel_addr & 0xFF;
+    tx_buffer[4] = Sensor[channel].sensor_type;
+    tx_buffer[5] = (Sensor[channel].channel_addr >> 8) & 0xFF;
+    tx_buffer[6] = Sensor[channel].channel_addr & 0xFF;
 
     u8 num = 7;
 
-    for(u8 i = 0; i < Sensor[cancel].cancel_size; i++){
-        tx_buffer[num++] = (Sensor[cancel].init_freq[i] >> 8) & 0xFF;
-        tx_buffer[num++] = (Sensor[cancel].init_freq[i]) & 0xFF;
-        tx_buffer[num++] = Sensor[cancel].init_temp;
+    for(u8 i = 0; i < Sensor[channel].channel_size; i++){
+        tx_buffer[num++] = (Sensor[channel].init_freq[i] >> 8) & 0xFF;
+        tx_buffer[num++] = (Sensor[channel].init_freq[i]) & 0xFF;
     }
-    for(u8 j = 0; j < Sensor[cancel].para_size; j++){
-        tx_buffer[num++] = (Sensor[cancel].para[j] >> 8) & 0xFF;
-        tx_buffer[num++] = (Sensor[cancel].para[j]) & 0xFF;
+    tx_buffer[num++] = Sensor[channel].init_temp;
+    tx_buffer[num++] = Sensor[channel].para_size;
+    for(u8 j = 0; j < Sensor[channel].para_size; j++){
+        tx_buffer[num++] = (Sensor[channel].para[j] >> 8) & 0xFF;
+        tx_buffer[num++] = (Sensor[channel].para[j]) & 0xFF;
     }
     tx_buffer[1] = num + 2;
     crc = CRC_Check(tx_buffer, num);
@@ -109,7 +115,7 @@ void ConfigSend(u8 cancel){
     tx_buffer[num++] = crc & 0xFF;
     HAL_UART_Transmit(&huart5, tx_buffer,  num, HAL_MAX_DELAY);
 }
-
+//返回全部配置
 void TotalConfigSend(){
     u8 num = 5;
     u8 device = 0;
@@ -125,14 +131,15 @@ void TotalConfigSend(){
 
         device++;
         tx_buffer[num++] = Sensor[i].sensor_type;
-        tx_buffer[num++] = (Sensor[i].cancel_addr >> 8) & 0xFF;
-        tx_buffer[num++] = Sensor[i].cancel_addr & 0xFF;
+        tx_buffer[num++] = (Sensor[i].channel_addr >> 8) & 0xFF;
+        tx_buffer[num++] = Sensor[i].channel_addr & 0xFF;
 
-        for(u8 j = 0; j < Sensor[i].cancel_size; j++){
+        for(u8 j = 0; j < Sensor[i].channel_size; j++){
             tx_buffer[num++] = (Sensor[i].init_freq[j] >> 8) & 0xFF;
             tx_buffer[num++] = (Sensor[i].init_freq[j]) & 0xFF;
-            tx_buffer[num++] = Sensor[i].init_temp;
         }
+        tx_buffer[num++] = Sensor[i].init_temp;
+        tx_buffer[num++] = Sensor[i].para_size;
         for(u8 k = 0; k < Sensor[i].para_size; k++){
             tx_buffer[num++] = (Sensor[i].para[k] >> 8) & 0xFF;
             tx_buffer[num++] = (Sensor[i].para[k]) & 0xFF;
@@ -148,25 +155,25 @@ void TotalConfigSend(){
 }
 
 //返回数据
-void DataSend(u8 cancel){
-    u8 num = 6;
+void DataSend(u8 channel){
+    u8 num = 5;
     u16 crc;
 
     tx_buffer[0] = 0xA0;
     tx_buffer[2] = 0x01;
     tx_buffer[3] = 0x70;
-    tx_buffer[4] = Sensor[cancel].sensor_type;
-    tx_buffer[5] = (Sensor[cancel].cancel_addr >> 8) & 0xFF;
-    tx_buffer[6] = Sensor[cancel].cancel_addr & 0xFF;
+    tx_buffer[4] = Sensor[channel].sensor_type;
+    tx_buffer[5] = Sensor[channel].channel_size;
 
-    for(u8 i = 0; i < Sensor[cancel].cancel_size ; i++){
-        tx_buffer[num++] = (Sensor[cancel].freq[i] >> 8) & 0xFF;
-        tx_buffer[num++] = (Sensor[cancel].freq[i]) & 0xFF;
-        tx_buffer[num++] = Sensor[cancel].temp;
-        tx_buffer[num++] = ((u16)Sensor[i].Calculate >> 8) & 0xFF ;
-        tx_buffer[num++] = (u16)Sensor[i].Calculate & 0xFF;
-        tx_buffer[num++] = (u8)((Sensor[i].Calculate - (u16)Sensor[i].Calculate) * 100);
+    for(u8 i = 0; i < Sensor[channel].channel_size ; i++){
+        tx_buffer[num++] = (Sensor[channel].freq[i] >> 8) & 0xFF;
+        tx_buffer[num++] = (Sensor[channel].freq[i]) & 0xFF;
     }
+    tx_buffer[num++] = ((u16)Sensor[channel].Calculate >> 16 ) * 100 & 0xFF;
+    tx_buffer[num++] = ((u16)Sensor[channel].Calculate >> 8 ) * 100 & 0xFF;
+    tx_buffer[num++] = ((u16)Sensor[channel].Calculate) * 100 & 0xFF;
+
+    tx_buffer[num++] = Sensor[channel].temp;
     tx_buffer[1] = num + 2;
     crc = CRC_Check(tx_buffer, num);
     tx_buffer[num++] = (crc >> 8) & 0xFF;
@@ -175,7 +182,7 @@ void DataSend(u8 cancel){
 }
 //返回全部数据
 void TotalDataSend(){
-    u8 num = 5;
+    u8 num = 4;
     u8 device = 0;
     u16 crc;
 
@@ -189,17 +196,17 @@ void TotalDataSend(){
 
         device++;
         tx_buffer[num++] = Sensor[i].sensor_type;
-        tx_buffer[num++] = (Sensor[i].cancel_addr >> 8) & 0xFF;
-        tx_buffer[num++] = Sensor[i].cancel_addr & 0xFF;
+        tx_buffer[num++] = (Sensor[i].channel_addr >> 8) & 0xFF;
+        tx_buffer[5] = Sensor[i].channel_size;
 
-        for (u8 j = 0; j < Sensor[i].cancel_size; j++) {
+        for (u8 j = 0; j < Sensor[i].channel_size; j++) {
             tx_buffer[num++] = (Sensor[i].freq[j] >> 8) & 0xFF;
             tx_buffer[num++] = (Sensor[i].freq[j]) & 0xFF;
-            tx_buffer[num++] = Sensor[i].temp;
-            tx_buffer[num++] = ((u16)Sensor[i].Calculate >> 8) & 0xFF;
-            tx_buffer[num++] = (u16)Sensor[i].Calculate & 0xFF;
-            tx_buffer[num++] = (u8)((Sensor[i].Calculate - (u16)Sensor[i].Calculate) * 100);
         }
+        tx_buffer[num++] = ((u16)Sensor[i].Calculate >> 16 ) * 100 & 0xFF;
+        tx_buffer[num++] = ((u16)Sensor[i].Calculate >> 8 ) * 100 & 0xFF;
+        tx_buffer[num++] = ((u16)Sensor[i].Calculate) * 100 & 0xFF;
+        tx_buffer[num++] = Sensor[i].temp;
     }
 
     tx_buffer[4] = device;
@@ -244,7 +251,6 @@ u16 CRC_Check(uint8_t *CRC_Ptr,uint8_t LEN) {
                 CRC_Value = (CRC_Value >> 1);
         }
     }
-    CRC_Value = ((CRC_Value >> 8) + (CRC_Value << 8)); //交换高低字节
 
     return CRC_Value;
 }
