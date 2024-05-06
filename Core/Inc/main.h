@@ -95,8 +95,6 @@ void Error_Handler(void);
 #define T16_AN_GPIO_Port GPIOB
 
 /* USER CODE BEGIN Private defines */
-//384K flash最后一页
-#define SensorInfo_FLASH_ADDRESS (0x0805F800)
 
 #define u8 uint8_t
 #define u16 uint16_t
@@ -104,7 +102,7 @@ void Error_Handler(void);
 #define MAX_DATA_LENGTH 255
 #define ADC_CHANCEL_NUM 16
 
-typedef struct __attribute__((packed)) SensorInfoTypeDef{
+typedef struct SensorInfoTypeDef{
     u16 serial[5];
 
     u8 sensor_type; //传感器类型
@@ -118,7 +116,7 @@ typedef struct __attribute__((packed)) SensorInfoTypeDef{
     int8_t temp; //测量温度
     u16 freq[9]; //测量频率 使用时需要除以10
 
-    double Calculate; //计算值
+    float Calculate; //计算值
 
     u8 para_size; //参数数量
     int32_t para[4]; //参数

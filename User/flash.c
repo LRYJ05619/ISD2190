@@ -5,13 +5,16 @@
 #include <string.h>
 #include "flash.h"
 
-//384K flash最后一页
-#define SensorInfo_FLASH_ADDRESS (0x0805F800)
-
-HAL_StatusTypeDef Flash_Write(uint8_t *data, uint16_t len) {
+//384K flash
+#define SensorInfo_FLASH_ADDRESS (0x0802E800)
+extern SensorInfo Sensor[16];
+uint32_t data;
+HAL_StatusTypeDef Flash_Write() {
     HAL_StatusTypeDef status;
     uint32_t typeProgram = FLASH_TYPEPROGRAM_WORD;  // 改为字编程
     uint32_t FlashAddress = SensorInfo_FLASH_ADDRESS;
+
+
 
     // 解锁 Flash
     HAL_FLASH_Unlock();
@@ -28,16 +31,18 @@ HAL_StatusTypeDef Flash_Write(uint8_t *data, uint16_t len) {
         return status;
     }
 
-    // 写入数据
-    for (uint16_t i = 0; i < len; i += 4) {
-        uint32_t data32 = *((uint32_t *)(data + i));
-        if (HAL_FLASH_Program(typeProgram, FlashAddress, data32) == HAL_OK) {
-            FlashAddress += 4; // 移动到下一个字
-        } else {
-            // 错误处理
-            status = HAL_FLASH_GetError();
-            HAL_FLASH_Lock();
-            return status;
+    for (int i = 0; i < 16; i++) {
+        // 遍历Sensor数组的每个元素
+        for (int j = 0; j < sizeof(SensorInfo); j += 4) {
+            data = *((__IO uint32_t*)(&Sensor[i].sensor_type + j));
+            if (HAL_FLASH_Program(FLASH_TYPEPROGRAM_WORD, FlashAddress, data) == HAL_OK) {
+                FlashAddress += 4;
+            } else {
+                // 错误处理
+                status = HAL_FLASH_GetError();
+                HAL_FLASH_Lock();
+                return status;
+            }
         }
     }
 
@@ -47,7 +52,32 @@ HAL_StatusTypeDef Flash_Write(uint8_t *data, uint16_t len) {
     return status;
 }
 
-void Flash_Read(uint8_t *data, uint16_t len) {
-    memcpy(data, (uint8_t *)SensorInfo_FLASH_ADDRESS, len);
+void Flash_Read() {
+    uint32_t FlashAddress = SensorInfo_FLASH_ADDRESS;
+    for (int i = 0; i < 16; i++) {
+        for(int j = 0;  j < sizeof(SensorInfo); j += 4)
+        {
+            *((__IO uint32_t*)(&Sensor[i].sensor_type + j)) = *(__IO uint32_t*)FlashAddress;//注意赋值的左边,必须要用结构体第一个成员的地址来偏移,双字偏移量是8
+            FlashAddress += 4;
+        }
+    }
+}
+
+HAL_StatusTypeDef Flash_Erase(){
+    HAL_StatusTypeDef status;
+    // 解锁 Flash
+    HAL_FLASH_Unlock();
+
+    // 擦除 Flash
+    FLASH_EraseInitTypeDef EraseInitStruct;
+    uint32_t PAGEError;
+    EraseInitStruct.TypeErase = FLASH_TYPEERASE_PAGES;
+    EraseInitStruct.PageAddress = SensorInfo_FLASH_ADDRESS;
+    EraseInitStruct.NbPages = 1; // 根据需要存储的数据量调整擦除的页数
+    status = HAL_FLASHEx_Erase(&EraseInitStruct, &PAGEError);
+    // 锁定 Flash
+    HAL_FLASH_Lock();
+
+    return status;
 }
 

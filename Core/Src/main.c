@@ -77,6 +77,7 @@ u8  rx_len = 0;
 u8  rx_buffer[MAX_DATA_LENGTH];
 u8  receiving = 0;
 u8  VM_init = 0;
+u8  Cmd = 0;
 u16 ADC_Value[ADC_CHANCEL_NUM];
 int16_t Temp_Value[ADC_CHANCEL_NUM];
 u8  BleBuf[MAX_DATA_LENGTH];
@@ -131,7 +132,9 @@ int main(void)
   HAL_UART_Receive_IT(&huart2, &rxdata, 1);
   HAL_UART_Receive_IT(&huart5, &rxdata, 1);
 
-  Flash_Read((uint8_t *)&Sensor, sizeof(SensorInfo[16]));
+  Flash_Read();
+
+    printf("TTM:REN-ISD2190\r\n\0");
 
   /* USER CODE END 2 */
 
@@ -148,7 +151,11 @@ int main(void)
           BleProcess();
       }
 
-      if(!VM_init && !VM_Busy){
+      if(!VM_init){
+          if(VM_Busy){
+              HAL_TIM_Base_Start_IT(&htim2);
+              continue;
+          }
           VM_Busy = 1;
           HAL_TIM_Base_Start_IT(&htim2);
           Init_VM(huart3);
@@ -156,6 +163,19 @@ int main(void)
 
       if (VM_init && Scan_Start) {
           Data_Collect();
+          if (Scan_Start == 0x01)
+              DataSend(BleBuf[4]);
+          if (Scan_Start == 0x03)
+              TotalDataSend();
+          if (Scan_Start == 0x05)
+              ConfigInit();
+
+          Scan_Start = 0;
+      }
+
+      if(VM_ERR && VM_init){
+          VM_ERR = 0;
+          StatuCallback(Cmd, 0x13);
       }
       HAL_Delay(50);
   }

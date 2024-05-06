@@ -12,6 +12,8 @@ u8 tx_buffer[MAX_DATA_LENGTH];
 extern SensorInfo Sensor[16];
 extern u8 BleBuf[MAX_DATA_LENGTH];
 extern u8  rx_len;
+extern u8 Scan_Start;
+extern u8 Cmd;
 
 u16 CRC_Check(uint8_t *CRC_Ptr,uint8_t LEN);
 
@@ -33,6 +35,8 @@ void BleProcess(){
         return;
     }
 
+    Cmd = BleBuf[3];
+
     rx_len = 0;
 
     u16 addr;
@@ -41,10 +45,10 @@ void BleProcess(){
 
     switch (BleBuf[3]) {
         case 0x70:
-            DataSend(BleBuf[4]);
+            Scan_Start = 0x01;
             break;
         case 0x71:
-            TotalDataSend();
+            Scan_Start = 0x03;
             break;
         case 0x60:
             ConfigSend(BleBuf[4]);
@@ -77,20 +81,11 @@ void BleProcess(){
             }
             Sensor[master].channel_size = num;
 
-            uint8_t data[sizeof(SensorInfo[16])];
-            memcpy(data, &Sensor, sizeof(SensorInfo[16]));
-            Flash_Write(data, sizeof(SensorInfo[16]));
+            Flash_Write();
             StatuCallback(0x50, 0xA0);
             break;
         case 0x40:
-            Data_Collect();
-            memcpy(Sensor[BleBuf[4]].init_freq, Sensor[BleBuf[4]].freq, Sensor[BleBuf[4]].channel_size);
-            Sensor[BleBuf[4]].init_temp = Sensor[BleBuf[4]].temp;
-
-            uint8_t data1[sizeof(SensorInfo[16])];
-            memcpy(data1, &Sensor, sizeof(SensorInfo[16]));
-            Flash_Write(data1, sizeof(SensorInfo[16]));
-            StatuCallback(0x50, 0xA0);
+            Scan_Start = 0x05;
             break;
     }
 }
@@ -138,7 +133,7 @@ void TotalConfigSend(){
     tx_buffer[0] = 0xA0;
     tx_buffer[2] = 0x01;
     tx_buffer[3] = 0x61;
-    u8 num = 5;
+    u16 num = 5;
 
     for(u8 i = 0; i < 16; i++) {
         if (Sensor[i].status != 0x01)
@@ -260,6 +255,14 @@ void StatuCallback(u8 cmd, u8 statu){
     tx_buffer[6] = crc & 0xFF;
 
     HAL_UART_Transmit(&huart5, tx_buffer, 7, HAL_MAX_DELAY);
+}
+
+void ConfigInit(){
+    memcpy(Sensor[BleBuf[4] - 1].init_freq, Sensor[BleBuf[4] - 1].freq, Sensor[BleBuf[4] - 1].channel_size * 2);
+    Sensor[BleBuf[4] - 1].init_temp = Sensor[BleBuf[4] - 1].temp;
+
+    Flash_Write();
+    StatuCallback(0x40, 0xA0);
 }
 
 u16 CRC_Check(uint8_t *CRC_Ptr,uint8_t LEN) {

@@ -6,6 +6,7 @@
 #define ISD2190_FLASH_H
 #include "main.h"
 
-HAL_StatusTypeDef Flash_Write(uint8_t *data, uint16_t len);
-void Flash_Read(uint8_t *data, uint16_t len);
+HAL_StatusTypeDef Flash_Write();
+void Flash_Read();
+HAL_StatusTypeDef Flash_Erase();
 #endif //ISD2190_FLASH_H
