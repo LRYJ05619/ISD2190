@@ -71,7 +71,7 @@ void BleProcess(){
                         Sensor[i].sensor_type = BleBuf[9];
                         Sensor[i].para_size = BleBuf[12];
                         for(int j = 0; j < BleBuf[12]; j++){
-                            Sensor[i].para[j] = (int16_t)BleBuf[2 * j + 13] << 8 | BleBuf[2 * j + 14];
+                            Sensor[i].para[j] = (int16_t)BleBuf[2 * j + 13] << 16 | BleBuf[2 * j + 14] << 8 | BleBuf[2 * j + 15];
                         }
                         Sensor[i].status = 0x01;
                     } else{

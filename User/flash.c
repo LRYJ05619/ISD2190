@@ -2,19 +2,16 @@
 // Created by 15569 on 2024/4/11.
 //
 
-#include <string.h>
 #include "flash.h"
 
-//384K flash
-#define SensorInfo_FLASH_ADDRESS (0x0802E800)
+//384K flash 256bit a page
+#define SensorInfo_FLASH_ADDRESS (0x0805F000)
 extern SensorInfo Sensor[16];
 uint32_t data;
 HAL_StatusTypeDef Flash_Write() {
     HAL_StatusTypeDef status;
     uint32_t typeProgram = FLASH_TYPEPROGRAM_WORD;  // 改为字编程
     uint32_t FlashAddress = SensorInfo_FLASH_ADDRESS;
-
-
 
     // 解锁 Flash
     HAL_FLASH_Unlock();
@@ -24,7 +21,7 @@ HAL_StatusTypeDef Flash_Write() {
     uint32_t PAGEError;
     EraseInitStruct.TypeErase = FLASH_TYPEERASE_PAGES;
     EraseInitStruct.PageAddress = SensorInfo_FLASH_ADDRESS;
-    EraseInitStruct.NbPages = 1; // 根据需要存储的数据量调整擦除的页数
+    EraseInitStruct.NbPages = 2; // 根据需要存储的数据量调整擦除的页数
     status = HAL_FLASHEx_Erase(&EraseInitStruct, &PAGEError);
 
     if (status != HAL_OK) {
@@ -73,7 +70,7 @@ HAL_StatusTypeDef Flash_Erase(){
     uint32_t PAGEError;
     EraseInitStruct.TypeErase = FLASH_TYPEERASE_PAGES;
     EraseInitStruct.PageAddress = SensorInfo_FLASH_ADDRESS;
-    EraseInitStruct.NbPages = 1; // 根据需要存储的数据量调整擦除的页数
+    EraseInitStruct.NbPages = 2; // 根据需要存储的数据量调整擦除的页数
     status = HAL_FLASHEx_Erase(&EraseInitStruct, &PAGEError);
     // 锁定 Flash
     HAL_FLASH_Lock();

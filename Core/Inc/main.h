@@ -103,7 +103,7 @@ void Error_Handler(void);
 #define ADC_CHANCEL_NUM 16
 
 typedef struct SensorInfoTypeDef{
-    u16 serial[5];
+    u8 serial[5];
 
     u8 sensor_type; //传感器类型
 

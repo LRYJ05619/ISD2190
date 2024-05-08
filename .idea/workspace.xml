@@ -21,35 +21,61 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="c8e28670-dfba-4e2b-832d-3f7616a4423e" name="更改" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/ISD2190.iml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Core/Inc/main.h" beforeDir="false" afterPath="$PROJECT_DIR$/Core/Inc/main.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Core/Src/main.c" beforeDir="false" afterPath="$PROJECT_DIR$/Core/Src/main.c" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/EWARM/ISD2190.dep" beforeDir="false" afterPath="$PROJECT_DIR$/EWARM/ISD2190.dep" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/EWARM/ISD2190.ewp" beforeDir="false" afterPath="$PROJECT_DIR$/EWARM/ISD2190.ewp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/EWARM/ISD2190.ewt" beforeDir="false" afterPath="$PROJECT_DIR$/EWARM/ISD2190.ewt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/EWARM/ISD2190/Exe/ISD2190.sim" beforeDir="false" afterPath="$PROJECT_DIR$/EWARM/ISD2190/Exe/ISD2190.sim" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/EWARM/ISD2190/Obj/ISD2190.pbd" beforeDir="false" afterPath="$PROJECT_DIR$/EWARM/ISD2190/Obj/ISD2190.pbd" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/EWARM/ISD2190/Obj/ISD2190.pbd.browse" beforeDir="false" afterPath="$PROJECT_DIR$/EWARM/ISD2190/Obj/ISD2190.pbd.browse" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/EWARM/ISD2190/Obj/ISD2190.pbd.linf" beforeDir="false" afterPath="$PROJECT_DIR$/EWARM/ISD2190/Obj/ISD2190.pbd.linf" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/EWARM/ISD2190/Obj/ISD2190.pbw" beforeDir="false" afterPath="$PROJECT_DIR$/EWARM/ISD2190/Obj/ISD2190.pbw" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/EWARM/ISD2190/Obj/adc.o" beforeDir="false" afterPath="$PROJECT_DIR$/EWARM/ISD2190/Obj/adc.o" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/EWARM/ISD2190/Obj/adc.pbi" beforeDir="false" afterPath="$PROJECT_DIR$/EWARM/ISD2190/Obj/adc.pbi" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/EWARM/ISD2190/Obj/dma.o" beforeDir="false" afterPath="$PROJECT_DIR$/EWARM/ISD2190/Obj/dma.o" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/EWARM/ISD2190/Obj/dma.pbi" beforeDir="false" afterPath="$PROJECT_DIR$/EWARM/ISD2190/Obj/dma.pbi" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/EWARM/ISD2190/Obj/gpio.o" beforeDir="false" afterPath="$PROJECT_DIR$/EWARM/ISD2190/Obj/gpio.o" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/EWARM/ISD2190/Obj/gpio.pbi" beforeDir="false" afterPath="$PROJECT_DIR$/EWARM/ISD2190/Obj/gpio.pbi" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/EWARM/ISD2190/Obj/main.o" beforeDir="false" afterPath="$PROJECT_DIR$/EWARM/ISD2190/Obj/main.o" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/EWARM/ISD2190/Obj/main.pbi" beforeDir="false" afterPath="$PROJECT_DIR$/EWARM/ISD2190/Obj/main.pbi" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/EWARM/ISD2190/Obj/stm32l1xx_hal_msp.o" beforeDir="false" afterPath="$PROJECT_DIR$/EWARM/ISD2190/Obj/stm32l1xx_hal_msp.o" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/EWARM/ISD2190/Obj/stm32l1xx_hal_msp.pbi" beforeDir="false" afterPath="$PROJECT_DIR$/EWARM/ISD2190/Obj/stm32l1xx_hal_msp.pbi" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/EWARM/ISD2190/Obj/stm32l1xx_it.o" beforeDir="false" afterPath="$PROJECT_DIR$/EWARM/ISD2190/Obj/stm32l1xx_it.o" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/EWARM/ISD2190/Obj/stm32l1xx_it.pbi" beforeDir="false" afterPath="$PROJECT_DIR$/EWARM/ISD2190/Obj/stm32l1xx_it.pbi" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/EWARM/ISD2190/Obj/temp.o" beforeDir="false" afterPath="$PROJECT_DIR$/EWARM/ISD2190/Obj/temp.o" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/EWARM/ISD2190/Obj/temp.pbi" beforeDir="false" afterPath="$PROJECT_DIR$/EWARM/ISD2190/Obj/temp.pbi" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/EWARM/ISD2190/Obj/tim.o" beforeDir="false" afterPath="$PROJECT_DIR$/EWARM/ISD2190/Obj/tim.o" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/EWARM/ISD2190/Obj/tim.pbi" beforeDir="false" afterPath="$PROJECT_DIR$/EWARM/ISD2190/Obj/tim.pbi" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/EWARM/ISD2190/Obj/usart.o" beforeDir="false" afterPath="$PROJECT_DIR$/EWARM/ISD2190/Obj/usart.o" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/EWARM/ISD2190/Obj/usart.pbi" beforeDir="false" afterPath="$PROJECT_DIR$/EWARM/ISD2190/Obj/usart.pbi" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/EWARM/ISD2190/Obj/vm608.pbi" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/EWARM/settings/ISD2190.dbgdt" beforeDir="false" afterPath="$PROJECT_DIR$/EWARM/settings/ISD2190.dbgdt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/EWARM/settings/ISD2190.dnx" beforeDir="false" afterPath="$PROJECT_DIR$/EWARM/settings/ISD2190.dnx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/EWARM/settings/Project.wsdt" beforeDir="false" afterPath="$PROJECT_DIR$/EWARM/settings/Project.wsdt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/User/CollectData.c" beforeDir="false" afterPath="$PROJECT_DIR$/User/CollectData.c" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/User/bt4531.c" beforeDir="false" afterPath="$PROJECT_DIR$/User/bt4531.c" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/User/hardware.c" beforeDir="false" afterPath="$PROJECT_DIR$/User/hardware.c" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/User/hardware.h" beforeDir="false" afterPath="$PROJECT_DIR$/User/hardware.h" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/.cmake/api/v1/reply/cache-v2-0bb4d87e36b727dbaf80.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/.cmake/api/v1/reply/cmakeFiles-v1-24c9ccf1f6e36f3579a1.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/.cmake/api/v1/reply/index-2024-04-15T06-17-09-0828.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/User/flash.c" beforeDir="false" afterPath="$PROJECT_DIR$/User/flash.c" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/.cmake/api/v1/reply/cache-v2-080a649b76a38fac7b5b.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/.cmake/api/v1/reply/cmakeFiles-v1-75403269b2ee1e8383e0.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/.cmake/api/v1/reply/codemodel-v2-e054c8233cc5c0876879.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/.cmake/api/v1/reply/index-2024-05-05T22-15-16-0841.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/.cmake/api/v1/reply/target-ISD2190.elf-Debug-ec14960c5bcc6662d3dc.json" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/cmake-build-debug/.ninja_deps" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/.ninja_deps" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/cmake-build-debug/.ninja_log" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/.ninja_log" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeCache.txt" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeCache.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/3.27.8/CMakeASMCompiler.cmake" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/3.27.8/CMakeCCompiler.cmake" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/3.27.8/CMakeCXXCompiler.cmake" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/3.27.8/CMakeDetermineCompilerABI_C.bin" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/3.27.8/CMakeDetermineCompilerABI_CXX.bin" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/3.27.8/CMakeSystem.cmake" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/3.27.8/CompilerIdC/CMakeCCompilerId.c" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/3.27.8/CompilerIdC/CMakeCCompilerId.o" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/3.27.8/CompilerIdCXX/CMakeCXXCompilerId.cpp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/3.27.8/CompilerIdCXX/CMakeCXXCompilerId.o" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/3.28.1/CMakeASMCompiler.cmake" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/3.28.1/CMakeCCompiler.cmake" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/3.28.1/CMakeCXXCompiler.cmake" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/3.28.1/CMakeDetermineCompilerABI_C.bin" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/3.28.1/CMakeDetermineCompilerABI_CXX.bin" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/3.28.1/CMakeSystem.cmake" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/3.28.1/CompilerIdC/CMakeCCompilerId.c" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/3.28.1/CompilerIdC/CMakeCCompilerId.o" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/3.28.1/CompilerIdCXX/CMakeCXXCompilerId.cpp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/3.28.1/CompilerIdCXX/CMakeCXXCompilerId.o" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/CMakeConfigureLog.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/CMakeConfigureLog.yaml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/ISD2190.elf.dir/Core/Src/main.c.obj" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/ISD2190.elf.dir/Core/Src/main.c.obj" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/ISD2190.elf.dir/User/CollectData.c.obj" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/ISD2190.elf.dir/User/CollectData.c.obj" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/ISD2190.elf.dir/User/bt4531.c.obj" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/ISD2190.elf.dir/User/bt4531.c.obj" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/ISD2190.elf.dir/User/hardware.c.obj" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/ISD2190.elf.dir/User/hardware.c.obj" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/clion-Debug-log.txt" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/clion-Debug-log.txt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/clion-environment.txt" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/clion-environment.txt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/rules.ninja" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/rules.ninja" afterDir="false" />
@@ -58,6 +84,7 @@
       <change beforePath="$PROJECT_DIR$/cmake-build-debug/ISD2190.hex" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/ISD2190.hex" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/cmake-build-debug/ISD2190.map" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/ISD2190.map" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/cmake-build-debug/build.ninja" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/build.ninja" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/蓝牙协议拟制.xlsx" beforeDir="false" afterPath="$PROJECT_DIR$/蓝牙协议拟制.xlsx" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -66,6 +93,22 @@
   </component>
   <component name="ClangdSettings">
     <option name="formatViaClangd" value="false" />
+  </component>
+  <component name="EmbeddedSvdWindowState">
+    <option name="columnWidths">
+      <list>
+        <option value="212" />
+        <option value="92" />
+        <option value="2126" />
+      </list>
+    </option>
+    <option name="columnOrder">
+      <list>
+        <option value="名称" />
+        <option value="值" />
+        <option value="描述" />
+      </list>
+    </option>
   </component>
   <component name="ExecutionTargetManager" SELECTED_TARGET="CMakeBuildProfile:Debug" />
   <component name="Git.Settings">
@@ -107,7 +150,7 @@
     "cidr.known.project.marker": "true",
     "git-widget-placeholder": "master",
     "ignore.virus.scanning.warn.message": "true",
-    "last_opened_file_path": "C:/Users/15569/Desktop/ISD2190",
+    "last_opened_file_path": "C:/Users/15569/Desktop/云平台测试/ISD2190/Core/Src/main.c",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.tslint": "true",
     "node.js.selected.package.eslint": "(autodetect)",
@@ -118,6 +161,7 @@
     "run.code.analysis.last.selected.profile": "pProject Default",
     "settings.editor.selected.configurable": "editor.preferences.gutterIcons",
     "structure.view.defaults.are.configured": "true",
+    "two.files.diff.last.used.file": "C:/Users/15569/Desktop/云平台测试/ISD2190/Core/Src/main.c",
     "vue.rearranger.settings.migration": "true"
   }
 }]]></component>
@@ -127,11 +171,6 @@
     </key>
   </component>
   <component name="RunManager" selected="OpenOCD 下载并运行.ISD2190">
-    <configuration default="true" type="CLionExternalRunConfiguration" factoryName="Application" REDIRECT_INPUT="false" ELEVATE="false" USE_EXTERNAL_CONSOLE="false" EMULATE_TERMINAL="false" PASS_PARENT_ENVS_2="true">
-      <method v="2">
-        <option name="CLION.EXTERNAL.BUILD" enabled="true" />
-      </method>
-    </configuration>
     <configuration name="ISD2190.elf" type="CMakeRunConfiguration" factoryName="Application" REDIRECT_INPUT="false" ELEVATE="false" USE_EXTERNAL_CONSOLE="false" EMULATE_TERMINAL="false" PASS_PARENT_ENVS_2="true" PROJECT_NAME="ISD2190" TARGET_NAME="ISD2190.elf" CONFIG_NAME="Debug" RUN_TARGET_PROJECT_NAME="ISD2190" RUN_TARGET_NAME="ISD2190.elf">
       <method v="2">
         <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
@@ -200,6 +239,7 @@
       <workItem from="1713388510480" duration="2704000" />
       <workItem from="1713710075905" duration="6000" />
       <workItem from="1714947313935" duration="2639000" />
+      <workItem from="1714963542746" duration="12535000" />
     </task>
     <servers />
   </component>
@@ -216,29 +256,11 @@
     <option name="LAST_COMMIT_MESSAGE" value="4.13" />
   </component>
   <component name="XDebuggerManager">
-    <breakpoint-manager>
-      <breakpoints>
-        <line-breakpoint enabled="true" type="com.jetbrains.cidr.execution.debugger.OCBreakpointType">
-          <url>file://$PROJECT_DIR$/Core/Src/main.c</url>
-          <line>147</line>
-          <option name="timeStamp" value="1" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="com.jetbrains.cidr.execution.debugger.OCBreakpointType">
-          <url>file://$PROJECT_DIR$/User/bt4531.c</url>
-          <line>55</line>
-          <option name="timeStamp" value="2" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="com.jetbrains.cidr.execution.debugger.OCBreakpointType">
-          <url>file://$PROJECT_DIR$/User/bt4531.c</url>
-          <line>82</line>
-          <option name="timeStamp" value="3" />
-        </line-breakpoint>
-      </breakpoints>
-    </breakpoint-manager>
     <watches-manager>
       <configuration name="com.jetbrains.cidr.embedded.openocd.conf.type">
         <watch expression="BleBuf" language="ObjectiveC" />
         <watch expression="tx_buffer" language="ObjectiveC" />
+        <watch expression="Sensor" language="ObjectiveC" />
       </configuration>
     </watches-manager>
   </component>

@@ -131,10 +131,10 @@ int main(void)
   HAL_UART_Receive_IT(&huart3, &rxdata, 1);
   HAL_UART_Receive_IT(&huart2, &rxdata, 1);
   HAL_UART_Receive_IT(&huart5, &rxdata, 1);
-
+//  Flash_Erase();
   Flash_Read();
 
-    printf("TTM:REN-ISD2190\r\n\0");
+  printf("TTM:REN-ISD2190\r\n\0");
 
   /* USER CODE END 2 */
 

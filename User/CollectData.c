@@ -56,31 +56,36 @@ void Data_Collect(){
     }
     memset(rx_buffer, 0, MAX_DATA_LENGTH);
 
-    HAL_TIM_Base_Start_IT(&htim2);
-    Scan_VM(huart2);
-    VM_Busy = 1;
-    while (VM_Busy && !restart) {
-        if (VM_ERR) {
-            restart = 1;
-            break;
-        }
-    }
-    if (restart) {
-        VM_init = 0;
-        StatuCallback(0x70, 0x13);
-        return;
-    }
+//    HAL_TIM_Base_Start_IT(&htim2);
+//    Scan_VM(huart2);
+//    VM_Busy = 1;
+//    while (VM_Busy && !restart) {
+//        if (VM_ERR) {
+//            restart = 1;
+//            break;
+//        }
+//    }
+//    if (restart) {
+//        VM_init = 0;
+//        StatuCallback(0x70, 0x13);
+//        return;
+//    }
+//
+//    for (u8 i = 4; i < 20; i += 2) {
+//        // 合并频率值
+//        Sensor[i / 2 - 2].freq[0] = ((uint16_t)rx_buffer[i] << 8) | rx_buffer[i + 1];
+//    }
+//    memset(rx_buffer, 0, MAX_DATA_LENGTH);
 
-    for (u8 i = 4; i < 20; i += 2) {
-        // 合并频率值
-        Sensor[i / 2 - 2].freq[0] = ((uint16_t)rx_buffer[i] << 8) | rx_buffer[i + 1];
-    }
-    memset(rx_buffer, 0, MAX_DATA_LENGTH);
-
-    HAL_TIM_Base_Start_IT(&htim2);
     HAL_ADC_Start_DMA(&hadc, (uint32_t *) ADC_Value, ADC_CHANCEL_NUM);
-    ADC_Busy = 1;
-    while (ADC_Busy);
+    HAL_Delay(200);
+//    ADC_Busy = 1;
+//    while (ADC_Busy && !restart) {
+//        if (VM_ERR) {
+//            restart = 1;
+//            break;
+//        }
+//    }
 
     calcuTemps(ADC_Value, Temp_Value, ADC_CHANCEL_NUM);
 
@@ -120,11 +125,11 @@ void Data_Collect(){
 
 u8 lastbuf;
 void HAL_UART_RxCpltCallback(UART_HandleTypeDef *huart){
-    lastbuf = rxdata;
     //VM模块
     if(huart->Instance == USART3 || huart->Instance == USART2){
-        if(0xBB == rxdata && 0xAA == lastbuf){
+        if((0xBB == rxdata && 0xAA == lastbuf) || (0xAA == rxdata && 0xAA == lastbuf)){
             receiving = 1;
+            rx_check += 0xAA;
             rx_buffer[rx_index++] = 0xAA;
         }
         if(receiving){
@@ -136,7 +141,7 @@ void HAL_UART_RxCpltCallback(UART_HandleTypeDef *huart){
                         memset(rx_buffer, 0, MAX_DATA_LENGTH);
                     }
                     if (0x73 == rx_buffer[3]) {
-                        Scan_Start = 0;
+
                     }
                     rx_index = 0;
                     receiving = 0;
@@ -163,20 +168,23 @@ void HAL_UART_RxCpltCallback(UART_HandleTypeDef *huart){
         HAL_TIM_Base_Start_IT(&htim3);
         HAL_UART_Receive_IT(&huart5, &rxdata, 1);
     }
+    lastbuf = rxdata;
 };
 void HAL_ADC_ConvCpltCallback(ADC_HandleTypeDef *hadc){
     if(hadc->Instance == ADC1) {
-        ADC_Busy = 0;
         HAL_TIM_Base_Stop_IT(&htim2);
+        __HAL_TIM_SET_COUNTER(&htim2,0);
+        ADC_Busy = 0;
     }
 }
 
 void HAL_TIM_PeriodElapsedCallback(TIM_HandleTypeDef *htim){
     if(htim->Instance == TIM2){
+        HAL_TIM_Base_Stop_IT(&htim2);
         __HAL_TIM_SET_COUNTER(&htim2,0);
-        HAL_TIM_Base_Start_IT(&htim2);
         VM_ERR = 1;
         VM_Busy = 0;
+        ADC_Busy = 0;
         VM_init = 0;
         Scan_Start = 0;
         rx_index = 0;

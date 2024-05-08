@@ -1216,6 +1216,9 @@
                     <name>$PROJ_DIR$\..\Core\Src\stm32l1xx_it.c</name>
                 </file>
                 <file>
+                    <name>$PROJ_DIR$\..\Core\Src\tim.c</name>
+                </file>
+                <file>
                     <name>$PROJ_DIR$\..\Core\Src\usart.c</name>
                 </file>
             </group>
@@ -1287,16 +1290,40 @@
     <group>
         <name>User</name>
         <file>
+            <name>$PROJ_DIR$\..\User\bt4531.c</name>
+        </file>
+        <file>
+            <name>$PROJ_DIR$\..\User\bt4531.h</name>
+        </file>
+        <file>
+            <name>$PROJ_DIR$\..\User\CollectData.c</name>
+        </file>
+        <file>
+            <name>$PROJ_DIR$\..\User\CollectData.h</name>
+        </file>
+        <file>
+            <name>$PROJ_DIR$\..\User\flash.c</name>
+        </file>
+        <file>
+            <name>$PROJ_DIR$\..\User\flash.h</name>
+        </file>
+        <file>
+            <name>$PROJ_DIR$\..\User\hardware.c</name>
+        </file>
+        <file>
+            <name>$PROJ_DIR$\..\User\hardware.h</name>
+        </file>
+        <file>
             <name>$PROJ_DIR$\..\User\temp.c</name>
         </file>
         <file>
             <name>$PROJ_DIR$\..\User\temp.h</name>
         </file>
         <file>
-            <name>$PROJ_DIR$\..\User\vm608.c</name>
+            <name>$PROJ_DIR$\..\User\VMxx.c</name>
         </file>
         <file>
-            <name>$PROJ_DIR$\..\User\vm608.h</name>
+            <name>$PROJ_DIR$\..\User\VMxx.h</name>
         </file>
     </group>
 </project>
