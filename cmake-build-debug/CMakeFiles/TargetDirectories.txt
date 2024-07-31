@@ -1,3 +1,0 @@
-C:/Users/15569/Desktop/ISD2190/cmake-build-debug/CMakeFiles/ISD2190.elf.dir
-C:/Users/15569/Desktop/ISD2190/cmake-build-debug/CMakeFiles/edit_cache.dir
-C:/Users/15569/Desktop/ISD2190/cmake-build-debug/CMakeFiles/rebuild_cache.dir

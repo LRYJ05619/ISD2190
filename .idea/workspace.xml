@@ -22,68 +22,83 @@
   <component name="ChangeListManager">
     <list default="true" id="c8e28670-dfba-4e2b-832d-3f7616a4423e" name="更改" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Core/Inc/main.h" beforeDir="false" afterPath="$PROJECT_DIR$/Core/Inc/main.h" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Core/Src/main.c" beforeDir="false" afterPath="$PROJECT_DIR$/Core/Src/main.c" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/EWARM/ISD2190.dep" beforeDir="false" afterPath="$PROJECT_DIR$/EWARM/ISD2190.dep" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/EWARM/ISD2190.ewp" beforeDir="false" afterPath="$PROJECT_DIR$/EWARM/ISD2190.ewp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/EWARM/ISD2190.ewt" beforeDir="false" afterPath="$PROJECT_DIR$/EWARM/ISD2190.ewt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/EWARM/ISD2190/Exe/ISD2190.sim" beforeDir="false" afterPath="$PROJECT_DIR$/EWARM/ISD2190/Exe/ISD2190.sim" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/EWARM/ISD2190/Obj/ISD2190.pbd" beforeDir="false" afterPath="$PROJECT_DIR$/EWARM/ISD2190/Obj/ISD2190.pbd" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/EWARM/ISD2190/Obj/ISD2190.pbd.browse" beforeDir="false" afterPath="$PROJECT_DIR$/EWARM/ISD2190/Obj/ISD2190.pbd.browse" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/EWARM/ISD2190/Obj/ISD2190.pbd.linf" beforeDir="false" afterPath="$PROJECT_DIR$/EWARM/ISD2190/Obj/ISD2190.pbd.linf" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/EWARM/ISD2190/Obj/ISD2190.pbw" beforeDir="false" afterPath="$PROJECT_DIR$/EWARM/ISD2190/Obj/ISD2190.pbw" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/EWARM/ISD2190/Obj/adc.o" beforeDir="false" afterPath="$PROJECT_DIR$/EWARM/ISD2190/Obj/adc.o" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/EWARM/ISD2190/Obj/adc.pbi" beforeDir="false" afterPath="$PROJECT_DIR$/EWARM/ISD2190/Obj/adc.pbi" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/EWARM/ISD2190/Obj/dma.o" beforeDir="false" afterPath="$PROJECT_DIR$/EWARM/ISD2190/Obj/dma.o" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/EWARM/ISD2190/Obj/dma.pbi" beforeDir="false" afterPath="$PROJECT_DIR$/EWARM/ISD2190/Obj/dma.pbi" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/EWARM/ISD2190/Obj/gpio.o" beforeDir="false" afterPath="$PROJECT_DIR$/EWARM/ISD2190/Obj/gpio.o" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/EWARM/ISD2190/Obj/gpio.pbi" beforeDir="false" afterPath="$PROJECT_DIR$/EWARM/ISD2190/Obj/gpio.pbi" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/EWARM/ISD2190/Obj/main.o" beforeDir="false" afterPath="$PROJECT_DIR$/EWARM/ISD2190/Obj/main.o" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/EWARM/ISD2190/Obj/main.pbi" beforeDir="false" afterPath="$PROJECT_DIR$/EWARM/ISD2190/Obj/main.pbi" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/EWARM/ISD2190/Obj/stm32l1xx_hal_msp.o" beforeDir="false" afterPath="$PROJECT_DIR$/EWARM/ISD2190/Obj/stm32l1xx_hal_msp.o" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/EWARM/ISD2190/Obj/stm32l1xx_hal_msp.pbi" beforeDir="false" afterPath="$PROJECT_DIR$/EWARM/ISD2190/Obj/stm32l1xx_hal_msp.pbi" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/EWARM/ISD2190/Obj/stm32l1xx_it.o" beforeDir="false" afterPath="$PROJECT_DIR$/EWARM/ISD2190/Obj/stm32l1xx_it.o" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/EWARM/ISD2190/Obj/stm32l1xx_it.pbi" beforeDir="false" afterPath="$PROJECT_DIR$/EWARM/ISD2190/Obj/stm32l1xx_it.pbi" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/EWARM/ISD2190/Obj/temp.o" beforeDir="false" afterPath="$PROJECT_DIR$/EWARM/ISD2190/Obj/temp.o" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/EWARM/ISD2190/Obj/temp.pbi" beforeDir="false" afterPath="$PROJECT_DIR$/EWARM/ISD2190/Obj/temp.pbi" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/EWARM/ISD2190/Obj/tim.o" beforeDir="false" afterPath="$PROJECT_DIR$/EWARM/ISD2190/Obj/tim.o" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/EWARM/ISD2190/Obj/tim.pbi" beforeDir="false" afterPath="$PROJECT_DIR$/EWARM/ISD2190/Obj/tim.pbi" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/EWARM/ISD2190/Obj/usart.o" beforeDir="false" afterPath="$PROJECT_DIR$/EWARM/ISD2190/Obj/usart.o" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/EWARM/ISD2190/Obj/usart.pbi" beforeDir="false" afterPath="$PROJECT_DIR$/EWARM/ISD2190/Obj/usart.pbi" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/EWARM/ISD2190/Obj/vm608.pbi" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/EWARM/settings/ISD2190.dbgdt" beforeDir="false" afterPath="$PROJECT_DIR$/EWARM/settings/ISD2190.dbgdt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/EWARM/settings/ISD2190.dnx" beforeDir="false" afterPath="$PROJECT_DIR$/EWARM/settings/ISD2190.dnx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/EWARM/settings/Project.wsdt" beforeDir="false" afterPath="$PROJECT_DIR$/EWARM/settings/Project.wsdt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/User/CollectData.c" beforeDir="false" afterPath="$PROJECT_DIR$/User/CollectData.c" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/User/bt4531.c" beforeDir="false" afterPath="$PROJECT_DIR$/User/bt4531.c" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/User/flash.c" beforeDir="false" afterPath="$PROJECT_DIR$/User/flash.c" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/.cmake/api/v1/reply/cache-v2-080a649b76a38fac7b5b.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/.cmake/api/v1/reply/cmakeFiles-v1-75403269b2ee1e8383e0.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/.cmake/api/v1/reply/codemodel-v2-e054c8233cc5c0876879.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/.cmake/api/v1/reply/index-2024-05-05T22-15-16-0841.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/.cmake/api/v1/reply/target-ISD2190.elf-Debug-ec14960c5bcc6662d3dc.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/.ninja_deps" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/.ninja_deps" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/.ninja_log" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/.ninja_log" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeCache.txt" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeCache.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/3.28.1/CMakeASMCompiler.cmake" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/3.28.1/CMakeCCompiler.cmake" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/3.28.1/CMakeCXXCompiler.cmake" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/3.28.1/CMakeDetermineCompilerABI_C.bin" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/3.28.1/CMakeDetermineCompilerABI_CXX.bin" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/3.28.1/CMakeSystem.cmake" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/3.28.1/CompilerIdC/CMakeCCompilerId.c" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/3.28.1/CompilerIdC/CMakeCCompilerId.o" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/3.28.1/CompilerIdCXX/CMakeCXXCompilerId.cpp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/3.28.1/CompilerIdCXX/CMakeCXXCompilerId.o" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/CMakeConfigureLog.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/CMakeConfigureLog.yaml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/clion-Debug-log.txt" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/clion-Debug-log.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/clion-environment.txt" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/clion-environment.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/rules.ninja" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/rules.ninja" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/ISD2190.bin" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/ISD2190.bin" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/ISD2190.elf" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/ISD2190.elf" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/ISD2190.hex" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/ISD2190.hex" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/ISD2190.map" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/ISD2190.map" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/build.ninja" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/build.ninja" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/User/hardware.c" beforeDir="false" afterPath="$PROJECT_DIR$/User/hardware.c" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/.cmake/api/v1/query/cache-v2" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/.cmake/api/v1/query/cmakeFiles-v1" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/.cmake/api/v1/query/codemodel-v2" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/.cmake/api/v1/query/toolchains-v1" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/.cmake/api/v1/reply/cache-v2-6b7fa981b3a67803a727.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/.cmake/api/v1/reply/cmakeFiles-v1-c40db1c429511345add1.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/.cmake/api/v1/reply/codemodel-v2-ca929871734fd38c0e0b.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/.cmake/api/v1/reply/directory-.-Debug-d0094a50bb2071803777.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/.cmake/api/v1/reply/index-2024-05-06T01-21-08-0258.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/.cmake/api/v1/reply/target-ISD2190.elf-Debug-b75a0d4d853e27ce7083.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/.cmake/api/v1/reply/toolchains-v1-f9ecdff76dca78e13651.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/.ninja_deps" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/.ninja_log" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeCache.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/3.27.8/CMakeASMCompiler.cmake" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/3.27.8/CMakeCCompiler.cmake" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/3.27.8/CMakeCXXCompiler.cmake" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/3.27.8/CMakeDetermineCompilerABI_C.bin" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/3.27.8/CMakeDetermineCompilerABI_CXX.bin" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/3.27.8/CMakeSystem.cmake" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/3.27.8/CompilerIdC/CMakeCCompilerId.c" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/3.27.8/CompilerIdC/CMakeCCompilerId.o" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/3.27.8/CompilerIdCXX/CMakeCXXCompilerId.cpp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/3.27.8/CompilerIdCXX/CMakeCXXCompilerId.o" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/CMakeConfigureLog.yaml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/ISD2190.elf.dir/Core/Src/adc.c.obj" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/ISD2190.elf.dir/Core/Src/dma.c.obj" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/ISD2190.elf.dir/Core/Src/gpio.c.obj" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/ISD2190.elf.dir/Core/Src/iwdg.c.obj" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/ISD2190.elf.dir/Core/Src/main.c.obj" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/ISD2190.elf.dir/Core/Src/stm32l1xx_hal_msp.c.obj" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/ISD2190.elf.dir/Core/Src/stm32l1xx_it.c.obj" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/ISD2190.elf.dir/Core/Src/syscalls.c.obj" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/ISD2190.elf.dir/Core/Src/sysmem.c.obj" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/ISD2190.elf.dir/Core/Src/system_stm32l1xx.c.obj" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/ISD2190.elf.dir/Core/Src/tim.c.obj" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/ISD2190.elf.dir/Core/Src/usart.c.obj" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/ISD2190.elf.dir/Core/Startup/startup_stm32l151rdtx.s.obj" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/ISD2190.elf.dir/Drivers/STM32L1xx_HAL_Driver/Src/stm32l1xx_hal.c.obj" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/ISD2190.elf.dir/Drivers/STM32L1xx_HAL_Driver/Src/stm32l1xx_hal_adc.c.obj" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/ISD2190.elf.dir/Drivers/STM32L1xx_HAL_Driver/Src/stm32l1xx_hal_adc_ex.c.obj" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/ISD2190.elf.dir/Drivers/STM32L1xx_HAL_Driver/Src/stm32l1xx_hal_cortex.c.obj" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/ISD2190.elf.dir/Drivers/STM32L1xx_HAL_Driver/Src/stm32l1xx_hal_dma.c.obj" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/ISD2190.elf.dir/Drivers/STM32L1xx_HAL_Driver/Src/stm32l1xx_hal_exti.c.obj" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/ISD2190.elf.dir/Drivers/STM32L1xx_HAL_Driver/Src/stm32l1xx_hal_flash.c.obj" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/ISD2190.elf.dir/Drivers/STM32L1xx_HAL_Driver/Src/stm32l1xx_hal_flash_ex.c.obj" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/ISD2190.elf.dir/Drivers/STM32L1xx_HAL_Driver/Src/stm32l1xx_hal_flash_ramfunc.c.obj" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/ISD2190.elf.dir/Drivers/STM32L1xx_HAL_Driver/Src/stm32l1xx_hal_gpio.c.obj" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/ISD2190.elf.dir/Drivers/STM32L1xx_HAL_Driver/Src/stm32l1xx_hal_iwdg.c.obj" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/ISD2190.elf.dir/Drivers/STM32L1xx_HAL_Driver/Src/stm32l1xx_hal_pwr.c.obj" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/ISD2190.elf.dir/Drivers/STM32L1xx_HAL_Driver/Src/stm32l1xx_hal_pwr_ex.c.obj" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/ISD2190.elf.dir/Drivers/STM32L1xx_HAL_Driver/Src/stm32l1xx_hal_rcc.c.obj" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/ISD2190.elf.dir/Drivers/STM32L1xx_HAL_Driver/Src/stm32l1xx_hal_rcc_ex.c.obj" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/ISD2190.elf.dir/Drivers/STM32L1xx_HAL_Driver/Src/stm32l1xx_hal_tim.c.obj" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/ISD2190.elf.dir/Drivers/STM32L1xx_HAL_Driver/Src/stm32l1xx_hal_tim_ex.c.obj" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/ISD2190.elf.dir/Drivers/STM32L1xx_HAL_Driver/Src/stm32l1xx_hal_uart.c.obj" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/ISD2190.elf.dir/User/CollectData.c.obj" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/ISD2190.elf.dir/User/VMxx.c.obj" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/ISD2190.elf.dir/User/bt4531.c.obj" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/ISD2190.elf.dir/User/flash.c.obj" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/ISD2190.elf.dir/User/hardware.c.obj" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/ISD2190.elf.dir/User/temp.c.obj" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/TargetDirectories.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/clion-Debug-log.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/clion-environment.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/cmake.check_cache" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/rules.ninja" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/ISD2190.bin" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/ISD2190.elf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/ISD2190.hex" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/ISD2190.map" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/Testing/Temporary/LastTest.log" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/build.ninja" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/cmake_install.cmake" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/蓝牙协议拟制.xlsx" beforeDir="false" afterPath="$PROJECT_DIR$/蓝牙协议拟制.xlsx" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -150,7 +165,7 @@
     "cidr.known.project.marker": "true",
     "git-widget-placeholder": "master",
     "ignore.virus.scanning.warn.message": "true",
-    "last_opened_file_path": "C:/Users/15569/Desktop/云平台测试/ISD2190/Core/Src/main.c",
+    "last_opened_file_path": "C:/Users/15569/Desktop/IAT302",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.tslint": "true",
     "node.js.selected.package.eslint": "(autodetect)",
@@ -171,6 +186,11 @@
     </key>
   </component>
   <component name="RunManager" selected="OpenOCD 下载并运行.ISD2190">
+    <configuration default="true" type="CLionExternalRunConfiguration" factoryName="Application" REDIRECT_INPUT="false" ELEVATE="false" USE_EXTERNAL_CONSOLE="false" EMULATE_TERMINAL="false" PASS_PARENT_ENVS_2="true">
+      <method v="2">
+        <option name="CLION.EXTERNAL.BUILD" enabled="true" />
+      </method>
+    </configuration>
     <configuration name="ISD2190.elf" type="CMakeRunConfiguration" factoryName="Application" REDIRECT_INPUT="false" ELEVATE="false" USE_EXTERNAL_CONSOLE="false" EMULATE_TERMINAL="false" PASS_PARENT_ENVS_2="true" PROJECT_NAME="ISD2190" TARGET_NAME="ISD2190.elf" CONFIG_NAME="Debug" RUN_TARGET_PROJECT_NAME="ISD2190" RUN_TARGET_NAME="ISD2190.elf">
       <method v="2">
         <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
@@ -240,6 +260,18 @@
       <workItem from="1713710075905" duration="6000" />
       <workItem from="1714947313935" duration="2639000" />
       <workItem from="1714963542746" duration="12535000" />
+      <workItem from="1715219656405" duration="1552000" />
+      <workItem from="1716175024906" duration="229000" />
+      <workItem from="1716521835196" duration="456000" />
+      <workItem from="1716860995149" duration="240000" />
+      <workItem from="1717035635310" duration="35000" />
+      <workItem from="1717035755782" duration="2435000" />
+      <workItem from="1718068381598" duration="37000" />
+      <workItem from="1721036512698" duration="310000" />
+      <workItem from="1721286826213" duration="1351000" />
+      <workItem from="1721716738729" duration="707000" />
+      <workItem from="1722330269233" duration="3042000" />
+      <workItem from="1722391189619" duration="1968000" />
     </task>
     <servers />
   </component>

@@ -90,3 +90,5 @@ float MSJ_YL_KN(u16* init_freq, u8 init_temp, u16* freq, u8 temp, u8 size, int32
     YB_Change = k * (a * 0.0001) * (YB - init_YB) - (b * 0.0001) + F * (temp - init_temp);
     return YB_Change;
 }
+
+
