@@ -36,6 +36,10 @@ extern SensorInfo Sensor[16];
 void Data_Collect() {
     HAL_TIM_Base_Start_IT(&htim2);
     Scan_VM(huart3);
+
+    Scan_VM(huart2);
+
+
     VM_Busy = 1;
     while (VM_Busy && !restart) {
         if (VM_ERR) {
