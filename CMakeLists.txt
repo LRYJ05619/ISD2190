@@ -49,11 +49,11 @@ else ()
     add_compile_options(-Og -g)
 endif ()
 
-include_directories(Core/Inc Drivers/STM32L1xx_HAL_Driver/Inc Drivers/STM32L1xx_HAL_Driver/Inc/Legacy Drivers/CMSIS/Device/ST/STM32L1xx/Include Drivers/CMSIS/Include User)
+include_directories(Core/Inc Drivers/STM32L1xx_HAL_Driver/Inc Drivers/STM32L1xx_HAL_Driver/Inc/Legacy Drivers/CMSIS/Device/ST/STM32L1xx/Include Drivers/CMSIS/Include Middlewares/Third_Party/FreeRTOS/Source/include Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS Middlewares/Third_Party/FreeRTOS/Source/portable/GCC/ARM_CM3 User)
 
 add_definitions(-DDEBUG -DUSE_HAL_DRIVER -DSTM32L151xD)
 
-file(GLOB_RECURSE SOURCES "Core/*.*" "Drivers/*.*" "User/*.*")
+file(GLOB_RECURSE SOURCES "Core/*.*" "Middlewares/*.*" "Drivers/*.*" "User/*.*")
 
 set(LINKER_SCRIPT ${CMAKE_SOURCE_DIR}/STM32L151RDTX_FLASH.ld)
 

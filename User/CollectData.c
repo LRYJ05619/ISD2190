@@ -12,6 +12,9 @@
 #include "hardware.h"
 #include "temp.h"
 #include "bt4531.h"
+#include "portmacro.h"
+#include "FreeRTOS.h"
+#include "queue.h"
 
 extern volatile u8 VM_Busy;
 extern volatile u8 VM_ERR;
@@ -20,18 +23,21 @@ extern volatile u8 restart;
 
 extern u8 ble_flag;
 extern u8 rxdata;
-extern u8 rx_check;
-extern u8 rx_index;
+
 extern u8 rx_len;
 extern u8 rx_buffer[MAX_DATA_LENGTH];
 
-extern u8 receiving;
+
 extern u8 VM_init;
 
 extern u16 ADC_Value[ADC_CHANCEL_NUM];
 extern int8_t Temp_Value[ADC_CHANCEL_NUM];
 extern u8 BleBuf[MAX_DATA_LENGTH];
 extern SensorInfo Sensor[16];
+
+extern QueueHandle_t usart2Queue;
+extern QueueHandle_t usart3Queue;
+extern QueueHandle_t usart5Queue;
 
 void Data_Collect() {
     HAL_TIM_Base_Start_IT(&htim2);
@@ -134,39 +140,31 @@ void Data_Collect() {
     }
 }
 
-u8 lastbuf;
+
 
 void HAL_UART_RxCpltCallback(UART_HandleTypeDef *huart) {
+    BaseType_t xHigherPriorityTaskWoken = pdFALSE;
+    uint8_t received_char;
+
+    if (huart->Instance == USART2) {
+        received_char = (uint8_t)(huart->Instance->DR & 0xFF);
+        xQueueSendFromISR(usart2Queue, &received_char, &xHigherPriorityTaskWoken);
+        HAL_UART_Receive_IT(&huart2, &received_char, 1); // 重新使能接收中断
+    } else if (huart->Instance == USART3) {
+        received_char = (uint8_t)(huart->Instance->DR & 0xFF);
+        xQueueSendFromISR(usart3Queue, &received_char, &xHigherPriorityTaskWoken);
+        HAL_UART_Receive_IT(&huart3, &received_char, 1); // 重新使能接收中断
+    } else if (huart->Instance == UART5) {
+        received_char = (uint8_t)(huart->Instance->DR & 0xFF);
+        xQueueSendFromISR(usart5Queue, &received_char, &xHigherPriorityTaskWoken);
+        HAL_UART_Receive_IT(&huart5, &received_char, 1); // 重新使能接收中断
+    }
+
+    portYIELD_FROM_ISR(xHigherPriorityTaskWoken);
+
     //VM模块
     if (huart->Instance == USART3 || huart->Instance == USART2) {
-        if ((0xBB == rxdata && 0xAA == lastbuf) || (0xAA == rxdata && 0xAA == lastbuf)) {
-            receiving = 1;
-            rx_check += 0xAA;
-            rx_buffer[rx_index++] = 0xAA;
-        }
-        if (receiving) {
-            rx_buffer[rx_index++] = rxdata;
-            if (rx_check == rxdata) {
-                if (0xAA != rxdata) {
-                    if (0x05 == rx_buffer[3]) {
-                        VM_init = 1;
-                        memset(rx_buffer, 0, MAX_DATA_LENGTH);
-                    }
-                    if (0x73 == rx_buffer[3]) {
 
-                    }
-                    rx_index = 0;
-                    receiving = 0;
-                    rx_check = 0;
-                    VM_Busy = 0;
-                    HAL_UART_Receive_IT(&huart3, &rxdata, 1);
-                    HAL_UART_Receive_IT(&huart2, &rxdata, 1);
-                    HAL_TIM_Base_Stop_IT(&htim2);
-                    __HAL_TIM_SET_COUNTER(&htim2, 0);
-                    return;
-                }
-            }
-            rx_check += rxdata;
         }
         HAL_UART_Receive_IT(&huart3, &rxdata, 1);
         HAL_UART_Receive_IT(&huart2, &rxdata, 1);
@@ -206,5 +204,8 @@ void HAL_TIM_PeriodElapsedCallback(TIM_HandleTypeDef *htim) {
         rx_len = rx_index;
         rx_index = 0;
         ble_flag = 1;
+    }
+    if (htim->Instance == TIM7) {
+        HAL_IncTick();
     }
 }
