@@ -70,25 +70,26 @@ volatile u8 VM_ERR;
 volatile u8 Scan_Start;
 volatile u8 restart;
 
-u8 ble_flag;
-u8 rxdata = 0;
-u8 rx_index = 0;
-u8 rx_len = 0;
+u8 ble_flag;    //蓝牙指令接收
+u8 ble_len;
+u8 BleBuf[MAX_DATA_LENGTH];
+
+u8 VM1_init;    //VM1初始化
+u8 VM2_init;    //VM2初始化
+u8 VM1_Busy;    //VM1工作中
+u8 VM2_Busy;
+
 u8 rx_buffer[MAX_DATA_LENGTH];
 u8 VM_init = 0;
 u8 Cmd = 0;
 u16 ADC_Value[ADC_CHANCEL_NUM];
 int16_t Temp_Value[ADC_CHANCEL_NUM];
-u8 BleBuf[MAX_DATA_LENGTH];
+
 SensorInfo Sensor[16];
 
 QueueHandle_t usart2Queue;
 QueueHandle_t usart3Queue;
 QueueHandle_t usart5Queue;
-// 1 -> 11  ;  2 -> 10  ;  3 -> 13  ;  4 -> 12
-// 5 -> 1   ;  6 -> 0   ;  7 -> 5   ;  8 -> 4
-// 9 -> 6   ; 10 -> 7   ; 11 -> 8   ; 12 -> 14
-//13 -> 18  ; 14 -> 19  ; 15 -> 20  ; 16 -> 21
 //数采通道 -> 振弦通道 -> adc通道 对照
 // 1  -> 8  -> 4 ;   2  -> 5  -> 1 ;   3  -> 1  -> 11 ;  4  -> 3  -> 13 ;
 // 5  -> 7  -> 5 ;   6  -> 6  -> 0 ;   7  -> 2  -> 10 ;  8  -> 4  -> 12 ;
@@ -132,10 +133,10 @@ int main(void)
   MX_USART2_UART_Init();
   MX_TIM2_Init();
   MX_UART5_Init();
-//MX_IWDG_Init();
+  MX_IWDG_Init();
   MX_TIM3_Init();
   /* USER CODE BEGIN 2 */
-
+    u8 rxdata;
     HAL_UART_Receive_IT(&huart3, &rxdata, 1);
     HAL_UART_Receive_IT(&huart2, &rxdata, 1);
     HAL_UART_Receive_IT(&huart5, &rxdata, 1);
@@ -254,16 +255,18 @@ void SystemClock_Config(void)
   * @param  htim : TIM handle
   * @retval None
   */
-/*void HAL_TIM_PeriodElapsedCallback(TIM_HandleTypeDef *htim)
+void HAL_TIM_PeriodElapsedCallback(TIM_HandleTypeDef *htim)
 {
-  *//* USER CODE BEGIN Callback 0 *//*
+  /* USER CODE BEGIN Callback 0 */
 
-  *//* USER CODE END Callback 0 *//*
+  /* USER CODE END Callback 0 */
+  if (htim->Instance == TIM7) {
+    HAL_IncTick();
+  }
+  /* USER CODE BEGIN Callback 1 */
 
-  *//* USER CODE BEGIN Callback 1 *//*
-
-  *//* USER CODE END Callback 1 *//*
-}*/
+  /* USER CODE END Callback 1 */
+}
 
 /**
   * @brief  This function is executed in case of error occurrence.

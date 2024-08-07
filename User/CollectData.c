@@ -12,27 +12,25 @@
 #include "hardware.h"
 #include "temp.h"
 #include "bt4531.h"
-#include "portmacro.h"
 #include "FreeRTOS.h"
 #include "queue.h"
 
-extern volatile u8 VM_Busy;
 extern volatile u8 VM_ERR;
 extern volatile u8 Scan_Start;
 extern volatile u8 restart;
 
 extern u8 ble_flag;
-extern u8 rxdata;
+extern u8 ble_len;
+extern u8 BleBuf[MAX_DATA_LENGTH];
 
-extern u8 rx_len;
-extern u8 rx_buffer[MAX_DATA_LENGTH];
-
-
-extern u8 VM_init;
+extern u8 VM1_Busy;
+extern u8 VM2_Busy;
+extern u8 VM1_init;
+extern u8 VM2_init;
 
 extern u16 ADC_Value[ADC_CHANCEL_NUM];
 extern int8_t Temp_Value[ADC_CHANCEL_NUM];
-extern u8 BleBuf[MAX_DATA_LENGTH];
+
 extern SensorInfo Sensor[16];
 
 extern QueueHandle_t usart2Queue;
@@ -41,50 +39,25 @@ extern QueueHandle_t usart5Queue;
 
 void Data_Collect() {
     HAL_TIM_Base_Start_IT(&htim2);
+    Scan_VM(huart2);
     Scan_VM(huart3);
 
-    Scan_VM(huart2);
-
-
-    VM_Busy = 1;
-    while (VM_Busy && !restart) {
+    VM1_Busy = 1;
+    VM2_Busy = 1;
+    while (VM1_Busy && VM2_Busy && !restart) {
         if (VM_ERR) {
             restart = 1;
             break;
         }
     }
+    HAL_TIM_Base_Stop_IT(&htim2); // 接收处理完成
+    __HAL_TIM_SET_COUNTER(&htim2, 0);
+
     if (restart) {
         VM_init = 0;
         StatuCallback(0x70, 0x13);
         return;
     }
-
-    for (u8 i = 4; i < 20; i += 2) {
-        // 合并频率值
-        Sensor[i / 2 + 6].freq[0] = ((uint16_t) rx_buffer[i] << 8) | rx_buffer[i + 1];
-    }
-    memset(rx_buffer, 0, MAX_DATA_LENGTH);
-
-//    HAL_TIM_Base_Start_IT(&htim2);
-//    Scan_VM(huart2);
-//    VM_Busy = 1;
-//    while (VM_Busy && !restart) {
-//        if (VM_ERR) {
-//            restart = 1;
-//            break;
-//        }
-//    }
-//    if (restart) {
-//        VM_init = 0;
-//        StatuCallback(0x70, 0x13);
-//        return;
-//    }
-//
-//    for (u8 i = 4; i < 20; i += 2) {
-//        // 合并频率值
-//        Sensor[i / 2 - 2].freq[0] = ((uint16_t)rx_buffer[i] << 8) | rx_buffer[i + 1];
-//    }
-//    memset(rx_buffer, 0, MAX_DATA_LENGTH);
 
     HAL_ADC_Start_DMA(&hadc, (uint32_t *) ADC_Value, ADC_CHANCEL_NUM);
     HAL_Delay(200);
@@ -162,23 +135,6 @@ void HAL_UART_RxCpltCallback(UART_HandleTypeDef *huart) {
 
     portYIELD_FROM_ISR(xHigherPriorityTaskWoken);
 
-    //VM模块
-    if (huart->Instance == USART3 || huart->Instance == USART2) {
-
-        }
-        HAL_UART_Receive_IT(&huart3, &rxdata, 1);
-        HAL_UART_Receive_IT(&huart2, &rxdata, 1);
-    };
-
-    //蓝牙
-    if (huart->Instance == UART5) {
-        BleBuf[rx_index++] = rxdata;
-        HAL_TIM_Base_Stop_IT(&htim3); // 计数清零 重启定时器
-        __HAL_TIM_SET_COUNTER(&htim3, 0);
-        HAL_TIM_Base_Start_IT(&htim3);
-        HAL_UART_Receive_IT(&huart5, &rxdata, 1);
-    }
-    lastbuf = rxdata;
 };
 
 void HAL_ADC_ConvCpltCallback(ADC_HandleTypeDef *hadc) {
@@ -193,16 +149,14 @@ void HAL_TIM_PeriodElapsedCallback(TIM_HandleTypeDef *htim) {
         HAL_TIM_Base_Stop_IT(&htim2);
         __HAL_TIM_SET_COUNTER(&htim2, 0);
         VM_ERR = 1;
-        VM_Busy = 0;
+        VM1_Busy = 0;
+        VM2_Busy = 0;
         VM_init = 0;
         Scan_Start = 0;
-        rx_index = 0;
     }
     if (htim->Instance == TIM3) {
         HAL_TIM_Base_Stop_IT(&htim3); // 计数清零 重启定时器
         __HAL_TIM_SET_COUNTER(&htim3, 0);
-        rx_len = rx_index;
-        rx_index = 0;
         ble_flag = 1;
     }
     if (htim->Instance == TIM7) {

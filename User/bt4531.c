@@ -11,25 +11,27 @@
 u8 tx_buffer[MAX_DATA_LENGTH];
 extern SensorInfo Sensor[16];
 extern u8 BleBuf[MAX_DATA_LENGTH];
-extern u8  rx_len;
 extern u8 Scan_Start;
 extern u8 Cmd;
+extern u8 ble_len;
 
 u16 CRC_Check(uint8_t *CRC_Ptr,uint8_t LEN);
 
 //命令处理
 void BleProcess(){
-    if(0xA0 != BleBuf[0] || 0x01 != BleBuf[2])
+    if(0xA0 != BleBuf[0] || 0x01 != BleBuf[2]){
+        ble_len = 0;
         return;
-    if(rx_len != BleBuf[1]){
+    }
+    if(ble_len != BleBuf[1]){
         StatuCallback(BleBuf[2], 0x15);
-        rx_len = 0;
+        ble_len = 0;
         return;
     }
 
 
-    u16 receivedCRC = (BleBuf[rx_len - 2] << 8) | BleBuf[rx_len - 1];
-    u16 calculatedCRC = CRC_Check(BleBuf, rx_len - 2); // 不包括校验码本身
+    u16 receivedCRC = (BleBuf[ble_len - 2] << 8) | BleBuf[ble_len - 1];
+    u16 calculatedCRC = CRC_Check(BleBuf, ble_len - 2); // 不包括校验码本身
     if (receivedCRC != calculatedCRC){
         StatuCallback(BleBuf[3], 0x14);
         return;
@@ -37,7 +39,7 @@ void BleProcess(){
 
     Cmd = BleBuf[3];
 
-    rx_len = 0;
+    ble_len = 0;
 
     u16 addr;
     u8 master;
