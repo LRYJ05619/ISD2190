@@ -70,7 +70,7 @@ volatile u8 Scan_Start; //置1开始扫描
 
 volatile u8 ble_flag;    //蓝牙指令接收
 volatile u8 ble_len;
-volatile u8 BleBuf[MAX_DATA_LENGTH];
+u8 BleBuf[MAX_DATA_LENGTH];
 volatile u8 Cmd;              //蓝牙指令
 
 volatile u8 VM1_Init;             //VM1初始化

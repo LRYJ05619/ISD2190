@@ -123,12 +123,12 @@ void MX_FREERTOS_Init(void) {
 
   /* USER CODE BEGIN RTOS_THREADS */
   /* add threads, ... */
-    osThreadDef(VM1_Receive_Task,VM1_Receive_Task,osPriorityRealtime,0,128);
-    osThreadDef(VM2_Receive_Task,VM2_Receive_Task,osPriorityRealtime,0,128);
+    osThreadDef(VM1_Receive_Task,VM1_Receive_Task,osPriorityHigh,0,128);
+    osThreadDef(VM2_Receive_Task,VM2_Receive_Task,osPriorityHigh,0,128);
     osThreadDef(BLE_Receive_Task,BLE_Receive_Task,osPriorityHigh,0,128);
 
-    osThreadDef(VM_Init_Task,VM_Init_Task,osPriorityRealtime,0,128);
-    osThreadDef(Data_Collect_Task,Data_Collect_Task,osPriorityHigh,0,128);
+    osThreadDef(VM_Init_Task,VM_Init_Task,osPriorityHigh,0,128);
+    osThreadDef(Data_Collect_Task,Data_Collect_Task,osPriorityRealtime,0,128);
 
     osThreadCreate(osThread(VM1_Receive_Task), NULL);
     osThreadCreate(osThread(VM2_Receive_Task), NULL);
@@ -176,8 +176,6 @@ extern SensorInfo Sensor[16];
 
 extern volatile u8 Scan_Start;
 extern volatile u8 Cmd;
-
-
 
 //VMΩ” ’
 void VM1_Receive_Task(const void *pvParameters) {
@@ -347,7 +345,6 @@ void Data_Collect_Task(const void *argument){
 
             Scan_Start = 0;
         }
-
         osDelay(50);
     }
 }

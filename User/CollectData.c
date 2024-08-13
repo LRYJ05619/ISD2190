@@ -18,7 +18,7 @@
 extern volatile u8 VM_ERR;
 extern volatile u8 Scan_Start;
 
-extern u8 ble_flag;
+extern volatile u8 ble_flag;
 extern u8 ble_len;
 extern u8 BleBuf[MAX_DATA_LENGTH];
 
