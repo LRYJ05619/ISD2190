@@ -160,22 +160,22 @@ void StartDefaultTask(void const * argument)
 
 /* Private application code --------------------------------------------------*/
 /* USER CODE BEGIN Application */
-extern u8 VM1_Init;
-extern u8 VM2_Init;
-extern u8 VM1_Busy;
-extern u8 VM2_Busy;
-extern u8 VM1_OK;
-extern u8 VM2_OK;
-extern u8 VM_ERR;
+extern volatile u8 VM1_Init;
+extern volatile u8 VM2_Init;
+extern volatile u8 VM1_Busy;
+extern volatile u8 VM2_Busy;
+extern volatile u8 VM1_OK;
+extern volatile u8 VM2_OK;
+extern volatile u8 VM_ERR;
 
-extern u8 ble_len;
-extern u8 BleBuf[MAX_DATA_LENGTH];
-extern u8 ble_flag;
+extern volatile u8 ble_len;
+extern volatile u8 BleBuf[MAX_DATA_LENGTH];
+extern volatile u8 ble_flag;
 
 extern SensorInfo Sensor[16];
 
-extern u8 Scan_Start;
-extern u8 Cmd;
+extern volatile u8 Scan_Start;
+extern volatile u8 Cmd;
 
 
 
@@ -227,6 +227,7 @@ void VM1_Receive_Task(const void *pvParameters) {
             lastbuf = rxdata;
             HAL_UART_Receive_IT(&huart2, &rxdata, 1);
         }
+        osDelay(50);
     }
 }
 void VM2_Receive_Task(const void *pvParameters) {
@@ -277,6 +278,7 @@ void VM2_Receive_Task(const void *pvParameters) {
             lastbuf = rxdata;
             HAL_UART_Receive_IT(&huart3, &rxdata, 1);
         }
+        osDelay(50);
     }
 }
 //蓝牙接收
@@ -291,6 +293,8 @@ void BLE_Receive_Task(const void *pvParameters) {
             HAL_TIM_Base_Start_IT(&htim3);
             HAL_UART_Receive_IT(&huart5, &rxdata, 1);
         }
+
+        osDelay(50);
     }
 }
 //VM初始化
@@ -318,6 +322,8 @@ void VM_Init_Task(const void *argument){
             VM_ERR = 0;
             StatuCallback(Cmd, 0x13);
         }
+
+        osDelay(50);
     }
 }
 //数据采集与指令处理
@@ -341,6 +347,8 @@ void Data_Collect_Task(const void *argument){
 
             Scan_Start = 0;
         }
+
+        osDelay(50);
     }
 }
 

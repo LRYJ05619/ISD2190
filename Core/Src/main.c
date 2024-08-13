@@ -69,16 +69,16 @@ void MX_FREERTOS_Init(void);
 volatile u8 Scan_Start; //置1开始扫描
 
 volatile u8 ble_flag;    //蓝牙指令接收
-u8 ble_len;
-u8 BleBuf[MAX_DATA_LENGTH];
-u8 Cmd;              //蓝牙指令
+volatile u8 ble_len;
+volatile u8 BleBuf[MAX_DATA_LENGTH];
+volatile u8 Cmd;              //蓝牙指令
 
-u8 VM1_Init;             //VM1初始化
-u8 VM2_Init;
+volatile u8 VM1_Init;             //VM1初始化
+volatile u8 VM2_Init;
 volatile u8 VM1_Busy;    //VM1工作中
 volatile u8 VM2_Busy;
-u8 VM1_OK;      //VM1读取成功
-u8 VM2_OK;
+volatile u8 VM1_OK;      //VM1读取成功
+volatile u8 VM2_OK;
 volatile u8 VM_ERR;      //模块异常，尝试初始化
 
 u16 ADC_Value[ADC_CHANCEL_NUM]; //adc采集值
