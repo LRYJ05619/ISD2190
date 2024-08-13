@@ -28,6 +28,9 @@
 /* USER CODE BEGIN Includes */
 #include "usart.h"
 #include "tim.h"
+#include "VMxx.h"
+#include "CollectData.h"
+#include "bt4531.h"
 #include <string.h>
 /* USER CODE END Includes */
 
@@ -59,6 +62,8 @@ osThreadId defaultTaskHandle;
 void VM1_Receive_Task(const void *pvParameters);
 void VM2_Receive_Task(const void *pvParameters);
 void BLE_Receive_Task(const void *pvParameters);
+void VM_Init_Task(const void *argument);
+void Data_Collect_Task(const void *argument);
 
 /* USER CODE END FunctionPrototypes */
 
@@ -115,17 +120,22 @@ void MX_FREERTOS_Init(void) {
 
   /* Create the thread(s) */
   /* definition and creation of defaultTask */
-  osThreadDef(defaultTask, StartDefaultTask, osPriorityNormal, 0, 128);
-  defaultTaskHandle = osThreadCreate(osThread(defaultTask), NULL);
 
   /* USER CODE BEGIN RTOS_THREADS */
   /* add threads, ... */
     osThreadDef(VM1_Receive_Task,VM1_Receive_Task,osPriorityRealtime,0,128);
     osThreadDef(VM2_Receive_Task,VM2_Receive_Task,osPriorityRealtime,0,128);
     osThreadDef(BLE_Receive_Task,BLE_Receive_Task,osPriorityHigh,0,128);
+
+    osThreadDef(VM_Init_Task,VM_Init_Task,osPriorityRealtime,0,128);
+    osThreadDef(Data_Collect_Task,Data_Collect_Task,osPriorityHigh,0,128);
+
     osThreadCreate(osThread(VM1_Receive_Task), NULL);
     osThreadCreate(osThread(VM2_Receive_Task), NULL);
-    osThreadCreate(osThread(defaultTask), NULL);
+    osThreadCreate(osThread(BLE_Receive_Task), NULL);
+
+    osThreadCreate(osThread(VM_Init_Task), NULL);
+    osThreadCreate(osThread(Data_Collect_Task), NULL);
   /* USER CODE END RTOS_THREADS */
 
 }
@@ -150,15 +160,24 @@ void StartDefaultTask(void const * argument)
 
 /* Private application code --------------------------------------------------*/
 /* USER CODE BEGIN Application */
-extern u8 VM1_init;
-extern u8 VM2_init;
+extern u8 VM1_Init;
+extern u8 VM2_Init;
 extern u8 VM1_Busy;
 extern u8 VM2_Busy;
+extern u8 VM1_OK;
+extern u8 VM2_OK;
+extern u8 VM_ERR;
 
 extern u8 ble_len;
 extern u8 BleBuf[MAX_DATA_LENGTH];
+extern u8 ble_flag;
 
 extern SensorInfo Sensor[16];
+
+extern u8 Scan_Start;
+extern u8 Cmd;
+
+
 
 //VM接收
 void VM1_Receive_Task(const void *pvParameters) {
@@ -182,7 +201,7 @@ void VM1_Receive_Task(const void *pvParameters) {
                 if (rx_check == rxdata) {
                     if (0xAA != rxdata) {
                         if (0x05 == rx_buffer[3]) {
-                            VM1_init = 1;
+                            VM1_Init = 1;
                         }
                         if (0x73 == rx_buffer[3]) {
                             u8 sensor_indices[] = {3, 7, 4, 8, 2, 6, 5, 1}; // 传感器索引数组
@@ -192,6 +211,7 @@ void VM1_Receive_Task(const void *pvParameters) {
                                 Sensor[sensor_indices[index]].freq[0] = ((uint16_t)rx_buffer[i] << 8) | rx_buffer[i + 1];
                                 index++;
                             }
+                            VM1_OK = 1;
                         }
                         rx_index = 0;
                         receiving = 0;
@@ -230,7 +250,7 @@ void VM2_Receive_Task(const void *pvParameters) {
                 if (rx_check == rxdata) {
                     if (0xAA != rxdata) {
                         if (0x05 == rx_buffer[3]) {
-                            VM2_init = 1;
+                            VM2_Init = 1;
                             memset(rx_buffer, 0, MAX_DATA_LENGTH);
                         }
                         if (0x73 == rx_buffer[3]) {
@@ -241,6 +261,7 @@ void VM2_Receive_Task(const void *pvParameters) {
                                 Sensor[sensor_indices[index]].freq[0] = ((uint16_t)rx_buffer[i] << 8) | rx_buffer[i + 1];
                                 index++;
                             }
+                            VM2_OK = 1;
                         }
                         rx_index = 0;
                         receiving = 0;
@@ -260,12 +281,10 @@ void VM2_Receive_Task(const void *pvParameters) {
 }
 //蓝牙接收
 void BLE_Receive_Task(const void *pvParameters) {
-    uint8_t received_char;
+    uint8_t rxdata;
     while (1) {
-        if (xQueueReceive(usart3Queue, &received_char, portMAX_DELAY)) {
+        if (xQueueReceive(usart5Queue, &rxdata, portMAX_DELAY)) {
             // 处理接收到的数据
-            u8 rxdata;
-
             BleBuf[ble_len++] = rxdata;
             HAL_TIM_Base_Stop_IT(&htim3); // 计数清零 重启定时器
             __HAL_TIM_SET_COUNTER(&htim3, 0);
@@ -274,8 +293,57 @@ void BLE_Receive_Task(const void *pvParameters) {
         }
     }
 }
-//蓝牙处理
+//VM初始化
+void VM_Init_Task(const void *argument){
+    while (1){
+        if (!VM1_Init) {
+            if (VM1_Busy) {
+                HAL_TIM_Base_Start_IT(&htim2);
+                continue;
+            }
+            VM1_Busy = 1;
+            HAL_TIM_Base_Start_IT(&htim2);
+            Init_VM(huart3);
+        }
+        if (!VM2_Init) {
+            if (VM2_Busy) {
+                HAL_TIM_Base_Start_IT(&htim3);
+                continue;
+            }
+            VM2_Busy = 1;
+            HAL_TIM_Base_Start_IT(&htim3);
+            Init_VM(huart3);
+        }
+        if (VM_ERR && VM1_Init && VM2_Init) {
+            VM_ERR = 0;
+            StatuCallback(Cmd, 0x13);
+        }
+    }
+}
+//数据采集与指令处理
+void Data_Collect_Task(const void *argument){
+    while (1){
+        if (ble_flag) {
+            ble_flag = 0;
+            BleProcess();
+        }
 
-//数据处理
+        if (VM1_Init && VM2_Init && !VM1_Busy && !VM2_Busy && Scan_Start) {
+            Data_Collect();
+
+            //蓝牙指令处理
+            if (Cmd == 0x70)
+                DataSend(BleBuf[4]);
+            if (Cmd == 0x71)
+                TotalDataSend();
+            if (Cmd == 0x40)
+                ConfigInit();
+
+            Scan_Start = 0;
+        }
+    }
+}
+
+
 /* USER CODE END Application */
 

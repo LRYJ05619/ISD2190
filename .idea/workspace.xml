@@ -20,27 +20,22 @@
     </configurations>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="c8e28670-dfba-4e2b-832d-3f7616a4423e" name="更改" comment="8.5">
+    <list default="true" id="c8e28670-dfba-4e2b-832d-3f7616a4423e" name="更改" comment="8.7">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Core/Inc/main.h" beforeDir="false" afterPath="$PROJECT_DIR$/Core/Inc/main.h" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Core/Src/adc.c" beforeDir="false" afterPath="$PROJECT_DIR$/Core/Src/adc.c" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Core/Src/freertos.c" beforeDir="false" afterPath="$PROJECT_DIR$/Core/Src/freertos.c" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Core/Src/main.c" beforeDir="false" afterPath="$PROJECT_DIR$/Core/Src/main.c" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ISD2190.ioc" beforeDir="false" afterPath="$PROJECT_DIR$/ISD2190.ioc" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/User/CollectData.c" beforeDir="false" afterPath="$PROJECT_DIR$/User/CollectData.c" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/User/bt4531.c" beforeDir="false" afterPath="$PROJECT_DIR$/User/bt4531.c" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/.cmake/api/v1/reply/index-2024-08-05T03-56-13-0612.json" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/cmake-build-debug/.ninja_deps" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/.ninja_deps" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/cmake-build-debug/.ninja_log" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/.ninja_log" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/3.27.8/CMakeDetermineCompilerABI_C.bin" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/3.27.8/CMakeDetermineCompilerABI_C.bin" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/3.27.8/CMakeDetermineCompilerABI_CXX.bin" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/3.27.8/CMakeDetermineCompilerABI_CXX.bin" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/CMakeConfigureLog.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/CMakeConfigureLog.yaml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/ISD2190.elf.dir/Core/Src/adc.c.obj" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/ISD2190.elf.dir/Core/Src/adc.c.obj" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/ISD2190.elf.dir/Core/Src/freertos.c.obj" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/ISD2190.elf.dir/Core/Src/freertos.c.obj" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/ISD2190.elf.dir/Core/Src/main.c.obj" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/ISD2190.elf.dir/Core/Src/main.c.obj" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/ISD2190.elf.dir/Core/Src/usart.c.obj" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/ISD2190.elf.dir/Core/Src/usart.c.obj" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/ISD2190.elf.dir/User/CollectData.c.obj" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/ISD2190.elf.dir/User/bt4531.c.obj" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/ISD2190.elf.dir/User/bt4531.c.obj" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/clion-Debug-log.txt" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/clion-Debug-log.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/ISD2190.bin" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/ISD2190.bin" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/ISD2190.elf" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/ISD2190.elf" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/ISD2190.hex" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/ISD2190.hex" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/ISD2190.map" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/ISD2190.map" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -88,13 +83,16 @@
   &quot;associatedIndex&quot;: 8
 }</component>
   <component name="ProjectId" id="2dXV3ure9GhNyVsGzv9FFvxQIgN" />
-  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true">
+    <ConfirmationsSetting value="2" id="Add" />
+  </component>
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
   <component name="PropertiesComponent">{
   &quot;keyToString&quot;: {
+    &quot;ASKED_ADD_EXTERNAL_FILES&quot;: &quot;true&quot;,
     &quot;ASKED_SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
     &quot;CMake 应用程序.ISD2190.elf.executor&quot;: &quot;Run&quot;,
     &quot;OpenOCD 下载并运行.ISD2190.executor&quot;: &quot;Debug&quot;,
@@ -128,11 +126,6 @@
     </key>
   </component>
   <component name="RunManager" selected="OpenOCD 下载并运行.ISD2190">
-    <configuration default="true" type="CLionExternalRunConfiguration" factoryName="Application" REDIRECT_INPUT="false" ELEVATE="false" USE_EXTERNAL_CONSOLE="false" EMULATE_TERMINAL="false" PASS_PARENT_ENVS_2="true">
-      <method v="2">
-        <option name="CLION.EXTERNAL.BUILD" enabled="true" />
-      </method>
-    </configuration>
     <configuration name="ISD2190.elf" type="CMakeRunConfiguration" factoryName="Application" REDIRECT_INPUT="false" ELEVATE="false" USE_EXTERNAL_CONSOLE="false" EMULATE_TERMINAL="false" PASS_PARENT_ENVS_2="true" PROJECT_NAME="ISD2190" TARGET_NAME="ISD2190.elf" CONFIG_NAME="Debug" RUN_TARGET_PROJECT_NAME="ISD2190" RUN_TARGET_NAME="ISD2190.elf">
       <method v="2">
         <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
@@ -217,7 +210,12 @@
       <workItem from="1722479248581" duration="6607000" />
       <workItem from="1722821746498" duration="17259000" />
       <workItem from="1722906557510" duration="14865000" />
-      <workItem from="1723013865441" duration="7984000" />
+      <workItem from="1723013865441" duration="8693000" />
+      <workItem from="1723024487759" duration="506000" />
+      <workItem from="1723080523404" duration="9625000" />
+      <workItem from="1723186532218" duration="1294000" />
+      <workItem from="1723424797583" duration="11172000" />
+      <workItem from="1723530924540" duration="4199000" />
     </task>
     <task id="LOCAL-00001" summary="7.31">
       <option name="closed" value="true" />
@@ -243,7 +241,47 @@
       <option name="project" value="LOCAL" />
       <updated>1722851906320</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="8.7">
+      <option name="closed" value="true" />
+      <created>1723024073098</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1723024073098</updated>
+    </task>
+    <task id="LOCAL-00005" summary="8.7">
+      <option name="closed" value="true" />
+      <created>1723024082461</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1723024082461</updated>
+    </task>
+    <task id="LOCAL-00006" summary="8.7">
+      <option name="closed" value="true" />
+      <created>1723024089507</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1723024089507</updated>
+    </task>
+    <task id="LOCAL-00007" summary="8.7">
+      <option name="closed" value="true" />
+      <created>1723024106064</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1723024106064</updated>
+    </task>
+    <task id="LOCAL-00008" summary="8.7">
+      <option name="closed" value="true" />
+      <created>1723024128680</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1723024128680</updated>
+    </task>
+    <option name="localTasksCounter" value="9" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -254,13 +292,52 @@
     <isAutomaticFoundErrors value="true" />
     <isAutomaticReloadCMake value="true" />
   </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State>
+              <option name="FILTERS">
+                <map>
+                  <entry key="branch">
+                    <value>
+                      <list>
+                        <option value="origin/master" />
+                      </list>
+                    </value>
+                  </entry>
+                </map>
+              </option>
+            </State>
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
   <component name="VcsManagerConfiguration">
+    <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
     <MESSAGE value="4.13" />
     <MESSAGE value="7.31" />
     <MESSAGE value="8.5" />
-    <option name="LAST_COMMIT_MESSAGE" value="8.5" />
+    <MESSAGE value="8.7" />
+    <option name="LAST_COMMIT_MESSAGE" value="8.7" />
   </component>
   <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="com.jetbrains.cidr.execution.debugger.OCBreakpointType">
+          <url>file://$PROJECT_DIR$/User/CollectData.c</url>
+          <line>165</line>
+          <option name="timeStamp" value="3" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="com.jetbrains.cidr.execution.debugger.OCBreakpointType">
+          <url>file://$PROJECT_DIR$/Core/Src/freertos.c</url>
+          <line>326</line>
+          <option name="timeStamp" value="16" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
     <watches-manager>
       <configuration name="com.jetbrains.cidr.embedded.openocd.conf.type">
         <watch expression="BleBuf" language="ObjectiveC" />

@@ -11,9 +11,10 @@
 u8 tx_buffer[MAX_DATA_LENGTH];
 extern SensorInfo Sensor[16];
 extern u8 BleBuf[MAX_DATA_LENGTH];
-extern u8 Scan_Start;
 extern u8 Cmd;
 extern u8 ble_len;
+
+extern u8 Scan_Start;
 
 u16 CRC_Check(uint8_t *CRC_Ptr,uint8_t LEN);
 
@@ -45,12 +46,12 @@ void BleProcess(){
     u8 master;
     u8 num;
 
-    switch (BleBuf[3]) {
+    switch (Cmd) {
         case 0x70:
-            Scan_Start = 0x01;
+            Scan_Start = 1;
             break;
         case 0x71:
-            Scan_Start = 0x03;
+            Scan_Start = 1;
             break;
         case 0x60:
             ConfigSend(BleBuf[4]);
@@ -87,7 +88,7 @@ void BleProcess(){
             StatuCallback(0x50, 0xA0);
             break;
         case 0x40:
-            Scan_Start = 0x05;
+            Scan_Start = 1;
             break;
     }
 }

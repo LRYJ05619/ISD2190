@@ -65,27 +65,26 @@ void MX_FREERTOS_Init(void);
 
 /* Private user code ---------------------------------------------------------*/
 /* USER CODE BEGIN 0 */
-volatile u8 VM_Busy;
-volatile u8 VM_ERR;
-volatile u8 Scan_Start;
-volatile u8 restart;
 
-u8 ble_flag;    //蓝牙指令接收
+volatile u8 Scan_Start; //置1开始扫描
+
+volatile u8 ble_flag;    //蓝牙指令接收
 u8 ble_len;
 u8 BleBuf[MAX_DATA_LENGTH];
+u8 Cmd;              //蓝牙指令
 
-u8 VM1_init;    //VM1初始化
-u8 VM2_init;    //VM2初始化
-u8 VM1_Busy;    //VM1工作中
-u8 VM2_Busy;
+u8 VM1_Init;             //VM1初始化
+u8 VM2_Init;
+volatile u8 VM1_Busy;    //VM1工作中
+volatile u8 VM2_Busy;
+u8 VM1_OK;      //VM1读取成功
+u8 VM2_OK;
+volatile u8 VM_ERR;      //模块异常，尝试初始化
 
-u8 rx_buffer[MAX_DATA_LENGTH];
-u8 VM_init = 0;
-u8 Cmd = 0;
-u16 ADC_Value[ADC_CHANCEL_NUM];
-int16_t Temp_Value[ADC_CHANCEL_NUM];
+u16 ADC_Value[ADC_CHANCEL_NUM]; //adc采集值
+int16_t Temp_Value[ADC_CHANCEL_NUM]; //实际温度
 
-SensorInfo Sensor[16];
+SensorInfo Sensor[16];   //数据结构体
 
 QueueHandle_t usart2Queue;
 QueueHandle_t usart3Queue;
@@ -162,40 +161,6 @@ int main(void)
     /* USER CODE END WHILE */
 
     /* USER CODE BEGIN 3 */
-        restart = 0;
-
-        if (ble_flag) {
-            ble_flag = 0;
-            BleProcess();
-        }
-
-        if (!VM_init) {
-            if (VM_Busy) {
-                HAL_TIM_Base_Start_IT(&htim2);
-                continue;
-            }
-            VM_Busy = 1;
-            HAL_TIM_Base_Start_IT(&htim2);
-            Init_VM(huart3);
-        }
-
-        if (VM_init && Scan_Start) {
-            Data_Collect();
-            if (Scan_Start == 0x01)
-                DataSend(BleBuf[4]);
-            if (Scan_Start == 0x03)
-                TotalDataSend();
-            if (Scan_Start == 0x05)
-                ConfigInit();
-
-            Scan_Start = 0;
-        }
-
-        if (VM_ERR && VM_init) {
-            VM_ERR = 0;
-            StatuCallback(Cmd, 0x13);
-        }
-        HAL_Delay(50);
     }
   /* USER CODE END 3 */
 }
@@ -255,18 +220,18 @@ void SystemClock_Config(void)
   * @param  htim : TIM handle
   * @retval None
   */
-void HAL_TIM_PeriodElapsedCallback(TIM_HandleTypeDef *htim)
+/*void HAL_TIM_PeriodElapsedCallback(TIM_HandleTypeDef *htim)
 {
-  /* USER CODE BEGIN Callback 0 */
+  *//* USER CODE BEGIN Callback 0 *//*
 
-  /* USER CODE END Callback 0 */
+  *//* USER CODE END Callback 0 *//*
   if (htim->Instance == TIM7) {
     HAL_IncTick();
   }
-  /* USER CODE BEGIN Callback 1 */
+  *//* USER CODE BEGIN Callback 1 *//*
 
-  /* USER CODE END Callback 1 */
-}
+  *//* USER CODE END Callback 1 *//*
+}*/
 
 /**
   * @brief  This function is executed in case of error occurrence.
