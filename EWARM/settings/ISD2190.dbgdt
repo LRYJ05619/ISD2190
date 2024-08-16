@@ -146,7 +146,7 @@
                     <item>Temp_Value</item>
                     <item>ADC_Value</item>
                     <item>Sensor</item>
-                    <item></item>
+                    <item />
                 </expressions>
                 <col-names>
                     <item>Expression</item>

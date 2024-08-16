@@ -4,7 +4,7 @@
 
 #include "flash.h"
 
-//384K flash 256bit a page
+//384K flash 256byte a page
 #define SensorInfo_FLASH_ADDRESS (0x0805F000)
 extern SensorInfo Sensor[16];
 uint32_t data;
@@ -21,7 +21,7 @@ HAL_StatusTypeDef Flash_Write() {
     uint32_t PAGEError;
     EraseInitStruct.TypeErase = FLASH_TYPEERASE_PAGES;
     EraseInitStruct.PageAddress = SensorInfo_FLASH_ADDRESS;
-    EraseInitStruct.NbPages = 2; // 根据需要存储的数据量调整擦除的页数
+    EraseInitStruct.NbPages = 5; // 根据需要存储的数据量调整擦除的页数
     status = HAL_FLASHEx_Erase(&EraseInitStruct, &PAGEError);
 
     if (status != HAL_OK) {
@@ -70,7 +70,7 @@ HAL_StatusTypeDef Flash_Erase(){
     uint32_t PAGEError;
     EraseInitStruct.TypeErase = FLASH_TYPEERASE_PAGES;
     EraseInitStruct.PageAddress = SensorInfo_FLASH_ADDRESS;
-    EraseInitStruct.NbPages = 2; // 根据需要存储的数据量调整擦除的页数
+    EraseInitStruct.NbPages = 5; // 根据需要存储的数据量调整擦除的页数
     status = HAL_FLASHEx_Erase(&EraseInitStruct, &PAGEError);
     // 锁定 Flash
     HAL_FLASH_Lock();

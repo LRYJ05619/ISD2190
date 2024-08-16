@@ -20,14 +20,17 @@ extern volatile u8 Scan_Start;
 
 extern volatile u8 ble_flag;
 extern u8 ble_len;
-extern u8 BleBuf[MAX_DATA_LENGTH];
+extern u8 BleBuf[RX_BUFFER_SIZE];
 
-extern u8 VM1_Busy;
-extern u8 VM2_Busy;
-extern u8 VM1_Init;
-extern u8 VM2_Init;
-extern u8 VM1_OK;
-extern u8 VM2_OK;
+extern u8 Uart2Buf[RX_BUFFER_SIZE];
+extern u8 Uart3Buf[RX_BUFFER_SIZE];
+
+extern volatile u8 VM1_Busy;
+extern volatile u8 VM2_Busy;
+extern volatile u8 VM1_Init;
+extern volatile u8 VM2_Init;
+extern volatile u8 VM1_OK;
+extern volatile u8 VM2_OK;
 
 extern u16 ADC_Value[ADC_CHANCEL_NUM];
 extern int8_t Temp_Value[ADC_CHANCEL_NUM];
@@ -36,24 +39,28 @@ extern SensorInfo Sensor[16];
 
 extern QueueHandle_t usart2Queue;
 extern QueueHandle_t usart3Queue;
-extern QueueHandle_t usart5Queue;
 
 void Data_Collect() {
+    __HAL_TIM_SET_COUNTER(&htim2, 0);
     HAL_TIM_Base_Start_IT(&htim2);
     Scan_VM(huart2);
     Scan_VM(huart3);
+    VM1_OK = 0;
+    VM2_OK = 0;
 
     VM1_Busy = 1;
     VM2_Busy = 1;
-    while (VM1_Busy && VM2_Busy) {
+
+    while (VM1_Busy || VM2_Busy) {
         if (VM_ERR) {
             break;
         }
     }
-    HAL_TIM_Base_Stop_IT(&htim2); // 接收处理完成
-    __HAL_TIM_SET_COUNTER(&htim2, 0);
     VM1_OK = 0;
     VM2_OK = 0;
+
+    __HAL_TIM_SET_COUNTER(&htim2, 0);
+    HAL_TIM_Base_Stop_IT(&htim2);
 
     if (VM_ERR) {
         StatuCallback(0x70, 0x13);
@@ -114,29 +121,27 @@ void Data_Collect() {
     }
 }
 
-
-
-void HAL_UART_RxCpltCallback(UART_HandleTypeDef *huart) {
+void HAL_UARTEx_RxEventCallback(UART_HandleTypeDef *huart, uint16_t Size){
     BaseType_t xHigherPriorityTaskWoken = pdFALSE;
-    uint8_t rxdata;
 
     if (huart->Instance == USART2) {
-        rxdata = (uint8_t)(huart->Instance->DR & 0xFF);
-        xQueueSendFromISR(usart2Queue, &rxdata, &xHigherPriorityTaskWoken);
-        HAL_UART_Receive_IT(&huart2, &rxdata, 1); // 重新使能接收中断
-    } else if (huart->Instance == USART3) {
-        rxdata = (uint8_t)(huart->Instance->DR & 0xFF);
-        xQueueSendFromISR(usart3Queue, &rxdata, &xHigherPriorityTaskWoken);
-        HAL_UART_Receive_IT(&huart3, &rxdata, 1); // 重新使能接收中断
-    } else if (huart->Instance == UART5) {
-        rxdata = (uint8_t)(huart->Instance->DR & 0xFF);
-        xQueueSendFromISR(usart5Queue, &rxdata, &xHigherPriorityTaskWoken);
-        HAL_UART_Receive_IT(&huart5, &rxdata, 1); // 重新使能接收中断
+        // 数据包校验通过
+        xQueueSendFromISR(usart2Queue, &Size, &xHigherPriorityTaskWoken);
+        portYIELD_FROM_ISR(xHigherPriorityTaskWoken);
+        HAL_UARTEx_ReceiveToIdle_DMA(&huart2, Uart2Buf, RX_BUFFER_SIZE); // 重新使能接收中断
     }
-
-    portYIELD_FROM_ISR(xHigherPriorityTaskWoken);
-
-};
+    if (huart->Instance == USART3) {
+        // 数据包校验通过
+        xQueueSendFromISR(usart3Queue, &Size, &xHigherPriorityTaskWoken);
+        portYIELD_FROM_ISR(xHigherPriorityTaskWoken);
+        HAL_UARTEx_ReceiveToIdle_DMA(&huart3, Uart3Buf, RX_BUFFER_SIZE); // 重新使能接收中断
+    }
+    if (huart->Instance == UART5) {
+        ble_flag = 1;
+        ble_len = Size;
+        HAL_UARTEx_ReceiveToIdle_DMA(&huart5, BleBuf, RX_BUFFER_SIZE); // 重新使能接收中断
+    }
+}
 
 void HAL_ADC_ConvCpltCallback(ADC_HandleTypeDef *hadc) {
     if (hadc->Instance == ADC1) {
@@ -145,27 +150,4 @@ void HAL_ADC_ConvCpltCallback(ADC_HandleTypeDef *hadc) {
     }
 }
 
-void HAL_TIM_PeriodElapsedCallback(TIM_HandleTypeDef *htim) {
-    if (htim->Instance == TIM2) {
-        HAL_TIM_Base_Stop_IT(&htim2);
-        __HAL_TIM_SET_COUNTER(&htim2, 0);
-        VM_ERR = 1;
-        VM1_Busy = 0;
-        VM2_Busy = 0;
-        Scan_Start = 0;
 
-        if(!VM1_OK)
-            VM1_Init = 0;
-
-        if(!VM2_OK)
-            VM2_Init = 0;
-    }
-    if (htim->Instance == TIM3) {
-        HAL_TIM_Base_Stop_IT(&htim3); // 计数清零 重启定时器
-        __HAL_TIM_SET_COUNTER(&htim3, 0);
-        ble_flag = 1;
-    }
-    if (htim->Instance == TIM7) {
-        HAL_IncTick();
-    }
-}

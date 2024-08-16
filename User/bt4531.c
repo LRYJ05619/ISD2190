@@ -8,10 +8,10 @@
 #include "flash.h"
 #include "CollectData.h"
 
-u8 tx_buffer[MAX_DATA_LENGTH];
+u8 tx_buffer[RX_BUFFER_SIZE];
 extern SensorInfo Sensor[16];
-extern u8 BleBuf[MAX_DATA_LENGTH];
-extern u8 Cmd;
+extern u8 BleBuf[RX_BUFFER_SIZE];
+extern volatile u8 Cmd;
 extern u8 ble_len;
 
 extern u8 Scan_Start;
@@ -21,15 +21,12 @@ u16 CRC_Check(uint8_t *CRC_Ptr,uint8_t LEN);
 //命令处理
 void BleProcess(){
     if(0xA0 != BleBuf[0] || 0x01 != BleBuf[2]){
-        ble_len = 0;
         return;
     }
     if(ble_len != BleBuf[1]){
         StatuCallback(BleBuf[2], 0x15);
-        ble_len = 0;
         return;
     }
-
 
     u16 receivedCRC = (BleBuf[ble_len - 2] << 8) | BleBuf[ble_len - 1];
     u16 calculatedCRC = CRC_Check(BleBuf, ble_len - 2); // 不包括校验码本身
@@ -74,7 +71,7 @@ void BleProcess(){
                         Sensor[i].sensor_type = BleBuf[9];
                         Sensor[i].para_size = BleBuf[12];
                         for(int j = 0; j < BleBuf[12]; j++){
-                            Sensor[i].para[j] = (int16_t)BleBuf[2 * j + 13] << 16 | BleBuf[2 * j + 14] << 8 | BleBuf[2 * j + 15];
+                            Sensor[i].para[j] = (int16_t)BleBuf[3 * j + 13] << 16 | BleBuf[3 * j + 14] << 8 | BleBuf[3 * j + 15];
                         }
                         Sensor[i].status = 0x01;
                     } else{
@@ -126,7 +123,7 @@ void ConfigSend(u8 channel){
     crc = CRC_Check(tx_buffer, num);
     tx_buffer[num++] = (crc >> 8) & 0xFF;
     tx_buffer[num++] = crc & 0xFF;
-    HAL_UART_Transmit(&huart5, tx_buffer,  num, HAL_MAX_DELAY);
+    HAL_UART_Transmit_DMA(&huart5, tx_buffer,  num);
 }
 //返回全部配置
 void TotalConfigSend(){
@@ -168,7 +165,7 @@ void TotalConfigSend(){
     crc = CRC_Check(tx_buffer, num);
     tx_buffer[num++] = (crc >> 8) & 0xFF;
     tx_buffer[num++] = crc & 0xFF;
-    HAL_UART_Transmit(&huart5, tx_buffer,  num, HAL_MAX_DELAY);
+    HAL_UART_Transmit_DMA (&huart5, tx_buffer,  num);
 }
 
 //返回数据
@@ -201,7 +198,7 @@ void DataSend(u8 channel){
     crc = CRC_Check(tx_buffer, num);
     tx_buffer[num++] = (crc >> 8) & 0xFF;
     tx_buffer[num++] = crc & 0xFF;
-    HAL_UART_Transmit(&huart5, tx_buffer,  num, HAL_MAX_DELAY);
+    HAL_UART_Transmit_DMA(&huart5, tx_buffer,  num);
 }
 //返回全部数据
 void TotalDataSend(){
@@ -239,7 +236,7 @@ void TotalDataSend(){
     crc = CRC_Check(tx_buffer, num);
     tx_buffer[num++] = (crc >> 8) & 0xFF;
     tx_buffer[num++] = crc & 0xFF;
-    HAL_UART_Transmit(&huart5, tx_buffer,  num, HAL_MAX_DELAY);
+    HAL_UART_Transmit_DMA(&huart5, tx_buffer,  num);
 }
 
 //状态回调
@@ -257,7 +254,7 @@ void StatuCallback(u8 cmd, u8 statu){
     tx_buffer[5] = (crc >> 8) & 0xFF;
     tx_buffer[6] = crc & 0xFF;
 
-    HAL_UART_Transmit(&huart5, tx_buffer, 7, HAL_MAX_DELAY);
+    HAL_UART_Transmit_DMA(&huart5, tx_buffer, 7);
 }
 
 void ConfigInit(){

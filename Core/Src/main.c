@@ -33,6 +33,7 @@
 #include "CollectData.h"
 #include "bt4531.h"
 #include "flash.h"
+#include "queue.h"
 /* USER CODE END Includes */
 
 /* Private typedef -----------------------------------------------------------*/
@@ -70,8 +71,11 @@ volatile u8 Scan_Start; //置1开始扫描
 
 volatile u8 ble_flag;    //蓝牙指令接收
 volatile u8 ble_len;
-u8 BleBuf[MAX_DATA_LENGTH];
+u8 BleBuf[RX_BUFFER_SIZE];
 volatile u8 Cmd;              //蓝牙指令
+
+u8 Uart2Buf[RX_BUFFER_SIZE];
+u8 Uart3Buf[RX_BUFFER_SIZE];
 
 volatile u8 VM1_Init;             //VM1初始化
 volatile u8 VM2_Init;
@@ -88,7 +92,6 @@ SensorInfo Sensor[16];   //数据结构体
 
 QueueHandle_t usart2Queue;
 QueueHandle_t usart3Queue;
-QueueHandle_t usart5Queue;
 //数采通道 -> 振弦通道 -> adc通道 对照
 // 1  -> 8  -> 4 ;   2  -> 5  -> 1 ;   3  -> 1  -> 11 ;  4  -> 3  -> 13 ;
 // 5  -> 7  -> 5 ;   6  -> 6  -> 0 ;   7  -> 2  -> 10 ;  8  -> 4  -> 12 ;
@@ -133,19 +136,24 @@ int main(void)
   MX_TIM2_Init();
   MX_UART5_Init();
   MX_IWDG_Init();
-  MX_TIM3_Init();
   /* USER CODE BEGIN 2 */
-    u8 rxdata;
-    HAL_UART_Receive_IT(&huart3, &rxdata, 1);
-    HAL_UART_Receive_IT(&huart2, &rxdata, 1);
-    HAL_UART_Receive_IT(&huart5, &rxdata, 1);
+    __HAL_UART_ENABLE_IT(&huart2, UART_IT_IDLE);
+    __HAL_UART_ENABLE_IT(&huart3, UART_IT_IDLE);
+    __HAL_UART_ENABLE_IT(&huart5, UART_IT_IDLE);
+
+    HAL_UARTEx_ReceiveToIdle_DMA(&huart2, Uart2Buf, RX_BUFFER_SIZE);
+    HAL_UARTEx_ReceiveToIdle_DMA(&huart3, Uart3Buf, RX_BUFFER_SIZE);
+    HAL_UARTEx_ReceiveToIdle_DMA(&huart5, BleBuf, RX_BUFFER_SIZE);
 //  Flash_Erase();
     Flash_Read();
 
     //更改蓝牙名称
-    printf("TTM:REN-ISD2190\r\n\0");
+    printf("TTM:REN-ISD2190-01\r\n\0");
 
   /* USER CODE END 2 */
+
+  /* Init scheduler */
+  osKernelInitialize();
 
   /* Call init function for freertos objects (in cmsis_os2.c) */
   MX_FREERTOS_Init();
@@ -220,18 +228,31 @@ void SystemClock_Config(void)
   * @param  htim : TIM handle
   * @retval None
   */
-/*void HAL_TIM_PeriodElapsedCallback(TIM_HandleTypeDef *htim)
+void HAL_TIM_PeriodElapsedCallback(TIM_HandleTypeDef *htim)
 {
-  *//* USER CODE BEGIN Callback 0 *//*
+  /* USER CODE BEGIN Callback 0 */
+    if (htim->Instance == TIM2) {
+        HAL_TIM_Base_Stop_IT(&htim2);
+        __HAL_TIM_SET_COUNTER(&htim2, 0);
+        VM_ERR = 1;
+        VM1_Busy = 0;
+        VM2_Busy = 0;
+        Scan_Start = 0;
 
-  *//* USER CODE END Callback 0 *//*
+        if(!VM1_OK)
+            VM1_Init = 0;
+
+        if(!VM2_OK)
+            VM2_Init = 0;
+    }
+  /* USER CODE END Callback 0 */
   if (htim->Instance == TIM7) {
     HAL_IncTick();
   }
-  *//* USER CODE BEGIN Callback 1 *//*
+  /* USER CODE BEGIN Callback 1 */
 
-  *//* USER CODE END Callback 1 *//*
-}*/
+  /* USER CODE END Callback 1 */
+}
 
 /**
   * @brief  This function is executed in case of error occurrence.

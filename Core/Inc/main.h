@@ -99,7 +99,7 @@ void Error_Handler(void);
 #define u8 uint8_t
 #define u16 uint16_t
 
-#define MAX_DATA_LENGTH 255
+#define RX_BUFFER_SIZE 64
 #define ADC_CHANCEL_NUM 16
 
 typedef struct SensorInfoTypeDef{
