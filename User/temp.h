@@ -6,6 +6,6 @@
 #define ISD2190_TEMP_H
 #include "main.h"
 
-void calcuTemps(u16* ad_value, int8_t* Temp_value, u8 size);
+void calcuTemps(u16* ad_value, int16_t* Temp_value, u8 size);
 
 #endif //ISD2190_TEMP_H

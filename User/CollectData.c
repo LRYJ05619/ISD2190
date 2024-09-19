@@ -7,7 +7,6 @@
 #include "tim.h"
 #include "usart.h"
 #include "adc.h"
-#include <string.h>
 #include "VMxx.h"
 #include "hardware.h"
 #include "temp.h"
@@ -33,7 +32,7 @@ extern volatile u8 VM1_OK;
 extern volatile u8 VM2_OK;
 
 extern u16 ADC_Value[ADC_CHANCEL_NUM];
-extern int8_t Temp_Value[ADC_CHANCEL_NUM];
+extern int16_t Temp_Value[ADC_CHANCEL_NUM];
 
 extern SensorInfo Sensor[16];
 
@@ -51,11 +50,7 @@ void Data_Collect() {
     VM1_Busy = 1;
     VM2_Busy = 1;
 
-    while (VM1_Busy || VM2_Busy) {
-        if (VM_ERR) {
-            break;
-        }
-    }
+    while (VM1_Busy || VM2_Busy) ;
     VM1_OK = 0;
     VM2_OK = 0;
 
@@ -143,11 +138,5 @@ void HAL_UARTEx_RxEventCallback(UART_HandleTypeDef *huart, uint16_t Size){
     }
 }
 
-void HAL_ADC_ConvCpltCallback(ADC_HandleTypeDef *hadc) {
-    if (hadc->Instance == ADC1) {
-        HAL_TIM_Base_Stop_IT(&htim2);
-        __HAL_TIM_SET_COUNTER(&htim2, 0);
-    }
-}
 
 

@@ -17,6 +17,12 @@ C:\Users\15569\Desktop\ISD2190\EWARM/../Drivers/CMSIS/Include
 -I
 C:\Users\15569\Desktop\ISD2190\User
 -I
+C:\Users\15569\Desktop\ISD2190\EWARM/../Middlewares/Third_Party/FreeRTOS/Source/include
+-I
+C:\Users\15569\Desktop\ISD2190\EWARM/../Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS_V2
+-I
+C:\Users\15569\Desktop\ISD2190\EWARM/../Middlewares/Third_Party/FreeRTOS/Source/portable/IAR/ARM_CM3
+-I
 D:\IAR 8.32.1\arm\inc
 -I
 D:\IAR 8.32.1\arm\inc\c
@@ -32,6 +38,12 @@ C:\Users\15569\Desktop\ISD2190\Drivers\CMSIS\Device\ST\STM32L1xx\Include
 C:\Users\15569\Desktop\ISD2190\Drivers\CMSIS\Include
 -I
 C:\Users\15569\Desktop\ISD2190\User
+-I
+C:\Users\15569\Desktop\ISD2190\Middlewares\Third_Party\FreeRTOS\Source\include
+-I
+C:\Users\15569\Desktop\ISD2190\Middlewares\Third_Party\FreeRTOS\Source\CMSIS_RTOS_V2
+-I
+C:\Users\15569\Desktop\ISD2190\Middlewares\Third_Party\FreeRTOS\Source\portable\IAR\ARM_CM3
 -D__CHAR_BITS__=8
 -D__CHAR_MAX__=0xff
 -D__CHAR_MIN__=0

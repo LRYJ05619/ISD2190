@@ -8,7 +8,7 @@
 #include "flash.h"
 #include "CollectData.h"
 
-u8 tx_buffer[RX_BUFFER_SIZE];
+u8 tx_buffer[512];
 extern SensorInfo Sensor[16];
 extern u8 BleBuf[RX_BUFFER_SIZE];
 extern volatile u8 Cmd;
@@ -106,7 +106,7 @@ void ConfigSend(u8 channel){
     tx_buffer[10] = (Sensor[channel].channel_addr >> 8) & 0xFF;
     tx_buffer[11] = Sensor[channel].channel_addr & 0xFF;
 
-    u8 num = 12;
+    u16 num = 12;
 
     for(u8 i = 0; i < Sensor[channel].channel_size; i++){
         tx_buffer[num++] = (Sensor[channel].init_freq[i] >> 8) & 0xFF;
@@ -183,15 +183,17 @@ void DataSend(u8 channel){
     tx_buffer[9] = Sensor[channel].sensor_type;
     tx_buffer[10] = Sensor[channel].channel_size;
 
-    u8 num = 11;
+    u16 num = 11;
 
     for(u8 i = 0; i < Sensor[channel].channel_size ; i++){
         tx_buffer[num++] = (Sensor[channel].freq[i] >> 8) & 0xFF;
         tx_buffer[num++] = (Sensor[channel].freq[i]) & 0xFF;
     }
-    tx_buffer[num++] = ((u16)Sensor[channel].Calculate >> 16 ) * 100 & 0xFF;
-    tx_buffer[num++] = ((u16)Sensor[channel].Calculate >> 8 ) * 100 & 0xFF;
-    tx_buffer[num++] = ((u16)Sensor[channel].Calculate) * 100 & 0xFF;
+    uint8_t* p = (uint8_t*)&Sensor[channel].Calculate;
+    tx_buffer[num++] = *p;
+    tx_buffer[num++] = *(p+1);
+    tx_buffer[num++] = *(p+2);
+    tx_buffer[num++] = *(p+3);
 
     tx_buffer[num++] = Sensor[channel].temp;
     tx_buffer[1] = num + 2;
@@ -208,7 +210,7 @@ void TotalDataSend(){
     tx_buffer[0] = 0xA0;
     tx_buffer[2] = 0x01;
     tx_buffer[3] = 0x71;
-    u8 num = 5;
+    u16 num = 5;
 
     for(u8 i = 0; i < 16; i++) {
         if (Sensor[i].status != 0x01)
@@ -225,9 +227,12 @@ void TotalDataSend(){
             tx_buffer[num++] = (Sensor[i].freq[j] >> 8) & 0xFF;
             tx_buffer[num++] = (Sensor[i].freq[j]) & 0xFF;
         }
-        tx_buffer[num++] = ((u16)Sensor[i].Calculate >> 16 ) * 100 & 0xFF;
-        tx_buffer[num++] = ((u16)Sensor[i].Calculate >> 8 ) * 100 & 0xFF;
-        tx_buffer[num++] = ((u16)Sensor[i].Calculate) * 100 & 0xFF;
+        uint8_t* p = (uint8_t*)&Sensor[i].Calculate;
+        tx_buffer[num++] = *p;
+        tx_buffer[num++] = *(p+1);
+        tx_buffer[num++] = *(p+2);
+        tx_buffer[num++] = *(p+3);
+
         tx_buffer[num++] = Sensor[i].temp;
     }
 

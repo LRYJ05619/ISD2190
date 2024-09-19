@@ -10,8 +10,8 @@ float  BMYBJ_YB(u16 init_freq, u8 init_temp, u16 freq, u8 temp){
     float  YB_Change;
     float  K = 0.0035708;
     float  F = 2.2;
-    float  init_YB = (init_freq * 0.1) * (init_freq * 0.1);
-    float  YB = (freq * 0.1) * (freq * 0.1);
+    float  init_YB = ((init_freq * 0.1) * (init_freq * 0.1));
+    float  YB = ((freq * 0.1) * (freq * 0.1));
     YB_Change = K * (YB - init_YB) + F * (temp - init_temp);
     return YB_Change;
 }

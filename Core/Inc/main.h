@@ -99,7 +99,7 @@ void Error_Handler(void);
 #define u8 uint8_t
 #define u16 uint16_t
 
-#define RX_BUFFER_SIZE 64
+#define RX_BUFFER_SIZE 32
 #define ADC_CHANCEL_NUM 16
 
 typedef struct SensorInfoTypeDef{
@@ -110,10 +110,10 @@ typedef struct SensorInfoTypeDef{
     u8 channel_size; //占用通道数量
     u16 channel_addr; //占用通道
 
-    int8_t init_temp; //初始温度
+    int16_t init_temp; //初始温度
     u16 init_freq[9]; //初始频率 使用时需要除以10
 
-    int8_t temp; //测量温度
+    int16_t temp; //测量温度
     u16 freq[9]; //测量频率 使用时需要除以10
 
     float Calculate; //计算值

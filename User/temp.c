@@ -33,7 +33,7 @@ int8_t calcuTem(u16 ad_value) {
     return closestIndex - 30; // Adjust for the temperature offset
 }
 
-void calcuTemps(u16* ad_value, int8_t* Temp_value, u8 size){
+void calcuTemps(u16* ad_value, int16_t* Temp_value, u8 size){
   for (int i = 0; i < size; i++) {
         Temp_value[i] = calcuTem(ad_value[i]);
   }

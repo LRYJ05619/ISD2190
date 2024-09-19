@@ -21,73 +21,117 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="c8e28670-dfba-4e2b-832d-3f7616a4423e" name="更改" comment="8.15">
-      <change afterPath="$PROJECT_DIR$/EWARM/ISD2190/Obj/ISD2190.pbd.tmp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS_V2/cmsis_os.h" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS_V2/cmsis_os2.c" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS_V2/cmsis_os2.h" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.cproject" beforeDir="false" afterPath="$PROJECT_DIR$/.cproject" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.mxproject" beforeDir="false" afterPath="$PROJECT_DIR$/.mxproject" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/CMakeLists.txt" beforeDir="false" afterPath="$PROJECT_DIR$/CMakeLists.txt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Core/Inc/FreeRTOSConfig.h" beforeDir="false" afterPath="$PROJECT_DIR$/Core/Inc/FreeRTOSConfig.h" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Core/Inc/main.h" beforeDir="false" afterPath="$PROJECT_DIR$/Core/Inc/main.h" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Core/Inc/stm32l1xx_it.h" beforeDir="false" afterPath="$PROJECT_DIR$/Core/Inc/stm32l1xx_it.h" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Core/Inc/tim.h" beforeDir="false" afterPath="$PROJECT_DIR$/Core/Inc/tim.h" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Core/Src/dma.c" beforeDir="false" afterPath="$PROJECT_DIR$/Core/Src/dma.c" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Core/Src/adc.c" beforeDir="false" afterPath="$PROJECT_DIR$/Core/Src/adc.c" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Core/Src/freertos.c" beforeDir="false" afterPath="$PROJECT_DIR$/Core/Src/freertos.c" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Core/Src/main.c" beforeDir="false" afterPath="$PROJECT_DIR$/Core/Src/main.c" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Core/Src/stm32l1xx_hal_msp.c" beforeDir="false" afterPath="$PROJECT_DIR$/Core/Src/stm32l1xx_hal_msp.c" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Core/Src/stm32l1xx_hal_timebase_tim.c" beforeDir="false" afterPath="$PROJECT_DIR$/Core/Src/stm32l1xx_hal_timebase_tim.c" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Core/Src/stm32l1xx_it.c" beforeDir="false" afterPath="$PROJECT_DIR$/Core/Src/stm32l1xx_it.c" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Core/Src/tim.c" beforeDir="false" afterPath="$PROJECT_DIR$/Core/Src/tim.c" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Core/Src/usart.c" beforeDir="false" afterPath="$PROJECT_DIR$/Core/Src/usart.c" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/EWARM/ISD2190.dep" beforeDir="false" afterPath="$PROJECT_DIR$/EWARM/ISD2190.dep" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/EWARM/ISD2190/Obj/ISD2190.pbd.browse" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/EWARM/ISD2190.ewp" beforeDir="false" afterPath="$PROJECT_DIR$/EWARM/ISD2190.ewp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/EWARM/ISD2190/Exe/ISD2190.hex" beforeDir="false" afterPath="$PROJECT_DIR$/EWARM/ISD2190/Exe/ISD2190.hex" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/EWARM/ISD2190/Exe/ISD2190.out" beforeDir="false" afterPath="$PROJECT_DIR$/EWARM/ISD2190/Exe/ISD2190.out" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/EWARM/ISD2190/List/ISD2190.map" beforeDir="false" afterPath="$PROJECT_DIR$/EWARM/ISD2190/List/ISD2190.map" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/EWARM/ISD2190/Obj/CollectData.o" beforeDir="false" afterPath="$PROJECT_DIR$/EWARM/ISD2190/Obj/CollectData.o" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/EWARM/ISD2190/Obj/CollectData.pbi" beforeDir="false" afterPath="$PROJECT_DIR$/EWARM/ISD2190/Obj/CollectData.pbi" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/EWARM/ISD2190/Obj/CollectData.pbi.xcl" beforeDir="false" afterPath="$PROJECT_DIR$/EWARM/ISD2190/Obj/CollectData.pbi.xcl" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/EWARM/ISD2190/Obj/ISD2190.pbd" beforeDir="false" afterPath="$PROJECT_DIR$/EWARM/ISD2190/Obj/ISD2190.pbd" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/EWARM/ISD2190/Obj/ISD2190.pbd.linf" beforeDir="false" afterPath="$PROJECT_DIR$/EWARM/ISD2190/Obj/ISD2190.pbd.linf" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/EWARM/ISD2190/Obj/ISD2190.pbd.tmp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/EWARM/ISD2190/Obj/ISD2190.pbw" beforeDir="false" afterPath="$PROJECT_DIR$/EWARM/ISD2190/Obj/ISD2190.pbw" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/EWARM/ISD2190/Obj/VMxx.o" beforeDir="false" afterPath="$PROJECT_DIR$/EWARM/ISD2190/Obj/VMxx.o" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/EWARM/ISD2190/Obj/VMxx.pbi" beforeDir="false" afterPath="$PROJECT_DIR$/EWARM/ISD2190/Obj/VMxx.pbi" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/EWARM/ISD2190/Obj/VMxx.pbi.xcl" beforeDir="false" afterPath="$PROJECT_DIR$/EWARM/ISD2190/Obj/VMxx.pbi.xcl" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/EWARM/ISD2190/Obj/adc.o" beforeDir="false" afterPath="$PROJECT_DIR$/EWARM/ISD2190/Obj/adc.o" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/EWARM/ISD2190/Obj/adc.pbi" beforeDir="false" afterPath="$PROJECT_DIR$/EWARM/ISD2190/Obj/adc.pbi" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/EWARM/ISD2190/Obj/adc.pbi.xcl" beforeDir="false" afterPath="$PROJECT_DIR$/EWARM/ISD2190/Obj/adc.pbi.xcl" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/EWARM/ISD2190/Obj/bt4531.o" beforeDir="false" afterPath="$PROJECT_DIR$/EWARM/ISD2190/Obj/bt4531.o" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/EWARM/ISD2190/Obj/bt4531.pbi" beforeDir="false" afterPath="$PROJECT_DIR$/EWARM/ISD2190/Obj/bt4531.pbi" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/EWARM/ISD2190/Obj/bt4531.pbi.xcl" beforeDir="false" afterPath="$PROJECT_DIR$/EWARM/ISD2190/Obj/bt4531.pbi.xcl" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/EWARM/ISD2190/Obj/dma.o" beforeDir="false" afterPath="$PROJECT_DIR$/EWARM/ISD2190/Obj/dma.o" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/EWARM/ISD2190/Obj/dma.pbi" beforeDir="false" afterPath="$PROJECT_DIR$/EWARM/ISD2190/Obj/dma.pbi" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/EWARM/ISD2190/Obj/gpio.pbi" beforeDir="false" afterPath="$PROJECT_DIR$/EWARM/ISD2190/Obj/gpio.pbi" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/EWARM/ISD2190/Obj/dma.pbi.xcl" beforeDir="false" afterPath="$PROJECT_DIR$/EWARM/ISD2190/Obj/dma.pbi.xcl" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/EWARM/ISD2190/Obj/flash.o" beforeDir="false" afterPath="$PROJECT_DIR$/EWARM/ISD2190/Obj/flash.o" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/EWARM/ISD2190/Obj/flash.pbi" beforeDir="false" afterPath="$PROJECT_DIR$/EWARM/ISD2190/Obj/flash.pbi" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/EWARM/ISD2190/Obj/flash.pbi.xcl" beforeDir="false" afterPath="$PROJECT_DIR$/EWARM/ISD2190/Obj/flash.pbi.xcl" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/EWARM/ISD2190/Obj/gpio.o" beforeDir="false" afterPath="$PROJECT_DIR$/EWARM/ISD2190/Obj/gpio.o" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/EWARM/ISD2190/Obj/hardware.o" beforeDir="false" afterPath="$PROJECT_DIR$/EWARM/ISD2190/Obj/hardware.o" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/EWARM/ISD2190/Obj/hardware.pbi" beforeDir="false" afterPath="$PROJECT_DIR$/EWARM/ISD2190/Obj/hardware.pbi" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/EWARM/ISD2190/Obj/hardware.pbi.xcl" beforeDir="false" afterPath="$PROJECT_DIR$/EWARM/ISD2190/Obj/hardware.pbi.xcl" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/EWARM/ISD2190/Obj/main.o" beforeDir="false" afterPath="$PROJECT_DIR$/EWARM/ISD2190/Obj/main.o" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/EWARM/ISD2190/Obj/main.pbi" beforeDir="false" afterPath="$PROJECT_DIR$/EWARM/ISD2190/Obj/main.pbi" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/EWARM/settings/ISD2190.dbgdt" beforeDir="false" afterPath="$PROJECT_DIR$/EWARM/settings/ISD2190.dbgdt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/EWARM/ISD2190/Obj/main.pbi.xcl" beforeDir="false" afterPath="$PROJECT_DIR$/EWARM/ISD2190/Obj/main.pbi.xcl" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/EWARM/ISD2190/Obj/startup_stm32l151xd.o" beforeDir="false" afterPath="$PROJECT_DIR$/EWARM/ISD2190/Obj/startup_stm32l151xd.o" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/EWARM/ISD2190/Obj/stm32l1xx_hal.o" beforeDir="false" afterPath="$PROJECT_DIR$/EWARM/ISD2190/Obj/stm32l1xx_hal.o" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/EWARM/ISD2190/Obj/stm32l1xx_hal_adc.o" beforeDir="false" afterPath="$PROJECT_DIR$/EWARM/ISD2190/Obj/stm32l1xx_hal_adc.o" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/EWARM/ISD2190/Obj/stm32l1xx_hal_adc_ex.o" beforeDir="false" afterPath="$PROJECT_DIR$/EWARM/ISD2190/Obj/stm32l1xx_hal_adc_ex.o" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/EWARM/ISD2190/Obj/stm32l1xx_hal_cortex.o" beforeDir="false" afterPath="$PROJECT_DIR$/EWARM/ISD2190/Obj/stm32l1xx_hal_cortex.o" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/EWARM/ISD2190/Obj/stm32l1xx_hal_dma.o" beforeDir="false" afterPath="$PROJECT_DIR$/EWARM/ISD2190/Obj/stm32l1xx_hal_dma.o" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/EWARM/ISD2190/Obj/stm32l1xx_hal_exti.o" beforeDir="false" afterPath="$PROJECT_DIR$/EWARM/ISD2190/Obj/stm32l1xx_hal_exti.o" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/EWARM/ISD2190/Obj/stm32l1xx_hal_flash.o" beforeDir="false" afterPath="$PROJECT_DIR$/EWARM/ISD2190/Obj/stm32l1xx_hal_flash.o" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/EWARM/ISD2190/Obj/stm32l1xx_hal_flash_ex.o" beforeDir="false" afterPath="$PROJECT_DIR$/EWARM/ISD2190/Obj/stm32l1xx_hal_flash_ex.o" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/EWARM/ISD2190/Obj/stm32l1xx_hal_flash_ramfunc.o" beforeDir="false" afterPath="$PROJECT_DIR$/EWARM/ISD2190/Obj/stm32l1xx_hal_flash_ramfunc.o" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/EWARM/ISD2190/Obj/stm32l1xx_hal_gpio.o" beforeDir="false" afterPath="$PROJECT_DIR$/EWARM/ISD2190/Obj/stm32l1xx_hal_gpio.o" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/EWARM/ISD2190/Obj/stm32l1xx_hal_msp.o" beforeDir="false" afterPath="$PROJECT_DIR$/EWARM/ISD2190/Obj/stm32l1xx_hal_msp.o" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/EWARM/ISD2190/Obj/stm32l1xx_hal_msp.pbi" beforeDir="false" afterPath="$PROJECT_DIR$/EWARM/ISD2190/Obj/stm32l1xx_hal_msp.pbi" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/EWARM/ISD2190/Obj/stm32l1xx_hal_msp.pbi.xcl" beforeDir="false" afterPath="$PROJECT_DIR$/EWARM/ISD2190/Obj/stm32l1xx_hal_msp.pbi.xcl" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/EWARM/ISD2190/Obj/stm32l1xx_hal_pwr.o" beforeDir="false" afterPath="$PROJECT_DIR$/EWARM/ISD2190/Obj/stm32l1xx_hal_pwr.o" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/EWARM/ISD2190/Obj/stm32l1xx_hal_pwr_ex.o" beforeDir="false" afterPath="$PROJECT_DIR$/EWARM/ISD2190/Obj/stm32l1xx_hal_pwr_ex.o" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/EWARM/ISD2190/Obj/stm32l1xx_hal_rcc.o" beforeDir="false" afterPath="$PROJECT_DIR$/EWARM/ISD2190/Obj/stm32l1xx_hal_rcc.o" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/EWARM/ISD2190/Obj/stm32l1xx_hal_rcc_ex.o" beforeDir="false" afterPath="$PROJECT_DIR$/EWARM/ISD2190/Obj/stm32l1xx_hal_rcc_ex.o" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/EWARM/ISD2190/Obj/stm32l1xx_hal_tim.o" beforeDir="false" afterPath="$PROJECT_DIR$/EWARM/ISD2190/Obj/stm32l1xx_hal_tim.o" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/EWARM/ISD2190/Obj/stm32l1xx_hal_tim_ex.o" beforeDir="false" afterPath="$PROJECT_DIR$/EWARM/ISD2190/Obj/stm32l1xx_hal_tim_ex.o" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/EWARM/ISD2190/Obj/stm32l1xx_hal_uart.o" beforeDir="false" afterPath="$PROJECT_DIR$/EWARM/ISD2190/Obj/stm32l1xx_hal_uart.o" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/EWARM/ISD2190/Obj/stm32l1xx_it.o" beforeDir="false" afterPath="$PROJECT_DIR$/EWARM/ISD2190/Obj/stm32l1xx_it.o" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/EWARM/ISD2190/Obj/stm32l1xx_it.pbi" beforeDir="false" afterPath="$PROJECT_DIR$/EWARM/ISD2190/Obj/stm32l1xx_it.pbi" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/EWARM/ISD2190/Obj/stm32l1xx_it.pbi.xcl" beforeDir="false" afterPath="$PROJECT_DIR$/EWARM/ISD2190/Obj/stm32l1xx_it.pbi.xcl" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/EWARM/ISD2190/Obj/system_stm32l1xx.o" beforeDir="false" afterPath="$PROJECT_DIR$/EWARM/ISD2190/Obj/system_stm32l1xx.o" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/EWARM/ISD2190/Obj/temp.o" beforeDir="false" afterPath="$PROJECT_DIR$/EWARM/ISD2190/Obj/temp.o" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/EWARM/ISD2190/Obj/temp.pbi" beforeDir="false" afterPath="$PROJECT_DIR$/EWARM/ISD2190/Obj/temp.pbi" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/EWARM/ISD2190/Obj/temp.pbi.xcl" beforeDir="false" afterPath="$PROJECT_DIR$/EWARM/ISD2190/Obj/temp.pbi.xcl" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/EWARM/ISD2190/Obj/tim.o" beforeDir="false" afterPath="$PROJECT_DIR$/EWARM/ISD2190/Obj/tim.o" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/EWARM/ISD2190/Obj/tim.pbi" beforeDir="false" afterPath="$PROJECT_DIR$/EWARM/ISD2190/Obj/tim.pbi" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/EWARM/ISD2190/Obj/tim.pbi.xcl" beforeDir="false" afterPath="$PROJECT_DIR$/EWARM/ISD2190/Obj/tim.pbi.xcl" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/EWARM/ISD2190/Obj/usart.o" beforeDir="false" afterPath="$PROJECT_DIR$/EWARM/ISD2190/Obj/usart.o" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/EWARM/ISD2190/Obj/usart.pbi" beforeDir="false" afterPath="$PROJECT_DIR$/EWARM/ISD2190/Obj/usart.pbi" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/EWARM/ISD2190/Obj/usart.pbi.xcl" beforeDir="false" afterPath="$PROJECT_DIR$/EWARM/ISD2190/Obj/usart.pbi.xcl" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/EWARM/settings/Project.wsdt" beforeDir="false" afterPath="$PROJECT_DIR$/EWARM/settings/Project.wsdt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/ISD2190.ioc" beforeDir="false" afterPath="$PROJECT_DIR$/ISD2190.ioc" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS/cmsis_os.c" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS/cmsis_os.h" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/User/CollectData.c" beforeDir="false" afterPath="$PROJECT_DIR$/User/CollectData.c" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/User/VMxx.c" beforeDir="false" afterPath="$PROJECT_DIR$/User/VMxx.c" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/User/VMxx.h" beforeDir="false" afterPath="$PROJECT_DIR$/User/VMxx.h" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/User/bt4531.c" beforeDir="false" afterPath="$PROJECT_DIR$/User/bt4531.c" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/User/flash.c" beforeDir="false" afterPath="$PROJECT_DIR$/User/flash.c" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/.cmake/api/v1/reply/codemodel-v2-54ccb5cae3b0ffa975d0.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/.cmake/api/v1/reply/index-2024-08-07T09-16-07-0987.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/.cmake/api/v1/reply/target-ISD2190.elf-Debug-1748d712e7f69a9b7e09.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/User/hardware.c" beforeDir="false" afterPath="$PROJECT_DIR$/User/hardware.c" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/User/temp.c" beforeDir="false" afterPath="$PROJECT_DIR$/User/temp.c" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/User/temp.h" beforeDir="false" afterPath="$PROJECT_DIR$/User/temp.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/.cmake/api/v1/reply/index-2024-08-16T07-35-49-0008.json" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/cmake-build-debug/.ninja_deps" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/.ninja_deps" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/cmake-build-debug/.ninja_log" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/.ninja_log" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/3.27.8/CMakeDetermineCompilerABI_C.bin" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/3.27.8/CMakeDetermineCompilerABI_C.bin" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/3.27.8/CMakeDetermineCompilerABI_CXX.bin" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/3.27.8/CMakeDetermineCompilerABI_CXX.bin" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/CMakeConfigureLog.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/CMakeConfigureLog.yaml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/ISD2190.elf.dir/Core/Src/dma.c.obj" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/ISD2190.elf.dir/Core/Src/dma.c.obj" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/ISD2190.elf.dir/Core/Src/adc.c.obj" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/ISD2190.elf.dir/Core/Src/adc.c.obj" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/ISD2190.elf.dir/Core/Src/freertos.c.obj" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/ISD2190.elf.dir/Core/Src/freertos.c.obj" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/ISD2190.elf.dir/Core/Src/main.c.obj" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/ISD2190.elf.dir/Core/Src/main.c.obj" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/ISD2190.elf.dir/Core/Src/stm32l1xx_hal_msp.c.obj" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/ISD2190.elf.dir/Core/Src/stm32l1xx_hal_msp.c.obj" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/ISD2190.elf.dir/Core/Src/stm32l1xx_hal_timebase_tim.c.obj" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/ISD2190.elf.dir/Core/Src/stm32l1xx_hal_timebase_tim.c.obj" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/ISD2190.elf.dir/Core/Src/stm32l1xx_it.c.obj" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/ISD2190.elf.dir/Core/Src/stm32l1xx_it.c.obj" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/ISD2190.elf.dir/Core/Src/tim.c.obj" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/ISD2190.elf.dir/Core/Src/tim.c.obj" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/ISD2190.elf.dir/Core/Src/usart.c.obj" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/ISD2190.elf.dir/Core/Src/usart.c.obj" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/ISD2190.elf.dir/Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS/cmsis_os.c.obj" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/ISD2190.elf.dir/Middlewares/Third_Party/FreeRTOS/Source/event_groups.c.obj" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/ISD2190.elf.dir/Middlewares/Third_Party/FreeRTOS/Source/event_groups.c.obj" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/ISD2190.elf.dir/Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS_V2/cmsis_os2.c.obj" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/ISD2190.elf.dir/Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS_V2/cmsis_os2.c.obj" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/ISD2190.elf.dir/Middlewares/Third_Party/FreeRTOS/Source/portable/MemMang/heap_4.c.obj" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/ISD2190.elf.dir/Middlewares/Third_Party/FreeRTOS/Source/portable/MemMang/heap_4.c.obj" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/ISD2190.elf.dir/Middlewares/Third_Party/FreeRTOS/Source/queue.c.obj" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/ISD2190.elf.dir/Middlewares/Third_Party/FreeRTOS/Source/queue.c.obj" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/ISD2190.elf.dir/Middlewares/Third_Party/FreeRTOS/Source/stream_buffer.c.obj" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/ISD2190.elf.dir/Middlewares/Third_Party/FreeRTOS/Source/stream_buffer.c.obj" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/ISD2190.elf.dir/Middlewares/Third_Party/FreeRTOS/Source/tasks.c.obj" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/ISD2190.elf.dir/Middlewares/Third_Party/FreeRTOS/Source/tasks.c.obj" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/ISD2190.elf.dir/Middlewares/Third_Party/FreeRTOS/Source/timers.c.obj" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/ISD2190.elf.dir/Middlewares/Third_Party/FreeRTOS/Source/timers.c.obj" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/ISD2190.elf.dir/User/CollectData.c.obj" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/ISD2190.elf.dir/User/CollectData.c.obj" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/ISD2190.elf.dir/User/VMxx.c.obj" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/ISD2190.elf.dir/User/VMxx.c.obj" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/ISD2190.elf.dir/User/bt4531.c.obj" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/ISD2190.elf.dir/User/bt4531.c.obj" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/ISD2190.elf.dir/User/flash.c.obj" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/ISD2190.elf.dir/User/flash.c.obj" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/ISD2190.elf.dir/User/hardware.c.obj" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/ISD2190.elf.dir/User/hardware.c.obj" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/ISD2190.elf.dir/User/temp.c.obj" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/ISD2190.elf.dir/User/temp.c.obj" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/clion-Debug-log.txt" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/clion-Debug-log.txt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/cmake-build-debug/ISD2190.bin" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/ISD2190.bin" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/cmake-build-debug/ISD2190.elf" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/ISD2190.elf" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/cmake-build-debug/ISD2190.hex" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/ISD2190.hex" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/cmake-build-debug/ISD2190.map" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/ISD2190.map" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/build.ninja" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/build.ninja" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/蓝牙协议拟制.xlsx" beforeDir="false" afterPath="$PROJECT_DIR$/蓝牙协议拟制.xlsx" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -148,47 +192,42 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "ASKED_ADD_EXTERNAL_FILES": "true",
-    "ASKED_SHARE_PROJECT_CONFIGURATION_FILES": "true",
-    "CMake 应用程序.ISD2190.elf.executor": "Run",
-    "OpenOCD 下载并运行.ISD2190.executor": "Debug",
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "RunOnceActivity.cidr.known.project.marker": "true",
-    "RunOnceActivity.readMode.enableVisualFormatting": "true",
-    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
-    "cf.first.check.clang-format": "false",
-    "cidr.known.project.marker": "true",
-    "git-widget-placeholder": "8.13",
-    "ignore.virus.scanning.warn.message": "true",
-    "last_opened_file_path": "C:/Users/15569/Desktop/IAT302",
-    "node.js.detected.package.eslint": "true",
-    "node.js.detected.package.tslint": "true",
-    "node.js.selected.package.eslint": "(autodetect)",
-    "node.js.selected.package.tslint": "(autodetect)",
-    "nodejs_package_manager_path": "npm",
-    "org.rust.cargo.project.model.impl.CargoExternalSystemProjectAware.subscribe.first.balloon": "",
-    "org.rust.first.attach.projects.stats": "true",
-    "run.code.analysis.last.selected.profile": "pProject Default",
-    "settings.editor.selected.configurable": "preferences.pluginManager",
-    "structure.view.defaults.are.configured": "true",
-    "two.files.diff.last.used.file": "C:/Users/15569/Desktop/云平台测试/ISD2190/Core/Src/main.c",
-    "vue.rearranger.settings.migration": "true"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;ASKED_ADD_EXTERNAL_FILES&quot;: &quot;true&quot;,
+    &quot;ASKED_SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
+    &quot;CMake 应用程序.ISD2190.elf.executor&quot;: &quot;Run&quot;,
+    &quot;OpenOCD 下载并运行.ISD2190.executor&quot;: &quot;Debug&quot;,
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.cidr.known.project.marker&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.readMode.enableVisualFormatting&quot;: &quot;true&quot;,
+    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
+    &quot;cf.first.check.clang-format&quot;: &quot;false&quot;,
+    &quot;cidr.known.project.marker&quot;: &quot;true&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;8.13&quot;,
+    &quot;ignore.virus.scanning.warn.message&quot;: &quot;true&quot;,
+    &quot;last_opened_file_path&quot;: &quot;C:/Users/15569/Desktop/IAT302&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;org.rust.cargo.project.model.impl.CargoExternalSystemProjectAware.subscribe.first.balloon&quot;: &quot;&quot;,
+    &quot;org.rust.first.attach.projects.stats&quot;: &quot;true&quot;,
+    &quot;run.code.analysis.last.selected.profile&quot;: &quot;pProject Default&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.pluginManager&quot;,
+    &quot;structure.view.defaults.are.configured&quot;: &quot;true&quot;,
+    &quot;two.files.diff.last.used.file&quot;: &quot;C:/Users/15569/Desktop/云平台测试/ISD2190/Core/Src/main.c&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
-}]]></component>
+}</component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
       <recent name="C:\Users\15569\Desktop\ISD2190" />
     </key>
   </component>
   <component name="RunManager" selected="OpenOCD 下载并运行.ISD2190">
-    <configuration default="true" type="CLionExternalRunConfiguration" factoryName="Application" REDIRECT_INPUT="false" ELEVATE="false" USE_EXTERNAL_CONSOLE="false" EMULATE_TERMINAL="false" PASS_PARENT_ENVS_2="true">
-      <method v="2">
-        <option name="CLION.EXTERNAL.BUILD" enabled="true" />
-      </method>
-    </configuration>
     <configuration name="ISD2190.elf" type="CMakeRunConfiguration" factoryName="Application" REDIRECT_INPUT="false" ELEVATE="false" USE_EXTERNAL_CONSOLE="false" EMULATE_TERMINAL="false" PASS_PARENT_ENVS_2="true" PROJECT_NAME="ISD2190" TARGET_NAME="ISD2190.elf" CONFIG_NAME="Debug" RUN_TARGET_PROJECT_NAME="ISD2190" RUN_TARGET_NAME="ISD2190.elf">
       <method v="2">
         <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
@@ -282,6 +321,23 @@
       <workItem from="1723709408866" duration="7063000" />
       <workItem from="1723716501036" duration="490000" />
       <workItem from="1723770591371" duration="24268000" />
+      <workItem from="1724053049407" duration="3830000" />
+      <workItem from="1724729336915" duration="164000" />
+      <workItem from="1724744977979" duration="839000" />
+      <workItem from="1724830850467" duration="147000" />
+      <workItem from="1724831005709" duration="6149000" />
+      <workItem from="1724895221795" duration="5136000" />
+      <workItem from="1724998412955" duration="9714000" />
+      <workItem from="1725239597396" duration="14470000" />
+      <workItem from="1725261178136" duration="10453000" />
+      <workItem from="1725271842300" duration="151000" />
+      <workItem from="1725958249887" duration="30000" />
+      <workItem from="1725958296737" duration="18000" />
+      <workItem from="1725958434234" duration="56000" />
+      <workItem from="1726302369119" duration="43000" />
+      <workItem from="1726302456846" duration="127000" />
+      <workItem from="1726709760528" duration="8438000" />
+      <workItem from="1726725925469" duration="344000" />
     </task>
     <task id="LOCAL-00001" summary="7.31">
       <option name="closed" value="true" />
@@ -415,39 +471,22 @@
           <line>84</line>
           <option name="timeStamp" value="173" />
         </line-breakpoint>
-        <line-breakpoint type="com.jetbrains.cidr.execution.debugger.OCBreakpointType">
-          <url>file://$PROJECT_DIR$/User/bt4531.c</url>
-          <line>238</line>
-          <option name="timeStamp" value="176" />
-        </line-breakpoint>
         <line-breakpoint enabled="true" type="com.jetbrains.cidr.execution.debugger.OCBreakpointType">
           <url>file://$PROJECT_DIR$/Core/Src/main.c</url>
-          <line>236</line>
-          <option name="timeStamp" value="202" />
-        </line-breakpoint>
-        <line-breakpoint type="com.jetbrains.cidr.execution.debugger.OCBreakpointType">
-          <url>file://$PROJECT_DIR$/Core/Src/freertos.c</url>
-          <line>328</line>
-          <option name="timeStamp" value="203" />
-        </line-breakpoint>
-        <line-breakpoint type="com.jetbrains.cidr.execution.debugger.OCBreakpointType">
-          <url>file://$PROJECT_DIR$/Core/Src/freertos.c</url>
-          <line>271</line>
-          <option name="timeStamp" value="204" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="com.jetbrains.cidr.execution.debugger.OCBreakpointType">
-          <url>file://$PROJECT_DIR$/Core/Src/freertos.c</url>
-          <line>344</line>
-          <option name="timeStamp" value="225" />
+          <line>231</line>
+          <option name="timeStamp" value="273" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>
     <watches-manager>
       <configuration name="com.jetbrains.cidr.embedded.openocd.conf.type">
         <watch expression="BleBuf" language="ObjectiveC" />
-        <watch expression="tx_buffer" language="ObjectiveC" />
         <watch expression="Sensor" language="ObjectiveC" />
-        <watch expression="rx_buffer" language="ObjectiveC" />
+        <watch expression="Uart2Buf" language="ObjectiveC" />
+        <watch expression="Uart3Buf" language="ObjectiveC" />
+        <watch expression="Temp_Value" language="ObjectiveC" />
+        <watch expression="tx_buffer" language="ObjectiveC" />
+        <watch expression="tx_buffer[15]" />
       </configuration>
     </watches-manager>
   </component>

@@ -28,10 +28,6 @@
 
 /* Private includes ----------------------------------------------------------*/
 /* USER CODE BEGIN Includes */
-#include <string.h>
-#include "VMxx.h"
-#include "CollectData.h"
-#include "bt4531.h"
 #include "flash.h"
 #include "queue.h"
 /* USER CODE END Includes */
@@ -77,13 +73,14 @@ volatile u8 Cmd;              //蓝牙指令
 u8 Uart2Buf[RX_BUFFER_SIZE];
 u8 Uart3Buf[RX_BUFFER_SIZE];
 
-volatile u8 VM1_Init;             //VM1初始化
+volatile u8 VM1_Init;    //VM1初始化
 volatile u8 VM2_Init;
 volatile u8 VM1_Busy;    //VM1工作中
 volatile u8 VM2_Busy;
 volatile u8 VM1_OK;      //VM1读取成功
 volatile u8 VM2_OK;
 volatile u8 VM_ERR;      //模块异常，尝试初始化
+
 
 u16 ADC_Value[ADC_CHANCEL_NUM]; //adc采集值
 int16_t Temp_Value[ADC_CHANCEL_NUM]; //实际温度
@@ -93,10 +90,10 @@ SensorInfo Sensor[16];   //数据结构体
 QueueHandle_t usart2Queue;
 QueueHandle_t usart3Queue;
 //数采通道 -> 振弦通道 -> adc通道 对照
-// 1  -> 8  -> 4 ;   2  -> 5  -> 1 ;   3  -> 1  -> 11 ;  4  -> 3  -> 13 ;
-// 5  -> 7  -> 5 ;   6  -> 6  -> 0 ;   7  -> 2  -> 10 ;  8  -> 4  -> 12 ;
-// 9  -> 10 -> 7 ;   10 -> 11 -> 8 ;   11 -> 15 -> 20 ;  12 -> 13 -> 18 ;
-// 13 -> 9  -> 6 ;   14 -> 12 -> 14;   15 -> 16 -> 21 ;  16 -> 14 -> 19 ;
+// 1  -> 8  -> 10 ;   2  -> 5  -> 12 ;   3  -> 1  -> 0  ;  4  -> 3  -> 4  ;
+// 5  -> 7  -> 11 ;   6  -> 6  -> 13 ;   7  -> 2  -> 1  ;  8  -> 4  -> 5  ;
+// 9  -> 10 -> 6  ;   10 -> 11 -> 8  ;   11 -> 15 -> 18 ;  12 -> 13 -> 20 ;
+// 13 -> 9  -> 7  ;   14 -> 12 -> 14 ;   15 -> 16 -> 19 ;  16 -> 14 -> 21 ;
 
 /* USER CODE END Private defines */
 /* USER CODE END 0 */
@@ -148,7 +145,7 @@ int main(void)
     Flash_Read();
 
     //更改蓝牙名称
-    printf("TTM:REN-ISD2190-01\r\n\0");
+    printf("TTM:REN-ISD2190-02\r\n\0");
 
   /* USER CODE END 2 */
 
