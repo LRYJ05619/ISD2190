@@ -19,10 +19,10 @@ extern volatile u8 Scan_Start;
 
 extern volatile u8 ble_flag;
 extern u8 ble_len;
-extern u8 BleBuf[RX_BUFFER_SIZE];
+extern u8 BleBuf[VM_BLE_RX_BUFFER_SIZE];
 
-extern u8 Uart2Buf[RX_BUFFER_SIZE];
-extern u8 Uart3Buf[RX_BUFFER_SIZE];
+extern u8 Uart2Buf[VM_BLE_RX_BUFFER_SIZE];
+extern u8 Uart3Buf[VM_BLE_RX_BUFFER_SIZE];
 
 extern volatile u8 VM1_Busy;
 extern volatile u8 VM2_Busy;
@@ -123,18 +123,18 @@ void HAL_UARTEx_RxEventCallback(UART_HandleTypeDef *huart, uint16_t Size){
         // 数据包校验通过
         xQueueSendFromISR(usart2Queue, &Size, &xHigherPriorityTaskWoken);
         portYIELD_FROM_ISR(xHigherPriorityTaskWoken);
-        HAL_UARTEx_ReceiveToIdle_DMA(&huart2, Uart2Buf, RX_BUFFER_SIZE); // 重新使能接收中断
+        HAL_UARTEx_ReceiveToIdle_DMA(&huart2, Uart2Buf, VM_BLE_RX_BUFFER_SIZE); // 重新使能接收中断
     }
     if (huart->Instance == USART3) {
         // 数据包校验通过
         xQueueSendFromISR(usart3Queue, &Size, &xHigherPriorityTaskWoken);
         portYIELD_FROM_ISR(xHigherPriorityTaskWoken);
-        HAL_UARTEx_ReceiveToIdle_DMA(&huart3, Uart3Buf, RX_BUFFER_SIZE); // 重新使能接收中断
+        HAL_UARTEx_ReceiveToIdle_DMA(&huart3, Uart3Buf, VM_BLE_RX_BUFFER_SIZE); // 重新使能接收中断
     }
     if (huart->Instance == UART5) {
         ble_flag = 1;
         ble_len = Size;
-        HAL_UARTEx_ReceiveToIdle_DMA(&huart5, BleBuf, RX_BUFFER_SIZE); // 重新使能接收中断
+        HAL_UARTEx_ReceiveToIdle_DMA(&huart5, BleBuf, VM_BLE_RX_BUFFER_SIZE); // 重新使能接收中断
     }
 }
 

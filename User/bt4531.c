@@ -10,7 +10,7 @@
 
 u8 tx_buffer[512];
 extern SensorInfo Sensor[16];
-extern u8 BleBuf[RX_BUFFER_SIZE];
+extern u8 BleBuf[VM_BLE_RX_BUFFER_SIZE];
 extern volatile u8 Cmd;
 extern u8 ble_len;
 
@@ -196,6 +196,7 @@ void DataSend(u8 channel){
     tx_buffer[num++] = *(p+3);
 
     tx_buffer[num++] = Sensor[channel].temp;
+    tx_buffer[num++] = Sensor[channel].freq_status;
     tx_buffer[1] = num + 2;
     crc = CRC_Check(tx_buffer, num);
     tx_buffer[num++] = (crc >> 8) & 0xFF;
@@ -234,6 +235,8 @@ void TotalDataSend(){
         tx_buffer[num++] = *(p+3);
 
         tx_buffer[num++] = Sensor[i].temp;
+
+        tx_buffer[num++] = Sensor[i].freq_status;
     }
 
     tx_buffer[4] = device;

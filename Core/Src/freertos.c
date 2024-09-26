@@ -64,7 +64,7 @@ extern volatile u8 VM2_OK;
 extern volatile u8 VM_ERR;
 
 extern volatile u8 ble_len;
-extern volatile u8 BleBuf[RX_BUFFER_SIZE];
+extern volatile u8 BleBuf[VM_BLE_RX_BUFFER_SIZE];
 extern volatile u8 ble_flag;
 
 extern volatile SensorInfo Sensor[16];
@@ -72,8 +72,8 @@ extern volatile SensorInfo Sensor[16];
 extern volatile u8 Scan_Start;
 extern volatile u8 Cmd;
 
-extern u8 Uart2Buf[RX_BUFFER_SIZE];
-extern u8 Uart3Buf[RX_BUFFER_SIZE];
+extern u8 Uart2Buf[VM_BLE_RX_BUFFER_SIZE];
+extern u8 Uart3Buf[VM_BLE_RX_BUFFER_SIZE];
 /* USER CODE END Variables */
 /* Definitions for DataCollectTask */
 osThreadId_t DataCollectTaskHandle;
@@ -241,7 +241,7 @@ void Data_Collect_Task(void *argument)
 void VM1_Receive_Task(void *argument)
 {
   /* USER CODE BEGIN VM1_Receive_Task */
-    u8 rx_buffer[RX_BUFFER_SIZE];
+    u8 rx_buffer[VM_BLE_RX_BUFFER_SIZE];
     u8 Size;
     /* Infinite loop */
     for (;;) {
@@ -258,7 +258,7 @@ void VM1_Receive_Task(void *argument)
                     // 数据包校验通过
                     if (0x05 == rx_buffer[3] && 0x06 == rx_buffer[1]) {
                         VM1_Init = 1;
-                        memset(rx_buffer, 0, RX_BUFFER_SIZE);
+                        memset(rx_buffer, 0, VM_BLE_RX_BUFFER_SIZE);
 
                         __HAL_TIM_SET_COUNTER(&htim2, 0);
                         HAL_TIM_Base_Stop_IT(&htim2);
@@ -268,7 +268,7 @@ void VM1_Receive_Task(void *argument)
                     }
                     if (0x03 == rx_buffer[3] && 0x06 == rx_buffer[1]) {
                         u8 ack_received = 0;
-                        u8 rx[RX_BUFFER_SIZE];
+                        u8 rx[VM_BLE_RX_BUFFER_SIZE];
                         u8 time = 0;
                         // 每隔3秒发送一次命令以获取设备状态
                         while (!ack_received) {
@@ -289,6 +289,7 @@ void VM1_Receive_Task(void *argument)
                                     u8 index = 0; // 初始化索引
                                     for (u8 j = 0; j < 8; j ++) {
                                         Sensor[j].freq[0] = 0;
+                                        Sensor[j].freq_status = 1;
                                         index++;
                                     }
                                     Clear_VM(huart2);
@@ -306,6 +307,11 @@ void VM1_Receive_Task(void *argument)
                         for (u8 i = 3; i < 19; i += 2) {
                             Sensor[sensor_indices[index]].freq[0] =
                                     ((uint16_t) rx_buffer[i] << 8) | rx_buffer[i + 1];
+                            if(!Sensor[sensor_indices[index]].freq[0]){
+                                Sensor[sensor_indices[index]].freq_status = 1;
+                            } else{
+                                Sensor[sensor_indices[index]].freq_status = 0;
+                            }
                             index++;
                         }
                         Clear_VM(huart2);
@@ -330,7 +336,7 @@ void VM1_Receive_Task(void *argument)
 void VM2_Receive_Task(void *argument)
 {
   /* USER CODE BEGIN VM2_Receive_Task */
-    u8 rx_buffer[RX_BUFFER_SIZE];
+    u8 rx_buffer[VM_BLE_RX_BUFFER_SIZE];
     u8 Size;
     /* Infinite loop */
     for (;;) {
@@ -347,7 +353,7 @@ void VM2_Receive_Task(void *argument)
                     // 数据包校验通过
                     if (0x05 == rx_buffer[3] && 0x06 == rx_buffer[1]) {
                         VM2_Init = 1;
-                        memset(rx_buffer, 0, RX_BUFFER_SIZE);
+                        memset(rx_buffer, 0, VM_BLE_RX_BUFFER_SIZE);
 
                         __HAL_TIM_SET_COUNTER(&htim2, 0);
                         HAL_TIM_Base_Stop_IT(&htim2);
@@ -357,7 +363,7 @@ void VM2_Receive_Task(void *argument)
                     }
                     if (0x03 == rx_buffer[3] && 0x06 == rx_buffer[1]) {
                         u8 ack_received = 0;
-                        u8 rx[RX_BUFFER_SIZE];
+                        u8 rx[VM_BLE_RX_BUFFER_SIZE];
                         u8 time = 0;
                         // 每隔5秒发送一次命令以获取设备状态
                         while (!ack_received) {
@@ -379,6 +385,7 @@ void VM2_Receive_Task(void *argument)
 
                                     for (u8 j = 0; j < 8; j ++) {
                                         Sensor[j + 8].freq[0] = 0;
+                                        Sensor[j].freq_status = 1;
                                         index++;
                                     }
                                     Clear_VM(huart3);
@@ -396,6 +403,11 @@ void VM2_Receive_Task(void *argument)
                         for (u8 i = 3; i < 19; i += 1) {
                             Sensor[sensor_indices[index]].freq[0] =
                                     ((uint16_t) rx_buffer[i] << 8) | rx_buffer[i + 1];
+                            if(!Sensor[sensor_indices[index]].freq[0]){
+                                Sensor[sensor_indices[index]].freq_status = 1;
+                            } else{
+                                Sensor[sensor_indices[index]].freq_status = 0;
+                            }
                             index++;
                         }
                         Clear_VM(huart3);

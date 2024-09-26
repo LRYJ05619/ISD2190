@@ -67,11 +67,11 @@ volatile u8 Scan_Start; //置1开始扫描
 
 volatile u8 ble_flag;    //蓝牙指令接收
 volatile u8 ble_len;
-u8 BleBuf[RX_BUFFER_SIZE];
+u8 BleBuf[VM_BLE_RX_BUFFER_SIZE];
 volatile u8 Cmd;              //蓝牙指令
 
-u8 Uart2Buf[RX_BUFFER_SIZE];
-u8 Uart3Buf[RX_BUFFER_SIZE];
+u8 Uart2Buf[VM_BLE_RX_BUFFER_SIZE];
+u8 Uart3Buf[VM_BLE_RX_BUFFER_SIZE];
 
 volatile u8 VM1_Init;    //VM1初始化
 volatile u8 VM2_Init;
@@ -138,14 +138,14 @@ int main(void)
     __HAL_UART_ENABLE_IT(&huart3, UART_IT_IDLE);
     __HAL_UART_ENABLE_IT(&huart5, UART_IT_IDLE);
 
-    HAL_UARTEx_ReceiveToIdle_DMA(&huart2, Uart2Buf, RX_BUFFER_SIZE);
-    HAL_UARTEx_ReceiveToIdle_DMA(&huart3, Uart3Buf, RX_BUFFER_SIZE);
-    HAL_UARTEx_ReceiveToIdle_DMA(&huart5, BleBuf, RX_BUFFER_SIZE);
+    HAL_UARTEx_ReceiveToIdle_DMA(&huart2, Uart2Buf, VM_BLE_RX_BUFFER_SIZE);
+    HAL_UARTEx_ReceiveToIdle_DMA(&huart3, Uart3Buf, VM_BLE_RX_BUFFER_SIZE);
+    HAL_UARTEx_ReceiveToIdle_DMA(&huart5, BleBuf, VM_BLE_RX_BUFFER_SIZE);
 //  Flash_Erase();
     Flash_Read();
 
     //更改蓝牙名称
-    printf("TTM:REN-ISD2190-02\r\n\0");
+    printf("TTM:REN-ISD2190-01\r\n\0");
 
   /* USER CODE END 2 */
 

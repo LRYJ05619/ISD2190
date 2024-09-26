@@ -99,7 +99,7 @@ void Error_Handler(void);
 #define u8 uint8_t
 #define u16 uint16_t
 
-#define RX_BUFFER_SIZE 32
+#define VM_BLE_RX_BUFFER_SIZE 32
 #define ADC_CHANCEL_NUM 16
 
 typedef struct SensorInfoTypeDef{
@@ -122,6 +122,7 @@ typedef struct SensorInfoTypeDef{
     int32_t para[4]; //参数
 
     u8 status; //状态位 0x00未使用 0x01主通道 0x02从通道
+    u8 freq_status; //频率是否为0 如为0则置1
 }SensorInfo;
 /* USER CODE END Private defines */
 
