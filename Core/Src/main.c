@@ -95,6 +95,8 @@ QueueHandle_t usart5Queue;
 // 9  -> 10 -> 7 ;   10 -> 11 -> 8 ;   11 -> 15 -> 20 ;  12 -> 13 -> 18 ;
 // 13 -> 9  -> 6 ;   14 -> 12 -> 14;   15 -> 16 -> 21 ;  16 -> 14 -> 19 ;
 
+ConfigInfo Config;   //配置结构体，包括ip和id
+
 /* USER CODE END Private defines */
 /* USER CODE END 0 */
 
@@ -135,15 +137,33 @@ int main(void)
   MX_IWDG_Init();
   MX_TIM3_Init();
   /* USER CODE BEGIN 2 */
+<<<<<<< Updated upstream
     u8 rxdata;
     HAL_UART_Receive_IT(&huart3, &rxdata, 1);
     HAL_UART_Receive_IT(&huart2, &rxdata, 1);
     HAL_UART_Receive_IT(&huart5, &rxdata, 1);
 //  Flash_Erase();
+=======
+    __HAL_UART_ENABLE_IT(&huart2, UART_IT_IDLE);
+    __HAL_UART_ENABLE_IT(&huart3, UART_IT_IDLE);
+    __HAL_UART_ENABLE_IT(&huart5, UART_IT_IDLE);
+
+    HAL_UARTEx_ReceiveToIdle_DMA(&huart2, Uart2Buf, VM_BLE_RX_BUFFER_SIZE);
+    HAL_UARTEx_ReceiveToIdle_DMA(&huart3, Uart3Buf, VM_BLE_RX_BUFFER_SIZE);
+    HAL_UARTEx_ReceiveToIdle_DMA(&huart5, BleBuf, VM_BLE_RX_BUFFER_SIZE);
+//    Flash_Erase();
+>>>>>>> Stashed changes
     Flash_Read();
 
+//    Config_Erase();
+    Config_Read();
+
     //更改蓝牙名称
+<<<<<<< Updated upstream
     printf("TTM:REN-ISD2190\r\n\0");
+=======
+    printf("TTM:REN-ISD2190-02\r\n\0");
+>>>>>>> Stashed changes
 
   /* USER CODE END 2 */
 

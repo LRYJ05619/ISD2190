@@ -40,6 +40,7 @@ extern QueueHandle_t usart5Queue;
 
 void Data_Collect() {
     HAL_TIM_Base_Start_IT(&htim2);
+<<<<<<< Updated upstream
     Scan_VM(huart2);
     Scan_VM(huart3);
 
@@ -52,11 +53,24 @@ void Data_Collect() {
     }
     HAL_TIM_Base_Stop_IT(&htim2); // 接收处理完成
     __HAL_TIM_SET_COUNTER(&htim2, 0);
+=======
+
+    VM1_OK = 0;
+    VM2_OK = 0;
+
+    VM1_Busy = 1;
+    VM2_Busy = 1;
+
+    Scan_VM(huart2);
+    HAL_Delay(200);
+    Scan_VM(huart3);
+
+    while (VM1_Busy || VM2_Busy) ;
+>>>>>>> Stashed changes
     VM1_OK = 0;
     VM2_OK = 0;
 
     if (VM_ERR) {
-        StatuCallback(0x70, 0x13);
         return;
     }
 

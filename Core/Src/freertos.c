@@ -335,6 +335,10 @@ void Data_Collect_Task(const void *argument){
         if (VM1_Init && VM2_Init && !VM1_Busy && !VM2_Busy && Scan_Start) {
             Data_Collect();
 
+            if(VM_ERR){
+                continue;
+            }
+
             //蓝牙指令处理
             if (Cmd == 0x70)
                 DataSend(BleBuf[4]);
@@ -347,6 +351,224 @@ void Data_Collect_Task(const void *argument){
         }
         osDelay(50);
     }
+<<<<<<< Updated upstream
+=======
+  /* USER CODE END Data_Collect_Task */
+}
+
+/* USER CODE BEGIN Header_VM1_Receive_Task */
+/**
+* @brief Function implementing the VM1ReceiveTask thread.
+* @param argument: Not used
+* @retval None
+*/
+/* USER CODE END Header_VM1_Receive_Task */
+void VM1_Receive_Task(void *argument)
+{
+  /* USER CODE BEGIN VM1_Receive_Task */
+    u8 rx_buffer[VM_BLE_RX_BUFFER_SIZE];
+    u8 Size;
+    /* Infinite loop */
+    for (;;) {
+        if (xQueueReceive(usart2Queue, &Size, portMAX_DELAY)) {
+            // 处理接收到的数据
+            memcpy(rx_buffer, Uart2Buf, Size);
+
+            if (Size >= 3) {
+                //crc16校验
+                u16 received_check = crc16(rx_buffer, Size - 2);
+                u16 crc_check = (rx_buffer[Size - 1] << 8) + rx_buffer[Size - 2];
+
+                u8 ack_received = 0;
+                u8 time = 0;
+
+                if (received_check == crc_check) {
+                    // 数据包校验通过
+                    if (0x05 == rx_buffer[3] && 0x06 == rx_buffer[1]) {
+                        VM1_Init = 1;
+                        memset(rx_buffer, 0, VM_BLE_RX_BUFFER_SIZE);
+
+                        __HAL_TIM_SET_COUNTER(&htim2, 0);
+                        HAL_TIM_Base_Stop_IT(&htim2);
+
+                        VM1_OK = 1;
+                        VM1_Busy = 0;
+                    }
+                    if (0x03 == rx_buffer[3] && 0x06 == rx_buffer[1]) {
+                        Verify_VM(huart2);
+                        time++;
+                    }
+                    if(0x03 == rx_buffer[1] && 0x02 == rx_buffer[2]) {
+                        time++;
+                        // 等待设备状态寄存器的确认
+                        if (rx_buffer[4] & (1 << 4)) {
+                            // bit4为1，说明测量完成
+                            ack_received = 1;
+                            time = 0;
+                            Read_VM(huart2);
+                        }
+                        // bit15为1，说明无设备
+                        if ((rx_buffer[3] & (1 << 7)) && time > 17) {
+
+                            for (u8 j = 0; j < 8; j++) {
+                                Sensor[j].freq[0] = 0;
+                                Sensor[j].freq_status = 1;
+                            }
+                            Clear_VM(huart2);
+                            VM1_OK = 1;
+                            VM1_Busy = 0;
+                            time = 0;
+                            ack_received = 1;
+                        }
+                        if (!ack_received) {
+                            // 每隔3秒发送一次命令以获取设备状态
+                            osDelay(pdMS_TO_TICKS(3000));
+                            Verify_VM(huart2);
+                        }
+                    }
+                    if (0x03 == rx_buffer[1] && 0x10 == rx_buffer[2]) {
+                        u8 sensor_indices[] = {2, 6, 3, 7, 1, 5, 4, 0}; // 传感器索引数组
+                        u8 index = 0; // 初始化索引
+
+                        for (u8 i = 3; i < 19; i += 2) {
+                            Sensor[sensor_indices[index]].freq[0] =
+                                    ((uint16_t) rx_buffer[i] << 8) | rx_buffer[i + 1];
+                            if(!Sensor[sensor_indices[index]].freq[0]){
+                                Sensor[sensor_indices[index]].freq_status = 1;
+                            } else{
+                                Sensor[sensor_indices[index]].freq_status = 0;
+                            }
+                            index++;
+                        }
+                        Clear_VM(huart2);
+                        VM1_OK = 1;
+                        VM1_Busy = 0;
+                    }
+                    osDelay(1);
+                }
+            }
+        }
+        osDelay(1);
+    }
+  /* USER CODE END VM1_Receive_Task */
+}
+
+/* USER CODE BEGIN Header_VM2_Receive_Task */
+/**
+* @brief Function implementing the VM2ReceiveTask thread.
+* @param argument: Not used
+* @retval None
+*/
+/* USER CODE END Header_VM2_Receive_Task */
+void VM2_Receive_Task(void *argument)
+{
+  /* USER CODE BEGIN VM2_Receive_Task */
+    u8 rx_buffer[VM_BLE_RX_BUFFER_SIZE];
+    u8 Size;
+    /* Infinite loop */
+    for (;;) {
+        if (xQueueReceive(usart3Queue, &Size, portMAX_DELAY)) {
+            // 处理接收到的数据
+            memcpy(rx_buffer, Uart3Buf, Size);
+
+            if (Size >= 3) {
+                //crc16校验
+                u16 received_check = crc16(rx_buffer, Size - 2);
+                u16 crc_check = (rx_buffer[Size - 1] << 8) + rx_buffer[Size - 2];
+
+                u8 ack_received = 0;
+                u8 time = 0;
+
+                if (crc_check == received_check) {
+                    // 数据包校验通过
+                    if (0x05 == rx_buffer[3] && 0x06 == rx_buffer[1]) {
+                        VM2_Init = 1;
+                        memset(rx_buffer, 0, VM_BLE_RX_BUFFER_SIZE);
+
+                        __HAL_TIM_SET_COUNTER(&htim2, 0);
+                        HAL_TIM_Base_Stop_IT(&htim2);
+
+                        VM2_OK = 1;
+                        VM2_Busy = 0;
+                    }
+                    if (0x03 == rx_buffer[3] && 0x06 == rx_buffer[1]) {
+                        Verify_VM(huart3);
+                        time++;
+                    }
+                    if(0x03 == rx_buffer[1] && 0x02 == rx_buffer[2]) {
+                        time++;
+                        // 等待设备状态寄存器的确认
+                        if (rx_buffer[4] & (1 << 4)) {
+                            // bit4为1，说明测量完成
+                            ack_received = 1;
+                            time = 0;
+                            Read_VM(huart3);
+                        }
+                        // bit15为1，说明无设备
+                        if ((rx_buffer[3] & (1 << 7)) && time > 17) {
+                            for (u8 j = 0; j < 8; j++) {
+                                Sensor[j + 8].freq[0] = 0;
+                                Sensor[j].freq_status = 1;
+                            }
+                            Clear_VM(huart3);
+                            VM2_OK = 1;
+                            VM2_Busy = 0;
+                            time = 0;
+                            ack_received = 1;
+                        }
+                        if (!ack_received) {
+                            // 每隔3秒发送一次命令以获取设备状态
+                            osDelay(pdMS_TO_TICKS(3000));
+                            Verify_VM(huart3);
+                        }
+                    }
+                    if (0x03 == rx_buffer[1] && 0x10 == rx_buffer[2]) {
+                        u8 sensor_indices[] = {12, 8, 9, 13, 11, 15, 10, 14}; // 传感器索引数组
+                        u8 index = 0; // 初始化索引
+
+                        for (u8 i = 3; i < 19; i += 2) {
+                            Sensor[sensor_indices[index]].freq[0] =
+                                    ((uint16_t) rx_buffer[i] << 8) | rx_buffer[i + 1];
+                            if(!Sensor[sensor_indices[index]].freq[0]){
+                                Sensor[sensor_indices[index]].freq_status = 1;
+                            } else{
+                                Sensor[sensor_indices[index]].freq_status = 0;
+                            }
+                            index++;
+                        }
+                        Clear_VM(huart3);
+                        VM2_OK = 1;
+                        VM2_Busy = 0;
+                    }
+                    osDelay(1);
+                }
+            }
+        }
+        osDelay(1);
+    }
+  /* USER CODE END VM2_Receive_Task */
+}
+
+/* Private application code --------------------------------------------------*/
+/* USER CODE BEGIN Application */
+unsigned int crc16(unsigned char *dat, unsigned int len) {
+    unsigned int crc = 0xffff;
+    unsigned char i;
+    while (len != 0) {
+        crc ^= *dat;
+        for (i = 0; i < 8; i++) {
+            if ((crc & 0x0001) == 0)
+                crc = crc >> 1;
+            else {
+                crc = crc >> 1;
+                crc ^= 0xa001;
+            }
+        }
+        len -= 1;
+        dat++;
+    }
+    return crc;
+>>>>>>> Stashed changes
 }
 
 

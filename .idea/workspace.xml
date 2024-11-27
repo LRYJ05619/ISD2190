@@ -25,15 +25,47 @@
       <change beforePath="$PROJECT_DIR$/Core/Src/freertos.c" beforeDir="false" afterPath="$PROJECT_DIR$/Core/Src/freertos.c" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Core/Src/main.c" beforeDir="false" afterPath="$PROJECT_DIR$/Core/Src/main.c" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/User/CollectData.c" beforeDir="false" afterPath="$PROJECT_DIR$/User/CollectData.c" afterDir="false" />
+<<<<<<< Updated upstream
+=======
+      <change beforePath="$PROJECT_DIR$/User/bt4531.c" beforeDir="false" afterPath="$PROJECT_DIR$/User/bt4531.c" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/User/bt4531.h" beforeDir="false" afterPath="$PROJECT_DIR$/User/bt4531.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/User/flash.c" beforeDir="false" afterPath="$PROJECT_DIR$/User/flash.c" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/User/flash.h" beforeDir="false" afterPath="$PROJECT_DIR$/User/flash.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/User/hardware.c" beforeDir="false" afterPath="$PROJECT_DIR$/User/hardware.c" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/User/hardware.h" beforeDir="false" afterPath="$PROJECT_DIR$/User/hardware.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/.cmake/api/v1/reply/cmakeFiles-v1-c40db1c429511345add1.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/.cmake/api/v1/reply/index-2024-09-19T02-00-25-0521.json" beforeDir="false" />
+>>>>>>> Stashed changes
       <change beforePath="$PROJECT_DIR$/cmake-build-debug/.ninja_deps" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/.ninja_deps" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/cmake-build-debug/.ninja_log" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/.ninja_log" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/ISD2190.elf.dir/Core/Src/adc.c.obj" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/ISD2190.elf.dir/Core/Src/adc.c.obj" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/ISD2190.elf.dir/Core/Src/dma.c.obj" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/ISD2190.elf.dir/Core/Src/dma.c.obj" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/ISD2190.elf.dir/Core/Src/freertos.c.obj" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/ISD2190.elf.dir/Core/Src/freertos.c.obj" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/ISD2190.elf.dir/Core/Src/gpio.c.obj" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/ISD2190.elf.dir/Core/Src/gpio.c.obj" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/ISD2190.elf.dir/Core/Src/iwdg.c.obj" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/ISD2190.elf.dir/Core/Src/iwdg.c.obj" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/ISD2190.elf.dir/Core/Src/main.c.obj" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/ISD2190.elf.dir/Core/Src/main.c.obj" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/ISD2190.elf.dir/Core/Src/stm32l1xx_hal_msp.c.obj" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/ISD2190.elf.dir/Core/Src/stm32l1xx_hal_msp.c.obj" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/ISD2190.elf.dir/Core/Src/stm32l1xx_it.c.obj" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/ISD2190.elf.dir/Core/Src/stm32l1xx_it.c.obj" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/ISD2190.elf.dir/Core/Src/tim.c.obj" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/ISD2190.elf.dir/Core/Src/tim.c.obj" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/ISD2190.elf.dir/Core/Src/usart.c.obj" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/ISD2190.elf.dir/Core/Src/usart.c.obj" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/ISD2190.elf.dir/User/CollectData.c.obj" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/ISD2190.elf.dir/User/CollectData.c.obj" afterDir="false" />
+<<<<<<< Updated upstream
+=======
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/ISD2190.elf.dir/User/VMxx.c.obj" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/ISD2190.elf.dir/User/VMxx.c.obj" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/ISD2190.elf.dir/User/bt4531.c.obj" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/ISD2190.elf.dir/User/bt4531.c.obj" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/ISD2190.elf.dir/User/flash.c.obj" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/ISD2190.elf.dir/User/flash.c.obj" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/ISD2190.elf.dir/User/hardware.c.obj" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/ISD2190.elf.dir/User/hardware.c.obj" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/ISD2190.elf.dir/User/temp.c.obj" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/ISD2190.elf.dir/User/temp.c.obj" afterDir="false" />
+>>>>>>> Stashed changes
       <change beforePath="$PROJECT_DIR$/cmake-build-debug/ISD2190.bin" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/ISD2190.bin" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/cmake-build-debug/ISD2190.elf" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/ISD2190.elf" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/cmake-build-debug/ISD2190.hex" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/ISD2190.hex" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/cmake-build-debug/ISD2190.map" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/ISD2190.map" afterDir="false" />
+<<<<<<< Updated upstream
+=======
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/build.ninja" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/build.ninja" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/蓝牙协议拟制.xlsx" beforeDir="false" afterPath="$PROJECT_DIR$/蓝牙协议拟制.xlsx" afterDir="false" />
+>>>>>>> Stashed changes
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -214,6 +246,49 @@
       <workItem from="1723186532218" duration="1294000" />
       <workItem from="1723424797583" duration="11172000" />
       <workItem from="1723530924540" duration="11899000" />
+<<<<<<< Updated upstream
+=======
+      <workItem from="1723709408866" duration="7063000" />
+      <workItem from="1723716501036" duration="490000" />
+      <workItem from="1723770591371" duration="24268000" />
+      <workItem from="1724053049407" duration="3830000" />
+      <workItem from="1724729336915" duration="164000" />
+      <workItem from="1724744977979" duration="839000" />
+      <workItem from="1724830850467" duration="147000" />
+      <workItem from="1724831005709" duration="6149000" />
+      <workItem from="1724895221795" duration="5136000" />
+      <workItem from="1724998412955" duration="9714000" />
+      <workItem from="1725239597396" duration="14470000" />
+      <workItem from="1725261178136" duration="10453000" />
+      <workItem from="1725271842300" duration="151000" />
+      <workItem from="1725958249887" duration="30000" />
+      <workItem from="1725958296737" duration="18000" />
+      <workItem from="1725958434234" duration="56000" />
+      <workItem from="1726302369119" duration="43000" />
+      <workItem from="1726302456846" duration="127000" />
+      <workItem from="1726709760528" duration="8438000" />
+      <workItem from="1726725925469" duration="1159000" />
+      <workItem from="1726730424153" duration="108000" />
+      <workItem from="1726733617191" duration="1933000" />
+      <workItem from="1727172018681" duration="96000" />
+      <workItem from="1727172223572" duration="1000" />
+      <workItem from="1727317739348" duration="624000" />
+      <workItem from="1727337330257" duration="605000" />
+      <workItem from="1729665181950" duration="8122000" />
+      <workItem from="1729733207504" duration="5376000" />
+      <workItem from="1729750042590" duration="12932000" />
+      <workItem from="1729819676704" duration="6256000" />
+      <workItem from="1729836857303" duration="10717000" />
+      <workItem from="1729848997870" duration="981000" />
+      <workItem from="1730078044865" duration="605000" />
+      <workItem from="1730105729991" duration="2816000" />
+      <workItem from="1730108568857" duration="384000" />
+      <workItem from="1730280255336" duration="69000" />
+      <workItem from="1730281202095" duration="21000" />
+      <workItem from="1731916403578" duration="1263000" />
+      <workItem from="1732245984626" duration="20000" />
+      <workItem from="1732519880935" duration="1000" />
+>>>>>>> Stashed changes
     </task>
     <task id="LOCAL-00001" summary="7.31">
       <option name="closed" value="true" />
@@ -342,6 +417,7 @@
   <component name="XDebuggerManager">
     <breakpoint-manager>
       <breakpoints>
+<<<<<<< Updated upstream
         <line-breakpoint enabled="true" type="com.jetbrains.cidr.execution.debugger.OCBreakpointType">
           <url>file://$PROJECT_DIR$/Core/Src/freertos.c</url>
           <line>301</line>
@@ -366,6 +442,52 @@
           <url>file://$PROJECT_DIR$/User/CollectData.c</url>
           <line>165</line>
           <option name="timeStamp" value="28" />
+=======
+        <line-breakpoint type="com.jetbrains.cidr.execution.debugger.OCBreakpointType">
+          <url>file://$PROJECT_DIR$/Core/Src/main.c</url>
+          <line>238</line>
+          <option name="timeStamp" value="7" />
+        </line-breakpoint>
+        <line-breakpoint type="com.jetbrains.cidr.execution.debugger.OCBreakpointType">
+          <url>file://$PROJECT_DIR$/Core/Src/freertos.c</url>
+          <line>350</line>
+          <option name="timeStamp" value="24" />
+        </line-breakpoint>
+        <line-breakpoint type="com.jetbrains.cidr.execution.debugger.OCBreakpointType">
+          <url>file://$PROJECT_DIR$/Core/Src/freertos.c</url>
+          <line>192</line>
+          <option name="timeStamp" value="26" />
+        </line-breakpoint>
+        <line-breakpoint type="com.jetbrains.cidr.execution.debugger.OCBreakpointType">
+          <url>file://$PROJECT_DIR$/User/bt4531.c</url>
+          <line>268</line>
+          <option name="timeStamp" value="30" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="com.jetbrains.cidr.execution.debugger.OCBreakpointType">
+          <url>file://$PROJECT_DIR$/Core/Src/freertos.c</url>
+          <line>221</line>
+          <option name="timeStamp" value="32" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="com.jetbrains.cidr.execution.debugger.OCBreakpointType">
+          <url>file://$PROJECT_DIR$/Core/Src/freertos.c</url>
+          <line>226</line>
+          <option name="timeStamp" value="33" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="com.jetbrains.cidr.execution.debugger.OCBreakpointType">
+          <url>file://$PROJECT_DIR$/User/CollectData.c</url>
+          <line>59</line>
+          <option name="timeStamp" value="34" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="com.jetbrains.cidr.execution.debugger.OCBreakpointType">
+          <url>file://$PROJECT_DIR$/Core/Src/freertos.c</url>
+          <line>419</line>
+          <option name="timeStamp" value="36" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="com.jetbrains.cidr.execution.debugger.OCBreakpointType">
+          <url>file://$PROJECT_DIR$/Core/Src/freertos.c</url>
+          <line>323</line>
+          <option name="timeStamp" value="49" />
+>>>>>>> Stashed changes
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>
@@ -373,7 +495,11 @@
       <configuration name="com.jetbrains.cidr.embedded.openocd.conf.type">
         <watch expression="BleBuf" language="ObjectiveC" />
         <watch expression="tx_buffer" language="ObjectiveC" />
+<<<<<<< Updated upstream
         <watch expression="Sensor" language="ObjectiveC" />
+=======
+        <watch expression="Config" language="ObjectiveC" />
+>>>>>>> Stashed changes
       </configuration>
     </watches-manager>
   </component>

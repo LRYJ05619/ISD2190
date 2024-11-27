@@ -103,9 +103,9 @@ void Error_Handler(void);
 #define ADC_CHANCEL_NUM 16
 
 typedef struct SensorInfoTypeDef{
-    u8 serial[5]; //十位编号
-
     u8 sensor_type; //传感器类型
+
+    u8 sensor_model[4]; //传感器型号
 
     u8 channel_size; //占用通道数量
     u16 channel_addr; //占用通道
@@ -119,10 +119,16 @@ typedef struct SensorInfoTypeDef{
     float Calculate; //计算值
 
     u8 para_size; //参数数量
-    int32_t para[4]; //参数
+    double para[4]; //参数
 
     u8 status; //状态位 0x00未使用 0x01主通道 0x02从通道
 }SensorInfo;
+
+typedef struct ConfigInfoTypeDef{
+    u8 ip_length;
+    char ip[32];
+    char id[20];
+}ConfigInfo;
 /* USER CODE END Private defines */
 
 #ifdef __cplusplus
