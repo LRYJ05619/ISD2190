@@ -12,7 +12,7 @@ float  BMYBJ_YB(u16 init_freq, u8 init_temp, u16 freq, u8 temp){
     float  F = 2.2;
     float  init_YB = ((init_freq * 0.1) * (init_freq * 0.1));
     float  YB = ((freq * 0.1) * (freq * 0.1));
-    YB_Change = K * (YB - init_YB) + F * (temp - init_temp);
+    YB_Change = (K * (YB - init_YB)) + F * ((temp - init_temp));
     return YB_Change;
 }
 //埋入式应变计
@@ -22,41 +22,41 @@ float MRYBJ_YB(u16 init_freq, u8 init_temp, u16 freq, u8 temp){
     float F = 2.2;
     float init_YB = (init_freq * 0.1) * (init_freq * 0.1);
     float YB = (freq * 0.1) * (freq * 0.1);
-    YB_Change = K * (YB - init_YB) + F * (temp - init_temp);
+    YB_Change = (K * (YB - init_YB)) + (F * (temp - init_temp));
     return YB_Change;
 }
 //钢筋计
-float GJJ_YL(u16 init_freq, u8 init_temp, u16 freq, u8 temp, int32_t K){
+float GJJ_YL(u16 init_freq, u8 init_temp, u16 freq, u8 temp, double K){
     float YB_Change;
     float K0 = 0.00071186;
     float F = 2.2;
     float init_YB = (init_freq * 0.1) * (init_freq * 0.1);
     float YB = (freq * 0.1) * (freq * 0.1);
-    YB_Change = (K * 0.0001) * K0 * (YB - init_YB) + F * (temp - init_temp);
+    YB_Change = (K * K0 * (YB - init_YB)) + (F * (temp - init_temp));
     return YB_Change;
 }
 //土压力盒
-float TYLH_YL_MPa(u16 init_freq, u8 init_temp, u16 freq, u8 temp, int32_t K){
+float TYLH_YL_MPa(u16 init_freq, u8 init_temp, u16 freq, u8 temp, double K){
     float YB_Change;
     float K0 = 0.0005383;
     float F = 2.2;
     float init_YB = (init_freq * 0.1) * (init_freq * 0.1);
     float YB = (freq * 0.1) * (freq * 0.1);
-    YB_Change = (K * 0.0001) * K0 * (YB - init_YB) + F * (temp - init_temp);
+    YB_Change = (K * K0 * (YB - init_YB)) + (F * (temp - init_temp));
     return YB_Change;
 }
 //渗压计
-float SYJ_YL_MPa(u16 init_freq, u8 init_temp, u16 freq, u8 temp, int32_t A, int32_t B, int32_t C, int32_t b){
+float SYJ_YL_MPa(u16 init_freq, u8 init_temp, u16 freq, u8 temp, double A, double B, double C, double b){
     float YB_Change;
 
     float init_YB = (init_freq * 0.1) * (init_freq * 0.1) * 0.001;
     float YB = (freq * 0.1) * (freq * 0.1) * 0.001;
 
-    YB_Change = (A * 0.0001) * (YB - init_YB) * (YB - init_YB) + (B * 0.0001) * (YB - init_YB) + (C * 0.0001) + (b *0.0001) * (temp - init_temp);
+    YB_Change = (A  * (YB - init_YB) * (YB - init_YB)) + (B * (YB - init_YB)) + C + (b * (temp - init_temp));
     return YB_Change;
 }
 //锚索计
-float MSJ_YL_KN(u16* init_freq, u8 init_temp, u16* freq, u8 temp, u8 size, int32_t a, int32_t b){
+float MSJ_YL_KN(u16* init_freq, u8 init_temp, u16* freq, u8 temp, u8 size, double a, double b){
     float k;
     float F;
     if(size == 6){
@@ -87,7 +87,7 @@ float MSJ_YL_KN(u16* init_freq, u8 init_temp, u16* freq, u8 temp, u8 size, int32
     }
     float YB = total / size;
 
-    YB_Change = k * (a * 0.0001) * (YB - init_YB) - (b * 0.0001) + F * (temp - init_temp);
+    YB_Change = (k * a * (YB - init_YB)) - b + (F * (temp - init_temp));
     return YB_Change;
 }
 

@@ -43,6 +43,7 @@ void Data_Collect() {
     __HAL_TIM_SET_COUNTER(&htim2, 0);
     HAL_TIM_Base_Start_IT(&htim2);
     Scan_VM(huart2);
+    HAL_Delay(200);
     Scan_VM(huart3);
     VM1_OK = 0;
     VM2_OK = 0;
@@ -58,7 +59,6 @@ void Data_Collect() {
     HAL_TIM_Base_Stop_IT(&htim2);
 
     if (VM_ERR) {
-        StatuCallback(0x70, 0x13);
         return;
     }
 

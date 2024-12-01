@@ -218,6 +218,10 @@ void Data_Collect_Task(void *argument)
         if (VM1_Init && VM2_Init && !VM1_Busy && !VM2_Busy && Scan_Start) {
             Data_Collect();
 
+            if(VM_ERR){
+                continue;
+            }
+
             //蓝牙指令处理
             if (Cmd == 0x71)
                 TotalDataSend();
@@ -254,6 +258,9 @@ void VM1_Receive_Task(void *argument)
                 u16 received_check = crc16(rx_buffer, Size - 2);
                 u16 crc_check = (rx_buffer[Size - 1] << 8) + rx_buffer[Size - 2];
 
+                u8 ack_received = 0;
+                u8 time = 0;
+
                 if (received_check == crc_check) {
                     // 数据包校验通过
                     if (0x05 == rx_buffer[3] && 0x06 == rx_buffer[1]) {
@@ -267,40 +274,38 @@ void VM1_Receive_Task(void *argument)
                         VM1_Busy = 0;
                     }
                     if (0x03 == rx_buffer[3] && 0x06 == rx_buffer[1]) {
-                        u8 ack_received = 0;
-                        u8 rx[VM_BLE_RX_BUFFER_SIZE];
-                        u8 time = 0;
-                        // 每隔3秒发送一次命令以获取设备状态
-                        while (!ack_received) {
-                            // 发送命令后等待3秒再重新发送
-                            osDelay(pdMS_TO_TICKS(5000));
-                            Verify_VM(huart2);
-                            time++;
-                            // 等待设备状态寄存器的确认
-                            if (xQueueReceive(usart2Queue, &Size, pdMS_TO_TICKS(500))) {
-                                memcpy(rx, Uart2Buf, Size);
-                                if (rx[4] & (1 << 4)) {
-                                    // bit4为1，说明测量完成
-                                    ack_received = 1;
-                                    Read_VM(huart2);
-                                }
-                                // bit15为1，说明无设备
-                                if ((rx[3] & (1 << 7)) && time > 5) {
-                                    u8 index = 0; // 初始化索引
-                                    for (u8 j = 0; j < 8; j ++) {
-                                        Sensor[j].freq[0] = 0;
-                                        Sensor[j].freq_status = 1;
-                                        index++;
-                                    }
-                                    Clear_VM(huart2);
-                                    VM1_OK = 1;
-                                    VM1_Busy = 0;
-                                    ack_received = 1;
-                                }
+                        Verify_VM(huart2);
+                        time++;
+                    }
+                    if(0x03 == rx_buffer[1] && 0x02 == rx_buffer[2]) {
+                        time++;
+                        // 等待设备状态寄存器的确认
+                        if (rx_buffer[4] & (1 << 4)) {
+                            // bit4为1，说明测量完成
+                            ack_received = 1;
+                            time = 0;
+                            Read_VM(huart2);
+                        }
+                        // bit15为1，说明无设备
+                        if ((rx_buffer[3] & (1 << 7)) && time > 17) {
+
+                            for (u8 j = 0; j < 8; j++) {
+                                Sensor[j].freq[0] = 0;
+                                Sensor[j].freq_status = 1;
                             }
+                            Clear_VM(huart2);
+                            VM1_OK = 1;
+                            VM1_Busy = 0;
+                            time = 0;
+                            ack_received = 1;
+                        }
+                        if (!ack_received) {
+                            // 每隔3秒发送一次命令以获取设备状态
+                            osDelay(pdMS_TO_TICKS(3000));
+                            Verify_VM(huart2);
                         }
                     }
-                    if (0x03 == rx_buffer[1]) {
+                    if (0x03 == rx_buffer[1] && 0x10 == rx_buffer[2]) {
                         u8 sensor_indices[] = {2, 6, 3, 7, 1, 5, 4, 0}; // 传感器索引数组
                         u8 index = 0; // 初始化索引
 
@@ -349,6 +354,9 @@ void VM2_Receive_Task(void *argument)
                 u16 received_check = crc16(rx_buffer, Size - 2);
                 u16 crc_check = (rx_buffer[Size - 1] << 8) + rx_buffer[Size - 2];
 
+                u8 ack_received = 0;
+                u8 time = 0;
+
                 if (crc_check == received_check) {
                     // 数据包校验通过
                     if (0x05 == rx_buffer[3] && 0x06 == rx_buffer[1]) {
@@ -362,41 +370,37 @@ void VM2_Receive_Task(void *argument)
                         VM2_Busy = 0;
                     }
                     if (0x03 == rx_buffer[3] && 0x06 == rx_buffer[1]) {
-                        u8 ack_received = 0;
-                        u8 rx[VM_BLE_RX_BUFFER_SIZE];
-                        u8 time = 0;
-                        // 每隔5秒发送一次命令以获取设备状态
-                        while (!ack_received) {
-                            // 发送命令后等待5秒再重新发送
-                            osDelay(pdMS_TO_TICKS(5000));
-                            Verify_VM(huart3);
-                            time++;
-                            // 等待设备状态寄存器的确认
-                            if (xQueueReceive(usart3Queue, &Size, pdMS_TO_TICKS(500))) {
-                                memcpy(rx, Uart3Buf, Size);
-                                if (rx[4] & (1 << 4)) {
-                                    // bit4为1，说明测量完成
-                                    ack_received = 1;
-                                    Read_VM(huart3);
-                                }
-                                // bit15为1，说明无设备
-                                if ((rx[3] & (1 << 7)) && time > 5) {
-                                    u8 index = 0; // 初始化索引
-
-                                    for (u8 j = 0; j < 8; j ++) {
-                                        Sensor[j + 8].freq[0] = 0;
-                                        Sensor[j].freq_status = 1;
-                                        index++;
-                                    }
-                                    Clear_VM(huart3);
-                                    VM2_OK = 1;
-                                    VM2_Busy = 0;
-                                    ack_received = 1;
-                                }
+                        Verify_VM(huart3);
+                        time++;
+                    }
+                    if(0x03 == rx_buffer[1] && 0x02 == rx_buffer[2]) {
+                        time++;
+                        // 等待设备状态寄存器的确认
+                        if (rx_buffer[4] & (1 << 4)) {
+                            // bit4为1，说明测量完成
+                            ack_received = 1;
+                            time = 0;
+                            Read_VM(huart3);
+                        }
+                        // bit15为1，说明无设备
+                        if ((rx_buffer[3] & (1 << 7)) && time > 17) {
+                            for (u8 j = 0; j < 8; j++) {
+                                Sensor[j + 8].freq[0] = 0;
+                                Sensor[j].freq_status = 1;
                             }
+                            Clear_VM(huart3);
+                            VM2_OK = 1;
+                            VM2_Busy = 0;
+                            time = 0;
+                            ack_received = 1;
+                        }
+                        if (!ack_received) {
+                            // 每隔3秒发送一次命令以获取设备状态
+                            osDelay(pdMS_TO_TICKS(3000));
+                            Verify_VM(huart3);
                         }
                     }
-                    if (0x03 == rx_buffer[1]) {
+                    if (0x03 == rx_buffer[1] && 0x10 == rx_buffer[2]) {
                         u8 sensor_indices[] = {12, 8, 9, 13, 11, 15, 10, 14}; // 传感器索引数组
                         u8 index = 0; // 初始化索引
 

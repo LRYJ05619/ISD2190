@@ -95,6 +95,8 @@ QueueHandle_t usart3Queue;
 // 9  -> 10 -> 6  ;   10 -> 11 -> 8  ;   11 -> 15 -> 18 ;  12 -> 13 -> 20 ;
 // 13 -> 9  -> 7  ;   14 -> 12 -> 14 ;   15 -> 16 -> 19 ;  16 -> 14 -> 21 ;
 
+ConfigInfo Config;   //配置结构体，包括ip和id
+
 /* USER CODE END Private defines */
 /* USER CODE END 0 */
 
@@ -141,11 +143,14 @@ int main(void)
     HAL_UARTEx_ReceiveToIdle_DMA(&huart2, Uart2Buf, VM_BLE_RX_BUFFER_SIZE);
     HAL_UARTEx_ReceiveToIdle_DMA(&huart3, Uart3Buf, VM_BLE_RX_BUFFER_SIZE);
     HAL_UARTEx_ReceiveToIdle_DMA(&huart5, BleBuf, VM_BLE_RX_BUFFER_SIZE);
-//  Flash_Erase();
+//    Flash_Erase();
     Flash_Read();
 
+//    Config_Erase();
+    Config_Read();
+
     //更改蓝牙名称
-    printf("TTM:REN-ISD2190-01\r\n\0");
+    printf("TTM:REN-ISD2190-02\r\n\0");
 
   /* USER CODE END 2 */
 
