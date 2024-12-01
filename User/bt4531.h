@@ -18,5 +18,6 @@ void ConfigInit();
 void IpConfig();
 void IdConfig();
 void IpConfigSend();
+void RewriteConfig();
 
 #endif //ISD2190_BT4531_H

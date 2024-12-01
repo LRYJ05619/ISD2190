@@ -42,14 +42,16 @@ extern QueueHandle_t usart3Queue;
 void Data_Collect() {
     __HAL_TIM_SET_COUNTER(&htim2, 0);
     HAL_TIM_Base_Start_IT(&htim2);
-    Scan_VM(huart2);
-    HAL_Delay(200);
-    Scan_VM(huart3);
+
     VM1_OK = 0;
     VM2_OK = 0;
 
     VM1_Busy = 1;
     VM2_Busy = 1;
+
+    Scan_VM(huart2);
+    HAL_Delay(200);
+    Scan_VM(huart3);
 
     while (VM1_Busy || VM2_Busy) ;
     VM1_OK = 0;

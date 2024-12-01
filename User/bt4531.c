@@ -69,6 +69,9 @@ void BleProcess(){
         case 0x32:
             IdConfig();
             break;
+        case 0x20:
+            RewriteConfig();
+            break;
     }
 }
 
@@ -339,7 +342,59 @@ void IpConfigSend(){
 
     HAL_UART_Transmit_DMA(&huart5, tx_buffer, num);
 }
+//重写配置
+void RewriteConfig() {
+    u8 device_num = BleBuf[4]; // 读取有效设备的数量
+    u8 pos = 5; // 当前位置，开始从rx_buffer[5]解析
 
+    for (u8 i = 0; i < device_num; i++) {
+        // 寻找主通道传感器位置
+        u8 sensor_index = 0xFF;
+        for (u8 j = 0; j < 16; j++) {
+            if (Sensor[j].status == 0x01) {
+                sensor_index = j;
+                break;
+            }
+        }
+
+        if (sensor_index == 0xFF) {
+            // 如果未找到主通道位置则跳出
+            break;
+        }
+
+        // 开始解读每个字段
+        Sensor[sensor_index].sensor_type = BleBuf[pos++];
+
+        // 读取传感器型号
+        for (u8 l = 0; l < 4; l++) {
+            Sensor[sensor_index].sensor_model[l] = BleBuf[pos++];
+        }
+
+        // 读取通道地址
+        Sensor[sensor_index].channel_addr = ((u16)BleBuf[pos++] << 8);
+        Sensor[sensor_index].channel_addr |= BleBuf[pos++];
+
+        // 读取初始频率（数量为 channel_size）
+        for (u8 j = 0; j < Sensor[sensor_index].channel_size; j++) {
+            Sensor[sensor_index].init_freq[j] = ((u16)BleBuf[pos++] << 8);
+            Sensor[sensor_index].init_freq[j] |= BleBuf[pos++];
+        }
+
+        // 读取初始温度
+        Sensor[sensor_index].init_temp = (int16_t)BleBuf[pos++];
+
+        // 读取参数数量
+        Sensor[sensor_index].para_size = BleBuf[pos++];
+
+        // 读取参数（每个参数为 double 类型）
+        for (u8 k = 0; k < Sensor[sensor_index].para_size; k++) {
+            memcpy(&Sensor[sensor_index].para[k], &BleBuf[pos], sizeof(double));
+            pos += sizeof(double);
+        }
+    }
+    Flash_Write();
+    StatuCallback(0x31, 0xA0);
+}
 u16 CRC_Check(uint8_t *CRC_Ptr,uint8_t LEN) {
     u16 CRC_Value = 0;
     u8 i = 0;

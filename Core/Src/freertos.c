@@ -404,7 +404,7 @@ void VM2_Receive_Task(void *argument)
                         u8 sensor_indices[] = {12, 8, 9, 13, 11, 15, 10, 14}; // 传感器索引数组
                         u8 index = 0; // 初始化索引
 
-                        for (u8 i = 3; i < 19; i += 1) {
+                        for (u8 i = 3; i < 19; i += 2) {
                             Sensor[sensor_indices[index]].freq[0] =
                                     ((uint16_t) rx_buffer[i] << 8) | rx_buffer[i + 1];
                             if(!Sensor[sensor_indices[index]].freq[0]){
