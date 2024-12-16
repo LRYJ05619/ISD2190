@@ -2686,7 +2686,7 @@ LOAD d:/clion/gcc-arm-none-eabi-10.3-2021.10/bin/../lib/gcc/arm-none-eabi/10.3.1
  .igot.plt      0x2000087c        0x0 d:/clion/gcc-arm-none-eabi-10.3-2021.10/bin/../lib/gcc/arm-none-eabi/10.3.1/thumb/v7-m/nofp/crtbegin.o
                 0x2000087c                . = ALIGN (0x4)
 
-.bss            0x20000880     0x2d54 load address 0x08009eac
+.bss            0x20000880     0x3554 load address 0x08009eac
                 0x20000880                _sbss = .
                 0x20000880                __bss_start__ = _sbss
  *(.bss)
@@ -2697,254 +2697,254 @@ LOAD d:/clion/gcc-arm-none-eabi-10.3-2021.10/bin/../lib/gcc/arm-none-eabi/10.3.1
  .bss.hdma_adc  0x200008f0       0x44 CMakeFiles/ISD2190.elf.dir/Core/Src/adc.c.obj
                 0x200008f0                hdma_adc
  .bss.DataCollectTaskBuffer
-                0x20000934      0x800 CMakeFiles/ISD2190.elf.dir/Core/Src/freertos.c.obj
+                0x20000934     0x1000 CMakeFiles/ISD2190.elf.dir/Core/Src/freertos.c.obj
                 0x20000934                DataCollectTaskBuffer
  .bss.DataCollectTaskControlBlock
-                0x20001134       0x5c CMakeFiles/ISD2190.elf.dir/Core/Src/freertos.c.obj
-                0x20001134                DataCollectTaskControlBlock
+                0x20001934       0x5c CMakeFiles/ISD2190.elf.dir/Core/Src/freertos.c.obj
+                0x20001934                DataCollectTaskControlBlock
  .bss.DataCollectTaskHandle
-                0x20001190        0x4 CMakeFiles/ISD2190.elf.dir/Core/Src/freertos.c.obj
-                0x20001190                DataCollectTaskHandle
+                0x20001990        0x4 CMakeFiles/ISD2190.elf.dir/Core/Src/freertos.c.obj
+                0x20001990                DataCollectTaskHandle
  .bss.VM1ReceiveTaskBuffer
-                0x20001194      0x200 CMakeFiles/ISD2190.elf.dir/Core/Src/freertos.c.obj
-                0x20001194                VM1ReceiveTaskBuffer
+                0x20001994      0x200 CMakeFiles/ISD2190.elf.dir/Core/Src/freertos.c.obj
+                0x20001994                VM1ReceiveTaskBuffer
  .bss.VM1ReceiveTaskControlBlock
-                0x20001394       0x5c CMakeFiles/ISD2190.elf.dir/Core/Src/freertos.c.obj
-                0x20001394                VM1ReceiveTaskControlBlock
+                0x20001b94       0x5c CMakeFiles/ISD2190.elf.dir/Core/Src/freertos.c.obj
+                0x20001b94                VM1ReceiveTaskControlBlock
  .bss.VM1ReceiveTaskHandle
-                0x200013f0        0x4 CMakeFiles/ISD2190.elf.dir/Core/Src/freertos.c.obj
-                0x200013f0                VM1ReceiveTaskHandle
+                0x20001bf0        0x4 CMakeFiles/ISD2190.elf.dir/Core/Src/freertos.c.obj
+                0x20001bf0                VM1ReceiveTaskHandle
  .bss.VM2ReceiveTaskBuffer
-                0x200013f4      0x200 CMakeFiles/ISD2190.elf.dir/Core/Src/freertos.c.obj
-                0x200013f4                VM2ReceiveTaskBuffer
+                0x20001bf4      0x200 CMakeFiles/ISD2190.elf.dir/Core/Src/freertos.c.obj
+                0x20001bf4                VM2ReceiveTaskBuffer
  .bss.VM2ReceiveTaskControlBlock
-                0x200015f4       0x5c CMakeFiles/ISD2190.elf.dir/Core/Src/freertos.c.obj
-                0x200015f4                VM2ReceiveTaskControlBlock
+                0x20001df4       0x5c CMakeFiles/ISD2190.elf.dir/Core/Src/freertos.c.obj
+                0x20001df4                VM2ReceiveTaskControlBlock
  .bss.VM2ReceiveTaskHandle
-                0x20001650        0x4 CMakeFiles/ISD2190.elf.dir/Core/Src/freertos.c.obj
-                0x20001650                VM2ReceiveTaskHandle
- .bss.hiwdg     0x20001654        0xc CMakeFiles/ISD2190.elf.dir/Core/Src/iwdg.c.obj
-                0x20001654                hiwdg
+                0x20001e50        0x4 CMakeFiles/ISD2190.elf.dir/Core/Src/freertos.c.obj
+                0x20001e50                VM2ReceiveTaskHandle
+ .bss.hiwdg     0x20001e54        0xc CMakeFiles/ISD2190.elf.dir/Core/Src/iwdg.c.obj
+                0x20001e54                hiwdg
  .bss.ADC_Value
-                0x20001660       0x20 CMakeFiles/ISD2190.elf.dir/Core/Src/main.c.obj
-                0x20001660                ADC_Value
- .bss.BleBuf    0x20001680       0x20 CMakeFiles/ISD2190.elf.dir/Core/Src/main.c.obj
-                0x20001680                BleBuf
- .bss.Cmd       0x200016a0        0x1 CMakeFiles/ISD2190.elf.dir/Core/Src/main.c.obj
-                0x200016a0                Cmd
- *fill*         0x200016a1        0x3 
- .bss.Config    0x200016a4       0x35 CMakeFiles/ISD2190.elf.dir/Core/Src/main.c.obj
-                0x200016a4                Config
+                0x20001e60       0x20 CMakeFiles/ISD2190.elf.dir/Core/Src/main.c.obj
+                0x20001e60                ADC_Value
+ .bss.BleBuf    0x20001e80       0x20 CMakeFiles/ISD2190.elf.dir/Core/Src/main.c.obj
+                0x20001e80                BleBuf
+ .bss.Cmd       0x20001ea0        0x1 CMakeFiles/ISD2190.elf.dir/Core/Src/main.c.obj
+                0x20001ea0                Cmd
+ *fill*         0x20001ea1        0x3 
+ .bss.Config    0x20001ea4       0x35 CMakeFiles/ISD2190.elf.dir/Core/Src/main.c.obj
+                0x20001ea4                Config
  .bss.Scan_Start
-                0x200016d9        0x1 CMakeFiles/ISD2190.elf.dir/Core/Src/main.c.obj
-                0x200016d9                Scan_Start
- *fill*         0x200016da        0x6 
- .bss.Sensor    0x200016e0      0x600 CMakeFiles/ISD2190.elf.dir/Core/Src/main.c.obj
-                0x200016e0                Sensor
+                0x20001ed9        0x1 CMakeFiles/ISD2190.elf.dir/Core/Src/main.c.obj
+                0x20001ed9                Scan_Start
+ *fill*         0x20001eda        0x6 
+ .bss.Sensor    0x20001ee0      0x600 CMakeFiles/ISD2190.elf.dir/Core/Src/main.c.obj
+                0x20001ee0                Sensor
  .bss.Temp_Value
-                0x20001ce0       0x20 CMakeFiles/ISD2190.elf.dir/Core/Src/main.c.obj
-                0x20001ce0                Temp_Value
- .bss.Uart2Buf  0x20001d00       0x20 CMakeFiles/ISD2190.elf.dir/Core/Src/main.c.obj
-                0x20001d00                Uart2Buf
- .bss.Uart3Buf  0x20001d20       0x20 CMakeFiles/ISD2190.elf.dir/Core/Src/main.c.obj
-                0x20001d20                Uart3Buf
- .bss.VM1_Busy  0x20001d40        0x1 CMakeFiles/ISD2190.elf.dir/Core/Src/main.c.obj
-                0x20001d40                VM1_Busy
- .bss.VM1_Init  0x20001d41        0x1 CMakeFiles/ISD2190.elf.dir/Core/Src/main.c.obj
-                0x20001d41                VM1_Init
- .bss.VM1_OK    0x20001d42        0x1 CMakeFiles/ISD2190.elf.dir/Core/Src/main.c.obj
-                0x20001d42                VM1_OK
- .bss.VM2_Busy  0x20001d43        0x1 CMakeFiles/ISD2190.elf.dir/Core/Src/main.c.obj
-                0x20001d43                VM2_Busy
- .bss.VM2_Init  0x20001d44        0x1 CMakeFiles/ISD2190.elf.dir/Core/Src/main.c.obj
-                0x20001d44                VM2_Init
- .bss.VM2_OK    0x20001d45        0x1 CMakeFiles/ISD2190.elf.dir/Core/Src/main.c.obj
-                0x20001d45                VM2_OK
- .bss.VM_ERR    0x20001d46        0x1 CMakeFiles/ISD2190.elf.dir/Core/Src/main.c.obj
-                0x20001d46                VM_ERR
- .bss.ble_flag  0x20001d47        0x1 CMakeFiles/ISD2190.elf.dir/Core/Src/main.c.obj
-                0x20001d47                ble_flag
- .bss.ble_len   0x20001d48        0x1 CMakeFiles/ISD2190.elf.dir/Core/Src/main.c.obj
-                0x20001d48                ble_len
- *fill*         0x20001d49        0x3 
+                0x200024e0       0x20 CMakeFiles/ISD2190.elf.dir/Core/Src/main.c.obj
+                0x200024e0                Temp_Value
+ .bss.Uart2Buf  0x20002500       0x20 CMakeFiles/ISD2190.elf.dir/Core/Src/main.c.obj
+                0x20002500                Uart2Buf
+ .bss.Uart3Buf  0x20002520       0x20 CMakeFiles/ISD2190.elf.dir/Core/Src/main.c.obj
+                0x20002520                Uart3Buf
+ .bss.VM1_Busy  0x20002540        0x1 CMakeFiles/ISD2190.elf.dir/Core/Src/main.c.obj
+                0x20002540                VM1_Busy
+ .bss.VM1_Init  0x20002541        0x1 CMakeFiles/ISD2190.elf.dir/Core/Src/main.c.obj
+                0x20002541                VM1_Init
+ .bss.VM1_OK    0x20002542        0x1 CMakeFiles/ISD2190.elf.dir/Core/Src/main.c.obj
+                0x20002542                VM1_OK
+ .bss.VM2_Busy  0x20002543        0x1 CMakeFiles/ISD2190.elf.dir/Core/Src/main.c.obj
+                0x20002543                VM2_Busy
+ .bss.VM2_Init  0x20002544        0x1 CMakeFiles/ISD2190.elf.dir/Core/Src/main.c.obj
+                0x20002544                VM2_Init
+ .bss.VM2_OK    0x20002545        0x1 CMakeFiles/ISD2190.elf.dir/Core/Src/main.c.obj
+                0x20002545                VM2_OK
+ .bss.VM_ERR    0x20002546        0x1 CMakeFiles/ISD2190.elf.dir/Core/Src/main.c.obj
+                0x20002546                VM_ERR
+ .bss.ble_flag  0x20002547        0x1 CMakeFiles/ISD2190.elf.dir/Core/Src/main.c.obj
+                0x20002547                ble_flag
+ .bss.ble_len   0x20002548        0x1 CMakeFiles/ISD2190.elf.dir/Core/Src/main.c.obj
+                0x20002548                ble_len
+ *fill*         0x20002549        0x3 
  .bss.usart2Queue
-                0x20001d4c        0x4 CMakeFiles/ISD2190.elf.dir/Core/Src/main.c.obj
-                0x20001d4c                usart2Queue
+                0x2000254c        0x4 CMakeFiles/ISD2190.elf.dir/Core/Src/main.c.obj
+                0x2000254c                usart2Queue
  .bss.usart3Queue
-                0x20001d50        0x4 CMakeFiles/ISD2190.elf.dir/Core/Src/main.c.obj
-                0x20001d50                usart3Queue
- .bss.htim7     0x20001d54       0x40 CMakeFiles/ISD2190.elf.dir/Core/Src/stm32l1xx_hal_timebase_tim.c.obj
-                0x20001d54                htim7
+                0x20002550        0x4 CMakeFiles/ISD2190.elf.dir/Core/Src/main.c.obj
+                0x20002550                usart3Queue
+ .bss.htim7     0x20002554       0x40 CMakeFiles/ISD2190.elf.dir/Core/Src/stm32l1xx_hal_timebase_tim.c.obj
+                0x20002554                htim7
  .bss.__sbrk_heap_end
-                0x20001d94        0x4 CMakeFiles/ISD2190.elf.dir/Core/Src/sysmem.c.obj
- .bss.htim2     0x20001d98       0x40 CMakeFiles/ISD2190.elf.dir/Core/Src/tim.c.obj
-                0x20001d98                htim2
+                0x20002594        0x4 CMakeFiles/ISD2190.elf.dir/Core/Src/sysmem.c.obj
+ .bss.htim2     0x20002598       0x40 CMakeFiles/ISD2190.elf.dir/Core/Src/tim.c.obj
+                0x20002598                htim2
  .bss.hdma_uart5_rx
-                0x20001dd8       0x44 CMakeFiles/ISD2190.elf.dir/Core/Src/usart.c.obj
-                0x20001dd8                hdma_uart5_rx
+                0x200025d8       0x44 CMakeFiles/ISD2190.elf.dir/Core/Src/usart.c.obj
+                0x200025d8                hdma_uart5_rx
  .bss.hdma_uart5_tx
-                0x20001e1c       0x44 CMakeFiles/ISD2190.elf.dir/Core/Src/usart.c.obj
-                0x20001e1c                hdma_uart5_tx
+                0x2000261c       0x44 CMakeFiles/ISD2190.elf.dir/Core/Src/usart.c.obj
+                0x2000261c                hdma_uart5_tx
  .bss.hdma_usart2_rx
-                0x20001e60       0x44 CMakeFiles/ISD2190.elf.dir/Core/Src/usart.c.obj
-                0x20001e60                hdma_usart2_rx
+                0x20002660       0x44 CMakeFiles/ISD2190.elf.dir/Core/Src/usart.c.obj
+                0x20002660                hdma_usart2_rx
  .bss.hdma_usart2_tx
-                0x20001ea4       0x44 CMakeFiles/ISD2190.elf.dir/Core/Src/usart.c.obj
-                0x20001ea4                hdma_usart2_tx
+                0x200026a4       0x44 CMakeFiles/ISD2190.elf.dir/Core/Src/usart.c.obj
+                0x200026a4                hdma_usart2_tx
  .bss.hdma_usart3_rx
-                0x20001ee8       0x44 CMakeFiles/ISD2190.elf.dir/Core/Src/usart.c.obj
-                0x20001ee8                hdma_usart3_rx
+                0x200026e8       0x44 CMakeFiles/ISD2190.elf.dir/Core/Src/usart.c.obj
+                0x200026e8                hdma_usart3_rx
  .bss.hdma_usart3_tx
-                0x20001f2c       0x44 CMakeFiles/ISD2190.elf.dir/Core/Src/usart.c.obj
-                0x20001f2c                hdma_usart3_tx
- .bss.huart2    0x20001f70       0x48 CMakeFiles/ISD2190.elf.dir/Core/Src/usart.c.obj
-                0x20001f70                huart2
- .bss.huart3    0x20001fb8       0x48 CMakeFiles/ISD2190.elf.dir/Core/Src/usart.c.obj
-                0x20001fb8                huart3
- .bss.huart5    0x20002000       0x48 CMakeFiles/ISD2190.elf.dir/Core/Src/usart.c.obj
-                0x20002000                huart5
- .bss.uwTick    0x20002048        0x4 CMakeFiles/ISD2190.elf.dir/Drivers/STM32L1xx_HAL_Driver/Src/stm32l1xx_hal.c.obj
-                0x20002048                uwTick
- .bss.pFlash    0x2000204c       0x18 CMakeFiles/ISD2190.elf.dir/Drivers/STM32L1xx_HAL_Driver/Src/stm32l1xx_hal_flash.c.obj
-                0x2000204c                pFlash
+                0x2000272c       0x44 CMakeFiles/ISD2190.elf.dir/Core/Src/usart.c.obj
+                0x2000272c                hdma_usart3_tx
+ .bss.huart2    0x20002770       0x48 CMakeFiles/ISD2190.elf.dir/Core/Src/usart.c.obj
+                0x20002770                huart2
+ .bss.huart3    0x200027b8       0x48 CMakeFiles/ISD2190.elf.dir/Core/Src/usart.c.obj
+                0x200027b8                huart3
+ .bss.huart5    0x20002800       0x48 CMakeFiles/ISD2190.elf.dir/Core/Src/usart.c.obj
+                0x20002800                huart5
+ .bss.uwTick    0x20002848        0x4 CMakeFiles/ISD2190.elf.dir/Drivers/STM32L1xx_HAL_Driver/Src/stm32l1xx_hal.c.obj
+                0x20002848                uwTick
+ .bss.pFlash    0x2000284c       0x18 CMakeFiles/ISD2190.elf.dir/Drivers/STM32L1xx_HAL_Driver/Src/stm32l1xx_hal_flash.c.obj
+                0x2000284c                pFlash
  .bss.Idle_Stack
-                0x20002064      0x200 CMakeFiles/ISD2190.elf.dir/Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS_V2/cmsis_os2.c.obj
- .bss.Idle_TCB  0x20002264       0x5c CMakeFiles/ISD2190.elf.dir/Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS_V2/cmsis_os2.c.obj
+                0x20002864      0x200 CMakeFiles/ISD2190.elf.dir/Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS_V2/cmsis_os2.c.obj
+ .bss.Idle_TCB  0x20002a64       0x5c CMakeFiles/ISD2190.elf.dir/Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS_V2/cmsis_os2.c.obj
  .bss.KernelState
-                0x200022c0        0x4 CMakeFiles/ISD2190.elf.dir/Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS_V2/cmsis_os2.c.obj
+                0x20002ac0        0x4 CMakeFiles/ISD2190.elf.dir/Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS_V2/cmsis_os2.c.obj
  .bss.Timer_Stack
-                0x200022c4      0x400 CMakeFiles/ISD2190.elf.dir/Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS_V2/cmsis_os2.c.obj
+                0x20002ac4      0x400 CMakeFiles/ISD2190.elf.dir/Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS_V2/cmsis_os2.c.obj
  .bss.Timer_TCB
-                0x200026c4       0x5c CMakeFiles/ISD2190.elf.dir/Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS_V2/cmsis_os2.c.obj
+                0x20002ec4       0x5c CMakeFiles/ISD2190.elf.dir/Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS_V2/cmsis_os2.c.obj
  .bss.ucMaxSysCallPriority
-                0x20002720        0x1 CMakeFiles/ISD2190.elf.dir/Middlewares/Third_Party/FreeRTOS/Source/portable/GCC/ARM_CM3/port.c.obj
- *fill*         0x20002721        0x3 
+                0x20002f20        0x1 CMakeFiles/ISD2190.elf.dir/Middlewares/Third_Party/FreeRTOS/Source/portable/GCC/ARM_CM3/port.c.obj
+ *fill*         0x20002f21        0x3 
  .bss.ulMaxPRIGROUPValue
-                0x20002724        0x4 CMakeFiles/ISD2190.elf.dir/Middlewares/Third_Party/FreeRTOS/Source/portable/GCC/ARM_CM3/port.c.obj
- .bss.pxEnd     0x20002728        0x4 CMakeFiles/ISD2190.elf.dir/Middlewares/Third_Party/FreeRTOS/Source/portable/MemMang/heap_4.c.obj
- .bss.ucHeap    0x2000272c      0x5dc CMakeFiles/ISD2190.elf.dir/Middlewares/Third_Party/FreeRTOS/Source/portable/MemMang/heap_4.c.obj
+                0x20002f24        0x4 CMakeFiles/ISD2190.elf.dir/Middlewares/Third_Party/FreeRTOS/Source/portable/GCC/ARM_CM3/port.c.obj
+ .bss.pxEnd     0x20002f28        0x4 CMakeFiles/ISD2190.elf.dir/Middlewares/Third_Party/FreeRTOS/Source/portable/MemMang/heap_4.c.obj
+ .bss.ucHeap    0x20002f2c      0x5dc CMakeFiles/ISD2190.elf.dir/Middlewares/Third_Party/FreeRTOS/Source/portable/MemMang/heap_4.c.obj
  .bss.xBlockAllocatedBit
-                0x20002d08        0x4 CMakeFiles/ISD2190.elf.dir/Middlewares/Third_Party/FreeRTOS/Source/portable/MemMang/heap_4.c.obj
+                0x20003508        0x4 CMakeFiles/ISD2190.elf.dir/Middlewares/Third_Party/FreeRTOS/Source/portable/MemMang/heap_4.c.obj
  .bss.xFreeBytesRemaining
-                0x20002d0c        0x4 CMakeFiles/ISD2190.elf.dir/Middlewares/Third_Party/FreeRTOS/Source/portable/MemMang/heap_4.c.obj
+                0x2000350c        0x4 CMakeFiles/ISD2190.elf.dir/Middlewares/Third_Party/FreeRTOS/Source/portable/MemMang/heap_4.c.obj
  .bss.xMinimumEverFreeBytesRemaining
-                0x20002d10        0x4 CMakeFiles/ISD2190.elf.dir/Middlewares/Third_Party/FreeRTOS/Source/portable/MemMang/heap_4.c.obj
- .bss.xStart    0x20002d14        0x8 CMakeFiles/ISD2190.elf.dir/Middlewares/Third_Party/FreeRTOS/Source/portable/MemMang/heap_4.c.obj
+                0x20003510        0x4 CMakeFiles/ISD2190.elf.dir/Middlewares/Third_Party/FreeRTOS/Source/portable/MemMang/heap_4.c.obj
+ .bss.xStart    0x20003514        0x8 CMakeFiles/ISD2190.elf.dir/Middlewares/Third_Party/FreeRTOS/Source/portable/MemMang/heap_4.c.obj
  .bss.xQueueRegistry
-                0x20002d1c       0x40 CMakeFiles/ISD2190.elf.dir/Middlewares/Third_Party/FreeRTOS/Source/queue.c.obj
-                0x20002d1c                xQueueRegistry
+                0x2000351c       0x40 CMakeFiles/ISD2190.elf.dir/Middlewares/Third_Party/FreeRTOS/Source/queue.c.obj
+                0x2000351c                xQueueRegistry
  .bss.pxCurrentTCB
-                0x20002d5c        0x4 CMakeFiles/ISD2190.elf.dir/Middlewares/Third_Party/FreeRTOS/Source/tasks.c.obj
-                0x20002d5c                pxCurrentTCB
+                0x2000355c        0x4 CMakeFiles/ISD2190.elf.dir/Middlewares/Third_Party/FreeRTOS/Source/tasks.c.obj
+                0x2000355c                pxCurrentTCB
  .bss.pxDelayedTaskList
-                0x20002d60        0x4 CMakeFiles/ISD2190.elf.dir/Middlewares/Third_Party/FreeRTOS/Source/tasks.c.obj
+                0x20003560        0x4 CMakeFiles/ISD2190.elf.dir/Middlewares/Third_Party/FreeRTOS/Source/tasks.c.obj
  .bss.pxOverflowDelayedTaskList
-                0x20002d64        0x4 CMakeFiles/ISD2190.elf.dir/Middlewares/Third_Party/FreeRTOS/Source/tasks.c.obj
+                0x20003564        0x4 CMakeFiles/ISD2190.elf.dir/Middlewares/Third_Party/FreeRTOS/Source/tasks.c.obj
  .bss.pxReadyTasksLists
-                0x20002d68      0x460 CMakeFiles/ISD2190.elf.dir/Middlewares/Third_Party/FreeRTOS/Source/tasks.c.obj
+                0x20003568      0x460 CMakeFiles/ISD2190.elf.dir/Middlewares/Third_Party/FreeRTOS/Source/tasks.c.obj
  .bss.uxCurrentNumberOfTasks
-                0x200031c8        0x4 CMakeFiles/ISD2190.elf.dir/Middlewares/Third_Party/FreeRTOS/Source/tasks.c.obj
+                0x200039c8        0x4 CMakeFiles/ISD2190.elf.dir/Middlewares/Third_Party/FreeRTOS/Source/tasks.c.obj
  .bss.uxDeletedTasksWaitingCleanUp
-                0x200031cc        0x4 CMakeFiles/ISD2190.elf.dir/Middlewares/Third_Party/FreeRTOS/Source/tasks.c.obj
+                0x200039cc        0x4 CMakeFiles/ISD2190.elf.dir/Middlewares/Third_Party/FreeRTOS/Source/tasks.c.obj
  .bss.uxPendedTicks
-                0x200031d0        0x4 CMakeFiles/ISD2190.elf.dir/Middlewares/Third_Party/FreeRTOS/Source/tasks.c.obj
+                0x200039d0        0x4 CMakeFiles/ISD2190.elf.dir/Middlewares/Third_Party/FreeRTOS/Source/tasks.c.obj
  .bss.uxSchedulerSuspended
-                0x200031d4        0x4 CMakeFiles/ISD2190.elf.dir/Middlewares/Third_Party/FreeRTOS/Source/tasks.c.obj
+                0x200039d4        0x4 CMakeFiles/ISD2190.elf.dir/Middlewares/Third_Party/FreeRTOS/Source/tasks.c.obj
  .bss.uxTaskNumber
-                0x200031d8        0x4 CMakeFiles/ISD2190.elf.dir/Middlewares/Third_Party/FreeRTOS/Source/tasks.c.obj
+                0x200039d8        0x4 CMakeFiles/ISD2190.elf.dir/Middlewares/Third_Party/FreeRTOS/Source/tasks.c.obj
  .bss.uxTopReadyPriority
-                0x200031dc        0x4 CMakeFiles/ISD2190.elf.dir/Middlewares/Third_Party/FreeRTOS/Source/tasks.c.obj
+                0x200039dc        0x4 CMakeFiles/ISD2190.elf.dir/Middlewares/Third_Party/FreeRTOS/Source/tasks.c.obj
  .bss.xDelayedTaskList1
-                0x200031e0       0x14 CMakeFiles/ISD2190.elf.dir/Middlewares/Third_Party/FreeRTOS/Source/tasks.c.obj
+                0x200039e0       0x14 CMakeFiles/ISD2190.elf.dir/Middlewares/Third_Party/FreeRTOS/Source/tasks.c.obj
  .bss.xDelayedTaskList2
-                0x200031f4       0x14 CMakeFiles/ISD2190.elf.dir/Middlewares/Third_Party/FreeRTOS/Source/tasks.c.obj
+                0x200039f4       0x14 CMakeFiles/ISD2190.elf.dir/Middlewares/Third_Party/FreeRTOS/Source/tasks.c.obj
  .bss.xIdleTaskHandle
-                0x20003208        0x4 CMakeFiles/ISD2190.elf.dir/Middlewares/Third_Party/FreeRTOS/Source/tasks.c.obj
+                0x20003a08        0x4 CMakeFiles/ISD2190.elf.dir/Middlewares/Third_Party/FreeRTOS/Source/tasks.c.obj
  .bss.xNextTaskUnblockTime
-                0x2000320c        0x4 CMakeFiles/ISD2190.elf.dir/Middlewares/Third_Party/FreeRTOS/Source/tasks.c.obj
+                0x20003a0c        0x4 CMakeFiles/ISD2190.elf.dir/Middlewares/Third_Party/FreeRTOS/Source/tasks.c.obj
  .bss.xNumOfOverflows
-                0x20003210        0x4 CMakeFiles/ISD2190.elf.dir/Middlewares/Third_Party/FreeRTOS/Source/tasks.c.obj
+                0x20003a10        0x4 CMakeFiles/ISD2190.elf.dir/Middlewares/Third_Party/FreeRTOS/Source/tasks.c.obj
  .bss.xPendingReadyList
-                0x20003214       0x14 CMakeFiles/ISD2190.elf.dir/Middlewares/Third_Party/FreeRTOS/Source/tasks.c.obj
+                0x20003a14       0x14 CMakeFiles/ISD2190.elf.dir/Middlewares/Third_Party/FreeRTOS/Source/tasks.c.obj
  .bss.xSchedulerRunning
-                0x20003228        0x4 CMakeFiles/ISD2190.elf.dir/Middlewares/Third_Party/FreeRTOS/Source/tasks.c.obj
+                0x20003a28        0x4 CMakeFiles/ISD2190.elf.dir/Middlewares/Third_Party/FreeRTOS/Source/tasks.c.obj
  .bss.xSuspendedTaskList
-                0x2000322c       0x14 CMakeFiles/ISD2190.elf.dir/Middlewares/Third_Party/FreeRTOS/Source/tasks.c.obj
+                0x20003a2c       0x14 CMakeFiles/ISD2190.elf.dir/Middlewares/Third_Party/FreeRTOS/Source/tasks.c.obj
  .bss.xTasksWaitingTermination
-                0x20003240       0x14 CMakeFiles/ISD2190.elf.dir/Middlewares/Third_Party/FreeRTOS/Source/tasks.c.obj
+                0x20003a40       0x14 CMakeFiles/ISD2190.elf.dir/Middlewares/Third_Party/FreeRTOS/Source/tasks.c.obj
  .bss.xTickCount
-                0x20003254        0x4 CMakeFiles/ISD2190.elf.dir/Middlewares/Third_Party/FreeRTOS/Source/tasks.c.obj
+                0x20003a54        0x4 CMakeFiles/ISD2190.elf.dir/Middlewares/Third_Party/FreeRTOS/Source/tasks.c.obj
  .bss.xYieldPending
-                0x20003258        0x4 CMakeFiles/ISD2190.elf.dir/Middlewares/Third_Party/FreeRTOS/Source/tasks.c.obj
+                0x20003a58        0x4 CMakeFiles/ISD2190.elf.dir/Middlewares/Third_Party/FreeRTOS/Source/tasks.c.obj
  .bss.pxCurrentTimerList
-                0x2000325c        0x4 CMakeFiles/ISD2190.elf.dir/Middlewares/Third_Party/FreeRTOS/Source/timers.c.obj
+                0x20003a5c        0x4 CMakeFiles/ISD2190.elf.dir/Middlewares/Third_Party/FreeRTOS/Source/timers.c.obj
  .bss.pxOverflowTimerList
-                0x20003260        0x4 CMakeFiles/ISD2190.elf.dir/Middlewares/Third_Party/FreeRTOS/Source/timers.c.obj
+                0x20003a60        0x4 CMakeFiles/ISD2190.elf.dir/Middlewares/Third_Party/FreeRTOS/Source/timers.c.obj
  .bss.ucStaticTimerQueueStorage.1
-                0x20003264       0xa0 CMakeFiles/ISD2190.elf.dir/Middlewares/Third_Party/FreeRTOS/Source/timers.c.obj
+                0x20003a64       0xa0 CMakeFiles/ISD2190.elf.dir/Middlewares/Third_Party/FreeRTOS/Source/timers.c.obj
  .bss.xActiveTimerList1
-                0x20003304       0x14 CMakeFiles/ISD2190.elf.dir/Middlewares/Third_Party/FreeRTOS/Source/timers.c.obj
+                0x20003b04       0x14 CMakeFiles/ISD2190.elf.dir/Middlewares/Third_Party/FreeRTOS/Source/timers.c.obj
  .bss.xActiveTimerList2
-                0x20003318       0x14 CMakeFiles/ISD2190.elf.dir/Middlewares/Third_Party/FreeRTOS/Source/timers.c.obj
+                0x20003b18       0x14 CMakeFiles/ISD2190.elf.dir/Middlewares/Third_Party/FreeRTOS/Source/timers.c.obj
  .bss.xLastTime.2
-                0x2000332c        0x4 CMakeFiles/ISD2190.elf.dir/Middlewares/Third_Party/FreeRTOS/Source/timers.c.obj
+                0x20003b2c        0x4 CMakeFiles/ISD2190.elf.dir/Middlewares/Third_Party/FreeRTOS/Source/timers.c.obj
  .bss.xStaticTimerQueue.0
-                0x20003330       0x50 CMakeFiles/ISD2190.elf.dir/Middlewares/Third_Party/FreeRTOS/Source/timers.c.obj
+                0x20003b30       0x50 CMakeFiles/ISD2190.elf.dir/Middlewares/Third_Party/FreeRTOS/Source/timers.c.obj
  .bss.xTimerQueue
-                0x20003380        0x4 CMakeFiles/ISD2190.elf.dir/Middlewares/Third_Party/FreeRTOS/Source/timers.c.obj
+                0x20003b80        0x4 CMakeFiles/ISD2190.elf.dir/Middlewares/Third_Party/FreeRTOS/Source/timers.c.obj
  .bss.xTimerTaskHandle
-                0x20003384        0x4 CMakeFiles/ISD2190.elf.dir/Middlewares/Third_Party/FreeRTOS/Source/timers.c.obj
+                0x20003b84        0x4 CMakeFiles/ISD2190.elf.dir/Middlewares/Third_Party/FreeRTOS/Source/timers.c.obj
  .bss.tx_buffer
-                0x20003388      0x200 CMakeFiles/ISD2190.elf.dir/User/bt4531.c.obj
-                0x20003388                tx_buffer
- .bss.data      0x20003588        0x4 CMakeFiles/ISD2190.elf.dir/User/flash.c.obj
-                0x20003588                data
+                0x20003b88      0x200 CMakeFiles/ISD2190.elf.dir/User/bt4531.c.obj
+                0x20003b88                tx_buffer
+ .bss.data      0x20003d88        0x4 CMakeFiles/ISD2190.elf.dir/User/flash.c.obj
+                0x20003d88                data
  .bss.__lock___atexit_recursive_mutex
-                0x2000358c        0x1 d:/clion/gcc-arm-none-eabi-10.3-2021.10/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/lib/thumb/v7-m/nofp\libg.a(lib_a-lock.o)
-                0x2000358c                __lock___atexit_recursive_mutex
- *fill*         0x2000358d        0x3 
+                0x20003d8c        0x1 d:/clion/gcc-arm-none-eabi-10.3-2021.10/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/lib/thumb/v7-m/nofp\libg.a(lib_a-lock.o)
+                0x20003d8c                __lock___atexit_recursive_mutex
+ *fill*         0x20003d8d        0x3 
  .bss.__lock___malloc_recursive_mutex
-                0x20003590        0x1 d:/clion/gcc-arm-none-eabi-10.3-2021.10/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/lib/thumb/v7-m/nofp\libg.a(lib_a-lock.o)
-                0x20003590                __lock___malloc_recursive_mutex
- *fill*         0x20003591        0x3 
+                0x20003d90        0x1 d:/clion/gcc-arm-none-eabi-10.3-2021.10/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/lib/thumb/v7-m/nofp\libg.a(lib_a-lock.o)
+                0x20003d90                __lock___malloc_recursive_mutex
+ *fill*         0x20003d91        0x3 
  .bss.__lock___sfp_recursive_mutex
-                0x20003594        0x1 d:/clion/gcc-arm-none-eabi-10.3-2021.10/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/lib/thumb/v7-m/nofp\libg.a(lib_a-lock.o)
-                0x20003594                __lock___sfp_recursive_mutex
- *fill*         0x20003595        0x3 
+                0x20003d94        0x1 d:/clion/gcc-arm-none-eabi-10.3-2021.10/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/lib/thumb/v7-m/nofp\libg.a(lib_a-lock.o)
+                0x20003d94                __lock___sfp_recursive_mutex
+ *fill*         0x20003d95        0x3 
  .bss.__lock___sinit_recursive_mutex
-                0x20003598        0x1 d:/clion/gcc-arm-none-eabi-10.3-2021.10/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/lib/thumb/v7-m/nofp\libg.a(lib_a-lock.o)
-                0x20003598                __lock___sinit_recursive_mutex
- *fill*         0x20003599        0x3 
+                0x20003d98        0x1 d:/clion/gcc-arm-none-eabi-10.3-2021.10/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/lib/thumb/v7-m/nofp\libg.a(lib_a-lock.o)
+                0x20003d98                __lock___sinit_recursive_mutex
+ *fill*         0x20003d99        0x3 
  .bss.__malloc_current_mallinfo
-                0x2000359c       0x28 d:/clion/gcc-arm-none-eabi-10.3-2021.10/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/lib/thumb/v7-m/nofp\libg.a(lib_a-mallocr.o)
-                0x2000359c                __malloc_current_mallinfo
+                0x20003d9c       0x28 d:/clion/gcc-arm-none-eabi-10.3-2021.10/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/lib/thumb/v7-m/nofp\libg.a(lib_a-mallocr.o)
+                0x20003d9c                __malloc_current_mallinfo
  .bss.__malloc_max_sbrked_mem
-                0x200035c4        0x4 d:/clion/gcc-arm-none-eabi-10.3-2021.10/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/lib/thumb/v7-m/nofp\libg.a(lib_a-mallocr.o)
-                0x200035c4                __malloc_max_sbrked_mem
+                0x20003dc4        0x4 d:/clion/gcc-arm-none-eabi-10.3-2021.10/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/lib/thumb/v7-m/nofp\libg.a(lib_a-mallocr.o)
+                0x20003dc4                __malloc_max_sbrked_mem
  .bss.__malloc_max_total_mem
-                0x200035c8        0x4 d:/clion/gcc-arm-none-eabi-10.3-2021.10/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/lib/thumb/v7-m/nofp\libg.a(lib_a-mallocr.o)
-                0x200035c8                __malloc_max_total_mem
+                0x20003dc8        0x4 d:/clion/gcc-arm-none-eabi-10.3-2021.10/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/lib/thumb/v7-m/nofp\libg.a(lib_a-mallocr.o)
+                0x20003dc8                __malloc_max_total_mem
  .bss.__malloc_top_pad
-                0x200035cc        0x4 d:/clion/gcc-arm-none-eabi-10.3-2021.10/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/lib/thumb/v7-m/nofp\libg.a(lib_a-mallocr.o)
-                0x200035cc                __malloc_top_pad
- .bss.errno     0x200035d0        0x4 d:/clion/gcc-arm-none-eabi-10.3-2021.10/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/lib/thumb/v7-m/nofp\libg.a(lib_a-reent.o)
-                0x200035d0                errno
+                0x20003dcc        0x4 d:/clion/gcc-arm-none-eabi-10.3-2021.10/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/lib/thumb/v7-m/nofp\libg.a(lib_a-mallocr.o)
+                0x20003dcc                __malloc_top_pad
+ .bss.errno     0x20003dd0        0x4 d:/clion/gcc-arm-none-eabi-10.3-2021.10/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/lib/thumb/v7-m/nofp\libg.a(lib_a-reent.o)
+                0x20003dd0                errno
  *(COMMON)
-                0x200035d4                . = ALIGN (0x4)
-                0x200035d4                _ebss = .
-                0x200035d4                __bss_end__ = _ebss
+                0x20003dd4                . = ALIGN (0x4)
+                0x20003dd4                _ebss = .
+                0x20003dd4                __bss_end__ = _ebss
 
 ._user_heap_stack
-                0x200035d4      0x604 load address 0x08009eac
-                0x200035d8                . = ALIGN (0x8)
- *fill*         0x200035d4        0x4 
+                0x20003dd4      0x604 load address 0x08009eac
+                0x20003dd8                . = ALIGN (0x8)
+ *fill*         0x20003dd4        0x4 
                 [!provide]                PROVIDE (end = .)
-                0x200035d8                PROVIDE (_end = .)
-                0x200037d8                . = (. + _Min_Heap_Size)
- *fill*         0x200035d8      0x200 
-                0x20003bd8                . = (. + _Min_Stack_Size)
- *fill*         0x200037d8      0x400 
-                0x20003bd8                . = ALIGN (0x8)
+                0x20003dd8                PROVIDE (_end = .)
+                0x20003fd8                . = (. + _Min_Heap_Size)
+ *fill*         0x20003dd8      0x200 
+                0x200043d8                . = (. + _Min_Stack_Size)
+ *fill*         0x20003fd8      0x400 
+                0x200043d8                . = ALIGN (0x8)
 
 /DISCARD/
  libc.a(*)

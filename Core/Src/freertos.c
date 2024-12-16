@@ -64,7 +64,7 @@ extern volatile u8 VM2_OK;
 extern volatile u8 VM_ERR;
 
 extern volatile u8 ble_len;
-extern volatile u8 BleBuf[VM_BLE_RX_BUFFER_SIZE];
+extern volatile u8 BleBuf[BLE_CONFIG_BUFFER_SIZE];
 extern volatile u8 ble_flag;
 
 extern volatile SensorInfo Sensor[16];
@@ -77,7 +77,7 @@ extern u8 Uart3Buf[VM_BLE_RX_BUFFER_SIZE];
 /* USER CODE END Variables */
 /* Definitions for DataCollectTask */
 osThreadId_t DataCollectTaskHandle;
-uint32_t DataCollectTaskBuffer[ 512 ];
+uint32_t DataCollectTaskBuffer[ 1024 ];
 osStaticThreadDef_t DataCollectTaskControlBlock;
 const osThreadAttr_t DataCollectTask_attributes = {
   .name = "DataCollectTask",

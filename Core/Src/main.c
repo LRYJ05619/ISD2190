@@ -67,7 +67,7 @@ volatile u8 Scan_Start; //置1开始扫描
 
 volatile u8 ble_flag;    //蓝牙指令接收
 volatile u8 ble_len;
-u8 BleBuf[VM_BLE_RX_BUFFER_SIZE];
+u8 BleBuf[BLE_CONFIG_BUFFER_SIZE];
 volatile u8 Cmd;              //蓝牙指令
 
 u8 Uart2Buf[VM_BLE_RX_BUFFER_SIZE];
@@ -142,7 +142,7 @@ int main(void)
 
     HAL_UARTEx_ReceiveToIdle_DMA(&huart2, Uart2Buf, VM_BLE_RX_BUFFER_SIZE);
     HAL_UARTEx_ReceiveToIdle_DMA(&huart3, Uart3Buf, VM_BLE_RX_BUFFER_SIZE);
-    HAL_UARTEx_ReceiveToIdle_DMA(&huart5, BleBuf, VM_BLE_RX_BUFFER_SIZE);
+    HAL_UARTEx_ReceiveToIdle_DMA(&huart5, BleBuf, BLE_CONFIG_BUFFER_SIZE);
 //    Flash_Erase();
     Flash_Read();
 

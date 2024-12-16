@@ -19,7 +19,7 @@ extern volatile u8 Scan_Start;
 
 extern volatile u8 ble_flag;
 extern u8 ble_len;
-extern u8 BleBuf[VM_BLE_RX_BUFFER_SIZE];
+extern u8 BleBuf[BLE_CONFIG_BUFFER_SIZE];
 
 extern u8 Uart2Buf[VM_BLE_RX_BUFFER_SIZE];
 extern u8 Uart3Buf[VM_BLE_RX_BUFFER_SIZE];
@@ -136,7 +136,7 @@ void HAL_UARTEx_RxEventCallback(UART_HandleTypeDef *huart, uint16_t Size){
     if (huart->Instance == UART5) {
         ble_flag = 1;
         ble_len = Size;
-        HAL_UARTEx_ReceiveToIdle_DMA(&huart5, BleBuf, VM_BLE_RX_BUFFER_SIZE); // 重新使能接收中断
+        HAL_UARTEx_ReceiveToIdle_DMA(&huart5, BleBuf, BLE_CONFIG_BUFFER_SIZE); // 重新使能接收中断
     }
 }
 

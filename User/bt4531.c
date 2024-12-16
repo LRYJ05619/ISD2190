@@ -10,7 +10,7 @@
 
 u8 tx_buffer[512];
 extern SensorInfo Sensor[16];
-extern u8 BleBuf[VM_BLE_RX_BUFFER_SIZE];
+extern u8 BleBuf[BLE_CONFIG_BUFFER_SIZE];
 extern volatile u8 Cmd;
 extern u8 ble_len;
 
@@ -348,52 +348,66 @@ void RewriteConfig() {
     u8 pos = 5; // 当前位置，开始从rx_buffer[5]解析
 
     for (u8 i = 0; i < device_num; i++) {
-        // 寻找主通道传感器位置
-        u8 sensor_index = 0xFF;
-        for (u8 j = 0; j < 16; j++) {
-            if (Sensor[j].status == 0x01) {
-                sensor_index = j;
-                break;
-            }
-        }
-
-        if (sensor_index == 0xFF) {
-            // 如果未找到主通道位置则跳出
-            break;
-        }
+        u8 type;
+        u8 model[4];
+        u16 channel_addr;
+        u16 channel_size = 0;
+        u8 channel;
+        u8 flag = 0;
 
         // 开始解读每个字段
-        Sensor[sensor_index].sensor_type = BleBuf[pos++];
+        type = BleBuf[pos++];
 
         // 读取传感器型号
         for (u8 l = 0; l < 4; l++) {
-            Sensor[sensor_index].sensor_model[l] = BleBuf[pos++];
+            model[l] = BleBuf[pos++];
         }
 
         // 读取通道地址
-        Sensor[sensor_index].channel_addr = ((u16)BleBuf[pos++] << 8);
-        Sensor[sensor_index].channel_addr |= BleBuf[pos++];
+        channel_addr = ((u16)BleBuf[pos++] << 8);
+        channel_addr |= BleBuf[pos++];
+
+        for (u8 ch = 0; ch < 16; ch++) {
+            if ((channel_addr >> ch) & 0x01) {  // 依次判断每个通道位
+                channel_size++;
+                if (flag == 0) {
+                    // 找到主通道
+                    flag = 1;
+                    channel = ch;
+                    Sensor[channel].status = 0x01;  // 设置为主通道
+                } else {
+                    // 其他为从通道
+                    Sensor[ch].status = 0x02;  // 设置为从通道
+                }
+            }
+        }
+        Sensor[channel].sensor_type = type;
+        Sensor[channel].channel_size = channel_size;
+        Sensor[channel].channel_addr = channel_addr;
+        for (u8 m = 0; m < 4; m++) {
+            Sensor[channel].sensor_model[m] = model[m];
+        }
 
         // 读取初始频率（数量为 channel_size）
-        for (u8 j = 0; j < Sensor[sensor_index].channel_size; j++) {
-            Sensor[sensor_index].init_freq[j] = ((u16)BleBuf[pos++] << 8);
-            Sensor[sensor_index].init_freq[j] |= BleBuf[pos++];
+        for (u8 j = 0; j < channel_size; j++) {
+            Sensor[channel].init_freq[j] = ((u16)BleBuf[pos++] << 8);
+            Sensor[channel].init_freq[j] |= BleBuf[pos++];
         }
 
         // 读取初始温度
-        Sensor[sensor_index].init_temp = (int16_t)BleBuf[pos++];
+        Sensor[channel].init_temp = (int8_t)BleBuf[pos++];
 
         // 读取参数数量
-        Sensor[sensor_index].para_size = BleBuf[pos++];
+        Sensor[channel].para_size = BleBuf[pos++];
 
         // 读取参数（每个参数为 double 类型）
-        for (u8 k = 0; k < Sensor[sensor_index].para_size; k++) {
-            memcpy(&Sensor[sensor_index].para[k], &BleBuf[pos], sizeof(double));
+        for (u8 k = 0; k < Sensor[channel].para_size; k++) {
+            memcpy(&Sensor[channel].para[k], &BleBuf[pos], sizeof(double));
             pos += sizeof(double);
         }
     }
     Flash_Write();
-    StatuCallback(0x31, 0xA0);
+    StatuCallback(0x20, 0xA0);
 }
 u16 CRC_Check(uint8_t *CRC_Ptr,uint8_t LEN) {
     u16 CRC_Value = 0;
