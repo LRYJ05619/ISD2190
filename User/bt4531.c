@@ -309,10 +309,18 @@ void IpConfig(){
 }
 //配置Id
 void IdConfig(){
-    for (int i = 0; i < 20; i++) {
+    for (int i = 0; i < 19; i++) {
         Config.id[i] = BleBuf[i + 4];
     }
     Config_Write();
+
+    //25.6.4 新增即时修改蓝牙名称
+    u8 ble_name[40];
+    strncpy( ble_name, "TTM:REN-",strlen( "TTM:REN-" ));
+    strncat( ble_name, Config.id, 19);
+    strncat( ble_name, "\r\n\0",strlen( "\r\n\0" ));
+    HAL_UART_Transmit_DMA(&huart5, ble_name, strlen(ble_name));
+
     StatuCallback(0x32, 0xA0);
 }
 //返回配置信息
@@ -325,7 +333,7 @@ void IpConfigSend(){
 
     u8 num = 4;
 
-    for (int i = 0; i < 20; i++) {
+    for (int i = 0; i < 19; i++) {
         tx_buffer[num++] = Config.id[i];
     }
 
@@ -333,12 +341,13 @@ void IpConfigSend(){
         tx_buffer[num++] = Config.ip[i];
     }
 
+    //25.6.4 修正crc校验错误
+    tx_buffer[1] = num + 2;
+
     crc = CRC_Check(tx_buffer, tx_buffer[1]);
 
     tx_buffer[num++] = (crc >> 8) & 0xFF;
     tx_buffer[num++] = crc & 0xFF;
-
-    tx_buffer[1] = num;
 
     HAL_UART_Transmit_DMA(&huart5, tx_buffer, num);
 }

@@ -150,7 +150,7 @@ int main(void)
     Config_Read();
 
     //¸ü¸ÄÀ¶ÑÀÃû³Æ
-    printf("TTM:REN-ISD2190-02\r\n\0");
+    printf("TTM:REN-IAD101\r\n\0");
 
   /* USER CODE END 2 */
 

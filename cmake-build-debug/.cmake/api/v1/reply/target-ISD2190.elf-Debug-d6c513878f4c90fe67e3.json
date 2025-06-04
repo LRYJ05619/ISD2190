@@ -151,39 +151,39 @@
 			[
 				{
 					"backtrace" : 10,
-					"path" : "C:/Users/15569/Desktop/ISD2190/Core/Inc"
+					"path" : "E:/Project/ISD2190/ISD2190/Core/Inc"
 				},
 				{
 					"backtrace" : 10,
-					"path" : "C:/Users/15569/Desktop/ISD2190/Drivers/STM32L1xx_HAL_Driver/Inc"
+					"path" : "E:/Project/ISD2190/ISD2190/Drivers/STM32L1xx_HAL_Driver/Inc"
 				},
 				{
 					"backtrace" : 10,
-					"path" : "C:/Users/15569/Desktop/ISD2190/Drivers/STM32L1xx_HAL_Driver/Inc/Legacy"
+					"path" : "E:/Project/ISD2190/ISD2190/Drivers/STM32L1xx_HAL_Driver/Inc/Legacy"
 				},
 				{
 					"backtrace" : 10,
-					"path" : "C:/Users/15569/Desktop/ISD2190/Drivers/CMSIS/Device/ST/STM32L1xx/Include"
+					"path" : "E:/Project/ISD2190/ISD2190/Drivers/CMSIS/Device/ST/STM32L1xx/Include"
 				},
 				{
 					"backtrace" : 10,
-					"path" : "C:/Users/15569/Desktop/ISD2190/Drivers/CMSIS/Include"
+					"path" : "E:/Project/ISD2190/ISD2190/Drivers/CMSIS/Include"
 				},
 				{
 					"backtrace" : 10,
-					"path" : "C:/Users/15569/Desktop/ISD2190/Middlewares/Third_Party/FreeRTOS/Source/include"
+					"path" : "E:/Project/ISD2190/ISD2190/Middlewares/Third_Party/FreeRTOS/Source/include"
 				},
 				{
 					"backtrace" : 10,
-					"path" : "C:/Users/15569/Desktop/ISD2190/Middlewares/Third_Party/FreeRTOS/Source/portable/GCC/ARM_CM3"
+					"path" : "E:/Project/ISD2190/ISD2190/Middlewares/Third_Party/FreeRTOS/Source/portable/GCC/ARM_CM3"
 				},
 				{
 					"backtrace" : 10,
-					"path" : "C:/Users/15569/Desktop/ISD2190/Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS_V2"
+					"path" : "E:/Project/ISD2190/ISD2190/Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS_V2"
 				},
 				{
 					"backtrace" : 10,
-					"path" : "C:/Users/15569/Desktop/ISD2190/User"
+					"path" : "E:/Project/ISD2190/ISD2190/User"
 				}
 			],
 			"language" : "C",
@@ -317,39 +317,39 @@
 			[
 				{
 					"backtrace" : 10,
-					"path" : "C:/Users/15569/Desktop/ISD2190/Core/Inc"
+					"path" : "E:/Project/ISD2190/ISD2190/Core/Inc"
 				},
 				{
 					"backtrace" : 10,
-					"path" : "C:/Users/15569/Desktop/ISD2190/Drivers/STM32L1xx_HAL_Driver/Inc"
+					"path" : "E:/Project/ISD2190/ISD2190/Drivers/STM32L1xx_HAL_Driver/Inc"
 				},
 				{
 					"backtrace" : 10,
-					"path" : "C:/Users/15569/Desktop/ISD2190/Drivers/STM32L1xx_HAL_Driver/Inc/Legacy"
+					"path" : "E:/Project/ISD2190/ISD2190/Drivers/STM32L1xx_HAL_Driver/Inc/Legacy"
 				},
 				{
 					"backtrace" : 10,
-					"path" : "C:/Users/15569/Desktop/ISD2190/Drivers/CMSIS/Device/ST/STM32L1xx/Include"
+					"path" : "E:/Project/ISD2190/ISD2190/Drivers/CMSIS/Device/ST/STM32L1xx/Include"
 				},
 				{
 					"backtrace" : 10,
-					"path" : "C:/Users/15569/Desktop/ISD2190/Drivers/CMSIS/Include"
+					"path" : "E:/Project/ISD2190/ISD2190/Drivers/CMSIS/Include"
 				},
 				{
 					"backtrace" : 10,
-					"path" : "C:/Users/15569/Desktop/ISD2190/Middlewares/Third_Party/FreeRTOS/Source/include"
+					"path" : "E:/Project/ISD2190/ISD2190/Middlewares/Third_Party/FreeRTOS/Source/include"
 				},
 				{
 					"backtrace" : 10,
-					"path" : "C:/Users/15569/Desktop/ISD2190/Middlewares/Third_Party/FreeRTOS/Source/portable/GCC/ARM_CM3"
+					"path" : "E:/Project/ISD2190/ISD2190/Middlewares/Third_Party/FreeRTOS/Source/portable/GCC/ARM_CM3"
 				},
 				{
 					"backtrace" : 10,
-					"path" : "C:/Users/15569/Desktop/ISD2190/Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS_V2"
+					"path" : "E:/Project/ISD2190/ISD2190/Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS_V2"
 				},
 				{
 					"backtrace" : 10,
-					"path" : "C:/Users/15569/Desktop/ISD2190/User"
+					"path" : "E:/Project/ISD2190/ISD2190/User"
 				}
 			],
 			"language" : "ASM",
@@ -374,7 +374,7 @@
 			},
 			{
 				"backtrace" : 2,
-				"fragment" : "-Wl,-gc-sections,--print-memory-usage,-Map=C:/Users/15569/Desktop/ISD2190/cmake-build-debug/ISD2190.map",
+				"fragment" : "-Wl,-gc-sections,--print-memory-usage,-Map=E:/Project/ISD2190/ISD2190/cmake-build-debug/ISD2190.map",
 				"role" : "flags"
 			},
 			{
@@ -399,7 +399,7 @@
 			},
 			{
 				"backtrace" : 4,
-				"fragment" : "C:/Users/15569/Desktop/ISD2190/STM32L151RDTX_FLASH.ld",
+				"fragment" : "E:/Project/ISD2190/ISD2190/STM32L151RDTX_FLASH.ld",
 				"role" : "flags"
 			}
 		],

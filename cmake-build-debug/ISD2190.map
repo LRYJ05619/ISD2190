@@ -33,7 +33,9 @@ d:/clion/gcc-arm-none-eabi-10.3-2021.10/bin/../lib/gcc/arm-none-eabi/10.3.1/../.
 d:/clion/gcc-arm-none-eabi-10.3-2021.10/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/lib/thumb/v7-m/nofp\libg.a(lib_a-puts.o)
                               CMakeFiles/ISD2190.elf.dir/Core/Src/main.c.obj (puts)
 d:/clion/gcc-arm-none-eabi-10.3-2021.10/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/lib/thumb/v7-m/nofp\libg.a(lib_a-strlen-stub.o)
-                              d:/clion/gcc-arm-none-eabi-10.3-2021.10/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/lib/thumb/v7-m/nofp\libg.a(lib_a-puts.o) (strlen)
+                              CMakeFiles/ISD2190.elf.dir/User/bt4531.c.obj (strlen)
+d:/clion/gcc-arm-none-eabi-10.3-2021.10/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/lib/thumb/v7-m/nofp\libg.a(lib_a-strncat.o)
+                              CMakeFiles/ISD2190.elf.dir/User/bt4531.c.obj (strncat)
 d:/clion/gcc-arm-none-eabi-10.3-2021.10/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/lib/thumb/v7-m/nofp\libg.a(lib_a-__call_atexit.o)
                               d:/clion/gcc-arm-none-eabi-10.3-2021.10/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/lib/thumb/v7-m/nofp\libg.a(lib_a-exit.o) (__call_exitprocs)
 d:/clion/gcc-arm-none-eabi-10.3-2021.10/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/lib/thumb/v7-m/nofp\libg.a(lib_a-atexit.o)
@@ -282,8 +284,8 @@ Discarded input sections
  .debug_aranges
                 0x00000000       0x58 CMakeFiles/ISD2190.elf.dir/Drivers/STM32L1xx_HAL_Driver/Src/stm32l1xx_hal_adc_ex.c.obj
  .debug_ranges  0x00000000       0x48 CMakeFiles/ISD2190.elf.dir/Drivers/STM32L1xx_HAL_Driver/Src/stm32l1xx_hal_adc_ex.c.obj
- .debug_line    0x00000000      0x881 CMakeFiles/ISD2190.elf.dir/Drivers/STM32L1xx_HAL_Driver/Src/stm32l1xx_hal_adc_ex.c.obj
- .debug_str     0x00000000      0x8a1 CMakeFiles/ISD2190.elf.dir/Drivers/STM32L1xx_HAL_Driver/Src/stm32l1xx_hal_adc_ex.c.obj
+ .debug_line    0x00000000      0x871 CMakeFiles/ISD2190.elf.dir/Drivers/STM32L1xx_HAL_Driver/Src/stm32l1xx_hal_adc_ex.c.obj
+ .debug_str     0x00000000      0x899 CMakeFiles/ISD2190.elf.dir/Drivers/STM32L1xx_HAL_Driver/Src/stm32l1xx_hal_adc_ex.c.obj
  .comment       0x00000000       0x4a CMakeFiles/ISD2190.elf.dir/Drivers/STM32L1xx_HAL_Driver/Src/stm32l1xx_hal_adc_ex.c.obj
  .debug_frame   0x00000000       0xec CMakeFiles/ISD2190.elf.dir/Drivers/STM32L1xx_HAL_Driver/Src/stm32l1xx_hal_adc_ex.c.obj
  .ARM.attributes
@@ -365,8 +367,8 @@ Discarded input sections
  .debug_aranges
                 0x00000000       0x60 CMakeFiles/ISD2190.elf.dir/Drivers/STM32L1xx_HAL_Driver/Src/stm32l1xx_hal_exti.c.obj
  .debug_ranges  0x00000000       0x50 CMakeFiles/ISD2190.elf.dir/Drivers/STM32L1xx_HAL_Driver/Src/stm32l1xx_hal_exti.c.obj
- .debug_line    0x00000000      0x61e CMakeFiles/ISD2190.elf.dir/Drivers/STM32L1xx_HAL_Driver/Src/stm32l1xx_hal_exti.c.obj
- .debug_str     0x00000000      0x3fb CMakeFiles/ISD2190.elf.dir/Drivers/STM32L1xx_HAL_Driver/Src/stm32l1xx_hal_exti.c.obj
+ .debug_line    0x00000000      0x612 CMakeFiles/ISD2190.elf.dir/Drivers/STM32L1xx_HAL_Driver/Src/stm32l1xx_hal_exti.c.obj
+ .debug_str     0x00000000      0x3f3 CMakeFiles/ISD2190.elf.dir/Drivers/STM32L1xx_HAL_Driver/Src/stm32l1xx_hal_exti.c.obj
  .comment       0x00000000       0x4a CMakeFiles/ISD2190.elf.dir/Drivers/STM32L1xx_HAL_Driver/Src/stm32l1xx_hal_exti.c.obj
  .debug_frame   0x00000000       0xe8 CMakeFiles/ISD2190.elf.dir/Drivers/STM32L1xx_HAL_Driver/Src/stm32l1xx_hal_exti.c.obj
  .ARM.attributes
@@ -457,8 +459,8 @@ Discarded input sections
  .debug_aranges
                 0x00000000       0x68 CMakeFiles/ISD2190.elf.dir/Drivers/STM32L1xx_HAL_Driver/Src/stm32l1xx_hal_flash_ramfunc.c.obj
  .debug_ranges  0x00000000       0x58 CMakeFiles/ISD2190.elf.dir/Drivers/STM32L1xx_HAL_Driver/Src/stm32l1xx_hal_flash_ramfunc.c.obj
- .debug_line    0x00000000      0x629 CMakeFiles/ISD2190.elf.dir/Drivers/STM32L1xx_HAL_Driver/Src/stm32l1xx_hal_flash_ramfunc.c.obj
- .debug_str     0x00000000      0x547 CMakeFiles/ISD2190.elf.dir/Drivers/STM32L1xx_HAL_Driver/Src/stm32l1xx_hal_flash_ramfunc.c.obj
+ .debug_line    0x00000000      0x619 CMakeFiles/ISD2190.elf.dir/Drivers/STM32L1xx_HAL_Driver/Src/stm32l1xx_hal_flash_ramfunc.c.obj
+ .debug_str     0x00000000      0x53f CMakeFiles/ISD2190.elf.dir/Drivers/STM32L1xx_HAL_Driver/Src/stm32l1xx_hal_flash_ramfunc.c.obj
  .comment       0x00000000       0x4a CMakeFiles/ISD2190.elf.dir/Drivers/STM32L1xx_HAL_Driver/Src/stm32l1xx_hal_flash_ramfunc.c.obj
  .debug_frame   0x00000000       0xfc CMakeFiles/ISD2190.elf.dir/Drivers/STM32L1xx_HAL_Driver/Src/stm32l1xx_hal_flash_ramfunc.c.obj
  .ARM.attributes
@@ -526,8 +528,8 @@ Discarded input sections
  .debug_aranges
                 0x00000000       0xa0 CMakeFiles/ISD2190.elf.dir/Drivers/STM32L1xx_HAL_Driver/Src/stm32l1xx_hal_pwr.c.obj
  .debug_ranges  0x00000000       0x90 CMakeFiles/ISD2190.elf.dir/Drivers/STM32L1xx_HAL_Driver/Src/stm32l1xx_hal_pwr.c.obj
- .debug_line    0x00000000      0x4fd CMakeFiles/ISD2190.elf.dir/Drivers/STM32L1xx_HAL_Driver/Src/stm32l1xx_hal_pwr.c.obj
- .debug_str     0x00000000      0x4e7 CMakeFiles/ISD2190.elf.dir/Drivers/STM32L1xx_HAL_Driver/Src/stm32l1xx_hal_pwr.c.obj
+ .debug_line    0x00000000      0x4ed CMakeFiles/ISD2190.elf.dir/Drivers/STM32L1xx_HAL_Driver/Src/stm32l1xx_hal_pwr.c.obj
+ .debug_str     0x00000000      0x4df CMakeFiles/ISD2190.elf.dir/Drivers/STM32L1xx_HAL_Driver/Src/stm32l1xx_hal_pwr.c.obj
  .comment       0x00000000       0x4a CMakeFiles/ISD2190.elf.dir/Drivers/STM32L1xx_HAL_Driver/Src/stm32l1xx_hal_pwr.c.obj
  .debug_frame   0x00000000      0x128 CMakeFiles/ISD2190.elf.dir/Drivers/STM32L1xx_HAL_Driver/Src/stm32l1xx_hal_pwr.c.obj
  .ARM.attributes
@@ -555,8 +557,8 @@ Discarded input sections
  .debug_aranges
                 0x00000000       0x50 CMakeFiles/ISD2190.elf.dir/Drivers/STM32L1xx_HAL_Driver/Src/stm32l1xx_hal_pwr_ex.c.obj
  .debug_ranges  0x00000000       0x40 CMakeFiles/ISD2190.elf.dir/Drivers/STM32L1xx_HAL_Driver/Src/stm32l1xx_hal_pwr_ex.c.obj
- .debug_line    0x00000000      0x3dd CMakeFiles/ISD2190.elf.dir/Drivers/STM32L1xx_HAL_Driver/Src/stm32l1xx_hal_pwr_ex.c.obj
- .debug_str     0x00000000      0x338 CMakeFiles/ISD2190.elf.dir/Drivers/STM32L1xx_HAL_Driver/Src/stm32l1xx_hal_pwr_ex.c.obj
+ .debug_line    0x00000000      0x3cd CMakeFiles/ISD2190.elf.dir/Drivers/STM32L1xx_HAL_Driver/Src/stm32l1xx_hal_pwr_ex.c.obj
+ .debug_str     0x00000000      0x330 CMakeFiles/ISD2190.elf.dir/Drivers/STM32L1xx_HAL_Driver/Src/stm32l1xx_hal_pwr_ex.c.obj
  .comment       0x00000000       0x4a CMakeFiles/ISD2190.elf.dir/Drivers/STM32L1xx_HAL_Driver/Src/stm32l1xx_hal_pwr_ex.c.obj
  .debug_frame   0x00000000       0x80 CMakeFiles/ISD2190.elf.dir/Drivers/STM32L1xx_HAL_Driver/Src/stm32l1xx_hal_pwr_ex.c.obj
  .ARM.attributes
@@ -603,8 +605,8 @@ Discarded input sections
  .debug_aranges
                 0x00000000       0x58 CMakeFiles/ISD2190.elf.dir/Drivers/STM32L1xx_HAL_Driver/Src/stm32l1xx_hal_rcc_ex.c.obj
  .debug_ranges  0x00000000       0x60 CMakeFiles/ISD2190.elf.dir/Drivers/STM32L1xx_HAL_Driver/Src/stm32l1xx_hal_rcc_ex.c.obj
- .debug_line    0x00000000      0x4ff CMakeFiles/ISD2190.elf.dir/Drivers/STM32L1xx_HAL_Driver/Src/stm32l1xx_hal_rcc_ex.c.obj
- .debug_str     0x00000000      0x456 CMakeFiles/ISD2190.elf.dir/Drivers/STM32L1xx_HAL_Driver/Src/stm32l1xx_hal_rcc_ex.c.obj
+ .debug_line    0x00000000      0x4f3 CMakeFiles/ISD2190.elf.dir/Drivers/STM32L1xx_HAL_Driver/Src/stm32l1xx_hal_rcc_ex.c.obj
+ .debug_str     0x00000000      0x44e CMakeFiles/ISD2190.elf.dir/Drivers/STM32L1xx_HAL_Driver/Src/stm32l1xx_hal_rcc_ex.c.obj
  .comment       0x00000000       0x4a CMakeFiles/ISD2190.elf.dir/Drivers/STM32L1xx_HAL_Driver/Src/stm32l1xx_hal_rcc_ex.c.obj
  .debug_frame   0x00000000       0xac CMakeFiles/ISD2190.elf.dir/Drivers/STM32L1xx_HAL_Driver/Src/stm32l1xx_hal_rcc_ex.c.obj
  .ARM.attributes
@@ -1039,7 +1041,7 @@ Discarded input sections
  .debug_aranges
                 0x00000000       0x18 CMakeFiles/ISD2190.elf.dir/Middlewares/Third_Party/FreeRTOS/Source/croutine.c.obj
  .debug_line    0x00000000       0x1d CMakeFiles/ISD2190.elf.dir/Middlewares/Third_Party/FreeRTOS/Source/croutine.c.obj
- .debug_str     0x00000000      0x1dc CMakeFiles/ISD2190.elf.dir/Middlewares/Third_Party/FreeRTOS/Source/croutine.c.obj
+ .debug_str     0x00000000      0x1d4 CMakeFiles/ISD2190.elf.dir/Middlewares/Third_Party/FreeRTOS/Source/croutine.c.obj
  .comment       0x00000000       0x4a CMakeFiles/ISD2190.elf.dir/Middlewares/Third_Party/FreeRTOS/Source/croutine.c.obj
  .ARM.attributes
                 0x00000000       0x2d CMakeFiles/ISD2190.elf.dir/Middlewares/Third_Party/FreeRTOS/Source/croutine.c.obj
@@ -1082,8 +1084,8 @@ Discarded input sections
  .debug_aranges
                 0x00000000       0x90 CMakeFiles/ISD2190.elf.dir/Middlewares/Third_Party/FreeRTOS/Source/event_groups.c.obj
  .debug_ranges  0x00000000       0xb8 CMakeFiles/ISD2190.elf.dir/Middlewares/Third_Party/FreeRTOS/Source/event_groups.c.obj
- .debug_line    0x00000000      0xb3b CMakeFiles/ISD2190.elf.dir/Middlewares/Third_Party/FreeRTOS/Source/event_groups.c.obj
- .debug_str     0x00000000      0x849 CMakeFiles/ISD2190.elf.dir/Middlewares/Third_Party/FreeRTOS/Source/event_groups.c.obj
+ .debug_line    0x00000000      0xb2f CMakeFiles/ISD2190.elf.dir/Middlewares/Third_Party/FreeRTOS/Source/event_groups.c.obj
+ .debug_str     0x00000000      0x841 CMakeFiles/ISD2190.elf.dir/Middlewares/Third_Party/FreeRTOS/Source/event_groups.c.obj
  .comment       0x00000000       0x4a CMakeFiles/ISD2190.elf.dir/Middlewares/Third_Party/FreeRTOS/Source/event_groups.c.obj
  .debug_frame   0x00000000      0x1a8 CMakeFiles/ISD2190.elf.dir/Middlewares/Third_Party/FreeRTOS/Source/event_groups.c.obj
  .ARM.attributes
@@ -1217,8 +1219,8 @@ Discarded input sections
  .debug_aranges
                 0x00000000       0xd8 CMakeFiles/ISD2190.elf.dir/Middlewares/Third_Party/FreeRTOS/Source/stream_buffer.c.obj
  .debug_ranges  0x00000000       0xc8 CMakeFiles/ISD2190.elf.dir/Middlewares/Third_Party/FreeRTOS/Source/stream_buffer.c.obj
- .debug_line    0x00000000     0x14b9 CMakeFiles/ISD2190.elf.dir/Middlewares/Third_Party/FreeRTOS/Source/stream_buffer.c.obj
- .debug_str     0x00000000      0x997 CMakeFiles/ISD2190.elf.dir/Middlewares/Third_Party/FreeRTOS/Source/stream_buffer.c.obj
+ .debug_line    0x00000000     0x14ad CMakeFiles/ISD2190.elf.dir/Middlewares/Third_Party/FreeRTOS/Source/stream_buffer.c.obj
+ .debug_str     0x00000000      0x98f CMakeFiles/ISD2190.elf.dir/Middlewares/Third_Party/FreeRTOS/Source/stream_buffer.c.obj
  .comment       0x00000000       0x4a CMakeFiles/ISD2190.elf.dir/Middlewares/Third_Party/FreeRTOS/Source/stream_buffer.c.obj
  .debug_frame   0x00000000      0x354 CMakeFiles/ISD2190.elf.dir/Middlewares/Third_Party/FreeRTOS/Source/stream_buffer.c.obj
  .ARM.attributes
@@ -1337,7 +1339,7 @@ Discarded input sections
  .data          0x00000000        0x0 CMakeFiles/ISD2190.elf.dir/User/bt4531.c.obj
  .bss           0x00000000        0x0 CMakeFiles/ISD2190.elf.dir/User/bt4531.c.obj
  .text.DataSend
-                0x00000000      0x110 CMakeFiles/ISD2190.elf.dir/User/bt4531.c.obj
+                0x00000000      0x10c CMakeFiles/ISD2190.elf.dir/User/bt4531.c.obj
  .text          0x00000000        0x0 CMakeFiles/ISD2190.elf.dir/User/flash.c.obj
  .data          0x00000000        0x0 CMakeFiles/ISD2190.elf.dir/User/flash.c.obj
  .bss           0x00000000        0x0 CMakeFiles/ISD2190.elf.dir/User/flash.c.obj
@@ -1401,6 +1403,9 @@ Discarded input sections
  .text          0x00000000        0x0 d:/clion/gcc-arm-none-eabi-10.3-2021.10/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/lib/thumb/v7-m/nofp\libg.a(lib_a-strlen-stub.o)
  .data          0x00000000        0x0 d:/clion/gcc-arm-none-eabi-10.3-2021.10/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/lib/thumb/v7-m/nofp\libg.a(lib_a-strlen-stub.o)
  .bss           0x00000000        0x0 d:/clion/gcc-arm-none-eabi-10.3-2021.10/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/lib/thumb/v7-m/nofp\libg.a(lib_a-strlen-stub.o)
+ .text          0x00000000        0x0 d:/clion/gcc-arm-none-eabi-10.3-2021.10/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/lib/thumb/v7-m/nofp\libg.a(lib_a-strncat.o)
+ .data          0x00000000        0x0 d:/clion/gcc-arm-none-eabi-10.3-2021.10/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/lib/thumb/v7-m/nofp\libg.a(lib_a-strncat.o)
+ .bss           0x00000000        0x0 d:/clion/gcc-arm-none-eabi-10.3-2021.10/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/lib/thumb/v7-m/nofp\libg.a(lib_a-strncat.o)
  .text          0x00000000        0x0 d:/clion/gcc-arm-none-eabi-10.3-2021.10/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/lib/thumb/v7-m/nofp\libg.a(lib_a-__call_atexit.o)
  .data          0x00000000        0x0 d:/clion/gcc-arm-none-eabi-10.3-2021.10/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/lib/thumb/v7-m/nofp\libg.a(lib_a-__call_atexit.o)
  .bss           0x00000000        0x0 d:/clion/gcc-arm-none-eabi-10.3-2021.10/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/lib/thumb/v7-m/nofp\libg.a(lib_a-__call_atexit.o)
@@ -1624,7 +1629,7 @@ LOAD d:/clion/gcc-arm-none-eabi-10.3-2021.10/bin/../lib/gcc/arm-none-eabi/10.3.1
                 0x08000000                g_pfnVectors
                 0x0800013c                . = ALIGN (0x4)
 
-.text           0x08000140     0x9330
+.text           0x08000140     0x9424
                 0x08000140                . = ALIGN (0x4)
  *(.text)
  .text          0x08000140       0x40 d:/clion/gcc-arm-none-eabi-10.3-2021.10/bin/../lib/gcc/arm-none-eabi/10.3.1/thumb/v7-m/nofp/crtbegin.o
@@ -2302,333 +2307,340 @@ LOAD d:/clion/gcc-arm-none-eabi-10.3-2021.10/bin/../lib/gcc/arm-none-eabi/10.3.1
                 0x08006644      0x2e4 CMakeFiles/ISD2190.elf.dir/User/CollectData.c.obj
                 0x08006644                Data_Collect
  .text.HAL_UARTEx_RxEventCallback
-                0x08006928       0xe0 CMakeFiles/ISD2190.elf.dir/User/CollectData.c.obj
+                0x08006928       0xe4 CMakeFiles/ISD2190.elf.dir/User/CollectData.c.obj
                 0x08006928                HAL_UARTEx_RxEventCallback
- .text.Init_VM  0x08006a08       0x28 CMakeFiles/ISD2190.elf.dir/User/VMxx.c.obj
-                0x08006a08                Init_VM
- .text.Scan_VM  0x08006a30       0x28 CMakeFiles/ISD2190.elf.dir/User/VMxx.c.obj
-                0x08006a30                Scan_VM
- .text.Read_VM  0x08006a58       0x28 CMakeFiles/ISD2190.elf.dir/User/VMxx.c.obj
-                0x08006a58                Read_VM
+ .text.Init_VM  0x08006a0c       0x28 CMakeFiles/ISD2190.elf.dir/User/VMxx.c.obj
+                0x08006a0c                Init_VM
+ .text.Scan_VM  0x08006a34       0x28 CMakeFiles/ISD2190.elf.dir/User/VMxx.c.obj
+                0x08006a34                Scan_VM
+ .text.Read_VM  0x08006a5c       0x28 CMakeFiles/ISD2190.elf.dir/User/VMxx.c.obj
+                0x08006a5c                Read_VM
  .text.Verify_VM
-                0x08006a80       0x28 CMakeFiles/ISD2190.elf.dir/User/VMxx.c.obj
-                0x08006a80                Verify_VM
+                0x08006a84       0x28 CMakeFiles/ISD2190.elf.dir/User/VMxx.c.obj
+                0x08006a84                Verify_VM
  .text.Clear_VM
-                0x08006aa8       0x28 CMakeFiles/ISD2190.elf.dir/User/VMxx.c.obj
-                0x08006aa8                Clear_VM
+                0x08006aac       0x28 CMakeFiles/ISD2190.elf.dir/User/VMxx.c.obj
+                0x08006aac                Clear_VM
  .text.CRC_Check
-                0x08006ad0       0x42 CMakeFiles/ISD2190.elf.dir/User/bt4531.c.obj
-                0x08006ad0                CRC_Check
- *fill*         0x08006b12        0x2 
+                0x08006ad4       0x42 CMakeFiles/ISD2190.elf.dir/User/bt4531.c.obj
+                0x08006ad4                CRC_Check
+ *fill*         0x08006b16        0x2 
  .text.ConfigSend
-                0x08006b14      0x110 CMakeFiles/ISD2190.elf.dir/User/bt4531.c.obj
-                0x08006b14                ConfigSend
+                0x08006b18      0x110 CMakeFiles/ISD2190.elf.dir/User/bt4531.c.obj
+                0x08006b18                ConfigSend
  .text.TotalConfigSend
-                0x08006c24      0x154 CMakeFiles/ISD2190.elf.dir/User/bt4531.c.obj
-                0x08006c24                TotalConfigSend
+                0x08006c28      0x154 CMakeFiles/ISD2190.elf.dir/User/bt4531.c.obj
+                0x08006c28                TotalConfigSend
  .text.TotalDataSend
-                0x08006d78      0x140 CMakeFiles/ISD2190.elf.dir/User/bt4531.c.obj
-                0x08006d78                TotalDataSend
+                0x08006d7c      0x140 CMakeFiles/ISD2190.elf.dir/User/bt4531.c.obj
+                0x08006d7c                TotalDataSend
  .text.StatuCallback
-                0x08006eb8       0x38 CMakeFiles/ISD2190.elf.dir/User/bt4531.c.obj
-                0x08006eb8                StatuCallback
+                0x08006ebc       0x38 CMakeFiles/ISD2190.elf.dir/User/bt4531.c.obj
+                0x08006ebc                StatuCallback
  .text.SenserConfig
-                0x08006ef0       0xf0 CMakeFiles/ISD2190.elf.dir/User/bt4531.c.obj
-                0x08006ef0                SenserConfig
+                0x08006ef4       0xf0 CMakeFiles/ISD2190.elf.dir/User/bt4531.c.obj
+                0x08006ef4                SenserConfig
  .text.ConfigInit
-                0x08006fe0       0x48 CMakeFiles/ISD2190.elf.dir/User/bt4531.c.obj
-                0x08006fe0                ConfigInit
+                0x08006fe4       0x48 CMakeFiles/ISD2190.elf.dir/User/bt4531.c.obj
+                0x08006fe4                ConfigInit
  .text.IpConfig
-                0x08007028       0x3c CMakeFiles/ISD2190.elf.dir/User/bt4531.c.obj
-                0x08007028                IpConfig
+                0x0800702c       0x3c CMakeFiles/ISD2190.elf.dir/User/bt4531.c.obj
+                0x0800702c                IpConfig
  .text.IdConfig
-                0x08007064       0x30 CMakeFiles/ISD2190.elf.dir/User/bt4531.c.obj
-                0x08007064                IdConfig
+                0x08007068       0x7c CMakeFiles/ISD2190.elf.dir/User/bt4531.c.obj
+                0x08007068                IdConfig
  .text.RewriteConfig
-                0x08007094      0x154 CMakeFiles/ISD2190.elf.dir/User/bt4531.c.obj
-                0x08007094                RewriteConfig
+                0x080070e4      0x194 CMakeFiles/ISD2190.elf.dir/User/bt4531.c.obj
+                0x080070e4                RewriteConfig
  .text.IpConfigSend
-                0x080071e8       0x78 CMakeFiles/ISD2190.elf.dir/User/bt4531.c.obj
-                0x080071e8                IpConfigSend
+                0x08007278       0x7c CMakeFiles/ISD2190.elf.dir/User/bt4531.c.obj
+                0x08007278                IpConfigSend
  .text.BleProcess
-                0x08007260      0x184 CMakeFiles/ISD2190.elf.dir/User/bt4531.c.obj
-                0x08007260                BleProcess
+                0x080072f4      0x184 CMakeFiles/ISD2190.elf.dir/User/bt4531.c.obj
+                0x080072f4                BleProcess
  .text.Flash_Write
-                0x080073e4       0x74 CMakeFiles/ISD2190.elf.dir/User/flash.c.obj
-                0x080073e4                Flash_Write
+                0x08007478       0x74 CMakeFiles/ISD2190.elf.dir/User/flash.c.obj
+                0x08007478                Flash_Write
  .text.Flash_Read
-                0x08007458       0x34 CMakeFiles/ISD2190.elf.dir/User/flash.c.obj
-                0x08007458                Flash_Read
+                0x080074ec       0x34 CMakeFiles/ISD2190.elf.dir/User/flash.c.obj
+                0x080074ec                Flash_Read
  .text.Config_Write
-                0x0800748c       0x64 CMakeFiles/ISD2190.elf.dir/User/flash.c.obj
-                0x0800748c                Config_Write
+                0x08007520       0x64 CMakeFiles/ISD2190.elf.dir/User/flash.c.obj
+                0x08007520                Config_Write
  .text.Config_Read
-                0x080074f0       0x20 CMakeFiles/ISD2190.elf.dir/User/flash.c.obj
-                0x080074f0                Config_Read
+                0x08007584       0x20 CMakeFiles/ISD2190.elf.dir/User/flash.c.obj
+                0x08007584                Config_Read
+ *fill*         0x080075a4        0x4 
  .text.BMYBJ_YB
-                0x08007510       0x78 CMakeFiles/ISD2190.elf.dir/User/hardware.c.obj
-                0x08007510                BMYBJ_YB
+                0x080075a8       0x78 CMakeFiles/ISD2190.elf.dir/User/hardware.c.obj
+                0x080075a8                BMYBJ_YB
  .text.MRYBJ_YB
-                0x08007588       0x78 CMakeFiles/ISD2190.elf.dir/User/hardware.c.obj
-                0x08007588                MRYBJ_YB
- .text.GJJ_YL   0x08007600       0xac CMakeFiles/ISD2190.elf.dir/User/hardware.c.obj
-                0x08007600                GJJ_YL
- *fill*         0x080076ac        0x4 
+                0x08007620       0x78 CMakeFiles/ISD2190.elf.dir/User/hardware.c.obj
+                0x08007620                MRYBJ_YB
+ .text.GJJ_YL   0x08007698       0xac CMakeFiles/ISD2190.elf.dir/User/hardware.c.obj
+                0x08007698                GJJ_YL
+ *fill*         0x08007744        0x4 
  .text.TYLH_YL_MPa
-                0x080076b0       0xac CMakeFiles/ISD2190.elf.dir/User/hardware.c.obj
-                0x080076b0                TYLH_YL_MPa
- *fill*         0x0800775c        0x4 
+                0x08007748       0xac CMakeFiles/ISD2190.elf.dir/User/hardware.c.obj
+                0x08007748                TYLH_YL_MPa
+ *fill*         0x080077f4        0x4 
  .text.SYJ_YL_MPa
-                0x08007760       0xd8 CMakeFiles/ISD2190.elf.dir/User/hardware.c.obj
-                0x08007760                SYJ_YL_MPa
+                0x080077f8       0xd8 CMakeFiles/ISD2190.elf.dir/User/hardware.c.obj
+                0x080077f8                SYJ_YL_MPa
  .text.MSJ_YL_KN
-                0x08007838      0x150 CMakeFiles/ISD2190.elf.dir/User/hardware.c.obj
-                0x08007838                MSJ_YL_KN
+                0x080078d0      0x150 CMakeFiles/ISD2190.elf.dir/User/hardware.c.obj
+                0x080078d0                MSJ_YL_KN
  .text.calcuTem
-                0x08007988       0x48 CMakeFiles/ISD2190.elf.dir/User/temp.c.obj
-                0x08007988                calcuTem
+                0x08007a20       0x48 CMakeFiles/ISD2190.elf.dir/User/temp.c.obj
+                0x08007a20                calcuTem
  .text.calcuTemps
-                0x080079d0       0x20 CMakeFiles/ISD2190.elf.dir/User/temp.c.obj
-                0x080079d0                calcuTemps
- .text.__errno  0x080079f0        0xc d:/clion/gcc-arm-none-eabi-10.3-2021.10/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/lib/thumb/v7-m/nofp\libg.a(lib_a-errno.o)
-                0x080079f0                __errno
+                0x08007a68       0x20 CMakeFiles/ISD2190.elf.dir/User/temp.c.obj
+                0x08007a68                calcuTemps
+ .text.__errno  0x08007a88        0xc d:/clion/gcc-arm-none-eabi-10.3-2021.10/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/lib/thumb/v7-m/nofp\libg.a(lib_a-errno.o)
+                0x08007a88                __errno
  .text.__libc_init_array
-                0x080079fc       0x48 d:/clion/gcc-arm-none-eabi-10.3-2021.10/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/lib/thumb/v7-m/nofp\libg.a(lib_a-init.o)
-                0x080079fc                __libc_init_array
- .text.memset   0x08007a44       0xa4 d:/clion/gcc-arm-none-eabi-10.3-2021.10/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/lib/thumb/v7-m/nofp\libg.a(lib_a-memset.o)
-                0x08007a44                memset
- .text._puts_r  0x08007ae8       0x9c d:/clion/gcc-arm-none-eabi-10.3-2021.10/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/lib/thumb/v7-m/nofp\libg.a(lib_a-puts.o)
-                0x08007ae8                _puts_r
- .text.puts     0x08007b84       0x10 d:/clion/gcc-arm-none-eabi-10.3-2021.10/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/lib/thumb/v7-m/nofp\libg.a(lib_a-puts.o)
-                0x08007b84                puts
- .text.strlen   0x08007b94       0x5c d:/clion/gcc-arm-none-eabi-10.3-2021.10/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/lib/thumb/v7-m/nofp\libg.a(lib_a-strlen-stub.o)
-                0x08007b94                strlen
+                0x08007a94       0x48 d:/clion/gcc-arm-none-eabi-10.3-2021.10/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/lib/thumb/v7-m/nofp\libg.a(lib_a-init.o)
+                0x08007a94                __libc_init_array
+ .text.memset   0x08007adc       0xa4 d:/clion/gcc-arm-none-eabi-10.3-2021.10/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/lib/thumb/v7-m/nofp\libg.a(lib_a-memset.o)
+                0x08007adc                memset
+ .text._puts_r  0x08007b80       0x9c d:/clion/gcc-arm-none-eabi-10.3-2021.10/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/lib/thumb/v7-m/nofp\libg.a(lib_a-puts.o)
+                0x08007b80                _puts_r
+ .text.puts     0x08007c1c       0x10 d:/clion/gcc-arm-none-eabi-10.3-2021.10/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/lib/thumb/v7-m/nofp\libg.a(lib_a-puts.o)
+                0x08007c1c                puts
+ .text.strlen   0x08007c2c       0x5c d:/clion/gcc-arm-none-eabi-10.3-2021.10/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/lib/thumb/v7-m/nofp\libg.a(lib_a-strlen-stub.o)
+                0x08007c2c                strlen
+ .text.strncat  0x08007c88       0x5c d:/clion/gcc-arm-none-eabi-10.3-2021.10/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/lib/thumb/v7-m/nofp\libg.a(lib_a-strncat.o)
+                0x08007c88                strncat
  .text.startup.register_fini
-                0x08007bf0       0x14 d:/clion/gcc-arm-none-eabi-10.3-2021.10/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/lib/thumb/v7-m/nofp\libg.a(lib_a-__call_atexit.o)
- .text.atexit   0x08007c04        0xc d:/clion/gcc-arm-none-eabi-10.3-2021.10/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/lib/thumb/v7-m/nofp\libg.a(lib_a-atexit.o)
-                0x08007c04                atexit
+                0x08007ce4       0x14 d:/clion/gcc-arm-none-eabi-10.3-2021.10/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/lib/thumb/v7-m/nofp\libg.a(lib_a-__call_atexit.o)
+ .text.atexit   0x08007cf8        0xc d:/clion/gcc-arm-none-eabi-10.3-2021.10/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/lib/thumb/v7-m/nofp\libg.a(lib_a-atexit.o)
+                0x08007cf8                atexit
  .text._cleanup_r
-                0x08007c10        0xc d:/clion/gcc-arm-none-eabi-10.3-2021.10/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/lib/thumb/v7-m/nofp\libg.a(lib_a-findfp.o)
-                0x08007c10                _cleanup_r
- .text.__sinit  0x08007c1c      0x10c d:/clion/gcc-arm-none-eabi-10.3-2021.10/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/lib/thumb/v7-m/nofp\libg.a(lib_a-findfp.o)
-                0x08007c1c                __sinit
+                0x08007d04        0xc d:/clion/gcc-arm-none-eabi-10.3-2021.10/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/lib/thumb/v7-m/nofp\libg.a(lib_a-findfp.o)
+                0x08007d04                _cleanup_r
+ .text.__sinit  0x08007d10      0x10c d:/clion/gcc-arm-none-eabi-10.3-2021.10/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/lib/thumb/v7-m/nofp\libg.a(lib_a-findfp.o)
+                0x08007d10                __sinit
  .text.__sfp_lock_acquire
-                0x08007d28        0xc d:/clion/gcc-arm-none-eabi-10.3-2021.10/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/lib/thumb/v7-m/nofp\libg.a(lib_a-findfp.o)
-                0x08007d28                __sfp_lock_acquire
+                0x08007e1c        0xc d:/clion/gcc-arm-none-eabi-10.3-2021.10/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/lib/thumb/v7-m/nofp\libg.a(lib_a-findfp.o)
+                0x08007e1c                __sfp_lock_acquire
  .text.__sfp_lock_release
-                0x08007d34        0xc d:/clion/gcc-arm-none-eabi-10.3-2021.10/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/lib/thumb/v7-m/nofp\libg.a(lib_a-findfp.o)
-                0x08007d34                __sfp_lock_release
+                0x08007e28        0xc d:/clion/gcc-arm-none-eabi-10.3-2021.10/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/lib/thumb/v7-m/nofp\libg.a(lib_a-findfp.o)
+                0x08007e28                __sfp_lock_release
  .text.__libc_fini_array
-                0x08007d40       0x2c d:/clion/gcc-arm-none-eabi-10.3-2021.10/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/lib/thumb/v7-m/nofp\libg.a(lib_a-fini.o)
-                0x08007d40                __libc_fini_array
+                0x08007e34       0x2c d:/clion/gcc-arm-none-eabi-10.3-2021.10/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/lib/thumb/v7-m/nofp\libg.a(lib_a-fini.o)
+                0x08007e34                __libc_fini_array
  .text.__sfvwrite_r
-                0x08007d6c      0x2f0 d:/clion/gcc-arm-none-eabi-10.3-2021.10/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/lib/thumb/v7-m/nofp\libg.a(lib_a-fvwrite.o)
-                0x08007d6c                __sfvwrite_r
+                0x08007e60      0x2f0 d:/clion/gcc-arm-none-eabi-10.3-2021.10/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/lib/thumb/v7-m/nofp\libg.a(lib_a-fvwrite.o)
+                0x08007e60                __sfvwrite_r
  .text._fwalk_reent
-                0x0800805c       0x48 d:/clion/gcc-arm-none-eabi-10.3-2021.10/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/lib/thumb/v7-m/nofp\libg.a(lib_a-fwalk.o)
-                0x0800805c                _fwalk_reent
+                0x08008150       0x48 d:/clion/gcc-arm-none-eabi-10.3-2021.10/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/lib/thumb/v7-m/nofp\libg.a(lib_a-fwalk.o)
+                0x08008150                _fwalk_reent
  .text.__retarget_lock_init_recursive
-                0x080080a4        0x4 d:/clion/gcc-arm-none-eabi-10.3-2021.10/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/lib/thumb/v7-m/nofp\libg.a(lib_a-lock.o)
-                0x080080a4                __retarget_lock_init_recursive
+                0x08008198        0x4 d:/clion/gcc-arm-none-eabi-10.3-2021.10/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/lib/thumb/v7-m/nofp\libg.a(lib_a-lock.o)
+                0x08008198                __retarget_lock_init_recursive
  .text.__retarget_lock_close_recursive
-                0x080080a8        0x4 d:/clion/gcc-arm-none-eabi-10.3-2021.10/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/lib/thumb/v7-m/nofp\libg.a(lib_a-lock.o)
-                0x080080a8                __retarget_lock_close_recursive
+                0x0800819c        0x4 d:/clion/gcc-arm-none-eabi-10.3-2021.10/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/lib/thumb/v7-m/nofp\libg.a(lib_a-lock.o)
+                0x0800819c                __retarget_lock_close_recursive
  .text.__retarget_lock_acquire_recursive
-                0x080080ac        0x4 d:/clion/gcc-arm-none-eabi-10.3-2021.10/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/lib/thumb/v7-m/nofp\libg.a(lib_a-lock.o)
-                0x080080ac                __retarget_lock_acquire_recursive
+                0x080081a0        0x4 d:/clion/gcc-arm-none-eabi-10.3-2021.10/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/lib/thumb/v7-m/nofp\libg.a(lib_a-lock.o)
+                0x080081a0                __retarget_lock_acquire_recursive
  .text.__retarget_lock_release_recursive
-                0x080080b0        0x4 d:/clion/gcc-arm-none-eabi-10.3-2021.10/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/lib/thumb/v7-m/nofp\libg.a(lib_a-lock.o)
-                0x080080b0                __retarget_lock_release_recursive
+                0x080081a4        0x4 d:/clion/gcc-arm-none-eabi-10.3-2021.10/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/lib/thumb/v7-m/nofp\libg.a(lib_a-lock.o)
+                0x080081a4                __retarget_lock_release_recursive
  .text._malloc_r
-                0x080080b4      0x558 d:/clion/gcc-arm-none-eabi-10.3-2021.10/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/lib/thumb/v7-m/nofp\libg.a(lib_a-mallocr.o)
-                0x080080b4                _malloc_r
- .text.memchr   0x0800860c       0x90 d:/clion/gcc-arm-none-eabi-10.3-2021.10/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/lib/thumb/v7-m/nofp\libg.a(lib_a-memchr-stub.o)
-                0x0800860c                memchr
- .text.memmove  0x0800869c       0xf8 d:/clion/gcc-arm-none-eabi-10.3-2021.10/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/lib/thumb/v7-m/nofp\libg.a(lib_a-memmove.o)
-                0x0800869c                memmove
+                0x080081a8      0x558 d:/clion/gcc-arm-none-eabi-10.3-2021.10/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/lib/thumb/v7-m/nofp\libg.a(lib_a-mallocr.o)
+                0x080081a8                _malloc_r
+ .text.memchr   0x08008700       0x90 d:/clion/gcc-arm-none-eabi-10.3-2021.10/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/lib/thumb/v7-m/nofp\libg.a(lib_a-memchr-stub.o)
+                0x08008700                memchr
+ .text.memmove  0x08008790       0xf8 d:/clion/gcc-arm-none-eabi-10.3-2021.10/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/lib/thumb/v7-m/nofp\libg.a(lib_a-memmove.o)
+                0x08008790                memmove
  .text.__malloc_lock
-                0x08008794        0xc d:/clion/gcc-arm-none-eabi-10.3-2021.10/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/lib/thumb/v7-m/nofp\libg.a(lib_a-mlock.o)
-                0x08008794                __malloc_lock
+                0x08008888        0xc d:/clion/gcc-arm-none-eabi-10.3-2021.10/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/lib/thumb/v7-m/nofp\libg.a(lib_a-mlock.o)
+                0x08008888                __malloc_lock
  .text.__malloc_unlock
-                0x080087a0        0xc d:/clion/gcc-arm-none-eabi-10.3-2021.10/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/lib/thumb/v7-m/nofp\libg.a(lib_a-mlock.o)
-                0x080087a0                __malloc_unlock
+                0x08008894        0xc d:/clion/gcc-arm-none-eabi-10.3-2021.10/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/lib/thumb/v7-m/nofp\libg.a(lib_a-mlock.o)
+                0x08008894                __malloc_unlock
  .text._realloc_r
-                0x080087ac      0x3dc d:/clion/gcc-arm-none-eabi-10.3-2021.10/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/lib/thumb/v7-m/nofp\libg.a(lib_a-reallocr.o)
-                0x080087ac                _realloc_r
- .text._sbrk_r  0x08008b88       0x24 d:/clion/gcc-arm-none-eabi-10.3-2021.10/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/lib/thumb/v7-m/nofp\libg.a(lib_a-sbrkr.o)
-                0x08008b88                _sbrk_r
- .text.__sread  0x08008bac       0x24 d:/clion/gcc-arm-none-eabi-10.3-2021.10/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/lib/thumb/v7-m/nofp\libg.a(lib_a-stdio.o)
-                0x08008bac                __sread
+                0x080088a0      0x3dc d:/clion/gcc-arm-none-eabi-10.3-2021.10/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/lib/thumb/v7-m/nofp\libg.a(lib_a-reallocr.o)
+                0x080088a0                _realloc_r
+ .text._sbrk_r  0x08008c7c       0x24 d:/clion/gcc-arm-none-eabi-10.3-2021.10/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/lib/thumb/v7-m/nofp\libg.a(lib_a-sbrkr.o)
+                0x08008c7c                _sbrk_r
+ .text.__sread  0x08008ca0       0x24 d:/clion/gcc-arm-none-eabi-10.3-2021.10/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/lib/thumb/v7-m/nofp\libg.a(lib_a-stdio.o)
+                0x08008ca0                __sread
  .text.__swrite
-                0x08008bd0       0x40 d:/clion/gcc-arm-none-eabi-10.3-2021.10/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/lib/thumb/v7-m/nofp\libg.a(lib_a-stdio.o)
-                0x08008bd0                __swrite
- .text.__sseek  0x08008c10       0x20 d:/clion/gcc-arm-none-eabi-10.3-2021.10/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/lib/thumb/v7-m/nofp\libg.a(lib_a-stdio.o)
-                0x08008c10                __sseek
+                0x08008cc4       0x40 d:/clion/gcc-arm-none-eabi-10.3-2021.10/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/lib/thumb/v7-m/nofp\libg.a(lib_a-stdio.o)
+                0x08008cc4                __swrite
+ .text.__sseek  0x08008d04       0x20 d:/clion/gcc-arm-none-eabi-10.3-2021.10/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/lib/thumb/v7-m/nofp\libg.a(lib_a-stdio.o)
+                0x08008d04                __sseek
  .text.__sclose
-                0x08008c30        0x8 d:/clion/gcc-arm-none-eabi-10.3-2021.10/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/lib/thumb/v7-m/nofp\libg.a(lib_a-stdio.o)
-                0x08008c30                __sclose
+                0x08008d24        0x8 d:/clion/gcc-arm-none-eabi-10.3-2021.10/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/lib/thumb/v7-m/nofp\libg.a(lib_a-stdio.o)
+                0x08008d24                __sclose
  .text._write_r
-                0x08008c38       0x2c d:/clion/gcc-arm-none-eabi-10.3-2021.10/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/lib/thumb/v7-m/nofp\libg.a(lib_a-writer.o)
-                0x08008c38                _write_r
+                0x08008d2c       0x2c d:/clion/gcc-arm-none-eabi-10.3-2021.10/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/lib/thumb/v7-m/nofp\libg.a(lib_a-writer.o)
+                0x08008d2c                _write_r
  .text.__swsetup_r
-                0x08008c64       0xd4 d:/clion/gcc-arm-none-eabi-10.3-2021.10/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/lib/thumb/v7-m/nofp\libg.a(lib_a-wsetup.o)
-                0x08008c64                __swsetup_r
+                0x08008d58       0xd4 d:/clion/gcc-arm-none-eabi-10.3-2021.10/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/lib/thumb/v7-m/nofp\libg.a(lib_a-wsetup.o)
+                0x08008d58                __swsetup_r
  .text.__register_exitproc
-                0x08008d38       0x8c d:/clion/gcc-arm-none-eabi-10.3-2021.10/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/lib/thumb/v7-m/nofp\libg.a(lib_a-__atexit.o)
-                0x08008d38                __register_exitproc
+                0x08008e2c       0x8c d:/clion/gcc-arm-none-eabi-10.3-2021.10/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/lib/thumb/v7-m/nofp\libg.a(lib_a-__atexit.o)
+                0x08008e2c                __register_exitproc
  .text._close_r
-                0x08008dc4       0x24 d:/clion/gcc-arm-none-eabi-10.3-2021.10/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/lib/thumb/v7-m/nofp\libg.a(lib_a-closer.o)
-                0x08008dc4                _close_r
+                0x08008eb8       0x24 d:/clion/gcc-arm-none-eabi-10.3-2021.10/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/lib/thumb/v7-m/nofp\libg.a(lib_a-closer.o)
+                0x08008eb8                _close_r
  .text._fclose_r
-                0x08008de8       0xcc d:/clion/gcc-arm-none-eabi-10.3-2021.10/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/lib/thumb/v7-m/nofp\libg.a(lib_a-fclose.o)
-                0x08008de8                _fclose_r
+                0x08008edc       0xcc d:/clion/gcc-arm-none-eabi-10.3-2021.10/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/lib/thumb/v7-m/nofp\libg.a(lib_a-fclose.o)
+                0x08008edc                _fclose_r
  .text.__sflush_r
-                0x08008eb4      0x124 d:/clion/gcc-arm-none-eabi-10.3-2021.10/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/lib/thumb/v7-m/nofp\libg.a(lib_a-fflush.o)
-                0x08008eb4                __sflush_r
+                0x08008fa8      0x124 d:/clion/gcc-arm-none-eabi-10.3-2021.10/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/lib/thumb/v7-m/nofp\libg.a(lib_a-fflush.o)
+                0x08008fa8                __sflush_r
  .text._fflush_r
-                0x08008fd8       0x5c d:/clion/gcc-arm-none-eabi-10.3-2021.10/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/lib/thumb/v7-m/nofp\libg.a(lib_a-fflush.o)
-                0x08008fd8                _fflush_r
+                0x080090cc       0x5c d:/clion/gcc-arm-none-eabi-10.3-2021.10/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/lib/thumb/v7-m/nofp\libg.a(lib_a-fflush.o)
+                0x080090cc                _fflush_r
  .text._malloc_trim_r
-                0x08009034       0xa0 d:/clion/gcc-arm-none-eabi-10.3-2021.10/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/lib/thumb/v7-m/nofp\libg.a(lib_a-freer.o)
-                0x08009034                _malloc_trim_r
- .text._free_r  0x080090d4      0x200 d:/clion/gcc-arm-none-eabi-10.3-2021.10/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/lib/thumb/v7-m/nofp\libg.a(lib_a-freer.o)
-                0x080090d4                _free_r
+                0x08009128       0xa0 d:/clion/gcc-arm-none-eabi-10.3-2021.10/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/lib/thumb/v7-m/nofp\libg.a(lib_a-freer.o)
+                0x08009128                _malloc_trim_r
+ .text._free_r  0x080091c8      0x200 d:/clion/gcc-arm-none-eabi-10.3-2021.10/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/lib/thumb/v7-m/nofp\libg.a(lib_a-freer.o)
+                0x080091c8                _free_r
  .text._lseek_r
-                0x080092d4       0x2c d:/clion/gcc-arm-none-eabi-10.3-2021.10/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/lib/thumb/v7-m/nofp\libg.a(lib_a-lseekr.o)
-                0x080092d4                _lseek_r
+                0x080093c8       0x2c d:/clion/gcc-arm-none-eabi-10.3-2021.10/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/lib/thumb/v7-m/nofp\libg.a(lib_a-lseekr.o)
+                0x080093c8                _lseek_r
  .text.__smakebuf_r
-                0x08009300       0xe0 d:/clion/gcc-arm-none-eabi-10.3-2021.10/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/lib/thumb/v7-m/nofp\libg.a(lib_a-makebuf.o)
-                0x08009300                __smakebuf_r
- .text._read_r  0x080093e0       0x2c d:/clion/gcc-arm-none-eabi-10.3-2021.10/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/lib/thumb/v7-m/nofp\libg.a(lib_a-readr.o)
-                0x080093e0                _read_r
+                0x080093f4       0xe0 d:/clion/gcc-arm-none-eabi-10.3-2021.10/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/lib/thumb/v7-m/nofp\libg.a(lib_a-makebuf.o)
+                0x080093f4                __smakebuf_r
+ .text._read_r  0x080094d4       0x2c d:/clion/gcc-arm-none-eabi-10.3-2021.10/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/lib/thumb/v7-m/nofp\libg.a(lib_a-readr.o)
+                0x080094d4                _read_r
  .text._fstat_r
-                0x0800940c       0x28 d:/clion/gcc-arm-none-eabi-10.3-2021.10/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/lib/thumb/v7-m/nofp\libg.a(lib_a-fstatr.o)
-                0x0800940c                _fstat_r
+                0x08009500       0x28 d:/clion/gcc-arm-none-eabi-10.3-2021.10/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/lib/thumb/v7-m/nofp\libg.a(lib_a-fstatr.o)
+                0x08009500                _fstat_r
  .text._isatty_r
-                0x08009434       0x24 d:/clion/gcc-arm-none-eabi-10.3-2021.10/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/lib/thumb/v7-m/nofp\libg.a(lib_a-isattyr.o)
-                0x08009434                _isatty_r
+                0x08009528       0x24 d:/clion/gcc-arm-none-eabi-10.3-2021.10/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/lib/thumb/v7-m/nofp\libg.a(lib_a-isattyr.o)
+                0x08009528                _isatty_r
  *(.glue_7)
- .glue_7        0x08009458        0x0 linker stubs
+ .glue_7        0x0800954c        0x0 linker stubs
  *(.glue_7t)
- .glue_7t       0x08009458        0x0 linker stubs
+ .glue_7t       0x0800954c        0x0 linker stubs
  *(.eh_frame)
- .eh_frame      0x08009458        0x0 d:/clion/gcc-arm-none-eabi-10.3-2021.10/bin/../lib/gcc/arm-none-eabi/10.3.1/thumb/v7-m/nofp/crtbegin.o
+ .eh_frame      0x0800954c        0x0 d:/clion/gcc-arm-none-eabi-10.3-2021.10/bin/../lib/gcc/arm-none-eabi/10.3.1/thumb/v7-m/nofp/crtbegin.o
  *(.init)
- .init          0x08009458        0x4 d:/clion/gcc-arm-none-eabi-10.3-2021.10/bin/../lib/gcc/arm-none-eabi/10.3.1/thumb/v7-m/nofp/crti.o
-                0x08009458                _init
- .init          0x0800945c        0x8 d:/clion/gcc-arm-none-eabi-10.3-2021.10/bin/../lib/gcc/arm-none-eabi/10.3.1/thumb/v7-m/nofp/crtn.o
+ .init          0x0800954c        0x4 d:/clion/gcc-arm-none-eabi-10.3-2021.10/bin/../lib/gcc/arm-none-eabi/10.3.1/thumb/v7-m/nofp/crti.o
+                0x0800954c                _init
+ .init          0x08009550        0x8 d:/clion/gcc-arm-none-eabi-10.3-2021.10/bin/../lib/gcc/arm-none-eabi/10.3.1/thumb/v7-m/nofp/crtn.o
  *(.fini)
- .fini          0x08009464        0x4 d:/clion/gcc-arm-none-eabi-10.3-2021.10/bin/../lib/gcc/arm-none-eabi/10.3.1/thumb/v7-m/nofp/crti.o
-                0x08009464                _fini
- .fini          0x08009468        0x8 d:/clion/gcc-arm-none-eabi-10.3-2021.10/bin/../lib/gcc/arm-none-eabi/10.3.1/thumb/v7-m/nofp/crtn.o
-                0x08009470                . = ALIGN (0x4)
-                0x08009470                _etext = .
+ .fini          0x08009558        0x4 d:/clion/gcc-arm-none-eabi-10.3-2021.10/bin/../lib/gcc/arm-none-eabi/10.3.1/thumb/v7-m/nofp/crti.o
+                0x08009558                _fini
+ .fini          0x0800955c        0x8 d:/clion/gcc-arm-none-eabi-10.3-2021.10/bin/../lib/gcc/arm-none-eabi/10.3.1/thumb/v7-m/nofp/crtn.o
+                0x08009564                . = ALIGN (0x4)
+                0x08009564                _etext = .
 
-.vfp11_veneer   0x08009470        0x0
- .vfp11_veneer  0x08009470        0x0 linker stubs
+.vfp11_veneer   0x08009564        0x0
+ .vfp11_veneer  0x08009564        0x0 linker stubs
 
-.v4_bx          0x08009470        0x0
- .v4_bx         0x08009470        0x0 linker stubs
+.v4_bx          0x08009564        0x0
+ .v4_bx         0x08009564        0x0 linker stubs
 
-.iplt           0x08009470        0x0
- .iplt          0x08009470        0x0 d:/clion/gcc-arm-none-eabi-10.3-2021.10/bin/../lib/gcc/arm-none-eabi/10.3.1/thumb/v7-m/nofp/crtbegin.o
+.iplt           0x08009564        0x0
+ .iplt          0x08009564        0x0 d:/clion/gcc-arm-none-eabi-10.3-2021.10/bin/../lib/gcc/arm-none-eabi/10.3.1/thumb/v7-m/nofp/crtbegin.o
 
-.rodata         0x08009470      0x1ac
-                0x08009470                . = ALIGN (0x4)
+.rodata         0x08009564      0x1b8
+                0x08009564                . = ALIGN (0x4)
  *(.rodata)
+ .rodata        0x08009564        0x4 CMakeFiles/ISD2190.elf.dir/User/bt4531.c.obj
  *(.rodata*)
  .rodata.VM1_Receive_Task.str1.4
-                0x08009470        0x8 CMakeFiles/ISD2190.elf.dir/Core/Src/freertos.c.obj
+                0x08009568        0x8 CMakeFiles/ISD2190.elf.dir/Core/Src/freertos.c.obj
  .rodata.VM2_Receive_Task.str1.4
-                0x08009478        0x9 CMakeFiles/ISD2190.elf.dir/Core/Src/freertos.c.obj
- *fill*         0x08009481        0x3 
+                0x08009570        0x9 CMakeFiles/ISD2190.elf.dir/Core/Src/freertos.c.obj
+ *fill*         0x08009579        0x3 
  .rodata.str1.4
-                0x08009484       0x30 CMakeFiles/ISD2190.elf.dir/Core/Src/freertos.c.obj
+                0x0800957c       0x30 CMakeFiles/ISD2190.elf.dir/Core/Src/freertos.c.obj
  .rodata.DataCollectTask_attributes
-                0x080094b4       0x24 CMakeFiles/ISD2190.elf.dir/Core/Src/freertos.c.obj
-                0x080094b4                DataCollectTask_attributes
+                0x080095ac       0x24 CMakeFiles/ISD2190.elf.dir/Core/Src/freertos.c.obj
+                0x080095ac                DataCollectTask_attributes
  .rodata.VM1ReceiveTask_attributes
-                0x080094d8       0x24 CMakeFiles/ISD2190.elf.dir/Core/Src/freertos.c.obj
-                0x080094d8                VM1ReceiveTask_attributes
+                0x080095d0       0x24 CMakeFiles/ISD2190.elf.dir/Core/Src/freertos.c.obj
+                0x080095d0                VM1ReceiveTask_attributes
  .rodata.VM2ReceiveTask_attributes
-                0x080094fc       0x24 CMakeFiles/ISD2190.elf.dir/Core/Src/freertos.c.obj
-                0x080094fc                VM2ReceiveTask_attributes
+                0x080095f4       0x24 CMakeFiles/ISD2190.elf.dir/Core/Src/freertos.c.obj
+                0x080095f4                VM2ReceiveTask_attributes
  .rodata.main.str1.4
-                0x08009520       0x14 CMakeFiles/ISD2190.elf.dir/Core/Src/main.c.obj
+                0x08009618       0x10 CMakeFiles/ISD2190.elf.dir/Core/Src/main.c.obj
  .rodata.AHBPrescTable
-                0x08009534       0x10 CMakeFiles/ISD2190.elf.dir/Core/Src/system_stm32l1xx.c.obj
-                0x08009534                AHBPrescTable
+                0x08009628       0x10 CMakeFiles/ISD2190.elf.dir/Core/Src/system_stm32l1xx.c.obj
+                0x08009628                AHBPrescTable
  .rodata.APBPrescTable
-                0x08009544        0x8 CMakeFiles/ISD2190.elf.dir/Core/Src/system_stm32l1xx.c.obj
-                0x08009544                APBPrescTable
+                0x08009638        0x8 CMakeFiles/ISD2190.elf.dir/Core/Src/system_stm32l1xx.c.obj
+                0x08009638                APBPrescTable
  .rodata.PLLMulTable
-                0x0800954c        0x9 CMakeFiles/ISD2190.elf.dir/Core/Src/system_stm32l1xx.c.obj
-                0x0800954c                PLLMulTable
- *fill*         0x08009555        0x3 
+                0x08009640        0x9 CMakeFiles/ISD2190.elf.dir/Core/Src/system_stm32l1xx.c.obj
+                0x08009640                PLLMulTable
+ *fill*         0x08009649        0x3 
  .rodata.vTaskStartScheduler.str1.4
-                0x08009558        0x5 CMakeFiles/ISD2190.elf.dir/Middlewares/Third_Party/FreeRTOS/Source/tasks.c.obj
- *fill*         0x0800955d        0x3 
+                0x0800964c        0x5 CMakeFiles/ISD2190.elf.dir/Middlewares/Third_Party/FreeRTOS/Source/tasks.c.obj
+ *fill*         0x08009651        0x3 
  .rodata.prvCheckForValidListAndQueue.str1.4
-                0x08009560        0x5 CMakeFiles/ISD2190.elf.dir/Middlewares/Third_Party/FreeRTOS/Source/timers.c.obj
- *fill*         0x08009565        0x3 
+                0x08009654        0x5 CMakeFiles/ISD2190.elf.dir/Middlewares/Third_Party/FreeRTOS/Source/timers.c.obj
+ *fill*         0x08009659        0x3 
  .rodata.xTimerCreateTimerTask.str1.4
-                0x08009568        0x8 CMakeFiles/ISD2190.elf.dir/Middlewares/Third_Party/FreeRTOS/Source/timers.c.obj
+                0x0800965c        0x8 CMakeFiles/ISD2190.elf.dir/Middlewares/Third_Party/FreeRTOS/Source/timers.c.obj
+ .rodata.IdConfig.str1.4
+                0x08009664        0x9 CMakeFiles/ISD2190.elf.dir/User/bt4531.c.obj
+ *fill*         0x0800966d        0x3 
  .rodata.tempRes_buf
-                0x08009570       0xa2 CMakeFiles/ISD2190.elf.dir/User/temp.c.obj
- *fill*         0x08009612        0x2 
+                0x08009670       0xa2 CMakeFiles/ISD2190.elf.dir/User/temp.c.obj
+ *fill*         0x08009712        0x2 
  .rodata._global_impure_ptr
-                0x08009614        0x4 d:/clion/gcc-arm-none-eabi-10.3-2021.10/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/lib/thumb/v7-m/nofp\libg.a(lib_a-impure.o)
-                0x08009614                _global_impure_ptr
+                0x08009714        0x4 d:/clion/gcc-arm-none-eabi-10.3-2021.10/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/lib/thumb/v7-m/nofp\libg.a(lib_a-impure.o)
+                0x08009714                _global_impure_ptr
  .rodata._puts_r.str1.4
-                0x08009618        0x2 d:/clion/gcc-arm-none-eabi-10.3-2021.10/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/lib/thumb/v7-m/nofp\libg.a(lib_a-puts.o)
-                0x0800961c                . = ALIGN (0x4)
- *fill*         0x0800961a        0x2 
+                0x08009718        0x2 d:/clion/gcc-arm-none-eabi-10.3-2021.10/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/lib/thumb/v7-m/nofp\libg.a(lib_a-puts.o)
+                0x0800971c                . = ALIGN (0x4)
+ *fill*         0x0800971a        0x2 
 
-.ARM.extab      0x0800961c        0x0
-                0x0800961c                . = ALIGN (0x4)
+.ARM.extab      0x0800971c        0x0
+                0x0800971c                . = ALIGN (0x4)
  *(.ARM.extab* .gnu.linkonce.armextab.*)
-                0x0800961c                . = ALIGN (0x4)
+                0x0800971c                . = ALIGN (0x4)
 
-.ARM            0x0800961c        0x8
-                0x0800961c                . = ALIGN (0x4)
-                0x0800961c                __exidx_start = .
+.ARM            0x0800971c        0x8
+                0x0800971c                . = ALIGN (0x4)
+                0x0800971c                __exidx_start = .
  *(.ARM.exidx*)
- .ARM.exidx     0x0800961c        0x8 d:/clion/gcc-arm-none-eabi-10.3-2021.10/bin/../lib/gcc/arm-none-eabi/10.3.1/thumb/v7-m/nofp\libgcc.a(_udivmoddi4.o)
-                0x08009624                __exidx_end = .
-                0x08009624                . = ALIGN (0x4)
+ .ARM.exidx     0x0800971c        0x8 d:/clion/gcc-arm-none-eabi-10.3-2021.10/bin/../lib/gcc/arm-none-eabi/10.3.1/thumb/v7-m/nofp\libgcc.a(_udivmoddi4.o)
+                0x08009724                __exidx_end = .
+                0x08009724                . = ALIGN (0x4)
 
-.rel.dyn        0x08009624        0x0
- .rel.iplt      0x08009624        0x0 d:/clion/gcc-arm-none-eabi-10.3-2021.10/bin/../lib/gcc/arm-none-eabi/10.3.1/thumb/v7-m/nofp/crtbegin.o
+.rel.dyn        0x08009724        0x0
+ .rel.iplt      0x08009724        0x0 d:/clion/gcc-arm-none-eabi-10.3-2021.10/bin/../lib/gcc/arm-none-eabi/10.3.1/thumb/v7-m/nofp/crtbegin.o
 
-.preinit_array  0x08009624        0x0
-                0x08009624                . = ALIGN (0x4)
-                0x08009624                PROVIDE (__preinit_array_start = .)
+.preinit_array  0x08009724        0x0
+                0x08009724                . = ALIGN (0x4)
+                0x08009724                PROVIDE (__preinit_array_start = .)
  *(.preinit_array*)
-                0x08009624                PROVIDE (__preinit_array_end = .)
-                0x08009624                . = ALIGN (0x4)
+                0x08009724                PROVIDE (__preinit_array_end = .)
+                0x08009724                . = ALIGN (0x4)
 
-.init_array     0x08009624        0x8
-                0x08009624                . = ALIGN (0x4)
-                0x08009624                PROVIDE (__init_array_start = .)
+.init_array     0x08009724        0x8
+                0x08009724                . = ALIGN (0x4)
+                0x08009724                PROVIDE (__init_array_start = .)
  *(SORT_BY_NAME(.init_array.*))
  .init_array.00000
-                0x08009624        0x4 d:/clion/gcc-arm-none-eabi-10.3-2021.10/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/lib/thumb/v7-m/nofp\libg.a(lib_a-__call_atexit.o)
+                0x08009724        0x4 d:/clion/gcc-arm-none-eabi-10.3-2021.10/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/lib/thumb/v7-m/nofp\libg.a(lib_a-__call_atexit.o)
  *(.init_array*)
- .init_array    0x08009628        0x4 d:/clion/gcc-arm-none-eabi-10.3-2021.10/bin/../lib/gcc/arm-none-eabi/10.3.1/thumb/v7-m/nofp/crtbegin.o
-                0x0800962c                PROVIDE (__init_array_end = .)
-                0x0800962c                . = ALIGN (0x4)
+ .init_array    0x08009728        0x4 d:/clion/gcc-arm-none-eabi-10.3-2021.10/bin/../lib/gcc/arm-none-eabi/10.3.1/thumb/v7-m/nofp/crtbegin.o
+                0x0800972c                PROVIDE (__init_array_end = .)
+                0x0800972c                . = ALIGN (0x4)
 
-.fini_array     0x0800962c        0x4
-                0x0800962c                . = ALIGN (0x4)
-                0x0800962c                PROVIDE (__fini_array_start = .)
+.fini_array     0x0800972c        0x4
+                0x0800972c                . = ALIGN (0x4)
+                0x0800972c                PROVIDE (__fini_array_start = .)
  *(SORT_BY_NAME(.fini_array.*))
  *(.fini_array*)
- .fini_array    0x0800962c        0x4 d:/clion/gcc-arm-none-eabi-10.3-2021.10/bin/../lib/gcc/arm-none-eabi/10.3.1/thumb/v7-m/nofp/crtbegin.o
-                0x08009630                PROVIDE (__fini_array_end = .)
-                0x08009630                . = ALIGN (0x4)
-                0x08009630                _sidata = LOADADDR (.data)
+ .fini_array    0x0800972c        0x4 d:/clion/gcc-arm-none-eabi-10.3-2021.10/bin/../lib/gcc/arm-none-eabi/10.3.1/thumb/v7-m/nofp/crtbegin.o
+                0x08009730                PROVIDE (__fini_array_end = .)
+                0x08009730                . = ALIGN (0x4)
+                0x08009730                _sidata = LOADADDR (.data)
 
-.data           0x20000000      0x87c load address 0x08009630
+.data           0x20000000      0x87c load address 0x08009730
                 0x20000000                . = ALIGN (0x4)
                 0x20000000                _sdata = .
  *(.data)
@@ -2682,11 +2694,11 @@ LOAD d:/clion/gcc-arm-none-eabi-10.3-2021.10/bin/../lib/gcc/arm-none-eabi/10.3.1
                 0x2000087c                . = ALIGN (0x4)
                 0x2000087c                _edata = .
 
-.igot.plt       0x2000087c        0x0 load address 0x08009eac
+.igot.plt       0x2000087c        0x0 load address 0x08009fac
  .igot.plt      0x2000087c        0x0 d:/clion/gcc-arm-none-eabi-10.3-2021.10/bin/../lib/gcc/arm-none-eabi/10.3.1/thumb/v7-m/nofp/crtbegin.o
                 0x2000087c                . = ALIGN (0x4)
 
-.bss            0x20000880     0x3554 load address 0x08009eac
+.bss            0x20000880     0x3634 load address 0x08009fac
                 0x20000880                _sbss = .
                 0x20000880                __bss_start__ = _sbss
  *(.bss)
@@ -2728,223 +2740,223 @@ LOAD d:/clion/gcc-arm-none-eabi-10.3-2021.10/bin/../lib/gcc/arm-none-eabi/10.3.1
  .bss.ADC_Value
                 0x20001e60       0x20 CMakeFiles/ISD2190.elf.dir/Core/Src/main.c.obj
                 0x20001e60                ADC_Value
- .bss.BleBuf    0x20001e80       0x20 CMakeFiles/ISD2190.elf.dir/Core/Src/main.c.obj
+ .bss.BleBuf    0x20001e80      0x100 CMakeFiles/ISD2190.elf.dir/Core/Src/main.c.obj
                 0x20001e80                BleBuf
- .bss.Cmd       0x20001ea0        0x1 CMakeFiles/ISD2190.elf.dir/Core/Src/main.c.obj
-                0x20001ea0                Cmd
- *fill*         0x20001ea1        0x3 
- .bss.Config    0x20001ea4       0x35 CMakeFiles/ISD2190.elf.dir/Core/Src/main.c.obj
-                0x20001ea4                Config
+ .bss.Cmd       0x20001f80        0x1 CMakeFiles/ISD2190.elf.dir/Core/Src/main.c.obj
+                0x20001f80                Cmd
+ *fill*         0x20001f81        0x3 
+ .bss.Config    0x20001f84       0x34 CMakeFiles/ISD2190.elf.dir/Core/Src/main.c.obj
+                0x20001f84                Config
  .bss.Scan_Start
-                0x20001ed9        0x1 CMakeFiles/ISD2190.elf.dir/Core/Src/main.c.obj
-                0x20001ed9                Scan_Start
- *fill*         0x20001eda        0x6 
- .bss.Sensor    0x20001ee0      0x600 CMakeFiles/ISD2190.elf.dir/Core/Src/main.c.obj
-                0x20001ee0                Sensor
+                0x20001fb8        0x1 CMakeFiles/ISD2190.elf.dir/Core/Src/main.c.obj
+                0x20001fb8                Scan_Start
+ *fill*         0x20001fb9        0x7 
+ .bss.Sensor    0x20001fc0      0x600 CMakeFiles/ISD2190.elf.dir/Core/Src/main.c.obj
+                0x20001fc0                Sensor
  .bss.Temp_Value
-                0x200024e0       0x20 CMakeFiles/ISD2190.elf.dir/Core/Src/main.c.obj
-                0x200024e0                Temp_Value
- .bss.Uart2Buf  0x20002500       0x20 CMakeFiles/ISD2190.elf.dir/Core/Src/main.c.obj
-                0x20002500                Uart2Buf
- .bss.Uart3Buf  0x20002520       0x20 CMakeFiles/ISD2190.elf.dir/Core/Src/main.c.obj
-                0x20002520                Uart3Buf
- .bss.VM1_Busy  0x20002540        0x1 CMakeFiles/ISD2190.elf.dir/Core/Src/main.c.obj
-                0x20002540                VM1_Busy
- .bss.VM1_Init  0x20002541        0x1 CMakeFiles/ISD2190.elf.dir/Core/Src/main.c.obj
-                0x20002541                VM1_Init
- .bss.VM1_OK    0x20002542        0x1 CMakeFiles/ISD2190.elf.dir/Core/Src/main.c.obj
-                0x20002542                VM1_OK
- .bss.VM2_Busy  0x20002543        0x1 CMakeFiles/ISD2190.elf.dir/Core/Src/main.c.obj
-                0x20002543                VM2_Busy
- .bss.VM2_Init  0x20002544        0x1 CMakeFiles/ISD2190.elf.dir/Core/Src/main.c.obj
-                0x20002544                VM2_Init
- .bss.VM2_OK    0x20002545        0x1 CMakeFiles/ISD2190.elf.dir/Core/Src/main.c.obj
-                0x20002545                VM2_OK
- .bss.VM_ERR    0x20002546        0x1 CMakeFiles/ISD2190.elf.dir/Core/Src/main.c.obj
-                0x20002546                VM_ERR
- .bss.ble_flag  0x20002547        0x1 CMakeFiles/ISD2190.elf.dir/Core/Src/main.c.obj
-                0x20002547                ble_flag
- .bss.ble_len   0x20002548        0x1 CMakeFiles/ISD2190.elf.dir/Core/Src/main.c.obj
-                0x20002548                ble_len
- *fill*         0x20002549        0x3 
+                0x200025c0       0x20 CMakeFiles/ISD2190.elf.dir/Core/Src/main.c.obj
+                0x200025c0                Temp_Value
+ .bss.Uart2Buf  0x200025e0       0x20 CMakeFiles/ISD2190.elf.dir/Core/Src/main.c.obj
+                0x200025e0                Uart2Buf
+ .bss.Uart3Buf  0x20002600       0x20 CMakeFiles/ISD2190.elf.dir/Core/Src/main.c.obj
+                0x20002600                Uart3Buf
+ .bss.VM1_Busy  0x20002620        0x1 CMakeFiles/ISD2190.elf.dir/Core/Src/main.c.obj
+                0x20002620                VM1_Busy
+ .bss.VM1_Init  0x20002621        0x1 CMakeFiles/ISD2190.elf.dir/Core/Src/main.c.obj
+                0x20002621                VM1_Init
+ .bss.VM1_OK    0x20002622        0x1 CMakeFiles/ISD2190.elf.dir/Core/Src/main.c.obj
+                0x20002622                VM1_OK
+ .bss.VM2_Busy  0x20002623        0x1 CMakeFiles/ISD2190.elf.dir/Core/Src/main.c.obj
+                0x20002623                VM2_Busy
+ .bss.VM2_Init  0x20002624        0x1 CMakeFiles/ISD2190.elf.dir/Core/Src/main.c.obj
+                0x20002624                VM2_Init
+ .bss.VM2_OK    0x20002625        0x1 CMakeFiles/ISD2190.elf.dir/Core/Src/main.c.obj
+                0x20002625                VM2_OK
+ .bss.VM_ERR    0x20002626        0x1 CMakeFiles/ISD2190.elf.dir/Core/Src/main.c.obj
+                0x20002626                VM_ERR
+ .bss.ble_flag  0x20002627        0x1 CMakeFiles/ISD2190.elf.dir/Core/Src/main.c.obj
+                0x20002627                ble_flag
+ .bss.ble_len   0x20002628        0x1 CMakeFiles/ISD2190.elf.dir/Core/Src/main.c.obj
+                0x20002628                ble_len
+ *fill*         0x20002629        0x3 
  .bss.usart2Queue
-                0x2000254c        0x4 CMakeFiles/ISD2190.elf.dir/Core/Src/main.c.obj
-                0x2000254c                usart2Queue
+                0x2000262c        0x4 CMakeFiles/ISD2190.elf.dir/Core/Src/main.c.obj
+                0x2000262c                usart2Queue
  .bss.usart3Queue
-                0x20002550        0x4 CMakeFiles/ISD2190.elf.dir/Core/Src/main.c.obj
-                0x20002550                usart3Queue
- .bss.htim7     0x20002554       0x40 CMakeFiles/ISD2190.elf.dir/Core/Src/stm32l1xx_hal_timebase_tim.c.obj
-                0x20002554                htim7
+                0x20002630        0x4 CMakeFiles/ISD2190.elf.dir/Core/Src/main.c.obj
+                0x20002630                usart3Queue
+ .bss.htim7     0x20002634       0x40 CMakeFiles/ISD2190.elf.dir/Core/Src/stm32l1xx_hal_timebase_tim.c.obj
+                0x20002634                htim7
  .bss.__sbrk_heap_end
-                0x20002594        0x4 CMakeFiles/ISD2190.elf.dir/Core/Src/sysmem.c.obj
- .bss.htim2     0x20002598       0x40 CMakeFiles/ISD2190.elf.dir/Core/Src/tim.c.obj
-                0x20002598                htim2
+                0x20002674        0x4 CMakeFiles/ISD2190.elf.dir/Core/Src/sysmem.c.obj
+ .bss.htim2     0x20002678       0x40 CMakeFiles/ISD2190.elf.dir/Core/Src/tim.c.obj
+                0x20002678                htim2
  .bss.hdma_uart5_rx
-                0x200025d8       0x44 CMakeFiles/ISD2190.elf.dir/Core/Src/usart.c.obj
-                0x200025d8                hdma_uart5_rx
+                0x200026b8       0x44 CMakeFiles/ISD2190.elf.dir/Core/Src/usart.c.obj
+                0x200026b8                hdma_uart5_rx
  .bss.hdma_uart5_tx
-                0x2000261c       0x44 CMakeFiles/ISD2190.elf.dir/Core/Src/usart.c.obj
-                0x2000261c                hdma_uart5_tx
+                0x200026fc       0x44 CMakeFiles/ISD2190.elf.dir/Core/Src/usart.c.obj
+                0x200026fc                hdma_uart5_tx
  .bss.hdma_usart2_rx
-                0x20002660       0x44 CMakeFiles/ISD2190.elf.dir/Core/Src/usart.c.obj
-                0x20002660                hdma_usart2_rx
+                0x20002740       0x44 CMakeFiles/ISD2190.elf.dir/Core/Src/usart.c.obj
+                0x20002740                hdma_usart2_rx
  .bss.hdma_usart2_tx
-                0x200026a4       0x44 CMakeFiles/ISD2190.elf.dir/Core/Src/usart.c.obj
-                0x200026a4                hdma_usart2_tx
+                0x20002784       0x44 CMakeFiles/ISD2190.elf.dir/Core/Src/usart.c.obj
+                0x20002784                hdma_usart2_tx
  .bss.hdma_usart3_rx
-                0x200026e8       0x44 CMakeFiles/ISD2190.elf.dir/Core/Src/usart.c.obj
-                0x200026e8                hdma_usart3_rx
+                0x200027c8       0x44 CMakeFiles/ISD2190.elf.dir/Core/Src/usart.c.obj
+                0x200027c8                hdma_usart3_rx
  .bss.hdma_usart3_tx
-                0x2000272c       0x44 CMakeFiles/ISD2190.elf.dir/Core/Src/usart.c.obj
-                0x2000272c                hdma_usart3_tx
- .bss.huart2    0x20002770       0x48 CMakeFiles/ISD2190.elf.dir/Core/Src/usart.c.obj
-                0x20002770                huart2
- .bss.huart3    0x200027b8       0x48 CMakeFiles/ISD2190.elf.dir/Core/Src/usart.c.obj
-                0x200027b8                huart3
- .bss.huart5    0x20002800       0x48 CMakeFiles/ISD2190.elf.dir/Core/Src/usart.c.obj
-                0x20002800                huart5
- .bss.uwTick    0x20002848        0x4 CMakeFiles/ISD2190.elf.dir/Drivers/STM32L1xx_HAL_Driver/Src/stm32l1xx_hal.c.obj
-                0x20002848                uwTick
- .bss.pFlash    0x2000284c       0x18 CMakeFiles/ISD2190.elf.dir/Drivers/STM32L1xx_HAL_Driver/Src/stm32l1xx_hal_flash.c.obj
-                0x2000284c                pFlash
+                0x2000280c       0x44 CMakeFiles/ISD2190.elf.dir/Core/Src/usart.c.obj
+                0x2000280c                hdma_usart3_tx
+ .bss.huart2    0x20002850       0x48 CMakeFiles/ISD2190.elf.dir/Core/Src/usart.c.obj
+                0x20002850                huart2
+ .bss.huart3    0x20002898       0x48 CMakeFiles/ISD2190.elf.dir/Core/Src/usart.c.obj
+                0x20002898                huart3
+ .bss.huart5    0x200028e0       0x48 CMakeFiles/ISD2190.elf.dir/Core/Src/usart.c.obj
+                0x200028e0                huart5
+ .bss.uwTick    0x20002928        0x4 CMakeFiles/ISD2190.elf.dir/Drivers/STM32L1xx_HAL_Driver/Src/stm32l1xx_hal.c.obj
+                0x20002928                uwTick
+ .bss.pFlash    0x2000292c       0x18 CMakeFiles/ISD2190.elf.dir/Drivers/STM32L1xx_HAL_Driver/Src/stm32l1xx_hal_flash.c.obj
+                0x2000292c                pFlash
  .bss.Idle_Stack
-                0x20002864      0x200 CMakeFiles/ISD2190.elf.dir/Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS_V2/cmsis_os2.c.obj
- .bss.Idle_TCB  0x20002a64       0x5c CMakeFiles/ISD2190.elf.dir/Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS_V2/cmsis_os2.c.obj
+                0x20002944      0x200 CMakeFiles/ISD2190.elf.dir/Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS_V2/cmsis_os2.c.obj
+ .bss.Idle_TCB  0x20002b44       0x5c CMakeFiles/ISD2190.elf.dir/Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS_V2/cmsis_os2.c.obj
  .bss.KernelState
-                0x20002ac0        0x4 CMakeFiles/ISD2190.elf.dir/Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS_V2/cmsis_os2.c.obj
+                0x20002ba0        0x4 CMakeFiles/ISD2190.elf.dir/Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS_V2/cmsis_os2.c.obj
  .bss.Timer_Stack
-                0x20002ac4      0x400 CMakeFiles/ISD2190.elf.dir/Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS_V2/cmsis_os2.c.obj
+                0x20002ba4      0x400 CMakeFiles/ISD2190.elf.dir/Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS_V2/cmsis_os2.c.obj
  .bss.Timer_TCB
-                0x20002ec4       0x5c CMakeFiles/ISD2190.elf.dir/Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS_V2/cmsis_os2.c.obj
+                0x20002fa4       0x5c CMakeFiles/ISD2190.elf.dir/Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS_V2/cmsis_os2.c.obj
  .bss.ucMaxSysCallPriority
-                0x20002f20        0x1 CMakeFiles/ISD2190.elf.dir/Middlewares/Third_Party/FreeRTOS/Source/portable/GCC/ARM_CM3/port.c.obj
- *fill*         0x20002f21        0x3 
+                0x20003000        0x1 CMakeFiles/ISD2190.elf.dir/Middlewares/Third_Party/FreeRTOS/Source/portable/GCC/ARM_CM3/port.c.obj
+ *fill*         0x20003001        0x3 
  .bss.ulMaxPRIGROUPValue
-                0x20002f24        0x4 CMakeFiles/ISD2190.elf.dir/Middlewares/Third_Party/FreeRTOS/Source/portable/GCC/ARM_CM3/port.c.obj
- .bss.pxEnd     0x20002f28        0x4 CMakeFiles/ISD2190.elf.dir/Middlewares/Third_Party/FreeRTOS/Source/portable/MemMang/heap_4.c.obj
- .bss.ucHeap    0x20002f2c      0x5dc CMakeFiles/ISD2190.elf.dir/Middlewares/Third_Party/FreeRTOS/Source/portable/MemMang/heap_4.c.obj
+                0x20003004        0x4 CMakeFiles/ISD2190.elf.dir/Middlewares/Third_Party/FreeRTOS/Source/portable/GCC/ARM_CM3/port.c.obj
+ .bss.pxEnd     0x20003008        0x4 CMakeFiles/ISD2190.elf.dir/Middlewares/Third_Party/FreeRTOS/Source/portable/MemMang/heap_4.c.obj
+ .bss.ucHeap    0x2000300c      0x5dc CMakeFiles/ISD2190.elf.dir/Middlewares/Third_Party/FreeRTOS/Source/portable/MemMang/heap_4.c.obj
  .bss.xBlockAllocatedBit
-                0x20003508        0x4 CMakeFiles/ISD2190.elf.dir/Middlewares/Third_Party/FreeRTOS/Source/portable/MemMang/heap_4.c.obj
+                0x200035e8        0x4 CMakeFiles/ISD2190.elf.dir/Middlewares/Third_Party/FreeRTOS/Source/portable/MemMang/heap_4.c.obj
  .bss.xFreeBytesRemaining
-                0x2000350c        0x4 CMakeFiles/ISD2190.elf.dir/Middlewares/Third_Party/FreeRTOS/Source/portable/MemMang/heap_4.c.obj
+                0x200035ec        0x4 CMakeFiles/ISD2190.elf.dir/Middlewares/Third_Party/FreeRTOS/Source/portable/MemMang/heap_4.c.obj
  .bss.xMinimumEverFreeBytesRemaining
-                0x20003510        0x4 CMakeFiles/ISD2190.elf.dir/Middlewares/Third_Party/FreeRTOS/Source/portable/MemMang/heap_4.c.obj
- .bss.xStart    0x20003514        0x8 CMakeFiles/ISD2190.elf.dir/Middlewares/Third_Party/FreeRTOS/Source/portable/MemMang/heap_4.c.obj
+                0x200035f0        0x4 CMakeFiles/ISD2190.elf.dir/Middlewares/Third_Party/FreeRTOS/Source/portable/MemMang/heap_4.c.obj
+ .bss.xStart    0x200035f4        0x8 CMakeFiles/ISD2190.elf.dir/Middlewares/Third_Party/FreeRTOS/Source/portable/MemMang/heap_4.c.obj
  .bss.xQueueRegistry
-                0x2000351c       0x40 CMakeFiles/ISD2190.elf.dir/Middlewares/Third_Party/FreeRTOS/Source/queue.c.obj
-                0x2000351c                xQueueRegistry
+                0x200035fc       0x40 CMakeFiles/ISD2190.elf.dir/Middlewares/Third_Party/FreeRTOS/Source/queue.c.obj
+                0x200035fc                xQueueRegistry
  .bss.pxCurrentTCB
-                0x2000355c        0x4 CMakeFiles/ISD2190.elf.dir/Middlewares/Third_Party/FreeRTOS/Source/tasks.c.obj
-                0x2000355c                pxCurrentTCB
+                0x2000363c        0x4 CMakeFiles/ISD2190.elf.dir/Middlewares/Third_Party/FreeRTOS/Source/tasks.c.obj
+                0x2000363c                pxCurrentTCB
  .bss.pxDelayedTaskList
-                0x20003560        0x4 CMakeFiles/ISD2190.elf.dir/Middlewares/Third_Party/FreeRTOS/Source/tasks.c.obj
+                0x20003640        0x4 CMakeFiles/ISD2190.elf.dir/Middlewares/Third_Party/FreeRTOS/Source/tasks.c.obj
  .bss.pxOverflowDelayedTaskList
-                0x20003564        0x4 CMakeFiles/ISD2190.elf.dir/Middlewares/Third_Party/FreeRTOS/Source/tasks.c.obj
+                0x20003644        0x4 CMakeFiles/ISD2190.elf.dir/Middlewares/Third_Party/FreeRTOS/Source/tasks.c.obj
  .bss.pxReadyTasksLists
-                0x20003568      0x460 CMakeFiles/ISD2190.elf.dir/Middlewares/Third_Party/FreeRTOS/Source/tasks.c.obj
+                0x20003648      0x460 CMakeFiles/ISD2190.elf.dir/Middlewares/Third_Party/FreeRTOS/Source/tasks.c.obj
  .bss.uxCurrentNumberOfTasks
-                0x200039c8        0x4 CMakeFiles/ISD2190.elf.dir/Middlewares/Third_Party/FreeRTOS/Source/tasks.c.obj
+                0x20003aa8        0x4 CMakeFiles/ISD2190.elf.dir/Middlewares/Third_Party/FreeRTOS/Source/tasks.c.obj
  .bss.uxDeletedTasksWaitingCleanUp
-                0x200039cc        0x4 CMakeFiles/ISD2190.elf.dir/Middlewares/Third_Party/FreeRTOS/Source/tasks.c.obj
+                0x20003aac        0x4 CMakeFiles/ISD2190.elf.dir/Middlewares/Third_Party/FreeRTOS/Source/tasks.c.obj
  .bss.uxPendedTicks
-                0x200039d0        0x4 CMakeFiles/ISD2190.elf.dir/Middlewares/Third_Party/FreeRTOS/Source/tasks.c.obj
+                0x20003ab0        0x4 CMakeFiles/ISD2190.elf.dir/Middlewares/Third_Party/FreeRTOS/Source/tasks.c.obj
  .bss.uxSchedulerSuspended
-                0x200039d4        0x4 CMakeFiles/ISD2190.elf.dir/Middlewares/Third_Party/FreeRTOS/Source/tasks.c.obj
+                0x20003ab4        0x4 CMakeFiles/ISD2190.elf.dir/Middlewares/Third_Party/FreeRTOS/Source/tasks.c.obj
  .bss.uxTaskNumber
-                0x200039d8        0x4 CMakeFiles/ISD2190.elf.dir/Middlewares/Third_Party/FreeRTOS/Source/tasks.c.obj
+                0x20003ab8        0x4 CMakeFiles/ISD2190.elf.dir/Middlewares/Third_Party/FreeRTOS/Source/tasks.c.obj
  .bss.uxTopReadyPriority
-                0x200039dc        0x4 CMakeFiles/ISD2190.elf.dir/Middlewares/Third_Party/FreeRTOS/Source/tasks.c.obj
+                0x20003abc        0x4 CMakeFiles/ISD2190.elf.dir/Middlewares/Third_Party/FreeRTOS/Source/tasks.c.obj
  .bss.xDelayedTaskList1
-                0x200039e0       0x14 CMakeFiles/ISD2190.elf.dir/Middlewares/Third_Party/FreeRTOS/Source/tasks.c.obj
+                0x20003ac0       0x14 CMakeFiles/ISD2190.elf.dir/Middlewares/Third_Party/FreeRTOS/Source/tasks.c.obj
  .bss.xDelayedTaskList2
-                0x200039f4       0x14 CMakeFiles/ISD2190.elf.dir/Middlewares/Third_Party/FreeRTOS/Source/tasks.c.obj
+                0x20003ad4       0x14 CMakeFiles/ISD2190.elf.dir/Middlewares/Third_Party/FreeRTOS/Source/tasks.c.obj
  .bss.xIdleTaskHandle
-                0x20003a08        0x4 CMakeFiles/ISD2190.elf.dir/Middlewares/Third_Party/FreeRTOS/Source/tasks.c.obj
+                0x20003ae8        0x4 CMakeFiles/ISD2190.elf.dir/Middlewares/Third_Party/FreeRTOS/Source/tasks.c.obj
  .bss.xNextTaskUnblockTime
-                0x20003a0c        0x4 CMakeFiles/ISD2190.elf.dir/Middlewares/Third_Party/FreeRTOS/Source/tasks.c.obj
+                0x20003aec        0x4 CMakeFiles/ISD2190.elf.dir/Middlewares/Third_Party/FreeRTOS/Source/tasks.c.obj
  .bss.xNumOfOverflows
-                0x20003a10        0x4 CMakeFiles/ISD2190.elf.dir/Middlewares/Third_Party/FreeRTOS/Source/tasks.c.obj
+                0x20003af0        0x4 CMakeFiles/ISD2190.elf.dir/Middlewares/Third_Party/FreeRTOS/Source/tasks.c.obj
  .bss.xPendingReadyList
-                0x20003a14       0x14 CMakeFiles/ISD2190.elf.dir/Middlewares/Third_Party/FreeRTOS/Source/tasks.c.obj
+                0x20003af4       0x14 CMakeFiles/ISD2190.elf.dir/Middlewares/Third_Party/FreeRTOS/Source/tasks.c.obj
  .bss.xSchedulerRunning
-                0x20003a28        0x4 CMakeFiles/ISD2190.elf.dir/Middlewares/Third_Party/FreeRTOS/Source/tasks.c.obj
+                0x20003b08        0x4 CMakeFiles/ISD2190.elf.dir/Middlewares/Third_Party/FreeRTOS/Source/tasks.c.obj
  .bss.xSuspendedTaskList
-                0x20003a2c       0x14 CMakeFiles/ISD2190.elf.dir/Middlewares/Third_Party/FreeRTOS/Source/tasks.c.obj
+                0x20003b0c       0x14 CMakeFiles/ISD2190.elf.dir/Middlewares/Third_Party/FreeRTOS/Source/tasks.c.obj
  .bss.xTasksWaitingTermination
-                0x20003a40       0x14 CMakeFiles/ISD2190.elf.dir/Middlewares/Third_Party/FreeRTOS/Source/tasks.c.obj
+                0x20003b20       0x14 CMakeFiles/ISD2190.elf.dir/Middlewares/Third_Party/FreeRTOS/Source/tasks.c.obj
  .bss.xTickCount
-                0x20003a54        0x4 CMakeFiles/ISD2190.elf.dir/Middlewares/Third_Party/FreeRTOS/Source/tasks.c.obj
+                0x20003b34        0x4 CMakeFiles/ISD2190.elf.dir/Middlewares/Third_Party/FreeRTOS/Source/tasks.c.obj
  .bss.xYieldPending
-                0x20003a58        0x4 CMakeFiles/ISD2190.elf.dir/Middlewares/Third_Party/FreeRTOS/Source/tasks.c.obj
+                0x20003b38        0x4 CMakeFiles/ISD2190.elf.dir/Middlewares/Third_Party/FreeRTOS/Source/tasks.c.obj
  .bss.pxCurrentTimerList
-                0x20003a5c        0x4 CMakeFiles/ISD2190.elf.dir/Middlewares/Third_Party/FreeRTOS/Source/timers.c.obj
+                0x20003b3c        0x4 CMakeFiles/ISD2190.elf.dir/Middlewares/Third_Party/FreeRTOS/Source/timers.c.obj
  .bss.pxOverflowTimerList
-                0x20003a60        0x4 CMakeFiles/ISD2190.elf.dir/Middlewares/Third_Party/FreeRTOS/Source/timers.c.obj
+                0x20003b40        0x4 CMakeFiles/ISD2190.elf.dir/Middlewares/Third_Party/FreeRTOS/Source/timers.c.obj
  .bss.ucStaticTimerQueueStorage.1
-                0x20003a64       0xa0 CMakeFiles/ISD2190.elf.dir/Middlewares/Third_Party/FreeRTOS/Source/timers.c.obj
+                0x20003b44       0xa0 CMakeFiles/ISD2190.elf.dir/Middlewares/Third_Party/FreeRTOS/Source/timers.c.obj
  .bss.xActiveTimerList1
-                0x20003b04       0x14 CMakeFiles/ISD2190.elf.dir/Middlewares/Third_Party/FreeRTOS/Source/timers.c.obj
+                0x20003be4       0x14 CMakeFiles/ISD2190.elf.dir/Middlewares/Third_Party/FreeRTOS/Source/timers.c.obj
  .bss.xActiveTimerList2
-                0x20003b18       0x14 CMakeFiles/ISD2190.elf.dir/Middlewares/Third_Party/FreeRTOS/Source/timers.c.obj
+                0x20003bf8       0x14 CMakeFiles/ISD2190.elf.dir/Middlewares/Third_Party/FreeRTOS/Source/timers.c.obj
  .bss.xLastTime.2
-                0x20003b2c        0x4 CMakeFiles/ISD2190.elf.dir/Middlewares/Third_Party/FreeRTOS/Source/timers.c.obj
+                0x20003c0c        0x4 CMakeFiles/ISD2190.elf.dir/Middlewares/Third_Party/FreeRTOS/Source/timers.c.obj
  .bss.xStaticTimerQueue.0
-                0x20003b30       0x50 CMakeFiles/ISD2190.elf.dir/Middlewares/Third_Party/FreeRTOS/Source/timers.c.obj
+                0x20003c10       0x50 CMakeFiles/ISD2190.elf.dir/Middlewares/Third_Party/FreeRTOS/Source/timers.c.obj
  .bss.xTimerQueue
-                0x20003b80        0x4 CMakeFiles/ISD2190.elf.dir/Middlewares/Third_Party/FreeRTOS/Source/timers.c.obj
+                0x20003c60        0x4 CMakeFiles/ISD2190.elf.dir/Middlewares/Third_Party/FreeRTOS/Source/timers.c.obj
  .bss.xTimerTaskHandle
-                0x20003b84        0x4 CMakeFiles/ISD2190.elf.dir/Middlewares/Third_Party/FreeRTOS/Source/timers.c.obj
+                0x20003c64        0x4 CMakeFiles/ISD2190.elf.dir/Middlewares/Third_Party/FreeRTOS/Source/timers.c.obj
  .bss.tx_buffer
-                0x20003b88      0x200 CMakeFiles/ISD2190.elf.dir/User/bt4531.c.obj
-                0x20003b88                tx_buffer
- .bss.data      0x20003d88        0x4 CMakeFiles/ISD2190.elf.dir/User/flash.c.obj
-                0x20003d88                data
+                0x20003c68      0x200 CMakeFiles/ISD2190.elf.dir/User/bt4531.c.obj
+                0x20003c68                tx_buffer
+ .bss.data      0x20003e68        0x4 CMakeFiles/ISD2190.elf.dir/User/flash.c.obj
+                0x20003e68                data
  .bss.__lock___atexit_recursive_mutex
-                0x20003d8c        0x1 d:/clion/gcc-arm-none-eabi-10.3-2021.10/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/lib/thumb/v7-m/nofp\libg.a(lib_a-lock.o)
-                0x20003d8c                __lock___atexit_recursive_mutex
- *fill*         0x20003d8d        0x3 
+                0x20003e6c        0x1 d:/clion/gcc-arm-none-eabi-10.3-2021.10/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/lib/thumb/v7-m/nofp\libg.a(lib_a-lock.o)
+                0x20003e6c                __lock___atexit_recursive_mutex
+ *fill*         0x20003e6d        0x3 
  .bss.__lock___malloc_recursive_mutex
-                0x20003d90        0x1 d:/clion/gcc-arm-none-eabi-10.3-2021.10/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/lib/thumb/v7-m/nofp\libg.a(lib_a-lock.o)
-                0x20003d90                __lock___malloc_recursive_mutex
- *fill*         0x20003d91        0x3 
+                0x20003e70        0x1 d:/clion/gcc-arm-none-eabi-10.3-2021.10/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/lib/thumb/v7-m/nofp\libg.a(lib_a-lock.o)
+                0x20003e70                __lock___malloc_recursive_mutex
+ *fill*         0x20003e71        0x3 
  .bss.__lock___sfp_recursive_mutex
-                0x20003d94        0x1 d:/clion/gcc-arm-none-eabi-10.3-2021.10/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/lib/thumb/v7-m/nofp\libg.a(lib_a-lock.o)
-                0x20003d94                __lock___sfp_recursive_mutex
- *fill*         0x20003d95        0x3 
+                0x20003e74        0x1 d:/clion/gcc-arm-none-eabi-10.3-2021.10/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/lib/thumb/v7-m/nofp\libg.a(lib_a-lock.o)
+                0x20003e74                __lock___sfp_recursive_mutex
+ *fill*         0x20003e75        0x3 
  .bss.__lock___sinit_recursive_mutex
-                0x20003d98        0x1 d:/clion/gcc-arm-none-eabi-10.3-2021.10/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/lib/thumb/v7-m/nofp\libg.a(lib_a-lock.o)
-                0x20003d98                __lock___sinit_recursive_mutex
- *fill*         0x20003d99        0x3 
+                0x20003e78        0x1 d:/clion/gcc-arm-none-eabi-10.3-2021.10/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/lib/thumb/v7-m/nofp\libg.a(lib_a-lock.o)
+                0x20003e78                __lock___sinit_recursive_mutex
+ *fill*         0x20003e79        0x3 
  .bss.__malloc_current_mallinfo
-                0x20003d9c       0x28 d:/clion/gcc-arm-none-eabi-10.3-2021.10/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/lib/thumb/v7-m/nofp\libg.a(lib_a-mallocr.o)
-                0x20003d9c                __malloc_current_mallinfo
+                0x20003e7c       0x28 d:/clion/gcc-arm-none-eabi-10.3-2021.10/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/lib/thumb/v7-m/nofp\libg.a(lib_a-mallocr.o)
+                0x20003e7c                __malloc_current_mallinfo
  .bss.__malloc_max_sbrked_mem
-                0x20003dc4        0x4 d:/clion/gcc-arm-none-eabi-10.3-2021.10/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/lib/thumb/v7-m/nofp\libg.a(lib_a-mallocr.o)
-                0x20003dc4                __malloc_max_sbrked_mem
+                0x20003ea4        0x4 d:/clion/gcc-arm-none-eabi-10.3-2021.10/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/lib/thumb/v7-m/nofp\libg.a(lib_a-mallocr.o)
+                0x20003ea4                __malloc_max_sbrked_mem
  .bss.__malloc_max_total_mem
-                0x20003dc8        0x4 d:/clion/gcc-arm-none-eabi-10.3-2021.10/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/lib/thumb/v7-m/nofp\libg.a(lib_a-mallocr.o)
-                0x20003dc8                __malloc_max_total_mem
+                0x20003ea8        0x4 d:/clion/gcc-arm-none-eabi-10.3-2021.10/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/lib/thumb/v7-m/nofp\libg.a(lib_a-mallocr.o)
+                0x20003ea8                __malloc_max_total_mem
  .bss.__malloc_top_pad
-                0x20003dcc        0x4 d:/clion/gcc-arm-none-eabi-10.3-2021.10/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/lib/thumb/v7-m/nofp\libg.a(lib_a-mallocr.o)
-                0x20003dcc                __malloc_top_pad
- .bss.errno     0x20003dd0        0x4 d:/clion/gcc-arm-none-eabi-10.3-2021.10/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/lib/thumb/v7-m/nofp\libg.a(lib_a-reent.o)
-                0x20003dd0                errno
+                0x20003eac        0x4 d:/clion/gcc-arm-none-eabi-10.3-2021.10/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/lib/thumb/v7-m/nofp\libg.a(lib_a-mallocr.o)
+                0x20003eac                __malloc_top_pad
+ .bss.errno     0x20003eb0        0x4 d:/clion/gcc-arm-none-eabi-10.3-2021.10/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/lib/thumb/v7-m/nofp\libg.a(lib_a-reent.o)
+                0x20003eb0                errno
  *(COMMON)
-                0x20003dd4                . = ALIGN (0x4)
-                0x20003dd4                _ebss = .
-                0x20003dd4                __bss_end__ = _ebss
+                0x20003eb4                . = ALIGN (0x4)
+                0x20003eb4                _ebss = .
+                0x20003eb4                __bss_end__ = _ebss
 
 ._user_heap_stack
-                0x20003dd4      0x604 load address 0x08009eac
-                0x20003dd8                . = ALIGN (0x8)
- *fill*         0x20003dd4        0x4 
+                0x20003eb4      0x604 load address 0x08009fac
+                0x20003eb8                . = ALIGN (0x8)
+ *fill*         0x20003eb4        0x4 
                 [!provide]                PROVIDE (end = .)
-                0x20003dd8                PROVIDE (_end = .)
-                0x20003fd8                . = (. + _Min_Heap_Size)
- *fill*         0x20003dd8      0x200 
-                0x200043d8                . = (. + _Min_Stack_Size)
- *fill*         0x20003fd8      0x400 
-                0x200043d8                . = ALIGN (0x8)
+                0x20003eb8                PROVIDE (_end = .)
+                0x200040b8                . = (. + _Min_Heap_Size)
+ *fill*         0x20003eb8      0x200 
+                0x200044b8                . = (. + _Min_Stack_Size)
+ *fill*         0x200040b8      0x400 
+                0x200044b8                . = ALIGN (0x8)
 
 /DISCARD/
  libc.a(*)
@@ -3069,110 +3081,112 @@ LOAD d:/clion/gcc-arm-none-eabi-10.3-2021.10/bin/../lib/gcc/arm-none-eabi/10.3.1
  .ARM.attributes
                 0x0000093a       0x2d d:/clion/gcc-arm-none-eabi-10.3-2021.10/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/lib/thumb/v7-m/nofp\libg.a(lib_a-strlen-stub.o)
  .ARM.attributes
-                0x00000967       0x2d d:/clion/gcc-arm-none-eabi-10.3-2021.10/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/lib/thumb/v7-m/nofp\libg.a(lib_a-__call_atexit.o)
+                0x00000967       0x2d d:/clion/gcc-arm-none-eabi-10.3-2021.10/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/lib/thumb/v7-m/nofp\libg.a(lib_a-strncat.o)
  .ARM.attributes
-                0x00000994       0x2d d:/clion/gcc-arm-none-eabi-10.3-2021.10/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/lib/thumb/v7-m/nofp\libg.a(lib_a-atexit.o)
+                0x00000994       0x2d d:/clion/gcc-arm-none-eabi-10.3-2021.10/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/lib/thumb/v7-m/nofp\libg.a(lib_a-__call_atexit.o)
  .ARM.attributes
-                0x000009c1       0x2d d:/clion/gcc-arm-none-eabi-10.3-2021.10/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/lib/thumb/v7-m/nofp\libg.a(lib_a-findfp.o)
+                0x000009c1       0x2d d:/clion/gcc-arm-none-eabi-10.3-2021.10/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/lib/thumb/v7-m/nofp\libg.a(lib_a-atexit.o)
  .ARM.attributes
-                0x000009ee       0x2d d:/clion/gcc-arm-none-eabi-10.3-2021.10/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/lib/thumb/v7-m/nofp\libg.a(lib_a-fini.o)
+                0x000009ee       0x2d d:/clion/gcc-arm-none-eabi-10.3-2021.10/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/lib/thumb/v7-m/nofp\libg.a(lib_a-findfp.o)
  .ARM.attributes
-                0x00000a1b       0x2d d:/clion/gcc-arm-none-eabi-10.3-2021.10/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/lib/thumb/v7-m/nofp\libg.a(lib_a-fvwrite.o)
+                0x00000a1b       0x2d d:/clion/gcc-arm-none-eabi-10.3-2021.10/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/lib/thumb/v7-m/nofp\libg.a(lib_a-fini.o)
  .ARM.attributes
-                0x00000a48       0x2d d:/clion/gcc-arm-none-eabi-10.3-2021.10/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/lib/thumb/v7-m/nofp\libg.a(lib_a-fwalk.o)
+                0x00000a48       0x2d d:/clion/gcc-arm-none-eabi-10.3-2021.10/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/lib/thumb/v7-m/nofp\libg.a(lib_a-fvwrite.o)
  .ARM.attributes
-                0x00000a75       0x2d d:/clion/gcc-arm-none-eabi-10.3-2021.10/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/lib/thumb/v7-m/nofp\libg.a(lib_a-lock.o)
+                0x00000a75       0x2d d:/clion/gcc-arm-none-eabi-10.3-2021.10/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/lib/thumb/v7-m/nofp\libg.a(lib_a-fwalk.o)
  .ARM.attributes
-                0x00000aa2       0x2d d:/clion/gcc-arm-none-eabi-10.3-2021.10/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/lib/thumb/v7-m/nofp\libg.a(lib_a-mallocr.o)
+                0x00000aa2       0x2d d:/clion/gcc-arm-none-eabi-10.3-2021.10/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/lib/thumb/v7-m/nofp\libg.a(lib_a-lock.o)
  .ARM.attributes
-                0x00000acf       0x2d d:/clion/gcc-arm-none-eabi-10.3-2021.10/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/lib/thumb/v7-m/nofp\libg.a(lib_a-memchr-stub.o)
+                0x00000acf       0x2d d:/clion/gcc-arm-none-eabi-10.3-2021.10/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/lib/thumb/v7-m/nofp\libg.a(lib_a-mallocr.o)
  .ARM.attributes
-                0x00000afc       0x2d d:/clion/gcc-arm-none-eabi-10.3-2021.10/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/lib/thumb/v7-m/nofp\libg.a(lib_a-memmove.o)
+                0x00000afc       0x2d d:/clion/gcc-arm-none-eabi-10.3-2021.10/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/lib/thumb/v7-m/nofp\libg.a(lib_a-memchr-stub.o)
  .ARM.attributes
-                0x00000b29       0x2d d:/clion/gcc-arm-none-eabi-10.3-2021.10/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/lib/thumb/v7-m/nofp\libg.a(lib_a-mlock.o)
+                0x00000b29       0x2d d:/clion/gcc-arm-none-eabi-10.3-2021.10/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/lib/thumb/v7-m/nofp\libg.a(lib_a-memmove.o)
  .ARM.attributes
-                0x00000b56       0x2d d:/clion/gcc-arm-none-eabi-10.3-2021.10/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/lib/thumb/v7-m/nofp\libg.a(lib_a-reallocr.o)
+                0x00000b56       0x2d d:/clion/gcc-arm-none-eabi-10.3-2021.10/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/lib/thumb/v7-m/nofp\libg.a(lib_a-mlock.o)
  .ARM.attributes
-                0x00000b83       0x2d d:/clion/gcc-arm-none-eabi-10.3-2021.10/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/lib/thumb/v7-m/nofp\libg.a(lib_a-sbrkr.o)
+                0x00000b83       0x2d d:/clion/gcc-arm-none-eabi-10.3-2021.10/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/lib/thumb/v7-m/nofp\libg.a(lib_a-reallocr.o)
  .ARM.attributes
-                0x00000bb0       0x2d d:/clion/gcc-arm-none-eabi-10.3-2021.10/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/lib/thumb/v7-m/nofp\libg.a(lib_a-stdio.o)
+                0x00000bb0       0x2d d:/clion/gcc-arm-none-eabi-10.3-2021.10/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/lib/thumb/v7-m/nofp\libg.a(lib_a-sbrkr.o)
  .ARM.attributes
-                0x00000bdd       0x2d d:/clion/gcc-arm-none-eabi-10.3-2021.10/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/lib/thumb/v7-m/nofp\libg.a(lib_a-writer.o)
+                0x00000bdd       0x2d d:/clion/gcc-arm-none-eabi-10.3-2021.10/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/lib/thumb/v7-m/nofp\libg.a(lib_a-stdio.o)
  .ARM.attributes
-                0x00000c0a       0x2d d:/clion/gcc-arm-none-eabi-10.3-2021.10/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/lib/thumb/v7-m/nofp\libg.a(lib_a-wsetup.o)
+                0x00000c0a       0x2d d:/clion/gcc-arm-none-eabi-10.3-2021.10/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/lib/thumb/v7-m/nofp\libg.a(lib_a-writer.o)
  .ARM.attributes
-                0x00000c37       0x2d d:/clion/gcc-arm-none-eabi-10.3-2021.10/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/lib/thumb/v7-m/nofp\libg.a(lib_a-__atexit.o)
+                0x00000c37       0x2d d:/clion/gcc-arm-none-eabi-10.3-2021.10/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/lib/thumb/v7-m/nofp\libg.a(lib_a-wsetup.o)
  .ARM.attributes
-                0x00000c64       0x2d d:/clion/gcc-arm-none-eabi-10.3-2021.10/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/lib/thumb/v7-m/nofp\libg.a(lib_a-closer.o)
+                0x00000c64       0x2d d:/clion/gcc-arm-none-eabi-10.3-2021.10/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/lib/thumb/v7-m/nofp\libg.a(lib_a-__atexit.o)
  .ARM.attributes
-                0x00000c91       0x2d d:/clion/gcc-arm-none-eabi-10.3-2021.10/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/lib/thumb/v7-m/nofp\libg.a(lib_a-fclose.o)
+                0x00000c91       0x2d d:/clion/gcc-arm-none-eabi-10.3-2021.10/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/lib/thumb/v7-m/nofp\libg.a(lib_a-closer.o)
  .ARM.attributes
-                0x00000cbe       0x2d d:/clion/gcc-arm-none-eabi-10.3-2021.10/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/lib/thumb/v7-m/nofp\libg.a(lib_a-fflush.o)
+                0x00000cbe       0x2d d:/clion/gcc-arm-none-eabi-10.3-2021.10/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/lib/thumb/v7-m/nofp\libg.a(lib_a-fclose.o)
  .ARM.attributes
-                0x00000ceb       0x2d d:/clion/gcc-arm-none-eabi-10.3-2021.10/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/lib/thumb/v7-m/nofp\libg.a(lib_a-freer.o)
+                0x00000ceb       0x2d d:/clion/gcc-arm-none-eabi-10.3-2021.10/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/lib/thumb/v7-m/nofp\libg.a(lib_a-fflush.o)
  .ARM.attributes
-                0x00000d18       0x2d d:/clion/gcc-arm-none-eabi-10.3-2021.10/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/lib/thumb/v7-m/nofp\libg.a(lib_a-lseekr.o)
+                0x00000d18       0x2d d:/clion/gcc-arm-none-eabi-10.3-2021.10/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/lib/thumb/v7-m/nofp\libg.a(lib_a-freer.o)
  .ARM.attributes
-                0x00000d45       0x2d d:/clion/gcc-arm-none-eabi-10.3-2021.10/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/lib/thumb/v7-m/nofp\libg.a(lib_a-makebuf.o)
+                0x00000d45       0x2d d:/clion/gcc-arm-none-eabi-10.3-2021.10/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/lib/thumb/v7-m/nofp\libg.a(lib_a-lseekr.o)
  .ARM.attributes
-                0x00000d72       0x2d d:/clion/gcc-arm-none-eabi-10.3-2021.10/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/lib/thumb/v7-m/nofp\libg.a(lib_a-readr.o)
+                0x00000d72       0x2d d:/clion/gcc-arm-none-eabi-10.3-2021.10/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/lib/thumb/v7-m/nofp\libg.a(lib_a-makebuf.o)
  .ARM.attributes
-                0x00000d9f       0x2d d:/clion/gcc-arm-none-eabi-10.3-2021.10/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/lib/thumb/v7-m/nofp\libg.a(lib_a-reent.o)
+                0x00000d9f       0x2d d:/clion/gcc-arm-none-eabi-10.3-2021.10/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/lib/thumb/v7-m/nofp\libg.a(lib_a-readr.o)
  .ARM.attributes
-                0x00000dcc       0x2d d:/clion/gcc-arm-none-eabi-10.3-2021.10/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/lib/thumb/v7-m/nofp\libg.a(lib_a-fstatr.o)
+                0x00000dcc       0x2d d:/clion/gcc-arm-none-eabi-10.3-2021.10/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/lib/thumb/v7-m/nofp\libg.a(lib_a-reent.o)
  .ARM.attributes
-                0x00000df9       0x2d d:/clion/gcc-arm-none-eabi-10.3-2021.10/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/lib/thumb/v7-m/nofp\libg.a(lib_a-isattyr.o)
+                0x00000df9       0x2d d:/clion/gcc-arm-none-eabi-10.3-2021.10/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/lib/thumb/v7-m/nofp\libg.a(lib_a-fstatr.o)
  .ARM.attributes
-                0x00000e26       0x1d d:/clion/gcc-arm-none-eabi-10.3-2021.10/bin/../lib/gcc/arm-none-eabi/10.3.1/thumb/v7-m/nofp/crtn.o
+                0x00000e26       0x2d d:/clion/gcc-arm-none-eabi-10.3-2021.10/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/lib/thumb/v7-m/nofp\libg.a(lib_a-isattyr.o)
+ .ARM.attributes
+                0x00000e53       0x1d d:/clion/gcc-arm-none-eabi-10.3-2021.10/bin/../lib/gcc/arm-none-eabi/10.3.1/thumb/v7-m/nofp/crtn.o
 OUTPUT(ISD2190.elf elf32-littlearm)
 LOAD linker stubs
 LOAD d:/clion/gcc-arm-none-eabi-10.3-2021.10/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/lib/thumb/v7-m/nofp\libc.a
 LOAD d:/clion/gcc-arm-none-eabi-10.3-2021.10/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/lib/thumb/v7-m/nofp\libm.a
 LOAD d:/clion/gcc-arm-none-eabi-10.3-2021.10/bin/../lib/gcc/arm-none-eabi/10.3.1/thumb/v7-m/nofp\libgcc.a
 
-.debug_info     0x00000000    0x262d0
+.debug_info     0x00000000    0x2643b
  .debug_info    0x00000000      0xceb CMakeFiles/ISD2190.elf.dir/Core/Src/adc.c.obj
  .debug_info    0x00000ceb      0x4ca CMakeFiles/ISD2190.elf.dir/Core/Src/dma.c.obj
  .debug_info    0x000011b5     0x156e CMakeFiles/ISD2190.elf.dir/Core/Src/freertos.c.obj
  .debug_info    0x00002723      0x401 CMakeFiles/ISD2190.elf.dir/Core/Src/gpio.c.obj
  .debug_info    0x00002b24      0x1e8 CMakeFiles/ISD2190.elf.dir/Core/Src/iwdg.c.obj
- .debug_info    0x00002d0c     0x10bb CMakeFiles/ISD2190.elf.dir/Core/Src/main.c.obj
- .debug_info    0x00003dc7      0x3a4 CMakeFiles/ISD2190.elf.dir/Core/Src/stm32l1xx_hal_msp.c.obj
- .debug_info    0x0000416b      0xab7 CMakeFiles/ISD2190.elf.dir/Core/Src/stm32l1xx_hal_timebase_tim.c.obj
- .debug_info    0x00004c22      0xb37 CMakeFiles/ISD2190.elf.dir/Core/Src/stm32l1xx_it.c.obj
- .debug_info    0x00005759      0x7af CMakeFiles/ISD2190.elf.dir/Core/Src/syscalls.c.obj
- .debug_info    0x00005f08      0x174 CMakeFiles/ISD2190.elf.dir/Core/Src/sysmem.c.obj
- .debug_info    0x0000607c      0x2bc CMakeFiles/ISD2190.elf.dir/Core/Src/system_stm32l1xx.c.obj
- .debug_info    0x00006338      0xad0 CMakeFiles/ISD2190.elf.dir/Core/Src/tim.c.obj
- .debug_info    0x00006e08      0xf56 CMakeFiles/ISD2190.elf.dir/Core/Src/usart.c.obj
- .debug_info    0x00007d5e       0x22 CMakeFiles/ISD2190.elf.dir/Core/Startup/startup_stm32l151rdtx.s.obj
- .debug_info    0x00007d80      0x7a3 CMakeFiles/ISD2190.elf.dir/Drivers/STM32L1xx_HAL_Driver/Src/stm32l1xx_hal.c.obj
- .debug_info    0x00008523     0x11a1 CMakeFiles/ISD2190.elf.dir/Drivers/STM32L1xx_HAL_Driver/Src/stm32l1xx_hal_adc.c.obj
- .debug_info    0x000096c4     0x1003 CMakeFiles/ISD2190.elf.dir/Drivers/STM32L1xx_HAL_Driver/Src/stm32l1xx_hal_cortex.c.obj
- .debug_info    0x0000a6c7      0x83b CMakeFiles/ISD2190.elf.dir/Drivers/STM32L1xx_HAL_Driver/Src/stm32l1xx_hal_dma.c.obj
- .debug_info    0x0000af02      0x55d CMakeFiles/ISD2190.elf.dir/Drivers/STM32L1xx_HAL_Driver/Src/stm32l1xx_hal_flash.c.obj
- .debug_info    0x0000b45f     0x1153 CMakeFiles/ISD2190.elf.dir/Drivers/STM32L1xx_HAL_Driver/Src/stm32l1xx_hal_flash_ex.c.obj
- .debug_info    0x0000c5b2      0x671 CMakeFiles/ISD2190.elf.dir/Drivers/STM32L1xx_HAL_Driver/Src/stm32l1xx_hal_gpio.c.obj
- .debug_info    0x0000cc23      0x20d CMakeFiles/ISD2190.elf.dir/Drivers/STM32L1xx_HAL_Driver/Src/stm32l1xx_hal_iwdg.c.obj
- .debug_info    0x0000ce30      0xc16 CMakeFiles/ISD2190.elf.dir/Drivers/STM32L1xx_HAL_Driver/Src/stm32l1xx_hal_rcc.c.obj
- .debug_info    0x0000da46     0x3b58 CMakeFiles/ISD2190.elf.dir/Drivers/STM32L1xx_HAL_Driver/Src/stm32l1xx_hal_tim.c.obj
- .debug_info    0x0001159e      0x6fe CMakeFiles/ISD2190.elf.dir/Drivers/STM32L1xx_HAL_Driver/Src/stm32l1xx_hal_tim_ex.c.obj
- .debug_info    0x00011c9c     0x4211 CMakeFiles/ISD2190.elf.dir/Drivers/STM32L1xx_HAL_Driver/Src/stm32l1xx_hal_uart.c.obj
- .debug_info    0x00015ead     0x4b1f CMakeFiles/ISD2190.elf.dir/Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS_V2/cmsis_os2.c.obj
- .debug_info    0x0001a9cc      0x2da CMakeFiles/ISD2190.elf.dir/Middlewares/Third_Party/FreeRTOS/Source/list.c.obj
- .debug_info    0x0001aca6      0x52b CMakeFiles/ISD2190.elf.dir/Middlewares/Third_Party/FreeRTOS/Source/portable/GCC/ARM_CM3/port.c.obj
- .debug_info    0x0001b1d1      0x471 CMakeFiles/ISD2190.elf.dir/Middlewares/Third_Party/FreeRTOS/Source/portable/MemMang/heap_4.c.obj
- .debug_info    0x0001b642     0x2733 CMakeFiles/ISD2190.elf.dir/Middlewares/Third_Party/FreeRTOS/Source/queue.c.obj
- .debug_info    0x0001dd75     0x301a CMakeFiles/ISD2190.elf.dir/Middlewares/Third_Party/FreeRTOS/Source/tasks.c.obj
- .debug_info    0x00020d8f     0x1969 CMakeFiles/ISD2190.elf.dir/Middlewares/Third_Party/FreeRTOS/Source/timers.c.obj
- .debug_info    0x000226f8     0x106b CMakeFiles/ISD2190.elf.dir/User/CollectData.c.obj
- .debug_info    0x00023763      0x758 CMakeFiles/ISD2190.elf.dir/User/VMxx.c.obj
- .debug_info    0x00023ebb     0x10f3 CMakeFiles/ISD2190.elf.dir/User/bt4531.c.obj
- .debug_info    0x00024fae      0x693 CMakeFiles/ISD2190.elf.dir/User/flash.c.obj
- .debug_info    0x00025641      0xa6a CMakeFiles/ISD2190.elf.dir/User/hardware.c.obj
- .debug_info    0x000260ab      0x225 CMakeFiles/ISD2190.elf.dir/User/temp.c.obj
+ .debug_info    0x00002d0c     0x10e4 CMakeFiles/ISD2190.elf.dir/Core/Src/main.c.obj
+ .debug_info    0x00003df0      0x3a4 CMakeFiles/ISD2190.elf.dir/Core/Src/stm32l1xx_hal_msp.c.obj
+ .debug_info    0x00004194      0xab7 CMakeFiles/ISD2190.elf.dir/Core/Src/stm32l1xx_hal_timebase_tim.c.obj
+ .debug_info    0x00004c4b      0xb37 CMakeFiles/ISD2190.elf.dir/Core/Src/stm32l1xx_it.c.obj
+ .debug_info    0x00005782      0x7af CMakeFiles/ISD2190.elf.dir/Core/Src/syscalls.c.obj
+ .debug_info    0x00005f31      0x174 CMakeFiles/ISD2190.elf.dir/Core/Src/sysmem.c.obj
+ .debug_info    0x000060a5      0x2bc CMakeFiles/ISD2190.elf.dir/Core/Src/system_stm32l1xx.c.obj
+ .debug_info    0x00006361      0xad0 CMakeFiles/ISD2190.elf.dir/Core/Src/tim.c.obj
+ .debug_info    0x00006e31      0xf56 CMakeFiles/ISD2190.elf.dir/Core/Src/usart.c.obj
+ .debug_info    0x00007d87       0x22 CMakeFiles/ISD2190.elf.dir/Core/Startup/startup_stm32l151rdtx.s.obj
+ .debug_info    0x00007da9      0x7a3 CMakeFiles/ISD2190.elf.dir/Drivers/STM32L1xx_HAL_Driver/Src/stm32l1xx_hal.c.obj
+ .debug_info    0x0000854c     0x11a1 CMakeFiles/ISD2190.elf.dir/Drivers/STM32L1xx_HAL_Driver/Src/stm32l1xx_hal_adc.c.obj
+ .debug_info    0x000096ed     0x1003 CMakeFiles/ISD2190.elf.dir/Drivers/STM32L1xx_HAL_Driver/Src/stm32l1xx_hal_cortex.c.obj
+ .debug_info    0x0000a6f0      0x83b CMakeFiles/ISD2190.elf.dir/Drivers/STM32L1xx_HAL_Driver/Src/stm32l1xx_hal_dma.c.obj
+ .debug_info    0x0000af2b      0x55d CMakeFiles/ISD2190.elf.dir/Drivers/STM32L1xx_HAL_Driver/Src/stm32l1xx_hal_flash.c.obj
+ .debug_info    0x0000b488     0x1153 CMakeFiles/ISD2190.elf.dir/Drivers/STM32L1xx_HAL_Driver/Src/stm32l1xx_hal_flash_ex.c.obj
+ .debug_info    0x0000c5db      0x671 CMakeFiles/ISD2190.elf.dir/Drivers/STM32L1xx_HAL_Driver/Src/stm32l1xx_hal_gpio.c.obj
+ .debug_info    0x0000cc4c      0x20d CMakeFiles/ISD2190.elf.dir/Drivers/STM32L1xx_HAL_Driver/Src/stm32l1xx_hal_iwdg.c.obj
+ .debug_info    0x0000ce59      0xc16 CMakeFiles/ISD2190.elf.dir/Drivers/STM32L1xx_HAL_Driver/Src/stm32l1xx_hal_rcc.c.obj
+ .debug_info    0x0000da6f     0x3b58 CMakeFiles/ISD2190.elf.dir/Drivers/STM32L1xx_HAL_Driver/Src/stm32l1xx_hal_tim.c.obj
+ .debug_info    0x000115c7      0x6fe CMakeFiles/ISD2190.elf.dir/Drivers/STM32L1xx_HAL_Driver/Src/stm32l1xx_hal_tim_ex.c.obj
+ .debug_info    0x00011cc5     0x4211 CMakeFiles/ISD2190.elf.dir/Drivers/STM32L1xx_HAL_Driver/Src/stm32l1xx_hal_uart.c.obj
+ .debug_info    0x00015ed6     0x4b1f CMakeFiles/ISD2190.elf.dir/Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS_V2/cmsis_os2.c.obj
+ .debug_info    0x0001a9f5      0x2da CMakeFiles/ISD2190.elf.dir/Middlewares/Third_Party/FreeRTOS/Source/list.c.obj
+ .debug_info    0x0001accf      0x52b CMakeFiles/ISD2190.elf.dir/Middlewares/Third_Party/FreeRTOS/Source/portable/GCC/ARM_CM3/port.c.obj
+ .debug_info    0x0001b1fa      0x471 CMakeFiles/ISD2190.elf.dir/Middlewares/Third_Party/FreeRTOS/Source/portable/MemMang/heap_4.c.obj
+ .debug_info    0x0001b66b     0x2733 CMakeFiles/ISD2190.elf.dir/Middlewares/Third_Party/FreeRTOS/Source/queue.c.obj
+ .debug_info    0x0001dd9e     0x301a CMakeFiles/ISD2190.elf.dir/Middlewares/Third_Party/FreeRTOS/Source/tasks.c.obj
+ .debug_info    0x00020db8     0x1969 CMakeFiles/ISD2190.elf.dir/Middlewares/Third_Party/FreeRTOS/Source/timers.c.obj
+ .debug_info    0x00022721     0x1094 CMakeFiles/ISD2190.elf.dir/User/CollectData.c.obj
+ .debug_info    0x000237b5      0x758 CMakeFiles/ISD2190.elf.dir/User/VMxx.c.obj
+ .debug_info    0x00023f0d     0x120c CMakeFiles/ISD2190.elf.dir/User/bt4531.c.obj
+ .debug_info    0x00025119      0x693 CMakeFiles/ISD2190.elf.dir/User/flash.c.obj
+ .debug_info    0x000257ac      0xa6a CMakeFiles/ISD2190.elf.dir/User/hardware.c.obj
+ .debug_info    0x00026216      0x225 CMakeFiles/ISD2190.elf.dir/User/temp.c.obj
 
-.debug_abbrev   0x00000000     0x5039
+.debug_abbrev   0x00000000     0x504a
  .debug_abbrev  0x00000000      0x20b CMakeFiles/ISD2190.elf.dir/Core/Src/adc.c.obj
  .debug_abbrev  0x0000020b      0x114 CMakeFiles/ISD2190.elf.dir/Core/Src/dma.c.obj
  .debug_abbrev  0x0000031f      0x2d4 CMakeFiles/ISD2190.elf.dir/Core/Src/freertos.c.obj
@@ -3209,12 +3223,12 @@ LOAD d:/clion/gcc-arm-none-eabi-10.3-2021.10/bin/../lib/gcc/arm-none-eabi/10.3.1
  .debug_abbrev  0x0000433b      0x303 CMakeFiles/ISD2190.elf.dir/Middlewares/Third_Party/FreeRTOS/Source/timers.c.obj
  .debug_abbrev  0x0000463e      0x20c CMakeFiles/ISD2190.elf.dir/User/CollectData.c.obj
  .debug_abbrev  0x0000484a      0x170 CMakeFiles/ISD2190.elf.dir/User/VMxx.c.obj
- .debug_abbrev  0x000049ba      0x30a CMakeFiles/ISD2190.elf.dir/User/bt4531.c.obj
- .debug_abbrev  0x00004cc4      0x19f CMakeFiles/ISD2190.elf.dir/User/flash.c.obj
- .debug_abbrev  0x00004e63       0xe2 CMakeFiles/ISD2190.elf.dir/User/hardware.c.obj
- .debug_abbrev  0x00004f45       0xf4 CMakeFiles/ISD2190.elf.dir/User/temp.c.obj
+ .debug_abbrev  0x000049ba      0x31b CMakeFiles/ISD2190.elf.dir/User/bt4531.c.obj
+ .debug_abbrev  0x00004cd5      0x19f CMakeFiles/ISD2190.elf.dir/User/flash.c.obj
+ .debug_abbrev  0x00004e74       0xe2 CMakeFiles/ISD2190.elf.dir/User/hardware.c.obj
+ .debug_abbrev  0x00004f56       0xf4 CMakeFiles/ISD2190.elf.dir/User/temp.c.obj
 
-.debug_loc      0x00000000    0x19ffc
+.debug_loc      0x00000000    0x1a13b
  .debug_loc     0x00000000       0x71 CMakeFiles/ISD2190.elf.dir/Core/Src/adc.c.obj
  .debug_loc     0x00000071      0x4b4 CMakeFiles/ISD2190.elf.dir/Core/Src/freertos.c.obj
  .debug_loc     0x00000525       0x3c CMakeFiles/ISD2190.elf.dir/Core/Src/main.c.obj
@@ -3244,10 +3258,10 @@ LOAD d:/clion/gcc-arm-none-eabi-10.3-2021.10/bin/../lib/gcc/arm-none-eabi/10.3.1
  .debug_loc     0x00015181     0x24bc CMakeFiles/ISD2190.elf.dir/Middlewares/Third_Party/FreeRTOS/Source/tasks.c.obj
  .debug_loc     0x0001763d      0xf8e CMakeFiles/ISD2190.elf.dir/Middlewares/Third_Party/FreeRTOS/Source/timers.c.obj
  .debug_loc     0x000185cb       0xfa CMakeFiles/ISD2190.elf.dir/User/CollectData.c.obj
- .debug_loc     0x000186c5      0xd44 CMakeFiles/ISD2190.elf.dir/User/bt4531.c.obj
- .debug_loc     0x00019409      0x203 CMakeFiles/ISD2190.elf.dir/User/flash.c.obj
- .debug_loc     0x0001960c      0x88a CMakeFiles/ISD2190.elf.dir/User/hardware.c.obj
- .debug_loc     0x00019e96      0x166 CMakeFiles/ISD2190.elf.dir/User/temp.c.obj
+ .debug_loc     0x000186c5      0xe83 CMakeFiles/ISD2190.elf.dir/User/bt4531.c.obj
+ .debug_loc     0x00019548      0x203 CMakeFiles/ISD2190.elf.dir/User/flash.c.obj
+ .debug_loc     0x0001974b      0x88a CMakeFiles/ISD2190.elf.dir/User/hardware.c.obj
+ .debug_loc     0x00019fd5      0x166 CMakeFiles/ISD2190.elf.dir/User/temp.c.obj
 
 .debug_aranges  0x00000000     0x1820
  .debug_aranges
@@ -3331,7 +3345,7 @@ LOAD d:/clion/gcc-arm-none-eabi-10.3-2021.10/bin/../lib/gcc/arm-none-eabi/10.3.1
  .debug_aranges
                 0x000017f8       0x28 CMakeFiles/ISD2190.elf.dir/User/temp.c.obj
 
-.debug_ranges   0x00000000     0x1a78
+.debug_ranges   0x00000000     0x1aa8
  .debug_ranges  0x00000000       0x20 CMakeFiles/ISD2190.elf.dir/Core/Src/adc.c.obj
  .debug_ranges  0x00000020       0x10 CMakeFiles/ISD2190.elf.dir/Core/Src/dma.c.obj
  .debug_ranges  0x00000030       0xc0 CMakeFiles/ISD2190.elf.dir/Core/Src/freertos.c.obj
@@ -3368,134 +3382,134 @@ LOAD d:/clion/gcc-arm-none-eabi-10.3-2021.10/bin/../lib/gcc/arm-none-eabi/10.3.1
  .debug_ranges  0x000016c0       0xd0 CMakeFiles/ISD2190.elf.dir/Middlewares/Third_Party/FreeRTOS/Source/timers.c.obj
  .debug_ranges  0x00001790       0x18 CMakeFiles/ISD2190.elf.dir/User/CollectData.c.obj
  .debug_ranges  0x000017a8       0x30 CMakeFiles/ISD2190.elf.dir/User/VMxx.c.obj
- .debug_ranges  0x000017d8      0x160 CMakeFiles/ISD2190.elf.dir/User/bt4531.c.obj
- .debug_ranges  0x00001938       0xb8 CMakeFiles/ISD2190.elf.dir/User/flash.c.obj
- .debug_ranges  0x000019f0       0x70 CMakeFiles/ISD2190.elf.dir/User/hardware.c.obj
- .debug_ranges  0x00001a60       0x18 CMakeFiles/ISD2190.elf.dir/User/temp.c.obj
+ .debug_ranges  0x000017d8      0x190 CMakeFiles/ISD2190.elf.dir/User/bt4531.c.obj
+ .debug_ranges  0x00001968       0xb8 CMakeFiles/ISD2190.elf.dir/User/flash.c.obj
+ .debug_ranges  0x00001a20       0x70 CMakeFiles/ISD2190.elf.dir/User/hardware.c.obj
+ .debug_ranges  0x00001a90       0x18 CMakeFiles/ISD2190.elf.dir/User/temp.c.obj
 
-.debug_line     0x00000000    0x1ccd0
- .debug_line    0x00000000      0x5e7 CMakeFiles/ISD2190.elf.dir/Core/Src/adc.c.obj
- .debug_line    0x000005e7      0x1dc CMakeFiles/ISD2190.elf.dir/Core/Src/dma.c.obj
- .debug_line    0x000007c3      0xa40 CMakeFiles/ISD2190.elf.dir/Core/Src/freertos.c.obj
- .debug_line    0x00001203      0x22b CMakeFiles/ISD2190.elf.dir/Core/Src/gpio.c.obj
- .debug_line    0x0000142e      0x23f CMakeFiles/ISD2190.elf.dir/Core/Src/iwdg.c.obj
- .debug_line    0x0000166d      0x55d CMakeFiles/ISD2190.elf.dir/Core/Src/main.c.obj
- .debug_line    0x00001bca      0x1e4 CMakeFiles/ISD2190.elf.dir/Core/Src/stm32l1xx_hal_msp.c.obj
- .debug_line    0x00001dae      0x32a CMakeFiles/ISD2190.elf.dir/Core/Src/stm32l1xx_hal_timebase_tim.c.obj
- .debug_line    0x000020d8      0x3ef CMakeFiles/ISD2190.elf.dir/Core/Src/stm32l1xx_it.c.obj
- .debug_line    0x000024c7      0x40b CMakeFiles/ISD2190.elf.dir/Core/Src/syscalls.c.obj
- .debug_line    0x000028d2      0x1c0 CMakeFiles/ISD2190.elf.dir/Core/Src/sysmem.c.obj
- .debug_line    0x00002a92      0x269 CMakeFiles/ISD2190.elf.dir/Core/Src/system_stm32l1xx.c.obj
- .debug_line    0x00002cfb      0x33f CMakeFiles/ISD2190.elf.dir/Core/Src/tim.c.obj
- .debug_line    0x0000303a      0x770 CMakeFiles/ISD2190.elf.dir/Core/Src/usart.c.obj
- .debug_line    0x000037aa       0xa2 CMakeFiles/ISD2190.elf.dir/Core/Startup/startup_stm32l151rdtx.s.obj
- .debug_line    0x0000384c      0x5a6 CMakeFiles/ISD2190.elf.dir/Drivers/STM32L1xx_HAL_Driver/Src/stm32l1xx_hal.c.obj
- .debug_line    0x00003df2      0xec2 CMakeFiles/ISD2190.elf.dir/Drivers/STM32L1xx_HAL_Driver/Src/stm32l1xx_hal_adc.c.obj
- .debug_line    0x00004cb4      0x7ca CMakeFiles/ISD2190.elf.dir/Drivers/STM32L1xx_HAL_Driver/Src/stm32l1xx_hal_cortex.c.obj
- .debug_line    0x0000547e      0x9b4 CMakeFiles/ISD2190.elf.dir/Drivers/STM32L1xx_HAL_Driver/Src/stm32l1xx_hal_dma.c.obj
- .debug_line    0x00005e32      0x686 CMakeFiles/ISD2190.elf.dir/Drivers/STM32L1xx_HAL_Driver/Src/stm32l1xx_hal_flash.c.obj
- .debug_line    0x000064b8      0xd7f CMakeFiles/ISD2190.elf.dir/Drivers/STM32L1xx_HAL_Driver/Src/stm32l1xx_hal_flash_ex.c.obj
- .debug_line    0x00007237      0x5ad CMakeFiles/ISD2190.elf.dir/Drivers/STM32L1xx_HAL_Driver/Src/stm32l1xx_hal_gpio.c.obj
- .debug_line    0x000077e4      0x2a4 CMakeFiles/ISD2190.elf.dir/Drivers/STM32L1xx_HAL_Driver/Src/stm32l1xx_hal_iwdg.c.obj
- .debug_line    0x00007a88      0xe0d CMakeFiles/ISD2190.elf.dir/Drivers/STM32L1xx_HAL_Driver/Src/stm32l1xx_hal_rcc.c.obj
- .debug_line    0x00008895     0x413c CMakeFiles/ISD2190.elf.dir/Drivers/STM32L1xx_HAL_Driver/Src/stm32l1xx_hal_tim.c.obj
- .debug_line    0x0000c9d1      0x356 CMakeFiles/ISD2190.elf.dir/Drivers/STM32L1xx_HAL_Driver/Src/stm32l1xx_hal_tim_ex.c.obj
- .debug_line    0x0000cd27     0x4411 CMakeFiles/ISD2190.elf.dir/Drivers/STM32L1xx_HAL_Driver/Src/stm32l1xx_hal_uart.c.obj
- .debug_line    0x00011138     0x2d5a CMakeFiles/ISD2190.elf.dir/Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS_V2/cmsis_os2.c.obj
- .debug_line    0x00013e92      0x39f CMakeFiles/ISD2190.elf.dir/Middlewares/Third_Party/FreeRTOS/Source/list.c.obj
- .debug_line    0x00014231      0x650 CMakeFiles/ISD2190.elf.dir/Middlewares/Third_Party/FreeRTOS/Source/portable/GCC/ARM_CM3/port.c.obj
- .debug_line    0x00014881      0x690 CMakeFiles/ISD2190.elf.dir/Middlewares/Third_Party/FreeRTOS/Source/portable/MemMang/heap_4.c.obj
- .debug_line    0x00014f11     0x2034 CMakeFiles/ISD2190.elf.dir/Middlewares/Third_Party/FreeRTOS/Source/queue.c.obj
- .debug_line    0x00016f45     0x2c02 CMakeFiles/ISD2190.elf.dir/Middlewares/Third_Party/FreeRTOS/Source/tasks.c.obj
- .debug_line    0x00019b47      0xe08 CMakeFiles/ISD2190.elf.dir/Middlewares/Third_Party/FreeRTOS/Source/timers.c.obj
- .debug_line    0x0001a94f      0x593 CMakeFiles/ISD2190.elf.dir/User/CollectData.c.obj
- .debug_line    0x0001aee2      0x250 CMakeFiles/ISD2190.elf.dir/User/VMxx.c.obj
- .debug_line    0x0001b132     0x118a CMakeFiles/ISD2190.elf.dir/User/bt4531.c.obj
- .debug_line    0x0001c2bc      0x494 CMakeFiles/ISD2190.elf.dir/User/flash.c.obj
- .debug_line    0x0001c750      0x3ad CMakeFiles/ISD2190.elf.dir/User/hardware.c.obj
- .debug_line    0x0001cafd      0x1d3 CMakeFiles/ISD2190.elf.dir/User/temp.c.obj
+.debug_line     0x00000000    0x1cba3
+ .debug_line    0x00000000      0x5d7 CMakeFiles/ISD2190.elf.dir/Core/Src/adc.c.obj
+ .debug_line    0x000005d7      0x1d0 CMakeFiles/ISD2190.elf.dir/Core/Src/dma.c.obj
+ .debug_line    0x000007a7      0xa20 CMakeFiles/ISD2190.elf.dir/Core/Src/freertos.c.obj
+ .debug_line    0x000011c7      0x21f CMakeFiles/ISD2190.elf.dir/Core/Src/gpio.c.obj
+ .debug_line    0x000013e6      0x22f CMakeFiles/ISD2190.elf.dir/Core/Src/iwdg.c.obj
+ .debug_line    0x00001615      0x53d CMakeFiles/ISD2190.elf.dir/Core/Src/main.c.obj
+ .debug_line    0x00001b52      0x1d8 CMakeFiles/ISD2190.elf.dir/Core/Src/stm32l1xx_hal_msp.c.obj
+ .debug_line    0x00001d2a      0x31e CMakeFiles/ISD2190.elf.dir/Core/Src/stm32l1xx_hal_timebase_tim.c.obj
+ .debug_line    0x00002048      0x3e3 CMakeFiles/ISD2190.elf.dir/Core/Src/stm32l1xx_it.c.obj
+ .debug_line    0x0000242b      0x407 CMakeFiles/ISD2190.elf.dir/Core/Src/syscalls.c.obj
+ .debug_line    0x00002832      0x1bc CMakeFiles/ISD2190.elf.dir/Core/Src/sysmem.c.obj
+ .debug_line    0x000029ee      0x261 CMakeFiles/ISD2190.elf.dir/Core/Src/system_stm32l1xx.c.obj
+ .debug_line    0x00002c4f      0x32f CMakeFiles/ISD2190.elf.dir/Core/Src/tim.c.obj
+ .debug_line    0x00002f7e      0x760 CMakeFiles/ISD2190.elf.dir/Core/Src/usart.c.obj
+ .debug_line    0x000036de       0x9e CMakeFiles/ISD2190.elf.dir/Core/Startup/startup_stm32l151rdtx.s.obj
+ .debug_line    0x0000377c      0x596 CMakeFiles/ISD2190.elf.dir/Drivers/STM32L1xx_HAL_Driver/Src/stm32l1xx_hal.c.obj
+ .debug_line    0x00003d12      0xeb2 CMakeFiles/ISD2190.elf.dir/Drivers/STM32L1xx_HAL_Driver/Src/stm32l1xx_hal_adc.c.obj
+ .debug_line    0x00004bc4      0x7ba CMakeFiles/ISD2190.elf.dir/Drivers/STM32L1xx_HAL_Driver/Src/stm32l1xx_hal_cortex.c.obj
+ .debug_line    0x0000537e      0x9a8 CMakeFiles/ISD2190.elf.dir/Drivers/STM32L1xx_HAL_Driver/Src/stm32l1xx_hal_dma.c.obj
+ .debug_line    0x00005d26      0x67a CMakeFiles/ISD2190.elf.dir/Drivers/STM32L1xx_HAL_Driver/Src/stm32l1xx_hal_flash.c.obj
+ .debug_line    0x000063a0      0xd73 CMakeFiles/ISD2190.elf.dir/Drivers/STM32L1xx_HAL_Driver/Src/stm32l1xx_hal_flash_ex.c.obj
+ .debug_line    0x00007113      0x5a1 CMakeFiles/ISD2190.elf.dir/Drivers/STM32L1xx_HAL_Driver/Src/stm32l1xx_hal_gpio.c.obj
+ .debug_line    0x000076b4      0x298 CMakeFiles/ISD2190.elf.dir/Drivers/STM32L1xx_HAL_Driver/Src/stm32l1xx_hal_iwdg.c.obj
+ .debug_line    0x0000794c      0xe01 CMakeFiles/ISD2190.elf.dir/Drivers/STM32L1xx_HAL_Driver/Src/stm32l1xx_hal_rcc.c.obj
+ .debug_line    0x0000874d     0x4130 CMakeFiles/ISD2190.elf.dir/Drivers/STM32L1xx_HAL_Driver/Src/stm32l1xx_hal_tim.c.obj
+ .debug_line    0x0000c87d      0x34a CMakeFiles/ISD2190.elf.dir/Drivers/STM32L1xx_HAL_Driver/Src/stm32l1xx_hal_tim_ex.c.obj
+ .debug_line    0x0000cbc7     0x4401 CMakeFiles/ISD2190.elf.dir/Drivers/STM32L1xx_HAL_Driver/Src/stm32l1xx_hal_uart.c.obj
+ .debug_line    0x00010fc8     0x2d46 CMakeFiles/ISD2190.elf.dir/Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS_V2/cmsis_os2.c.obj
+ .debug_line    0x00013d0e      0x393 CMakeFiles/ISD2190.elf.dir/Middlewares/Third_Party/FreeRTOS/Source/list.c.obj
+ .debug_line    0x000140a1      0x644 CMakeFiles/ISD2190.elf.dir/Middlewares/Third_Party/FreeRTOS/Source/portable/GCC/ARM_CM3/port.c.obj
+ .debug_line    0x000146e5      0x684 CMakeFiles/ISD2190.elf.dir/Middlewares/Third_Party/FreeRTOS/Source/portable/MemMang/heap_4.c.obj
+ .debug_line    0x00014d69     0x2028 CMakeFiles/ISD2190.elf.dir/Middlewares/Third_Party/FreeRTOS/Source/queue.c.obj
+ .debug_line    0x00016d91     0x2bf6 CMakeFiles/ISD2190.elf.dir/Middlewares/Third_Party/FreeRTOS/Source/tasks.c.obj
+ .debug_line    0x00019987      0xdfc CMakeFiles/ISD2190.elf.dir/Middlewares/Third_Party/FreeRTOS/Source/timers.c.obj
+ .debug_line    0x0001a783      0x578 CMakeFiles/ISD2190.elf.dir/User/CollectData.c.obj
+ .debug_line    0x0001acfb      0x244 CMakeFiles/ISD2190.elf.dir/User/VMxx.c.obj
+ .debug_line    0x0001af3f     0x1264 CMakeFiles/ISD2190.elf.dir/User/bt4531.c.obj
+ .debug_line    0x0001c1a3      0x488 CMakeFiles/ISD2190.elf.dir/User/flash.c.obj
+ .debug_line    0x0001c62b      0x3a9 CMakeFiles/ISD2190.elf.dir/User/hardware.c.obj
+ .debug_line    0x0001c9d4      0x1cf CMakeFiles/ISD2190.elf.dir/User/temp.c.obj
 
-.debug_str      0x00000000     0x7eb0
- .debug_str     0x00000000      0x6d9 CMakeFiles/ISD2190.elf.dir/Core/Src/adc.c.obj
-                                0x784 (size before relaxing)
- .debug_str     0x000006d9      0x3c0 CMakeFiles/ISD2190.elf.dir/Core/Src/dma.c.obj
-                                0x5d7 (size before relaxing)
- .debug_str     0x00000a99      0xdb6 CMakeFiles/ISD2190.elf.dir/Core/Src/freertos.c.obj
-                               0x11e6 (size before relaxing)
- .debug_str     0x0000184f       0x6a CMakeFiles/ISD2190.elf.dir/Core/Src/gpio.c.obj
-                                0x310 (size before relaxing)
- .debug_str     0x000018b9       0x81 CMakeFiles/ISD2190.elf.dir/Core/Src/iwdg.c.obj
-                                0x27f (size before relaxing)
- .debug_str     0x0000193a      0x2eb CMakeFiles/ISD2190.elf.dir/Core/Src/main.c.obj
-                                0xd5a (size before relaxing)
- .debug_str     0x00001c25       0x48 CMakeFiles/ISD2190.elf.dir/Core/Src/stm32l1xx_hal_msp.c.obj
-                                0x5d2 (size before relaxing)
- .debug_str     0x00001c6d      0x11f CMakeFiles/ISD2190.elf.dir/Core/Src/stm32l1xx_hal_timebase_tim.c.obj
-                                0xbe8 (size before relaxing)
- .debug_str     0x00001d8c      0x232 CMakeFiles/ISD2190.elf.dir/Core/Src/stm32l1xx_it.c.obj
-                                0xacf (size before relaxing)
- .debug_str     0x00001fbe      0x22f CMakeFiles/ISD2190.elf.dir/Core/Src/syscalls.c.obj
-                                0x422 (size before relaxing)
- .debug_str     0x000021ed       0x91 CMakeFiles/ISD2190.elf.dir/Core/Src/sysmem.c.obj
-                                0x24e (size before relaxing)
- .debug_str     0x0000227e       0xb5 CMakeFiles/ISD2190.elf.dir/Core/Src/system_stm32l1xx.c.obj
-                                0x2c5 (size before relaxing)
- .debug_str     0x00002333      0x14b CMakeFiles/ISD2190.elf.dir/Core/Src/tim.c.obj
-                                0xc01 (size before relaxing)
- .debug_str     0x0000247e       0x7f CMakeFiles/ISD2190.elf.dir/Core/Src/usart.c.obj
-                                0xbb0 (size before relaxing)
- .debug_str     0x000024fd       0x52 CMakeFiles/ISD2190.elf.dir/Core/Startup/startup_stm32l151rdtx.s.obj
-                                 0x83 (size before relaxing)
- .debug_str     0x0000254f      0x255 CMakeFiles/ISD2190.elf.dir/Drivers/STM32L1xx_HAL_Driver/Src/stm32l1xx_hal.c.obj
-                                0x88a (size before relaxing)
- .debug_str     0x000027a4      0x309 CMakeFiles/ISD2190.elf.dir/Drivers/STM32L1xx_HAL_Driver/Src/stm32l1xx_hal_adc.c.obj
-                                0x9ee (size before relaxing)
- .debug_str     0x00002aad      0x4c9 CMakeFiles/ISD2190.elf.dir/Drivers/STM32L1xx_HAL_Driver/Src/stm32l1xx_hal_cortex.c.obj
-                                0xac5 (size before relaxing)
- .debug_str     0x00002f76      0x225 CMakeFiles/ISD2190.elf.dir/Drivers/STM32L1xx_HAL_Driver/Src/stm32l1xx_hal_dma.c.obj
+.debug_str      0x00000000     0x7e1c
+ .debug_str     0x00000000      0x6d1 CMakeFiles/ISD2190.elf.dir/Core/Src/adc.c.obj
+                                0x77c (size before relaxing)
+ .debug_str     0x000006d1      0x3bc CMakeFiles/ISD2190.elf.dir/Core/Src/dma.c.obj
+                                0x5cf (size before relaxing)
+ .debug_str     0x00000a8d      0xdac CMakeFiles/ISD2190.elf.dir/Core/Src/freertos.c.obj
+                               0x11dc (size before relaxing)
+ .debug_str     0x00001839       0x66 CMakeFiles/ISD2190.elf.dir/Core/Src/gpio.c.obj
+                                0x308 (size before relaxing)
+ .debug_str     0x0000189f       0x7d CMakeFiles/ISD2190.elf.dir/Core/Src/iwdg.c.obj
+                                0x277 (size before relaxing)
+ .debug_str     0x0000191c      0x2f1 CMakeFiles/ISD2190.elf.dir/Core/Src/main.c.obj
+                                0xd62 (size before relaxing)
+ .debug_str     0x00001c0d       0x44 CMakeFiles/ISD2190.elf.dir/Core/Src/stm32l1xx_hal_msp.c.obj
+                                0x5ca (size before relaxing)
+ .debug_str     0x00001c51      0x11b CMakeFiles/ISD2190.elf.dir/Core/Src/stm32l1xx_hal_timebase_tim.c.obj
+                                0xbe0 (size before relaxing)
+ .debug_str     0x00001d6c      0x22e CMakeFiles/ISD2190.elf.dir/Core/Src/stm32l1xx_it.c.obj
+                                0xac7 (size before relaxing)
+ .debug_str     0x00001f9a      0x22b CMakeFiles/ISD2190.elf.dir/Core/Src/syscalls.c.obj
+                                0x41a (size before relaxing)
+ .debug_str     0x000021c5       0x8d CMakeFiles/ISD2190.elf.dir/Core/Src/sysmem.c.obj
+                                0x246 (size before relaxing)
+ .debug_str     0x00002252       0xb1 CMakeFiles/ISD2190.elf.dir/Core/Src/system_stm32l1xx.c.obj
+                                0x2bd (size before relaxing)
+ .debug_str     0x00002303      0x147 CMakeFiles/ISD2190.elf.dir/Core/Src/tim.c.obj
+                                0xbf9 (size before relaxing)
+ .debug_str     0x0000244a       0x7b CMakeFiles/ISD2190.elf.dir/Core/Src/usart.c.obj
+                                0xba8 (size before relaxing)
+ .debug_str     0x000024c5       0x4e CMakeFiles/ISD2190.elf.dir/Core/Startup/startup_stm32l151rdtx.s.obj
+                                 0x7b (size before relaxing)
+ .debug_str     0x00002513      0x251 CMakeFiles/ISD2190.elf.dir/Drivers/STM32L1xx_HAL_Driver/Src/stm32l1xx_hal.c.obj
+                                0x882 (size before relaxing)
+ .debug_str     0x00002764      0x305 CMakeFiles/ISD2190.elf.dir/Drivers/STM32L1xx_HAL_Driver/Src/stm32l1xx_hal_adc.c.obj
+                                0x9e6 (size before relaxing)
+ .debug_str     0x00002a69      0x4c5 CMakeFiles/ISD2190.elf.dir/Drivers/STM32L1xx_HAL_Driver/Src/stm32l1xx_hal_cortex.c.obj
+                                0xabd (size before relaxing)
+ .debug_str     0x00002f2e      0x221 CMakeFiles/ISD2190.elf.dir/Drivers/STM32L1xx_HAL_Driver/Src/stm32l1xx_hal_dma.c.obj
+                                0x642 (size before relaxing)
+ .debug_str     0x0000314f      0x27a CMakeFiles/ISD2190.elf.dir/Drivers/STM32L1xx_HAL_Driver/Src/stm32l1xx_hal_flash.c.obj
+                                0x4b6 (size before relaxing)
+ .debug_str     0x000033c9      0x51d CMakeFiles/ISD2190.elf.dir/Drivers/STM32L1xx_HAL_Driver/Src/stm32l1xx_hal_flash_ex.c.obj
+                                0x8bd (size before relaxing)
+ .debug_str     0x000038e6      0x12a CMakeFiles/ISD2190.elf.dir/Drivers/STM32L1xx_HAL_Driver/Src/stm32l1xx_hal_gpio.c.obj
+                                0x43e (size before relaxing)
+ .debug_str     0x00003a10       0x62 CMakeFiles/ISD2190.elf.dir/Drivers/STM32L1xx_HAL_Driver/Src/stm32l1xx_hal_iwdg.c.obj
+                                0x2a9 (size before relaxing)
+ .debug_str     0x00003a72      0x1e7 CMakeFiles/ISD2190.elf.dir/Drivers/STM32L1xx_HAL_Driver/Src/stm32l1xx_hal_rcc.c.obj
+                                0x72c (size before relaxing)
+ .debug_str     0x00003c59      0xd83 CMakeFiles/ISD2190.elf.dir/Drivers/STM32L1xx_HAL_Driver/Src/stm32l1xx_hal_tim.c.obj
+                               0x15b0 (size before relaxing)
+ .debug_str     0x000049dc       0x6f CMakeFiles/ISD2190.elf.dir/Drivers/STM32L1xx_HAL_Driver/Src/stm32l1xx_hal_tim_ex.c.obj
+                                0x765 (size before relaxing)
+ .debug_str     0x00004a4b      0x5e6 CMakeFiles/ISD2190.elf.dir/Drivers/STM32L1xx_HAL_Driver/Src/stm32l1xx_hal_uart.c.obj
+                                0xd22 (size before relaxing)
+ .debug_str     0x00005031     0x1102 CMakeFiles/ISD2190.elf.dir/Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS_V2/cmsis_os2.c.obj
+                               0x1919 (size before relaxing)
+ .debug_str     0x00006133      0x151 CMakeFiles/ISD2190.elf.dir/Middlewares/Third_Party/FreeRTOS/Source/list.c.obj
+                                0x323 (size before relaxing)
+ .debug_str     0x00006284      0x258 CMakeFiles/ISD2190.elf.dir/Middlewares/Third_Party/FreeRTOS/Source/portable/GCC/ARM_CM3/port.c.obj
+                                0x48f (size before relaxing)
+ .debug_str     0x000064dc      0x1f9 CMakeFiles/ISD2190.elf.dir/Middlewares/Third_Party/FreeRTOS/Source/portable/MemMang/heap_4.c.obj
+                                0x40c (size before relaxing)
+ .debug_str     0x000066d5      0x5ea CMakeFiles/ISD2190.elf.dir/Middlewares/Third_Party/FreeRTOS/Source/queue.c.obj
+                                0xca1 (size before relaxing)
+ .debug_str     0x00006cbf      0x8ad CMakeFiles/ISD2190.elf.dir/Middlewares/Third_Party/FreeRTOS/Source/tasks.c.obj
+                               0x129d (size before relaxing)
+ .debug_str     0x0000756c      0x4f6 CMakeFiles/ISD2190.elf.dir/Middlewares/Third_Party/FreeRTOS/Source/timers.c.obj
+                                0xc14 (size before relaxing)
+ .debug_str     0x00007a62       0x7b CMakeFiles/ISD2190.elf.dir/User/CollectData.c.obj
+                                0xd09 (size before relaxing)
+ .debug_str     0x00007add       0x66 CMakeFiles/ISD2190.elf.dir/User/VMxx.c.obj
                                 0x64a (size before relaxing)
- .debug_str     0x0000319b      0x27e CMakeFiles/ISD2190.elf.dir/Drivers/STM32L1xx_HAL_Driver/Src/stm32l1xx_hal_flash.c.obj
-                                0x4be (size before relaxing)
- .debug_str     0x00003419      0x521 CMakeFiles/ISD2190.elf.dir/Drivers/STM32L1xx_HAL_Driver/Src/stm32l1xx_hal_flash_ex.c.obj
-                                0x8c5 (size before relaxing)
- .debug_str     0x0000393a      0x12e CMakeFiles/ISD2190.elf.dir/Drivers/STM32L1xx_HAL_Driver/Src/stm32l1xx_hal_gpio.c.obj
-                                0x446 (size before relaxing)
- .debug_str     0x00003a68       0x66 CMakeFiles/ISD2190.elf.dir/Drivers/STM32L1xx_HAL_Driver/Src/stm32l1xx_hal_iwdg.c.obj
-                                0x2b1 (size before relaxing)
- .debug_str     0x00003ace      0x1eb CMakeFiles/ISD2190.elf.dir/Drivers/STM32L1xx_HAL_Driver/Src/stm32l1xx_hal_rcc.c.obj
-                                0x734 (size before relaxing)
- .debug_str     0x00003cb9      0xd87 CMakeFiles/ISD2190.elf.dir/Drivers/STM32L1xx_HAL_Driver/Src/stm32l1xx_hal_tim.c.obj
-                               0x15b8 (size before relaxing)
- .debug_str     0x00004a40       0x73 CMakeFiles/ISD2190.elf.dir/Drivers/STM32L1xx_HAL_Driver/Src/stm32l1xx_hal_tim_ex.c.obj
-                                0x76d (size before relaxing)
- .debug_str     0x00004ab3      0x5ea CMakeFiles/ISD2190.elf.dir/Drivers/STM32L1xx_HAL_Driver/Src/stm32l1xx_hal_uart.c.obj
-                                0xd2a (size before relaxing)
- .debug_str     0x0000509d     0x1106 CMakeFiles/ISD2190.elf.dir/Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS_V2/cmsis_os2.c.obj
-                               0x1921 (size before relaxing)
- .debug_str     0x000061a3      0x155 CMakeFiles/ISD2190.elf.dir/Middlewares/Third_Party/FreeRTOS/Source/list.c.obj
-                                0x32b (size before relaxing)
- .debug_str     0x000062f8      0x25c CMakeFiles/ISD2190.elf.dir/Middlewares/Third_Party/FreeRTOS/Source/portable/GCC/ARM_CM3/port.c.obj
-                                0x497 (size before relaxing)
- .debug_str     0x00006554      0x1fd CMakeFiles/ISD2190.elf.dir/Middlewares/Third_Party/FreeRTOS/Source/portable/MemMang/heap_4.c.obj
-                                0x414 (size before relaxing)
- .debug_str     0x00006751      0x5f7 CMakeFiles/ISD2190.elf.dir/Middlewares/Third_Party/FreeRTOS/Source/queue.c.obj
-                                0xca9 (size before relaxing)
- .debug_str     0x00006d48      0x8b1 CMakeFiles/ISD2190.elf.dir/Middlewares/Third_Party/FreeRTOS/Source/tasks.c.obj
-                               0x12a5 (size before relaxing)
- .debug_str     0x000075f9      0x4fa CMakeFiles/ISD2190.elf.dir/Middlewares/Third_Party/FreeRTOS/Source/timers.c.obj
-                                0xc1c (size before relaxing)
- .debug_str     0x00007af3       0x7f CMakeFiles/ISD2190.elf.dir/User/CollectData.c.obj
-                                0xd01 (size before relaxing)
- .debug_str     0x00007b72       0x6a CMakeFiles/ISD2190.elf.dir/User/VMxx.c.obj
-                                0x652 (size before relaxing)
- .debug_str     0x00007bdc      0x117 CMakeFiles/ISD2190.elf.dir/User/bt4531.c.obj
-                                0x83c (size before relaxing)
- .debug_str     0x00007cf3       0x78 CMakeFiles/ISD2190.elf.dir/User/flash.c.obj
-                                0x423 (size before relaxing)
- .debug_str     0x00007d6b       0xd7 CMakeFiles/ISD2190.elf.dir/User/hardware.c.obj
-                                0x2f7 (size before relaxing)
- .debug_str     0x00007e42       0x6e CMakeFiles/ISD2190.elf.dir/User/temp.c.obj
-                                0x25d (size before relaxing)
+ .debug_str     0x00007b43      0x128 CMakeFiles/ISD2190.elf.dir/User/bt4531.c.obj
+                                0x859 (size before relaxing)
+ .debug_str     0x00007c6b       0x74 CMakeFiles/ISD2190.elf.dir/User/flash.c.obj
+                                0x419 (size before relaxing)
+ .debug_str     0x00007cdf       0xd3 CMakeFiles/ISD2190.elf.dir/User/hardware.c.obj
+                                0x2ef (size before relaxing)
+ .debug_str     0x00007db2       0x6a CMakeFiles/ISD2190.elf.dir/User/temp.c.obj
+                                0x255 (size before relaxing)
 
 .comment        0x00000000       0x49
  .comment       0x00000000       0x49 CMakeFiles/ISD2190.elf.dir/Core/Src/adc.c.obj
@@ -3539,7 +3553,7 @@ LOAD d:/clion/gcc-arm-none-eabi-10.3-2021.10/bin/../lib/gcc/arm-none-eabi/10.3.1
  .comment       0x00000049       0x4a CMakeFiles/ISD2190.elf.dir/User/hardware.c.obj
  .comment       0x00000049       0x4a CMakeFiles/ISD2190.elf.dir/User/temp.c.obj
 
-.debug_frame    0x00000000     0x4d14
+.debug_frame    0x00000000     0x4d58
  .debug_frame   0x00000000       0x6c CMakeFiles/ISD2190.elf.dir/Core/Src/adc.c.obj
  .debug_frame   0x0000006c       0x2c CMakeFiles/ISD2190.elf.dir/Core/Src/dma.c.obj
  .debug_frame   0x00000098       0x90 CMakeFiles/ISD2190.elf.dir/Core/Src/freertos.c.obj
@@ -3575,46 +3589,47 @@ LOAD d:/clion/gcc-arm-none-eabi-10.3-2021.10/bin/../lib/gcc/arm-none-eabi/10.3.1
  .debug_frame   0x00003a30      0x2c4 CMakeFiles/ISD2190.elf.dir/Middlewares/Third_Party/FreeRTOS/Source/timers.c.obj
  .debug_frame   0x00003cf4       0x60 CMakeFiles/ISD2190.elf.dir/User/CollectData.c.obj
  .debug_frame   0x00003d54       0xc4 CMakeFiles/ISD2190.elf.dir/User/VMxx.c.obj
- .debug_frame   0x00003e18      0x184 CMakeFiles/ISD2190.elf.dir/User/bt4531.c.obj
- .debug_frame   0x00003f9c       0xc8 CMakeFiles/ISD2190.elf.dir/User/flash.c.obj
- .debug_frame   0x00004064       0xe8 CMakeFiles/ISD2190.elf.dir/User/hardware.c.obj
- .debug_frame   0x0000414c       0x40 CMakeFiles/ISD2190.elf.dir/User/temp.c.obj
- .debug_frame   0x0000418c       0x30 d:/clion/gcc-arm-none-eabi-10.3-2021.10/bin/../lib/gcc/arm-none-eabi/10.3.1/thumb/v7-m/nofp\libgcc.a(_arm_muldf3.o)
- .debug_frame   0x000041bc       0xac d:/clion/gcc-arm-none-eabi-10.3-2021.10/bin/../lib/gcc/arm-none-eabi/10.3.1/thumb/v7-m/nofp\libgcc.a(_arm_addsubdf3.o)
- .debug_frame   0x00004268       0x24 d:/clion/gcc-arm-none-eabi-10.3-2021.10/bin/../lib/gcc/arm-none-eabi/10.3.1/thumb/v7-m/nofp\libgcc.a(_arm_truncdfsf2.o)
- .debug_frame   0x0000428c       0x4c d:/clion/gcc-arm-none-eabi-10.3-2021.10/bin/../lib/gcc/arm-none-eabi/10.3.1/thumb/v7-m/nofp\libgcc.a(_arm_addsubsf3.o)
- .debug_frame   0x000042d8       0x38 d:/clion/gcc-arm-none-eabi-10.3-2021.10/bin/../lib/gcc/arm-none-eabi/10.3.1/thumb/v7-m/nofp\libgcc.a(_arm_muldivsf3.o)
- .debug_frame   0x00004310       0x2c d:/clion/gcc-arm-none-eabi-10.3-2021.10/bin/../lib/gcc/arm-none-eabi/10.3.1/thumb/v7-m/nofp\libgcc.a(_aeabi_uldivmod.o)
- .debug_frame   0x0000433c       0x34 d:/clion/gcc-arm-none-eabi-10.3-2021.10/bin/../lib/gcc/arm-none-eabi/10.3.1/thumb/v7-m/nofp\libgcc.a(_udivmoddi4.o)
- .debug_frame   0x00004370       0x20 d:/clion/gcc-arm-none-eabi-10.3-2021.10/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/lib/thumb/v7-m/nofp\libg.a(lib_a-errno.o)
- .debug_frame   0x00004390       0x2c d:/clion/gcc-arm-none-eabi-10.3-2021.10/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/lib/thumb/v7-m/nofp\libg.a(lib_a-init.o)
- .debug_frame   0x000043bc       0x2c d:/clion/gcc-arm-none-eabi-10.3-2021.10/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/lib/thumb/v7-m/nofp\libg.a(lib_a-memset.o)
- .debug_frame   0x000043e8       0x48 d:/clion/gcc-arm-none-eabi-10.3-2021.10/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/lib/thumb/v7-m/nofp\libg.a(lib_a-puts.o)
- .debug_frame   0x00004430       0x20 d:/clion/gcc-arm-none-eabi-10.3-2021.10/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/lib/thumb/v7-m/nofp\libg.a(lib_a-strlen-stub.o)
- .debug_frame   0x00004450       0x5c d:/clion/gcc-arm-none-eabi-10.3-2021.10/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/lib/thumb/v7-m/nofp\libg.a(lib_a-__call_atexit.o)
- .debug_frame   0x000044ac       0x20 d:/clion/gcc-arm-none-eabi-10.3-2021.10/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/lib/thumb/v7-m/nofp\libg.a(lib_a-atexit.o)
- .debug_frame   0x000044cc      0x154 d:/clion/gcc-arm-none-eabi-10.3-2021.10/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/lib/thumb/v7-m/nofp\libg.a(lib_a-findfp.o)
- .debug_frame   0x00004620       0x34 d:/clion/gcc-arm-none-eabi-10.3-2021.10/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/lib/thumb/v7-m/nofp\libg.a(lib_a-fini.o)
- .debug_frame   0x00004654       0x64 d:/clion/gcc-arm-none-eabi-10.3-2021.10/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/lib/thumb/v7-m/nofp\libg.a(lib_a-fvwrite.o)
- .debug_frame   0x000046b8       0x54 d:/clion/gcc-arm-none-eabi-10.3-2021.10/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/lib/thumb/v7-m/nofp\libg.a(lib_a-fwalk.o)
- .debug_frame   0x0000470c       0xb0 d:/clion/gcc-arm-none-eabi-10.3-2021.10/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/lib/thumb/v7-m/nofp\libg.a(lib_a-lock.o)
- .debug_frame   0x000047bc       0x4c d:/clion/gcc-arm-none-eabi-10.3-2021.10/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/lib/thumb/v7-m/nofp\libg.a(lib_a-mallocr.o)
- .debug_frame   0x00004808       0x28 d:/clion/gcc-arm-none-eabi-10.3-2021.10/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/lib/thumb/v7-m/nofp\libg.a(lib_a-memchr-stub.o)
- .debug_frame   0x00004830       0x40 d:/clion/gcc-arm-none-eabi-10.3-2021.10/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/lib/thumb/v7-m/nofp\libg.a(lib_a-memmove.o)
- .debug_frame   0x00004870       0x30 d:/clion/gcc-arm-none-eabi-10.3-2021.10/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/lib/thumb/v7-m/nofp\libg.a(lib_a-mlock.o)
- .debug_frame   0x000048a0       0x48 d:/clion/gcc-arm-none-eabi-10.3-2021.10/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/lib/thumb/v7-m/nofp\libg.a(lib_a-reallocr.o)
- .debug_frame   0x000048e8       0x2c d:/clion/gcc-arm-none-eabi-10.3-2021.10/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/lib/thumb/v7-m/nofp\libg.a(lib_a-sbrkr.o)
- .debug_frame   0x00004914       0x8c d:/clion/gcc-arm-none-eabi-10.3-2021.10/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/lib/thumb/v7-m/nofp\libg.a(lib_a-stdio.o)
- .debug_frame   0x000049a0       0x2c d:/clion/gcc-arm-none-eabi-10.3-2021.10/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/lib/thumb/v7-m/nofp\libg.a(lib_a-writer.o)
- .debug_frame   0x000049cc       0x2c d:/clion/gcc-arm-none-eabi-10.3-2021.10/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/lib/thumb/v7-m/nofp\libg.a(lib_a-wsetup.o)
- .debug_frame   0x000049f8       0x34 d:/clion/gcc-arm-none-eabi-10.3-2021.10/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/lib/thumb/v7-m/nofp\libg.a(lib_a-__atexit.o)
- .debug_frame   0x00004a2c       0x2c d:/clion/gcc-arm-none-eabi-10.3-2021.10/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/lib/thumb/v7-m/nofp\libg.a(lib_a-closer.o)
- .debug_frame   0x00004a58       0x3c d:/clion/gcc-arm-none-eabi-10.3-2021.10/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/lib/thumb/v7-m/nofp\libg.a(lib_a-fclose.o)
- .debug_frame   0x00004a94       0x70 d:/clion/gcc-arm-none-eabi-10.3-2021.10/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/lib/thumb/v7-m/nofp\libg.a(lib_a-fflush.o)
- .debug_frame   0x00004b04       0x8c d:/clion/gcc-arm-none-eabi-10.3-2021.10/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/lib/thumb/v7-m/nofp\libg.a(lib_a-freer.o)
- .debug_frame   0x00004b90       0x2c d:/clion/gcc-arm-none-eabi-10.3-2021.10/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/lib/thumb/v7-m/nofp\libg.a(lib_a-lseekr.o)
- .debug_frame   0x00004bbc       0x70 d:/clion/gcc-arm-none-eabi-10.3-2021.10/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/lib/thumb/v7-m/nofp\libg.a(lib_a-makebuf.o)
- .debug_frame   0x00004c2c       0x2c d:/clion/gcc-arm-none-eabi-10.3-2021.10/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/lib/thumb/v7-m/nofp\libg.a(lib_a-readr.o)
- .debug_frame   0x00004c58       0x64 d:/clion/gcc-arm-none-eabi-10.3-2021.10/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/lib/thumb/v7-m/nofp\libg.a(lib_a-reent.o)
- .debug_frame   0x00004cbc       0x2c d:/clion/gcc-arm-none-eabi-10.3-2021.10/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/lib/thumb/v7-m/nofp\libg.a(lib_a-fstatr.o)
- .debug_frame   0x00004ce8       0x2c d:/clion/gcc-arm-none-eabi-10.3-2021.10/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/lib/thumb/v7-m/nofp\libg.a(lib_a-isattyr.o)
+ .debug_frame   0x00003e18      0x198 CMakeFiles/ISD2190.elf.dir/User/bt4531.c.obj
+ .debug_frame   0x00003fb0       0xc8 CMakeFiles/ISD2190.elf.dir/User/flash.c.obj
+ .debug_frame   0x00004078       0xe8 CMakeFiles/ISD2190.elf.dir/User/hardware.c.obj
+ .debug_frame   0x00004160       0x40 CMakeFiles/ISD2190.elf.dir/User/temp.c.obj
+ .debug_frame   0x000041a0       0x30 d:/clion/gcc-arm-none-eabi-10.3-2021.10/bin/../lib/gcc/arm-none-eabi/10.3.1/thumb/v7-m/nofp\libgcc.a(_arm_muldf3.o)
+ .debug_frame   0x000041d0       0xac d:/clion/gcc-arm-none-eabi-10.3-2021.10/bin/../lib/gcc/arm-none-eabi/10.3.1/thumb/v7-m/nofp\libgcc.a(_arm_addsubdf3.o)
+ .debug_frame   0x0000427c       0x24 d:/clion/gcc-arm-none-eabi-10.3-2021.10/bin/../lib/gcc/arm-none-eabi/10.3.1/thumb/v7-m/nofp\libgcc.a(_arm_truncdfsf2.o)
+ .debug_frame   0x000042a0       0x4c d:/clion/gcc-arm-none-eabi-10.3-2021.10/bin/../lib/gcc/arm-none-eabi/10.3.1/thumb/v7-m/nofp\libgcc.a(_arm_addsubsf3.o)
+ .debug_frame   0x000042ec       0x38 d:/clion/gcc-arm-none-eabi-10.3-2021.10/bin/../lib/gcc/arm-none-eabi/10.3.1/thumb/v7-m/nofp\libgcc.a(_arm_muldivsf3.o)
+ .debug_frame   0x00004324       0x2c d:/clion/gcc-arm-none-eabi-10.3-2021.10/bin/../lib/gcc/arm-none-eabi/10.3.1/thumb/v7-m/nofp\libgcc.a(_aeabi_uldivmod.o)
+ .debug_frame   0x00004350       0x34 d:/clion/gcc-arm-none-eabi-10.3-2021.10/bin/../lib/gcc/arm-none-eabi/10.3.1/thumb/v7-m/nofp\libgcc.a(_udivmoddi4.o)
+ .debug_frame   0x00004384       0x20 d:/clion/gcc-arm-none-eabi-10.3-2021.10/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/lib/thumb/v7-m/nofp\libg.a(lib_a-errno.o)
+ .debug_frame   0x000043a4       0x2c d:/clion/gcc-arm-none-eabi-10.3-2021.10/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/lib/thumb/v7-m/nofp\libg.a(lib_a-init.o)
+ .debug_frame   0x000043d0       0x2c d:/clion/gcc-arm-none-eabi-10.3-2021.10/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/lib/thumb/v7-m/nofp\libg.a(lib_a-memset.o)
+ .debug_frame   0x000043fc       0x48 d:/clion/gcc-arm-none-eabi-10.3-2021.10/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/lib/thumb/v7-m/nofp\libg.a(lib_a-puts.o)
+ .debug_frame   0x00004444       0x20 d:/clion/gcc-arm-none-eabi-10.3-2021.10/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/lib/thumb/v7-m/nofp\libg.a(lib_a-strlen-stub.o)
+ .debug_frame   0x00004464       0x30 d:/clion/gcc-arm-none-eabi-10.3-2021.10/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/lib/thumb/v7-m/nofp\libg.a(lib_a-strncat.o)
+ .debug_frame   0x00004494       0x5c d:/clion/gcc-arm-none-eabi-10.3-2021.10/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/lib/thumb/v7-m/nofp\libg.a(lib_a-__call_atexit.o)
+ .debug_frame   0x000044f0       0x20 d:/clion/gcc-arm-none-eabi-10.3-2021.10/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/lib/thumb/v7-m/nofp\libg.a(lib_a-atexit.o)
+ .debug_frame   0x00004510      0x154 d:/clion/gcc-arm-none-eabi-10.3-2021.10/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/lib/thumb/v7-m/nofp\libg.a(lib_a-findfp.o)
+ .debug_frame   0x00004664       0x34 d:/clion/gcc-arm-none-eabi-10.3-2021.10/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/lib/thumb/v7-m/nofp\libg.a(lib_a-fini.o)
+ .debug_frame   0x00004698       0x64 d:/clion/gcc-arm-none-eabi-10.3-2021.10/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/lib/thumb/v7-m/nofp\libg.a(lib_a-fvwrite.o)
+ .debug_frame   0x000046fc       0x54 d:/clion/gcc-arm-none-eabi-10.3-2021.10/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/lib/thumb/v7-m/nofp\libg.a(lib_a-fwalk.o)
+ .debug_frame   0x00004750       0xb0 d:/clion/gcc-arm-none-eabi-10.3-2021.10/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/lib/thumb/v7-m/nofp\libg.a(lib_a-lock.o)
+ .debug_frame   0x00004800       0x4c d:/clion/gcc-arm-none-eabi-10.3-2021.10/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/lib/thumb/v7-m/nofp\libg.a(lib_a-mallocr.o)
+ .debug_frame   0x0000484c       0x28 d:/clion/gcc-arm-none-eabi-10.3-2021.10/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/lib/thumb/v7-m/nofp\libg.a(lib_a-memchr-stub.o)
+ .debug_frame   0x00004874       0x40 d:/clion/gcc-arm-none-eabi-10.3-2021.10/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/lib/thumb/v7-m/nofp\libg.a(lib_a-memmove.o)
+ .debug_frame   0x000048b4       0x30 d:/clion/gcc-arm-none-eabi-10.3-2021.10/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/lib/thumb/v7-m/nofp\libg.a(lib_a-mlock.o)
+ .debug_frame   0x000048e4       0x48 d:/clion/gcc-arm-none-eabi-10.3-2021.10/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/lib/thumb/v7-m/nofp\libg.a(lib_a-reallocr.o)
+ .debug_frame   0x0000492c       0x2c d:/clion/gcc-arm-none-eabi-10.3-2021.10/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/lib/thumb/v7-m/nofp\libg.a(lib_a-sbrkr.o)
+ .debug_frame   0x00004958       0x8c d:/clion/gcc-arm-none-eabi-10.3-2021.10/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/lib/thumb/v7-m/nofp\libg.a(lib_a-stdio.o)
+ .debug_frame   0x000049e4       0x2c d:/clion/gcc-arm-none-eabi-10.3-2021.10/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/lib/thumb/v7-m/nofp\libg.a(lib_a-writer.o)
+ .debug_frame   0x00004a10       0x2c d:/clion/gcc-arm-none-eabi-10.3-2021.10/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/lib/thumb/v7-m/nofp\libg.a(lib_a-wsetup.o)
+ .debug_frame   0x00004a3c       0x34 d:/clion/gcc-arm-none-eabi-10.3-2021.10/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/lib/thumb/v7-m/nofp\libg.a(lib_a-__atexit.o)
+ .debug_frame   0x00004a70       0x2c d:/clion/gcc-arm-none-eabi-10.3-2021.10/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/lib/thumb/v7-m/nofp\libg.a(lib_a-closer.o)
+ .debug_frame   0x00004a9c       0x3c d:/clion/gcc-arm-none-eabi-10.3-2021.10/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/lib/thumb/v7-m/nofp\libg.a(lib_a-fclose.o)
+ .debug_frame   0x00004ad8       0x70 d:/clion/gcc-arm-none-eabi-10.3-2021.10/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/lib/thumb/v7-m/nofp\libg.a(lib_a-fflush.o)
+ .debug_frame   0x00004b48       0x8c d:/clion/gcc-arm-none-eabi-10.3-2021.10/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/lib/thumb/v7-m/nofp\libg.a(lib_a-freer.o)
+ .debug_frame   0x00004bd4       0x2c d:/clion/gcc-arm-none-eabi-10.3-2021.10/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/lib/thumb/v7-m/nofp\libg.a(lib_a-lseekr.o)
+ .debug_frame   0x00004c00       0x70 d:/clion/gcc-arm-none-eabi-10.3-2021.10/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/lib/thumb/v7-m/nofp\libg.a(lib_a-makebuf.o)
+ .debug_frame   0x00004c70       0x2c d:/clion/gcc-arm-none-eabi-10.3-2021.10/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/lib/thumb/v7-m/nofp\libg.a(lib_a-readr.o)
+ .debug_frame   0x00004c9c       0x64 d:/clion/gcc-arm-none-eabi-10.3-2021.10/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/lib/thumb/v7-m/nofp\libg.a(lib_a-reent.o)
+ .debug_frame   0x00004d00       0x2c d:/clion/gcc-arm-none-eabi-10.3-2021.10/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/lib/thumb/v7-m/nofp\libg.a(lib_a-fstatr.o)
+ .debug_frame   0x00004d2c       0x2c d:/clion/gcc-arm-none-eabi-10.3-2021.10/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/lib/thumb/v7-m/nofp\libg.a(lib_a-isattyr.o)

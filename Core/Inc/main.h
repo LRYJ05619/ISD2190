@@ -129,7 +129,7 @@ typedef struct SensorInfoTypeDef{
 typedef struct ConfigInfoTypeDef{
     u8 ip_length;
     char ip[32];
-    char id[20];
+    char id[19];
 }ConfigInfo;
 /* USER CODE END Private defines */
 
